@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rafalkufel/alinka-electron.git"
+    "url": "git+https://github.com/CodeForPoznan/alinka-electron"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rafalkufel/alinka-electron/issues"
+    "url": "https://github.com/CodeForPoznan/alinka-electron/issues"
   },
-  "homepage": "https://github.com/Rafalkufel/alinka-electron#readme",
+  "homepage": "https://github.com/CodeForPoznan/alinka-electron#readme",
   "devDependencies": {
     "electron": "^3.0.10"
   },
