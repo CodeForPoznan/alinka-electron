@@ -1,9 +1,12 @@
 const electron = require('electron');
 const docx = require("docx");
+const fs = require('file-system');
 
 const { app, BrowserWindow, ipcMain } = electron;
 
+var packer = new docx.Packer();
 var doc = new docx.Document();
+
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
@@ -17,8 +20,10 @@ app.on('ready', () => {
 ipcMain.on('print', (event, value) => {
     var paragraph = new docx.Paragraph(value);
     doc.addParagraph(paragraph);
-    var exporter = new docx.Packer(doc);
-    exporter.pack("My First Document");
+
+    packer.toBuffer(doc).then((buffer) => {
+        fs.writeFile('test.docx', buffer)
+    });
     console.log(value);
 });
 

@@ -20,6 +20,7 @@
     "electron": "^3.0.10"
   },
   "dependencies": {
-    "docx": "^4.4.0"
+    "docx": "^4.4.0",
+    "file-system": "^2.2.2"
   }
 }
