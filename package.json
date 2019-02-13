@@ -2,7 +2,7 @@
   "name": "alinka-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -20,6 +20,7 @@
     "electron": "^3.0.10"
   },
   "dependencies": {
+    "adm-zip": "^0.4.13",
     "docx": "^4.4.0",
     "file-system": "^2.2.2"
   }

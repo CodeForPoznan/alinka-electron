@@ -5,26 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Alinka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <form>
         <div>
-          <label>Enter something</label>
+          <label>Podaj nazwę wygenerowanego pliku docx</label>
           <input autofocus />
         </div>
-        <button type="submit">Make docx</button>
+        <button type="submit">Wygeneruj</button>
     </form>
     <script>
         const electron = require('electron');
         const { ipcRenderer } = electron;
         document.querySelector('form').addEventListener('submit', (event) =>{
-
             event.preventDefault();
             const { value } = document.querySelector('input');
             ipcRenderer.send('print', value);
         });
+
     </script>
 </body>
 </html>
