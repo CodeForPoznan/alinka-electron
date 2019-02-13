@@ -1,0 +1,26 @@
+{
+  "name": "alinka-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeForPoznan/alinka-electron"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeForPoznan/alinka-electron/issues"
+  },
+  "homepage": "https://github.com/CodeForPoznan/alinka-electron#readme",
+  "devDependencies": {
+    "electron": "^3.0.10"
+  },
+  "dependencies": {
+    "docx": "^4.4.0",
+    "file-system": "^2.2.2"
+  }
+}
