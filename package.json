@@ -4,23 +4,59 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "org.breta.MemoryKing",
+    "files": [
+      "node_modules/",
+      "index.js",
+      "index.html",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodeForPoznan/alinka-electron"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "CodeForPoznan <xyz@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeForPoznan/alinka-electron/issues"
   },
   "homepage": "https://github.com/CodeForPoznan/alinka-electron#readme",
   "devDependencies": {
-    "electron": "^3.0.10"
+    "electron": "^3.1.8",
+    "electron-builder": "^20.39.0"
   },
   "dependencies": {
-    "docx": "^4.4.0",
+    "docx": "^4.7.1",
     "file-system": "^2.2.2"
   }
 }
