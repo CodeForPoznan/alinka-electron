@@ -4,12 +4,16 @@ Application's name: *"Alinka"* is name of real person, which has to do that bori
 
 ---
 
-**Alinka** jest aplikacją desktopową, która wspiera wydawanie orzeczeń, wraz z innymi niezbędnymi dokumentami przez polskie Poradnie Psychologiczno - Pedagogiczne. 
+**Alinka** jest aplikacją desktopową, która wspiera wydawanie orzeczeń, wraz z innymi niezbędnymi dokumentami przez polskie Poradnie Psychologiczno - Pedagogiczne.
 
 Nazwa *"Alinka"* jest imieniem rzeczywistej osoby, która wykonuje tą nużącą, ale bardzo potrzebną pracę. Mam nadzieję, że pewnego dnia ta aplikacja pomoże w jej pracy. :)
 
 ---
-`npm install --save-dev electron`
-`npm install --save docx`
 
-`npm start`
+
+Development:
+*Run electron app in background:*
+`npm run start`
+
+*Run electron appliaction(in second tab)*:
+`npm run electron-start`
