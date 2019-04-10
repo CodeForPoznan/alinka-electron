@@ -17,12 +17,11 @@
     "wait-on": "^3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"BROWSER=none npm run react\" \"wait-on http://localhost:3000 && electron .\"",
+    "react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-start": "electron .",
-    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
