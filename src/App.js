@@ -26,8 +26,8 @@ class App extends Component {
     return (
       <div className="App">
         <form onSubmit={this.handleSubmit}>
-            <label>File name:</label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <label htmlFor="fileName">File name</label>
+            <input type="text" name="fileName" value={this.state.value} onChange={this.handleChange} />
             <input type="submit" value="Submit" />
         </form>
       </div>
