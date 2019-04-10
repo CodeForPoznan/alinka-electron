@@ -18,7 +18,6 @@ class App extends Component {
   }
   
   handleSubmit(event) {
-    console.log(this.state.value);
     ipcRenderer.send('print:value', this.state.value);
     event.preventDefault();
   }
@@ -27,11 +26,9 @@ class App extends Component {
     return (
       <div className="App">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            File name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
+            <label htmlFor="fileName">File name</label>
+            <input type="text" name="fileName" value={this.state.value} onChange={this.handleChange} />
+            <input type="submit" value="Submit" />
         </form>
       </div>
     );

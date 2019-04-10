@@ -16,3 +16,5 @@ Development:
 `npm run start`
 
 
+*Run electron appliaction(in second terminal tab)*:
+`npm run electron`
