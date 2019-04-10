@@ -2,9 +2,11 @@ var studentData  = {
     firstName: "Enrique",
     lastName: "Johnson",
     pesel: "89121223444",
+    placeOfBirth: "Mszana Dolna",
     addressOfStudent: "Malwowa 12a/22",
     cityOfStudent: "Poznań",
     postCodeOfStudent: "62-489",
+    studentID: "4567",
     school: {
         nameOfSchool: "Szkoła Podstawowa nr 1",
         typeOfSchool: "Szkoła Podstawowa",
