@@ -9,6 +9,7 @@
     "electron": "electron ."
   },
   "author": "Code for Poznan <hello@codeforpoznan.pl>",
+  "homepage": "https://github.com/CodeForPoznan/alinka-electron#readme",
   "devDependencies": {
     "electron": "4.1.3"
   },
@@ -18,16 +19,18 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-1": "^6.22.0",
+    "concurrently": "^4.1.0",
     "docx": "^4.7.1",
     "file-system": "^2.2.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-scripts": "2.1.8",
+    "wait-on": "^3.2.0",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeForPoznan/alinka-electron/issues"
-  },
-  "homepage": "https://github.com/CodeForPoznan/alinka-electron#readme"
+  }
 }
