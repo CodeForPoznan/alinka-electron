@@ -1,0 +1,12 @@
+build: false
+
+environment:
+  nodejs_version: "10.15.3"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
