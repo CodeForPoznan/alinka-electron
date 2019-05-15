@@ -1,7 +1,7 @@
 {
   "name": "Alinka",
   "version": "0.1.0",
-  "description": "Aplication for Supporting Center for Children",
+  "description": "Application for Supporting Center for Children",
   "private": true,
   "main": "main.js",
   "scripts": {
