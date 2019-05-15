@@ -12,8 +12,6 @@ Nazwa *"Alinka"* jest imieniem rzeczywistej osoby, która wykonuje tą nużącą
 
 
 Development:
-*Run react app in background:*
-`npm run start`
+*Run live preview of changes on development environment:*
 
-*Run electron appliaction(in second terminal tab)*:
-`npm run electron`
+`npm run start`
