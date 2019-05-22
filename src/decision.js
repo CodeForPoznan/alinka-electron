@@ -1,41 +1,42 @@
 //this allows to save the file
-const app = require('electron');
+const app = require("electron");
 const dialog = app.dialog;
-const fs = require('fs');
+const fs = require("fs");
 
 //this changes the file to docx
-const docx = require('docx');
-const { Document, Paragraph, Packer, TextRun } = docx;
-
-
+const docx = require("docx");
+const { Document, Paragraph, Packer } = docx;
 
 class DecisionCreate extends Document {
   constructor(value) {
-      super();
-      this.value = value
-      this.doc = new Document();
+    super();
+    this.value = value;
+    this.doc = new Document();
   }
 
   create() {
-      let paragraph = new Paragraph(this.value);
-      this.doc.addParagraph(paragraph);
+    let paragraph = new Paragraph(this.value);
+    this.doc.addParagraph(paragraph);
   }
 
   save() {
-    dialog.showSaveDialog((fileName) => {
-      if (fileName === undefined){
+    dialog.showSaveDialog(fileName => {
+      if (fileName === undefined) {
         return;
       }
 
       var packer = new Packer();
 
-      packer.toBuffer(this.doc).then((buffer) => {
-        fs.writeFileSync(`${fileName}.docx`, buffer);
-        console.log("Document created successfully");
-      }).catch((e) => {
-        console.log(e)
-      });    
-    })
+      packer
+        .toBuffer(this.doc)
+        .then(buffer => {
+          fs.writeFileSync(`${fileName}.docx`, buffer);
+          console.log("Document created successfully");
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    });
   }
 }
 
