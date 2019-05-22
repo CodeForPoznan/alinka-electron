@@ -1,6 +1,15 @@
+// React import
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// CSS import
+import './main.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Components import
+import Header from './components/Header'
+import SaveButton from './components/SaveButton'
 
+
+
+// Render and Inject components into the html element tree
+ReactDOM.render(<Header />, document.getElementById('header'));
+ReactDOM.render(<SaveButton />, document.getElementById('save-button'));

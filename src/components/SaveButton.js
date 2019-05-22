@@ -1,10 +1,11 @@
-
-import React, { Component } from 'react';
+import React from 'react';
+import './SaveButton.css';
 
 const { ipcRenderer } = require('electron');
 
 
-class App extends Component {
+
+export default class MyNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -34,5 +35,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

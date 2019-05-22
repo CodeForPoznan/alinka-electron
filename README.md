@@ -12,8 +12,10 @@ Nazwa *"Alinka"* jest imieniem rzeczywistej osoby, która wykonuje tą nużącą
 
 
 Development:
-*Run react app in background:*
+*Run the aplication localy with developer tools:*
 `npm run start`
 
-*Run electron appliaction(in second terminal tab)*:
-`npm run electron`
+Distribution:
+*Creates a dist folder and packages it into a windows installer:*:
+(the installer folder can be copied to a windows OS and executed)
+`npm run dist`

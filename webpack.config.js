@@ -1,44 +1,67 @@
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const nodeModules = {};
-fs.readdirSync('node_modules')
-  .filter(function(x) {
-    return ['.bin'].indexOf(x) === -1;
-  })
-  .forEach(function(mod) {
-    nodeModules[mod] = 'commonjs ' + mod;
-  });
 
+
+/***********************/
+/* HTML Webpack Plugin */
+/***********************/
+const htmlPlugin = new HtmlWebPackPlugin({
+	title: "Alinka",
+	template: "./src/index.html",
+	filename: "./index.html"
+});
+// Create the html acessible for the app in production
+const hotModulePlugin = new webpack.HotModuleReplacementPlugin();
+
+
+
+/*************************/
+/* Webpack Configuration */
+/*************************/
 module.exports = {
-  externals: nodeModules,
-  entry: [
-    './src/index.js'
-  ],
-  target: 'node',
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  module: {
-    loaders: [
-      {
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
-        }
-      },
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    port: 4172
-  }
-};
+	entry: ['./src/index.js'],
+	target: 'electron-renderer',
+	output: {
+		path: path.resolve(__dirname, 'build'),
+		publicPath: './',
+		filename: 'bundle.js'
+	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: [
+					/node_modules/,
+					/.json?/
+				],
+				use: {
+					loader: 'babel-loader',
+					query: {
+						presets: ["env","react"]
+					}
+				}
+			}, {
+				test: /\.(s*)css$/,
+				use: ['style-loader','css-loader']
+			}
+		]
+	},
+	plugins:[
+		htmlPlugin,
+		hotModulePlugin
+	],
+	resolve: {
+		extensions: ['.js','.jsx']
+	},
+	devServer: {
+		publicPath:'http://localhost:9000',
+		contentBase: path.join(__dirname, 'assets'),
+		open: false,
+		lazy: false,
+		compress: true,
+		historyApiFallback: true,
+		port: 9000
+	}
+}
