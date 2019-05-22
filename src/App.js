@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 
 const { ipcRenderer } = require('electron');
