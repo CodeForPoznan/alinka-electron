@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, Menu } = require('electron');
-const DecisionCreate = require('./src/doc/decision');
+const DecisionCreate = require('./doc/decision');
 const path = require('path');
 // Specifies the enviroment variable 
 const inDevelopmentMode = (process.env.MODE === 'dev')
@@ -90,7 +90,6 @@ if (inDevelopmentMode){
 /*********************/
 /* Document Renderer */
 /*********************/
-
 ipcMain.on('print:value', (event, value) => {
   var doc = new DecisionCreate(value);
   doc.create();

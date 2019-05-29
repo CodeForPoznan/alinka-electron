@@ -12,7 +12,7 @@ Nazwa *"Alinka"* jest imieniem rzeczywistej osoby, która wykonuje tą nużącą
 
 
 Development:
-*Run the aplication localy with developer tools:*
+*Run the application localy with developer tools:*
 `npm run start`
 
 Distribution:

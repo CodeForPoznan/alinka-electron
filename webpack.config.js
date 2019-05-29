@@ -21,7 +21,7 @@ const hotModulePlugin = new webpack.HotModuleReplacementPlugin();
 /* Webpack Configuration */
 /*************************/
 module.exports = {
-	entry: ['./src/index.js'],
+	entry: ['./src/App.js'],
 	target: 'electron-renderer',
 	output: {
 		path: path.resolve(__dirname, 'build'),
