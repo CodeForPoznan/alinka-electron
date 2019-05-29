@@ -1,41 +1,13 @@
-import React, { Component } from "react";
+// React import
+import React from "react";
+import ReactDOM from "react-dom";
+// CSS import
+import "./main.css";
 
-const { ipcRenderer } = require("electron");
+// Components import
+import Header from "./components/Header";
+import SaveButton from "./components/SaveButton";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    ipcRenderer.send("print:value", this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="fileName">File name</label>
-          <input
-            type="text"
-            name="fileName"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    );
-  }
-}
-
-export default App;
+// Render and Inject components into the html element tree
+ReactDOM.render(<Header />, document.getElementById("header"));
+ReactDOM.render(<SaveButton />, document.getElementById("save-button"));

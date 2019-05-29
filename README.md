@@ -12,6 +12,10 @@ Nazwa *"Alinka"* jest imieniem rzeczywistej osoby, która wykonuje tą nużącą
 
 
 Development:
-*Run live preview of changes on development environment:*
-
+*Run the application localy with developer tools:*
 `npm run start`
+
+Distribution:
+*Creates a dist folder and packages it into a windows installer:*:
+(the installer folder can be copied to a windows OS and executed)
+`npm run dist`

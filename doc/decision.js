@@ -1,7 +1,7 @@
 //this allows to save the file
-const app = require("electron");
+const app = require('electron');
+const fs = require('fs');
 const dialog = app.dialog;
-const fs = require("fs");
 
 //this changes the file to docx
 const docx = require("docx");
