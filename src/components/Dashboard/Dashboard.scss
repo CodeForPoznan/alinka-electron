@@ -1,0 +1,16 @@
+@import '../../scss/_variables.scss';
+
+.container {
+  background-color: $sidebarBackground;
+  color: $textColor;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.wrapper {
+  background-color: $white;
+  height: 80%;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
