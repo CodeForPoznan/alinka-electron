@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./Header.scss";
 
-const Header = () => (
-  <div className={styles.container}>
-    <img className={styles.image} src="test-image.jpg" />
-    <h1 className={styles.heading}>Alinka</h1>
-  </div>
-);
+const Header = () => {
+  return (
+    <header className={styles.Header}>
+      <img className={styles.Image} src="test-image.jpg" />
+      <h1>Alinka</h1>
+    </header>
+  );
+};
 
 export default Header;

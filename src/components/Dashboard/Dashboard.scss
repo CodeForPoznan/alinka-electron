@@ -1,13 +1,13 @@
 @import '../../scss/_variables.scss';
 
-.container {
+.Dashboard {
   background-color: $sidebarBackground;
   color: $textColor;
   height: 100%;
   flex-grow: 1;
 }
 
-.wrapper {
+.Wrapper {
   background-color: $white;
   height: 80%;
   width: 90%;

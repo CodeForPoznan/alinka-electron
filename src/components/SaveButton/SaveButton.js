@@ -1,40 +1,34 @@
-import React from "react";
-import "./SaveButton.css";
+import React, { useState } from "react";
+import styles from "./SaveButton.scss";
 
 const { ipcRenderer } = require("electron");
 
-export default class MyNavbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
+const NavBar = () => {
+  const [fileName, setFileName] = useState("");
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  const handleChange = event => {
+    setFileName(event.target.value);
+  };
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    ipcRenderer.send("print:value", this.state.value);
+  const handleSubmit = event => {
+    ipcRenderer.send("print:value", fileName);
     event.preventDefault();
-  }
+  };
 
-  render() {
-    return (
-      <div className="App">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="fileName">File name</label>
-          <input
-            type="text"
-            name="fileName"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.SaveButton}>
+      <form onSubmit={handleSubmit.bind(this)}>
+        <label htmlFor="fileName">File name</label>
+        <input
+          type="text"
+          name="fileName"
+          value={fileName}
+          onChange={handleChange.bind(this)}
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+};
+
+export default NavBar;
