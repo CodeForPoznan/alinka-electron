@@ -17,13 +17,13 @@ const NavBar = () => {
 
   return (
     <div className={styles.SaveButton}>
-      <form onSubmit={handleSubmit.bind(this)}>
+      <form onSubmit={event => handleSubmit(event)}>
         <label htmlFor="fileName">File name</label>
         <input
           type="text"
           name="fileName"
           value={fileName}
-          onChange={handleChange.bind(this)}
+          onChange={event => handleChange(event)}
         />
         <input type="submit" value="Submit" />
       </form>
