@@ -1,0 +1,620 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<w:document mc:Ignorable="w14 wp14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_right_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>{{ city }}, {{ date }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="24"/>
+        </w:rPr>
+        <w:t xml:space="preserve">ORZECZENIE NR {{ no }}</w:t>
+        <w:br/>
+        <w:t xml:space="preserve">o potrzebie indywidualnego nauczania</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="18"/>
+        </w:rPr>
+        <w:t>Działając na podstawie art. 127 ust. 10 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2017 r. poz. 59 i 949)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+        </w:rPr>
+        <w:br/>
+        <w:t xml:space="preserve">Na wniosek: </w:t>
+      </w:r>
+      <w:r>
+        <w:t>{{ applicant.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">(imię i nazwisko wnioskodawcy)</w:t>
+        <w:br/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Header_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ team.name }}</w:t>
+        <w:br/>
+        <w:t>{{ team.address }}</w:t>
+        <w:br/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Small_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w składzie:</w:t>
+      </w:r>
+    </w:p>
+    {% for member in team.members %}
+      <w:p>
+        <w:pPr>
+          <w:pStyle w:val="Small_my"/>
+        </w:pPr>
+        <w:r>
+          <w:t>{{ member.name }} - {{ member.function }}</w:t>
+        </w:r>
+      </w:p>
+    {% endfor %}
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="24"/>
+        </w:rPr>
+        <w:t>orzeka o potrzebie indywidualnego nauczania</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię/imiona i nazwisko ucznia)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.birthDate }}r., {{ child.birthPlace }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(data i miejsce urodzenia ucznia)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.pesel }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(numer PESEL ucznia, a w przypadku braku numeru PESEL – seria i numer dokumentu potwierdzającego jego tożsamość)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(adres zamieszkania ucznia)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ school }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(nazwa i adres szkoły oraz oznaczenie oddziału w szkole, nazwa zawodu</w:t>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="2"/>
+        <w:t>1</w:t>
+      </w:r>
+      <w:r>
+        <w:t>)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Text_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ parents.name }}, {{ parents.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Tag_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imiona i nazwiska rodziców</w:t>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="3"/>
+        <w:t>2</w:t>
+      </w:r>
+      <w:r>
+        <w:t>oraz adres ich zamieszkania)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>na okres</w:t>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="4"/>
+        <w:t>3</w:t>
+      </w:r>
+      <w:r>
+        <w:t>: {{ period }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">ze względu na stan zdrowia ucznia </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:strike/>
+        </w:rPr>
+        <w:t>uniemożliwiający</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve">/ </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:strike w:val="0"/>
+        </w:rPr>
+        <w:t>znacznie utrudniający</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:strike w:val="0"/>
+        </w:rPr>
+        <w:t/>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="5"/>
+        <w:t>4</w:t>
+      </w:r>
+      <w:r>
+        <w:t>uczęszczanie do szkoły.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>Diagnoza</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t>Zespół Orzekający określa ograniczenia w funkcjonowaniu ucznia wynikające z przebiegu choroby lub procesu terapeutycznego:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>Zalecenia</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>Zespół Orzekający zaleca:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve">1) </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t>(należy określić zalecane warunki i formy wsparcia umożliwiające realizację indywidualnych potrzeb rozwojowych i edukacyjnych oraz możliwości psychofizycznych ucznia, w tym warunki rozwijania jego potencjalnych możliwości i mocnych stron, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve">2) </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t>(należy określić zalecane działania sprzyjające integracji ucznia ze środowiskiem szkolnym oraz ułatwiające powrót ucznia do szkoły, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve">3) </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t>(należy określić zalecane, w zależności od potrzeb, cele rozwojowe i terapeutyczne do realizacji podczas zajęć indywidualnego nauczania oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej uczniowi i, w zależności od potrzeb, jego rodzicom, przez szkołę oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>Dodatkowe informacje</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t>(w zależności od potrzeb podaje się dodatkowe istotne informacje o uczniu, w szczególności o wspomagającej lub alternatywnej metodzie komunikacji (AAC), którą posługuje się uczeń, a w przypadku ucznia szkoły prowadzącej kształcenie zawodowe – także możliwość dalszego kształcenia w zawodzie, w tym warunki realizacji praktycznej nauki zawodu)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_justify_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:t>W przypadku wydania nowego orzeczenia o potrzebie indywidualnego nauczania należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="6"/>
+        <w:t>5</w:t>
+      </w:r>
+      <w:r>
+        <w:t>:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_bold_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Orzeczenie uchyla orzeczenie nr ...... o potrzebie indywidualnego nauczania z dnia .............. wydane przez .....................</w:t>
+      </w:r>
+      <w:r>
+        <w:footnoteReference w:id="7"/>
+        <w:t>6</w:t>
+      </w:r>
+      <w:r>
+        <w:t>.</w:t>
+        <w:br/>
+        <w:br/>
+        <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w ........................za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_center_my"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="20"/>
+        </w:rPr>
+        <w:br/>
+        <w:br/>
+        <w:br/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_right_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b w:val="0"/>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve">(podpis Przewodniczącego Zespołu Orzekającego)               </w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+          <w:u w:val="single"/>
+        </w:rPr>
+        <w:t>Otrzymuje:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Wnioskodawca:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ applicant.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve">(imię i nazwisko)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ applicant.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Normal_left_my"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve">(adres zamieszkania albo adres do korespondencji</w:t>
+        <w:br/>
+        <w:t xml:space="preserve">– jeżeli jest inny niż adres zamieszkania)</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr w:rsidR="00FC693F" w:rsidRPr="0006063C" w:rsidSect="00034616">
+      <w:pgSz w:h="15840" w:w="12240"/>
+      <w:pgMar w:bottom="1440" w:footer="720" w:gutter="0" w:header="720" w:left="1800" w:right="1800" w:top="1440"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>
