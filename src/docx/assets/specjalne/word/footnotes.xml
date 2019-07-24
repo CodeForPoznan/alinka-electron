@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<footnotes xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+	<footnote w:type="separator" w:id="-1">
+		<p w:rsidR="00A91858" w:rsidRDefault="00A91858" w:rsidP="00000266">
+			<pPr>
+				<spacing w:after="0" w:line="240" w:lineRule="auto" />
+			</pPr>
+			<r>
+				<separator />
+			</r>
+		</p>
+	</footnote>
+	<footnote w:type="continuationSeparator" w:id="0">
+		<p w:rsidR="00A91858" w:rsidRDefault="00A91858" w:rsidP="00000266">
+			<pPr>
+				<spacing w:after="0" w:line="240" w:lineRule="auto" />
+			</pPr>
+			<r>
+				<continuationSeparator />
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="1">
+		<p w:rsidR="00A91858" w:rsidRPr="00000266" w:rsidRDefault="00A91858" w:rsidP="00515C8F">
+			<pPr>
+				<spacing w:after="0" />
+				<rPr>
+					<lang w:val="pl-PL" />
+				</rPr>
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="00000266">
+				<rPr>
+					<lang w:val="pl-PL" />
+				</rPr>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00116841">
+				<rPr>
+					<rStyle w:val="FootnoteZnak" />
+				</rPr>
+				<t>
+					Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="2">
+		<p w:rsidR="00A91858" w:rsidRPr="00515C8F" w:rsidRDefault="00A91858" w:rsidP="00116841">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="00515C8F">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					Zgodnie z art. 4
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00301066">
+				<t>
+					pkt
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					19 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe przez rodziców należy rozumieć także
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					prawnych opiekunów dziecka oraz osoby (podmioty) sprawujące pieczę zastępczą nad dzieckiem.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="3">
+		<p w:rsidR="00A91858" w:rsidRPr="00515C8F" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="00515C8F">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Orzeczenie wydaje się na okres wychowania przedszkolnego, roku szkolnego albo etapu edukacyjnego. W przypadku
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					ucznia szkoły ponadpodstawowej lub
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00301066">
+				<t>
+					ponadgimnazjalnej
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					termin ważności orzeczenia nie może przypadać później niż
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					koniec roku szkolnego, w roku kalendarzowym, w któ
+				</t>
+			</r>
+			<r>
+				<t>
+					rym uczeń kończy 24. rok życia.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="4">
+		<p w:rsidR="00A91858" w:rsidRPr="00515C8F" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="00515C8F">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Właściwe podkreślić; w przypadku gdy potrzeba kształcenia specjalnego wynika zarówno z występowania u ucznia
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					niepełnosprawności, jak i niedostosowania społecznego albo zagrożenia niedostosowaniem społecznym, należy podkreślić
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					występującą u ucznia niepełnosprawność lub niepełnosprawności (
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00301066">
+				<t>
+					pkt
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					1 lit.
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00301066">
+				<t>
+					a–j
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00301066">
+				<t>
+					) oraz niedostosowanie społeczne (
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00301066">
+				<t>
+					pkt
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00301066">
+				<t xml:space="preserve">
+					2)
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					albo zagrożenie niedo
+				</t>
+			</r>
+			<r>
+				<t>
+					stosowaniem społecznym (
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r>
+				<t>
+					pkt
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r>
+				<t xml:space="preserve">
+					3).
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="5">
+		<p w:rsidR="00A91858" w:rsidRPr="005C4C44" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="005C4C44">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00F77FA5">
+				<t xml:space="preserve">
+					Wskazać współwystępujące niepełnosprawności, o których mowa w lit.
+				</t>
+			</r>
+			<proofErr w:type="spellStart" />
+			<r w:rsidRPr="00F77FA5">
+				<t>
+					a–i
+				</t>
+			</r>
+			<proofErr w:type="spellEnd" />
+			<r w:rsidRPr="00F77FA5">
+				<t>
+					.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="6">
+		<p w:rsidR="00A91858" w:rsidRPr="005B54C2" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="005B54C2">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Wypełnia się w przypadku dzieck
+				</t>
+			</r>
+			<r>
+				<t>
+					a lub ucznia niepełnosprawnego.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="7">
+		<p w:rsidR="00A91858" w:rsidRPr="005B54C2" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="005B54C2">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Wypełnia się w przypadkach, o których mowa w § 18 ust. 1 rozporządzenia Ministra Edukacji Narodowej z dnia
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych
+				</t>
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					poradniach psychologiczno-ped
+				</t>
+			</r>
+			<r>
+				<t>
+					agogicznych (Dz. U. poz. 1743).
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="8">
+		<p w:rsidR="00A91858" w:rsidRPr="005B54C2" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r w:rsidRPr="005B54C2">
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Wypełnia się w przypadku wydania nowego orzeczenia o potrzebie kształcenia specjalnego.
+				</t>
+			</r>
+		</p>
+	</footnote>
+	<footnote w:id="9">
+		<p w:rsidR="00A91858" w:rsidRDefault="00A91858" w:rsidP="00CB7F45">
+			<pPr>
+				<pStyle w:val="Footnote" />
+			</pPr>
+			<r>
+				<rPr>
+					<rStyle w:val="Odwoanieprzypisudolnego" />
+				</rPr>
+				<footnoteRef />
+			</r>
+			<r>
+				<t xml:space="preserve">
+				</t>
+			</r>
+			<r w:rsidRPr="00301066">
+				<t>
+					Właściwe podkreślić.
+				</t>
+			</r>
+		</p>
+	</footnote>
+</footnotes>
