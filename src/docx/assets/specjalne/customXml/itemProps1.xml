@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<datastoreItem ds:itemID="{1E6F6314-BDC3-46C7-A322-BDB2095310DB}" xmlns:ds="http://schemas.openxmlformats.org/officeDocument/2006/customXml">
-	<schemaRefs>
-		<schemaRef ds:uri="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" />
-	</schemaRefs>
-</datastoreItem>
+<ds:datastoreItem ds:itemID="{1E6F6314-BDC3-46C7-A322-BDB2095310DB}" 
+    xmlns:ds="http://schemas.openxmlformats.org/officeDocument/2006/customXml">
+    <ds:schemaRefs>
+        <ds:schemaRef ds:uri="http://schemas.openxmlformats.org/officeDocument/2006/bibliography"/>
+    </ds:schemaRefs>
+</ds:datastoreItem>
