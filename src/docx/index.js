@@ -93,6 +93,7 @@ if (require.main === module) {
       name: "Tomasz Rzeźniczak i Adelajda Kieł"
     },
     period: "styczeń 2018 - listopad 2019",
+    reason: "ZNACZNIE_UTRUDNIAJACY",
     school:
       "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
     team: {

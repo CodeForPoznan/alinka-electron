@@ -296,18 +296,22 @@
         <w:t xml:space="preserve">ze względu na stan zdrowia ucznia </w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:strike/>
-        </w:rPr>
+        {% if reason == "ZNACZNIE_UTRUDNIAJACY" %}
+          <w:rPr>
+            <w:strike/>
+          </w:rPr>
+        {% endif %}
         <w:t>uniemożliwiający</w:t>
       </w:r>
       <w:r>
         <w:t xml:space="preserve">/ </w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:strike w:val="0"/>
-        </w:rPr>
+        {% if reason == "UNIEMOZLIWIAJACY" %}
+          <w:rPr>
+            <w:strike/>
+          </w:rPr>
+        {% endif %}
         <w:t>znacznie utrudniający</w:t>
       </w:r>
       <w:r>
