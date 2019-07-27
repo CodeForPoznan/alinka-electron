@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
-<w:document mc:Ignorable="w14 wp14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+<w:document mc:Ignorable="w14 wp14" 
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" 
+  xmlns:mv="urn:schemas-microsoft-com:mac:vml" 
+  xmlns:o="urn:schemas-microsoft-com:office:office" 
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+  xmlns:v="urn:schemas-microsoft-com:vml" 
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+  xmlns:w10="urn:schemas-microsoft-com:office:word" 
+  xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" 
+  xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" 
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+  xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" 
+  xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" 
+  xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" 
+  xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" 
+  xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
   <w:body>
     <w:p>
       <w:pPr>
@@ -14,28 +31,20 @@
       </w:r>
     </w:p>
     <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
+        <w:pPr>
+            <w:pStyle w:val="Title-uppercase"/>
+        </w:pPr>
+        <w:r>
+            <w:t>ORZECZENIE NR {{ no }}</w:t>
+        </w:r>
     </w:p>
     <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-          <w:sz w:val="24"/>
-        </w:rPr>
-        <w:t xml:space="preserve">ORZECZENIE NR {{ no }}</w:t>
-        <w:br/>
-        <w:t xml:space="preserve">o potrzebie indywidualnego nauczania</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
+        <w:pPr>
+            <w:pStyle w:val="Title-lowercase"/>
+        </w:pPr>
+        <w:r>
+            <w:t>o potrzebie indywidualnego nauczania</w:t>
+        </w:r>
     </w:p>
     <w:p>
       <w:pPr>
@@ -78,10 +87,7 @@
         <w:pStyle w:val="Header_my"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ team.name }}</w:t>
-        <w:br/>
-        <w:t>{{ team.address }}</w:t>
-        <w:br/>
+        <w:t>{{ support_center.name }}, {{ support_center.address }}, {{ support_center.post }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -92,21 +98,20 @@
         <w:t>w składzie:</w:t>
       </w:r>
     </w:p>
-    {% for member in team.members %}
-      <w:p>
-        <w:pPr>
-          <w:pStyle w:val="Small_my"/>
-        </w:pPr>
-        <w:r>
-          <w:t>{{ member.name }} - {{ member.function }}</w:t>
-        </w:r>
-      </w:p>
-    {% endfor %}
+    {% for member in supportCenter.members %}
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
+        <w:pStyle w:val="Small_my"/>
       </w:pPr>
+      <w:r>
+          {% if member == supportCenter.members[0] %}
+              <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+          {% else %}
+              <w:t>{{ member.name }} - {{ member.function }}</w:t>
+          {% endif %}
+      </w:r>
     </w:p>
+    {% endfor %}
     <w:p>
       <w:pPr>
         <w:pStyle w:val="Normal_center_my"/>
@@ -118,11 +123,6 @@
         </w:rPr>
         <w:t>orzeka o potrzebie indywidualnego nauczania</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
@@ -142,11 +142,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Text_my"/>
       </w:pPr>
       <w:r>
@@ -160,11 +155,6 @@
       <w:r>
         <w:t>(data i miejsce urodzenia ucznia)</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
@@ -184,11 +174,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Text_my"/>
       </w:pPr>
       <w:r>
@@ -202,11 +187,6 @@
       <w:r>
         <w:t>(adres zamieszkania ucznia)</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
@@ -230,11 +210,6 @@
       <w:r>
         <w:t>)</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
@@ -282,11 +257,6 @@
       <w:r>
         <w:t>: {{ period }}</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>

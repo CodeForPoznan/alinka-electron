@@ -9,89 +9,47 @@
     xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
     xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
     <w:body>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:spacing w:after="0"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Uppercase"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>SYGNATURA</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:spacing w:after="0"/>
-                <w:jc w:val="right"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="City-and-date"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Grodzisk Wlkp. 12.06.2018r.</w:t>
+            <w:r>
+                <w:t>{{ city }}, {{ date }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00116841" w:rsidRDefault="00301066" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
-                <w:spacing w:before="240" w:after="0"/>
-                <w:jc w:val="center"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Title-uppercase"/>
             </w:pPr>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>ORZECZENIE NR ......</w:t>
+            <w:r>
+                <w:t>ORZECZENIE NR {{ no }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00116841" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:jc w:val="center"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Title-lowercase"/>
             </w:pPr>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>o potrzebie kształcenia specjalnego</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="LegalBasis"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>Działając na podstawie art. 127 ust. 10 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2017 r. poz. 59 i 949),</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00425E44">
+        <w:p>
             <w:pPr>
                 <w:spacing w:after="0"/>
                 <w:jc w:val="center"/>
@@ -100,828 +58,421 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:t xml:space="preserve">na wniosek </w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="SubtitledRunZnak"/>
                 </w:rPr>
-                <w:t>Ilonyi</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rStyle w:val="SubtitledRunZnak"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rStyle w:val="SubtitledRunZnak"/>
-                </w:rPr>
-                <w:t>Stanislawa</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rStyle w:val="SubtitledRunZnak"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> Rzepeckich</w:t>
+                <w:t>{{ applicant.name }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(imię i nazwisko wnioskodawcy)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00116841" w:rsidRDefault="00301066" w:rsidP="00B63BCD">
+        <w:p>
             <w:pPr>
-                <w:spacing w:after="0"/>
-                <w:jc w:val="center"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve">Zespół Orzekający przy Publicznej Poradni Psychologiczno – Pedagogicznej w Grodzisku Wlkp., ul. </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Zbaszynska</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> 11, 62-065 Grodzisk Wlkp.</w:t>
+            <w:r>
+                <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="003B6E22" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
+            <w:r>
                 <w:t>(nazwa i adres publicznej poradni psychologiczno-pedagogicznej)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Pre-staff"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>w składzie:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00CB7F45">
+        {% for member in supportCenter.members %}
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Staff"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>mgr Karolina Modra – Przewodniczący Zespołu Orzekającego</w:t>
+            <w:r>
+                {% if member == supportCenter.members[0] %}
+                    <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+                {% else %}
+                    <w:t>{{ member.name }} - {{ member.function }}</w:t>
+                {% endif %}
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00CB7F45">
+        {% endfor %}
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Staff"/>
+                <w:pStyle w:val="sentence"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">dr Euzebia Smolarek – logopeda, </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>surdopedagog</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-        </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00CB7F45">
-            <w:pPr>
-                <w:pStyle w:val="Staff"/>
-            </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>mg</w:t>
-            </w:r>
-            <w:r w:rsidR="00116841">
-                <w:t>r Tadeusz Witkowski – psycholog</w:t>
-            </w:r>
-        </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00F77FA5" w:rsidRDefault="00301066" w:rsidP="00CB7F45">
-            <w:pPr>
-                <w:pStyle w:val="Staff"/>
-            </w:pPr>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t xml:space="preserve">mgr </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t>Eleanor</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t>Rigby</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t xml:space="preserve"> – pedagog, </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:t>tyflopedagog</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-        </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00CB7F45">
-            <w:pPr>
-                <w:pStyle w:val="Staff"/>
-            </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">lek. </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Stanisaw</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> Lewicki – lekarz pediatra</w:t>
-            </w:r>
-        </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00116841" w:rsidRDefault="00301066" w:rsidP="00B63BCD">
-            <w:pPr>
-                <w:spacing w:before="240" w:after="0"/>
-                <w:jc w:val="center"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="00116841">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:sz w:val="24"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>orzeka o potrzebie kształcenia specjalnego</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00B63BCD" w:rsidRPr="00425E44" w:rsidRDefault="00B63BCD" w:rsidP="00425E44">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">Alojzy </w:t>
+            <w:r>
+                <w:t>{{ child.name }}</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Bombel</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(imię/imiona i nazwisko dziecka lub ucznia)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00B63BCD" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>12.03.2001r., Grodzisk Wlkp.</w:t>
+            <w:r>
+                <w:t>{{ child.birthDate }}r., {{ child.birthPlace }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(data i miejsce urodzenia dziecka lub ucznia)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00B63BCD" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>789878125121</w:t>
+            <w:r>
+                <w:t>{{ child.pesel }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(numer PESEL dziecka lub ucznia, a w przypadku braku numeru PESEL – seria i numer dokumentu potwierdzającego jego tożsamość)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00B63BCD" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Ul. Krawiecka 12/8, Piaski Wielkie, 62-065 Grodzisk Wlkp.</w:t>
+            <w:r>
+                <w:t>{{ child.address }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(adres zamieszkania dziecka lub ucznia)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00000266" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Zespol</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> Szkol nr 3, </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Szkola</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> Podstawowa nr 8, ul. Krotka 8, 63-543 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Elblag</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">, </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>zawod</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>: krawiec</w:t>
+            <w:r>
+                <w:t>{{ school }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">(nazwa i adres przedszkola, innej formy wychowania przedszkolnego, szkoły lub ośrodka, o którym mowa w art. 2 </w:t>
+            <w:r>
+                <w:t>(nazwa i adres przedszkola, innej formy wychowania przedszkolnego, szkoły lub ośrodka, o którym mowa w art. 2 pkt 7 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, a w przypadku ucznia – także oznaczenie oddziału w szkole oraz nazwa zawodu</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 7 ustawy z dnia</w:t>
-            </w:r>
-            <w:r w:rsidR="00000266" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>14 grudnia 2016 r. – Prawo oświatowe, a w przypadku ucznia – także oznaczenie oddziału w szkole oraz nazwa zawodu</w:t>
-            </w:r>
-            <w:r w:rsidR="00000266" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
                 </w:rPr>
                 <w:footnoteReference w:id="1"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00116841">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="SubtitledRun"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">Ilona i </w:t>
+            <w:r>
+                <w:t>{{ parents.name }}, {{ parents.address }}</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Stanislaw</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> Rzepeccy</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">, al. </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t>Zachodzacego</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t>Slonca</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 14, 65-444 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00425E44">
-                <w:t>Grywald</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00F77FA5" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Subtitle1"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(imiona i nazwiska rodziców</w:t>
             </w:r>
-            <w:r w:rsidR="00515C8F" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
                 </w:rPr>
                 <w:footnoteReference w:id="2"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t xml:space="preserve"> oraz adres ich zamieszkania)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00F77FA5" w:rsidRDefault="00F77FA5">
-            <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:sz w:val="16"/>
-                    <w:szCs w:val="16"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="00F77FA5">
-                <w:rPr>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+        <w:p>
+            <w:r>
                 <w:br w:type="page"/>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="time-span"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:lastRenderedPageBreak/>
                 <w:t>na okres</w:t>
             </w:r>
-            <w:r w:rsidR="00515C8F" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:footnoteReference w:id="3"/>
             </w:r>
-            <w:r w:rsidR="00515C8F" w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t xml:space="preserve"></w:t>
             </w:r>
-            <w:r w:rsidR="00515C8F" w:rsidRPr="00CB7F45">
+            <w:r>
                 <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:b/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t>pierwszego etapu edukacyjnego</w:t>
+                <w:t>: {{ period }}</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Pre-reason"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>ze względu na</w:t>
             </w:r>
-            <w:r w:rsidR="00515C8F" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:footnoteReference w:id="4"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>:</w:t>
-            </w:r>
-            <w:r w:rsidR="00CB7F45">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
+            <w:r>
+                <w:t xml:space="preserve">: </w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
-                <w:numPr>
-                    <w:ilvl w:val="0"/>
-                    <w:numId w:val="1"/>
-                </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Reason-list"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niepełnosprawność dziecka lub ucznia:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niesłyszące</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>słabosłyszące</w:t>
             </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niewidzące</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>słabowidzące</w:t>
             </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niepełnosprawne ruchowo, w tym z afazją</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="00515C8F" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niepełnosprawne intelektualnie w stopniu lekkim</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00515C8F" w:rsidRPr="00425E44" w:rsidRDefault="004C1E90" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niepełnosprawne intelektualnie w stopniu umiarkowanym</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="004C1E90" w:rsidRPr="00425E44" w:rsidRDefault="004C1E90" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niepełnosprawne intelektualnie w stopniu znacznym</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00425E44" w:rsidRDefault="005C4C44" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve">z autyzmem, w tym z zespołem </w:t>
+            <w:r>
+                <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Aspergera</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00C33E2C" w:rsidRDefault="005C4C44" w:rsidP="00515C8F">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
+                <w:pStyle w:val="Reason-list"/>
                 <w:numPr>
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
                 <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:u w:val="single"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00C33E2C">
+            <w:r>
                 <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:u w:val="single"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:t>z niepełnosprawnością sprzężoną</w:t>
             </w:r>
-            <w:r w:rsidRPr="00C33E2C">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:u w:val="single"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:footnoteReference w:id="5"/>
             </w:r>
-            <w:r w:rsidR="00F77FA5" w:rsidRPr="00C33E2C">
+            <w:r>
                 <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:u w:val="single"/>
-                    <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:t>: niewidzące, niepełnosprawne ruchowo</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00425E44" w:rsidRDefault="005C4C44" w:rsidP="005C4C44">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
-                <w:numPr>
-                    <w:ilvl w:val="0"/>
-                    <w:numId w:val="1"/>
-                </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Reason-list"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>niedostosowanie społeczne</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00425E44" w:rsidRDefault="005C4C44" w:rsidP="005C4C44">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Akapitzlist"/>
-                <w:numPr>
-                    <w:ilvl w:val="0"/>
-                    <w:numId w:val="1"/>
-                </w:numPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Reason-list"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>zagrożenie niedostosowaniem społecznym.</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00EE3829" w:rsidRDefault="00301066" w:rsidP="00EE3829">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Section"/>
             </w:pPr>
-            <w:r w:rsidRPr="00EE3829">
+            <w:r>
                 <w:t>Diagnoza</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="007249DC" w:rsidRDefault="00301066" w:rsidP="007249DC">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Section-desc"/>
             </w:pPr>
-            <w:r w:rsidRPr="007249DC">
-                <w:t>Zespół Orzekający przedstawia diagnozę funkcjonowania dziecka lub ucznia,</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="007249DC">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="007249DC">
-                <w:t>z uwzględnieniem potencjału rozwojowego oraz mocnych stron i uzdolnień dziecka lub</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="007249DC">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="007249DC">
-                <w:t>ucznia oraz występujących w środowisku nauczania i wychowania barier i ograniczeń</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="007249DC">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="007249DC">
-                <w:t>utrudniających jego funkcjonowanie:</w:t>
+            <w:r>
+                <w:t>Zespół Orzekający przedstawia diagnozę funkcjonowania dziecka lub ucznia, z uwzględnieniem potencjału rozwojowego oraz mocnych stron i uzdolnień dziecka lub ucznia oraz występujących w środowisku nauczania i wychowania barier i ograniczeń utrudniających jego funkcjonowanie:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00425E44" w:rsidRDefault="005C4C44" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
@@ -929,60 +480,31 @@
                 <w:t>Tekst diagnozy.</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00EE3829">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Section"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>Zalecenia</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="007249DC">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Section-desc"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>Zespół Orzekający zaleca:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005C4C44" w:rsidRPr="00A91858" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00A91858">
-                <w:t>(należy określić zalecane warunki i formy wsparcia umożliwiające realizację indywidualnych potrzeb rozwojowych i edukacyjnych</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="00A91858">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:t>dziecka lub ucznia, w tym warunki rozwijania jego potencjalnych możliwości i mocnych stron, wzmacniania aktywności i uczestnictwa</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="00A91858">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:t>dziecka lub ucznia w życiu przedszkola, innej formy wychowania przedszkolnego, szkoły, ośrodka lub placówki, o których mowa w art. 2</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="00A91858">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00A91858">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00A91858">
-                <w:t xml:space="preserve"> 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, oraz jeżeli zachodzi potrzeba indywidualnego wsparcia dziecka lub ucznia ze</w:t>
-            </w:r>
-            <w:r w:rsidR="005C4C44" w:rsidRPr="00A91858">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:t>strony dodatkowo zatrudnionej kadry – zakres tego wsparcia, wraz z uzasadnieniem)</w:t>
+            <w:r>
+                <w:t>(należy określić zalecane warunki i formy wsparcia umożliwiające realizację indywidualnych potrzeb rozwojowych i edukacyjnych dziecka lub ucznia, w tym warunki rozwijania jego potencjalnych możliwości i mocnych stron, wzmacniania aktywności i uczestnictwa dziecka lub ucznia w życiu przedszkola, innej formy wychowania przedszkolnego, szkoły, ośrodka lub placówki, o których mowa w art. 2 pkt 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, oraz jeżeli zachodzi potrzeba indywidualnego wsparcia dziecka lub ucznia ze strony dodatkowo zatrudnionej kadry – zakres tego wsparcia, wraz z uzasadnieniem)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -990,44 +512,27 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005C4C44" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">(należy określić zalecane cele rozwojowe i terapeutyczne do realizacji podczas zajęć wychowania przedszkolnego lub zajęć edukacyjnych, zajęć rewalidacyjnych, socjoterapeutycznych i resocjalizacyjnych oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej dziecku lub uczniowi i, w zależności od potrzeb, jego rodzicom, przez przedszkole, inną formę wychowania przedszkolnego, szkołę, ośrodek lub placówkę, o których mowa w art. 2 </w:t>
+            <w:r>
+                <w:t xml:space="preserve">(należy określić zalecane cele rozwojowe i terapeutyczne do realizacji podczas zajęć wychowania przedszkolnego lub zajęć edukacyjnych, zajęć rewalidacyjnych, socjoterapeutycznych i resocjalizacyjnych oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej dziecku lub uczniowi i, w zależności od potrzeb, jego rodzicom, przez przedszkole, inną formę wychowania przedszkolnego, szkołę, ośrodek lub placówkę, o których mowa w art. 2 pkt 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, a </w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, a </w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:lastRenderedPageBreak/>
                 <w:t>w przypadku dzieci i uczniów niepełnosprawnych – również zalecanych rodzajów zajęć rewalidacyjnych, wraz z uzasadnieniem)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1035,38 +540,23 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(należy określić wszystkie możliwe formy kształcenia specjalnego, poczynając od najkorzystniejszej dla dziecka lub ucznia, według</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>Zespołu Orzekającego, formy kształcenia specjalnego, wraz z uzasadnieniem)</w:t>
+            <w:r>
+                <w:t>(należy określić wszystkie możliwe formy kształcenia specjalnego, poczynając od najkorzystniejszej dla dziecka lub ucznia, według Zespołu Orzekającego, formy kształcenia specjalnego, wraz z uzasadnieniem)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1074,44 +564,23 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(należy określić potrzebę realizacji wybranych zajęć wychowania przedszkolnego lub zajęć edukacyjnych indywidualnie z dzieckiem lub</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>uczniem lub w grupie liczącej do 5 dzieci lub uczniów – w przypadku dziecka lub ucznia napotykającego na trudności w funkcjonowaniu</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>wspólnie z oddziałem przedszkolnym lub szkolnym, wraz z uzasadnieniem)</w:t>
+            <w:r>
+                <w:t>(należy określić potrzebę realizacji wybranych zajęć wychowania przedszkolnego lub zajęć edukacyjnych indywidualnie z dzieckiem lub uczniem lub w grupie liczącej do 5 dzieci lub uczniów – w przypadku dziecka lub ucznia napotykającego na trudności w funkcjonowaniu wspólnie z oddziałem przedszkolnym lub szkolnym, wraz z uzasadnieniem)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1119,52 +588,23 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(należy określić zalecane działania ukierunkowane na poprawę funkcjonowania dziecka lub ucznia i wzmacnianie jego uczestnictwa w</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">życiu przedszkola, innej formy wychowania przedszkolnego, szkoły, ośrodka lub placówki, o których mowa w art. 2 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 7 i 8 ustawy z dnia</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>14 grudnia 2016 r. – Prawo oświatowe, oraz działania wspierające rodziców dziecka lub ucznia, wraz z uzasadnieniem)</w:t>
+            <w:r>
+                <w:t>(należy określić zalecane działania ukierunkowane na poprawę funkcjonowania dziecka lub ucznia i wzmacnianie jego uczestnictwa w życiu przedszkola, innej formy wychowania przedszkolnego, szkoły, ośrodka lub placówki, o których mowa w art. 2 pkt 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, oraz działania wspierające rodziców dziecka lub ucznia, wraz z uzasadnieniem)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1172,47 +612,32 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(należy określić, w zależności od potrzeb dziecka lub ucznia niepełnosprawnego, niezbędny w procesie kształcenia sprzęt specjalistyczny</w:t>
+            <w:r>
+                <w:t>(należy określić, w zależności od potrzeb dziecka lub ucznia niepełnosprawnego, niezbędny w procesie kształcenia sprzęt specjalistyczny i środki dydaktyczne, w tym z wykorzystaniem technologii informacyjno-komunikacyjnych, wraz z uzasadnieniem</w:t>
             </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>i środki dydaktyczne, w tym z wykorzystaniem technologii informacyjno-komunikacyjnych, wraz z uzasadnieniem</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
                 </w:rPr>
                 <w:footnoteReference w:id="6"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1220,60 +645,23 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Recommend"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(należy określić zalecane sposoby oceny efektów działań podjętych przez przedszkole, inną formę wychowania przedszkolnego, szkołę,</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">ośrodek lub placówkę, o których mowa w art. 2 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, w celu realizacji zaleceń, o</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve">których mowa w </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>pkt</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"> 1–6)</w:t>
+            <w:r>
+                <w:t>(należy określić zalecane sposoby oceny efektów działań podjętych przez przedszkole, inną formę wychowania przedszkolnego, szkołę, ośrodek lub placówkę, o których mowa w art. 2 pkt 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, w celu realizacji zaleceń, o których mowa w pkt 1–6)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="005B54C2" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="005B54C2">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1281,46 +669,31 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Tekst zalecen</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00EE3829">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Section"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>Dodatkowe informacje</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="007249DC">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Podtytu2"/>
+                <w:pStyle w:val="Additional-info-desc"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>(w zależności od potrzeb podaje się dodatkowe istotne informacje o dziecku lub uczniu, w szczególności o wspomagającej lub</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:t>alternatywnej metodzie komunikacji (AAC), którą posługuje się dziecko lub uczeń)</w:t>
+            <w:r>
+                <w:t>(w zależności od potrzeb podaje się dodatkowe istotne informacje o dziecku lub uczniu, w szczególności o wspomagającej lub alternatywnej metodzie komunikacji (AAC), którą posługuje się dziecko lub uczeń)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="005B54C2" w:rsidP="007249DC">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1328,24 +701,15 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t xml:space="preserve">Tekst </w:t>
+                <w:t>Opis</w:t>
             </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>zalecen</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="004C41ED">
+        <w:p>
             <w:pPr>
                 <w:jc w:val="both"/>
                 <w:rPr>
@@ -1353,42 +717,14 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-                <w:t>W przypadku wydania nowego orzeczenia o potrzebie kształcenia specjalnego należy wskazać</w:t>
+                <w:t>W przypadku wydania nowego orzeczenia o potrzebie kształcenia specjalnego należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
             </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
-            </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1396,7 +732,7 @@
                 </w:rPr>
                 <w:footnoteReference w:id="7"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
@@ -1404,21 +740,21 @@
                 <w:t>:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
                 <w:t>Orzeczenie uchyla</w:t>
             </w:r>
-            <w:r w:rsidR="005B54C2" w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1426,7 +762,7 @@
                 </w:rPr>
                 <w:footnoteReference w:id="8"/>
             </w:r>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
@@ -1434,92 +770,42 @@
                 <w:t>:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00C33E2C" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Revocation"/>
             </w:pPr>
-            <w:r w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:lastRenderedPageBreak/>
-                <w:t>1) orzeczenie nr ............ o potrzebie kształcenia specjalnego z dnia ......................wydane przez</w:t>
-            </w:r>
-            <w:r w:rsidR="004C41ED" w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>....................................................................</w:t>
+                <w:t>1) orzeczenie nr ............ o potrzebie kształcenia specjalnego z dnia ......................wydane przez ....................................................................</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00C33E2C" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Revocation"/>
             </w:pPr>
-            <w:r w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>2) orzeczenie nr .............. o potrzebie zajęć rewalidacyjno-wychowawczych zespołowych/</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00C33E2C" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Revocation"/>
             </w:pPr>
-            <w:r w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t>indywidualnych</w:t>
             </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00C33E2C">
+            <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
+                    <w:b w:val="0"/>
                 </w:rPr>
                 <w:footnoteReference w:id="9"/>
             </w:r>
-            <w:r w:rsidRPr="00C33E2C">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+            <w:r>
                 <w:t xml:space="preserve"> z dnia ................................. wydane przez ........................................</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00A91858" w:rsidRPr="00425E44" w:rsidRDefault="00A91858" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1527,221 +813,15 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00A91858" w:rsidRDefault="00301066" w:rsidP="00A91858">
+        <w:p>
             <w:pPr>
-                <w:jc w:val="both"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Information"/>
             </w:pPr>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Od</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>niniejszego</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>orzeczenia</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>przysługuje</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>odwołanie</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>do</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Kuratora</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Oświaty</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>w</w:t>
-            </w:r>
-            <w:r w:rsidR="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> Poznaniu, ul. </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidR="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Kosciuszki</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidR="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> 38, 64-200 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidR="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Poznan</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidR="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>,</w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> za pośrednictwem Zespołu</w:t>
-            </w:r>
-            <w:r w:rsidR="00AF34E9" w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidRPr="00A91858">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
+            <w:r>
+                <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w Poznaniu, ul. Kosciuszki 38, 64-200 Poznan, za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00AF34E9" w:rsidRPr="00425E44" w:rsidRDefault="00AF34E9" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1749,7 +829,7 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        <w:p w:rsidR="00AF34E9" w:rsidRPr="00425E44" w:rsidRDefault="00AF34E9" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1757,16 +837,16 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
                 <w:pStyle w:val="Subtitle1"/>
                 <w:jc w:val="right"/>
             </w:pPr>
-            <w:r w:rsidRPr="00425E44">
+            <w:r>
                 <w:t>(podpis Przewodniczącego Zespołu Orzekającego)</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="003B6E22" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -1774,7 +854,7 @@
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
             </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
+            <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:b/>
@@ -1783,165 +863,62 @@
                 <w:t>Otrzymuje:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="00301066" w:rsidP="00301066">
+        <w:p>
             <w:pPr>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
                     <w:lang w:val="pl-PL"/>
                 </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="00425E44">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Wnioskodawca</w:t>
-            </w:r>
-            <w:r w:rsidR="004C41ED">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>:</w:t>
-            </w:r>
-        </w:p>
-        <w:p w:rsidR="00AF34E9" w:rsidRPr="003B6E22" w:rsidRDefault="00AF34E9" w:rsidP="00AF34E9">
-            <w:pPr>
-                <w:spacing w:after="0"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve">Ilona i </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Stanislaw</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> Rzepeccy </w:t>
-            </w:r>
-        </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="00425E44" w:rsidRDefault="003B6E22" w:rsidP="003B6E22">
-            <w:pPr>
-                <w:pStyle w:val="Subtitle1"/>
-                <w:spacing w:after="240"/>
             </w:pPr>
             <w:r>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:r w:rsidR="00301066" w:rsidRPr="00425E44">
-                <w:t>(imię i nazwisko)</w:t>
+                <w:rPr>
+                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+                    <w:lang w:val="pl-PL"/>
+                </w:rPr>
+                <w:t>Wnioskodawca:</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00AF34E9" w:rsidRPr="003B6E22" w:rsidRDefault="00AF34E9" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:spacing w:after="0"/>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
+                <w:pStyle w:val="Recivers-main"/>
             </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve">al. </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Zachodzacego</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Slonca</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"> 14, 65-444 </w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t>Grywald</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r w:rsidRPr="003B6E22">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-                    <w:b/>
-                    <w:lang w:val="pl-PL"/>
-                </w:rPr>
-                <w:t xml:space="preserve"></w:t>
+            <w:r>
+                <w:t xml:space="preserve">Ilona i Stanislaw Rzepeccy </w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00301066" w:rsidRPr="003B6E22" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Subtitle1"/>
+                <w:pStyle w:val="Subtitle-end"/>
             </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
+            <w:r>
+                <w:t xml:space="preserve">             (imię i nazwisko)</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Recivers-main"/>
+            </w:pPr>
+            <w:r>
+                <w:t xml:space="preserve">al. Zachodzacego Slonca 14, 65-444 Grywald </w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Subtitle-end"/>
+            </w:pPr>
+            <w:r>
                 <w:t>(adres zamieszkania albo adres do korespondencji</w:t>
             </w:r>
         </w:p>
-        <w:p w:rsidR="00000266" w:rsidRPr="003B6E22" w:rsidRDefault="00301066" w:rsidP="003B6E22">
+        <w:p>
             <w:pPr>
-                <w:pStyle w:val="Subtitle1"/>
+                <w:pStyle w:val="Subtitle-end"/>
             </w:pPr>
-            <w:r w:rsidRPr="003B6E22">
+            <w:r>
                 <w:t>– jeżeli jest inny niż adres zamieszkania)</w:t>
             </w:r>
         </w:p>
-        <w:sectPr w:rsidR="00000266" w:rsidRPr="003B6E22" w:rsidSect="005C4C44">
+        <w:sectPr>
             <w:pgSz w:w="12240" w:h="15840"/>
             <w:pgMar w:top="990" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
             <w:cols w:space="720"/>

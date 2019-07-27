@@ -525,6 +525,32 @@
       <w:szCs w:val="24"/>
     </w:rPr>
   </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Title-uppercase">
+    <w:name w:val="Title-uppercase"/>
+    <w:link w:val="Title-uppercaseZnak"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:spacing w:before="240" w:after="0"/>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:b/>
+      <w:sz w:val="24"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="Title-uppercaseZnak">
+    <w:name w:val="Title-uppercase Znak"/>
+    <w:basedOn w:val="Domylnaczcionkaakapitu"/>
+    <w:link w:val="Title-uppercase"/>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:b/>
+      <w:sz w:val="24"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
   <w:style w:styleId="ListParagraph" w:type="paragraph">
     <w:name w:val="List Paragraph"/>
     <w:basedOn w:val="Normal"/>

@@ -95,7 +95,8 @@ module.exports = {
 };
 
 if (require.main === module) {
-  generateDocument("SPECJALNE", {
+  console.log(process.argv[2])
+  generateDocument(process.argv[2], {
     applicant: {
       address: "Wielka 4/6, 55-789 Studnia",
       name: "Tomasz Rzeźniczak i Adelajda Kieł"
@@ -117,18 +118,15 @@ if (require.main === module) {
     period: "styczeń 2018 - listopad 2019",
     school:
       "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
-    team: {
+    supportCenter: {
       address: "ul. Zbąszyńska 11",
       members: [
         { name: "Antoni Stąsz-Lebieź", function: "przewodniczący zespołu" },
         { name: "mgr Leonia Witek-Konuś", function: "psycholog, tyflopedagog" },
-        {
-          name: "mgr Eleonora Roseveelt",
-          function: "socjoterapeuta, tyflopedagog"
-        }
+        { name: "mgr Eleonora Roseveelt", function: "socjoterapeuta, tyflopedagog"}
       ],
-      name:
-        "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp."
+      name: "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+      post: "62-065 Grodzisk Wlkp."
     }
   })
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
