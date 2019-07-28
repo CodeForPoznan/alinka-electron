@@ -145,5 +145,4 @@ if (require.main === module) {
   generateDocument(process.argv[2], commonData)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream("output.docx"));
-    console.log(commonData);
 }
