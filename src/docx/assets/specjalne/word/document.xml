@@ -303,6 +303,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "NIESLYSZACE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niesłyszące</w:t>
             </w:r>
         </w:p>
@@ -315,6 +320,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "SLABOSLYSZACE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>słabosłyszące</w:t>
             </w:r>
         </w:p>
@@ -327,6 +337,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "NIEWIDZACE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niewidzące</w:t>
             </w:r>
         </w:p>
@@ -339,6 +354,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "SLABOWIDZACE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>słabowidzące</w:t>
             </w:r>
         </w:p>
@@ -351,6 +371,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "RUCHOWA" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niepełnosprawne ruchowo, w tym z afazją</w:t>
             </w:r>
         </w:p>
@@ -363,6 +388,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "LEKKIE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niepełnosprawne intelektualnie w stopniu lekkim</w:t>
             </w:r>
         </w:p>
@@ -375,6 +405,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "UMIARKOWANE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niepełnosprawne intelektualnie w stopniu umiarkowanym</w:t>
             </w:r>
         </w:p>
@@ -387,6 +422,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "ZNACZNE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niepełnosprawne intelektualnie w stopniu znacznym</w:t>
             </w:r>
         </w:p>
@@ -399,6 +439,11 @@
                 </w:numPr>
             </w:pPr>
             <w:r>
+                {% if reason == "AUTYZM" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
             </w:r>
         </w:p>
@@ -409,35 +454,51 @@
                     <w:ilvl w:val="1"/>
                     <w:numId w:val="1"/>
                 </w:numPr>
-                <w:rPr>
-                    <w:u w:val="single"/>
-                </w:rPr>
             </w:pPr>
             <w:r>
+                {% if reason == "SPRZEZONA" %}
                 <w:rPr>
                     <w:u w:val="single"/>
                 </w:rPr>
+                {% endif %}
                 <w:t>z niepełnosprawnością sprzężoną</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
                     <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+                    {% if reason == "SPRZEZONA" %}
                     <w:u w:val="single"/>
+                    {% endif %}
                 </w:rPr>
                 <w:footnoteReference w:id="5"/>
             </w:r>
+                        <w:r>
+                {% if reason == "SPRZEZONA" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
+                <w:t>: </w:t>
+            </w:r>
+            {% if reason == "SPRZEZONA" %}
             <w:r>
                 <w:rPr>
                     <w:u w:val="single"/>
                 </w:rPr>
-                <w:t>: niewidzące, niepełnosprawne ruchowo</w:t>
+                <w:t>{{ multipleDisability.join() }}</w:t>
             </w:r>
+            {% endif %}
         </w:p>
         <w:p>
             <w:pPr>
                 <w:pStyle w:val="Reason-list"/>
             </w:pPr>
             <w:r>
+                {% if reason == "NIEDOSTOSOWANIE" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>niedostosowanie społeczne</w:t>
             </w:r>
         </w:p>
@@ -446,6 +507,11 @@
                 <w:pStyle w:val="Reason-list"/>
             </w:pPr>
             <w:r>
+                {% if reason == "ZAGROZENIE_NIEDOSTOSOWANIEM" %}
+                <w:rPr>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                {% endif %}
                 <w:t>zagrożenie niedostosowaniem społecznym.</w:t>
             </w:r>
         </w:p>
@@ -818,7 +884,7 @@
                 <w:pStyle w:val="Information"/>
             </w:pPr>
             <w:r>
-                <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w Poznaniu, ul. Kosciuszki 38, 64-200 Poznan, za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
+                <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w {{ kurator }}, za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
             </w:r>
         </w:p>
         <w:p>
@@ -883,7 +949,7 @@
                 <w:pStyle w:val="Recivers-main"/>
             </w:pPr>
             <w:r>
-                <w:t xml:space="preserve">Ilona i Stanislaw Rzepeccy </w:t>
+                <w:t xml:space="preserve">{{ applicant.name }} </w:t>
             </w:r>
         </w:p>
         <w:p>
@@ -899,7 +965,7 @@
                 <w:pStyle w:val="Recivers-main"/>
             </w:pPr>
             <w:r>
-                <w:t xml:space="preserve">al. Zachodzacego Slonca 14, 65-444 Grywald </w:t>
+                <w:t xml:space="preserve">{{ applicant.address }}</w:t>
             </w:r>
         </w:p>
         <w:p>

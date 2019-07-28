@@ -31,20 +31,20 @@
       </w:r>
     </w:p>
     <w:p>
-        <w:pPr>
-            <w:pStyle w:val="Title-uppercase"/>
-        </w:pPr>
-        <w:r>
-            <w:t>ORZECZENIE NR {{ no }}</w:t>
-        </w:r>
+      <w:pPr>
+        <w:pStyle w:val="Title-uppercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>ORZECZENIE NR {{ no }}</w:t>
+      </w:r>
     </w:p>
     <w:p>
-        <w:pPr>
-            <w:pStyle w:val="Title-lowercase"/>
-        </w:pPr>
-        <w:r>
-            <w:t>o potrzebie indywidualnego nauczania</w:t>
-        </w:r>
+      <w:pPr>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>o potrzebie indywidualnego nauczania</w:t>
+      </w:r>
     </w:p>
     <w:p>
       <w:pPr>
@@ -105,9 +105,9 @@
       </w:pPr>
       <w:r>
           {% if member == supportCenter.members[0] %}
-              <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+        <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
           {% else %}
-              <w:t>{{ member.name }} - {{ member.function }}</w:t>
+        <w:t>{{ member.name }} - {{ member.function }}</w:t>
           {% endif %}
       </w:r>
     </w:p>
@@ -235,9 +235,9 @@
       </w:r>
     </w:p>
     <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
     </w:p>
     <w:p>
       <w:pPr>
@@ -267,9 +267,9 @@
       </w:r>
       <w:r>
         {% if reason == "ZNACZNIE_UTRUDNIAJACY" %}
-          <w:rPr>
-            <w:strike/>
-          </w:rPr>
+        <w:rPr>
+          <w:strike/>
+        </w:rPr>
         {% endif %}
         <w:t>uniemożliwiający</w:t>
       </w:r>
@@ -278,9 +278,9 @@
       </w:r>
       <w:r>
         {% if reason == "UNIEMOZLIWIAJACY" %}
-          <w:rPr>
-            <w:strike/>
-          </w:rPr>
+        <w:rPr>
+          <w:strike/>
+        </w:rPr>
         {% endif %}
         <w:t>znacznie utrudniający</w:t>
       </w:r>
@@ -331,11 +331,6 @@
       <w:pPr>
         <w:pStyle w:val="Normal_center_my"/>
       </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
       <w:r>
         <w:rPr>
           <w:b/>
@@ -375,11 +370,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Normal_justify_my"/>
       </w:pPr>
       <w:r>
@@ -397,11 +387,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Normal_justify_my"/>
       </w:pPr>
       <w:r>
@@ -416,11 +401,6 @@
         </w:rPr>
         <w:t>(należy określić zalecane, w zależności od potrzeb, cele rozwojowe i terapeutyczne do realizacji podczas zajęć indywidualnego nauczania oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej uczniowi i, w zależności od potrzeb, jego rodzicom, przez szkołę oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, wraz z uzasadnieniem)</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
@@ -448,11 +428,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Normal_justify_my"/>
       </w:pPr>
       <w:r>
@@ -472,11 +447,6 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
-    </w:p>
-    <w:p>
-      <w:pPr>
         <w:pStyle w:val="Normal_bold_my"/>
       </w:pPr>
       <w:r>
@@ -490,13 +460,8 @@
         <w:t>.</w:t>
         <w:br/>
         <w:br/>
-        <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w ........................za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
+        <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty w {{ Kurator }} za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
       </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_center_my"/>
-      </w:pPr>
     </w:p>
     <w:p>
       <w:pPr>
