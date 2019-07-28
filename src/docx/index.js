@@ -52,7 +52,7 @@ const ASSETS_LIST = {
   }
 };
 
-function generateDocument(type="INDYWIDUALNE", data) {
+function generateDocument(type = "INDYWIDUALNE", data) {
   const zip = new JSZip();
 
   for (let staticPath of ASSETS_LIST[type].statics) {
@@ -102,9 +102,12 @@ var specificData = {
   SPECJALNE: {
     period: "pierwszy etap edukacyjny",
     reason: "SPRZEZONA",
-    multipleDisability: ["niesłyszące", "niepełnosprawne intelektualnie w stopniu znacznym"]
+    multipleDisability: [
+      "niesłyszące",
+      "niepełnosprawne intelektualnie w stopniu znacznym"
+    ]
   }
-}
+};
 
 var commonData = {
   applicant: {
@@ -130,18 +133,28 @@ var commonData = {
   supportCenter: {
     address: "ul. Zbąszyńska 11",
     members: [
-      { name: "Antoni Stąsz-Lebieź", function: "przewodniczący zespołu" },
-      { name: "mgr Leonia Witek-Konuś", function: "psycholog, tyflopedagog" },
-      { name: "mgr Eleonora Roseveelt", function: "socjoterapeuta, tyflopedagog"}
+      {
+        name: "Antoni Stąsz-Lebieź",
+        function: "przewodniczący zespołu"
+      },
+      {
+        name: "mgr Leonia Witek-Konuś",
+        function: "psycholog, tyflopedagog"
+      },
+      {
+        name: "mgr Eleonora Roseveelt",
+        function: "socjoterapeuta, tyflopedagog"
+      }
     ],
-    name: "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+    name:
+      "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
     post: "62-065 Grodzisk Wlkp."
   },
   kurator: "w Poznaniu, ul Kościuszki 38, 64-400 Poznań"
-}
+};
 
 if (require.main === module) {
-  Object.assign(commonData, specificData[process.argv[2]])
+  Object.assign(commonData, specificData[process.argv[2]]);
   generateDocument(process.argv[2], commonData)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream("output.docx"));
