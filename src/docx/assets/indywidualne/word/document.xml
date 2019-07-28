@@ -87,7 +87,7 @@
         <w:pStyle w:val="Header_my"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ support_center.name }}, {{ support_center.address }}, {{ support_center.post }}</w:t>
+        <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -296,11 +296,6 @@
       </w:r>
       <w:r>
         <w:t>uczęszczanie do szkoły.</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:r>
-        <w:br w:type="page"/>
       </w:r>
     </w:p>
     <w:p>
