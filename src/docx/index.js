@@ -154,8 +154,11 @@ var commonData = {
 };
 
 if (require.main === module) {
-  Object.assign(commonData, specificData[process.argv[2]]);
-  generateDocument(process.argv[2], commonData)
+  const documentType = process.argv[2];
+
+  Object.assign(commonData, specificData[documentType]);
+
+  generateDocument(documentType, commonData)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream("output.docx"));
 }
