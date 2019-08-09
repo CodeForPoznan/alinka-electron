@@ -49,6 +49,7 @@ const ASSETS_LIST = {
       "[Content_Types].xml"
     ],
     templates: ["word/document.xml"]
+<<<<<<< HEAD
   },
   INDYWIDUALNE_ROCZNE: {
     prefix: "indywidualne_roczne",
@@ -71,6 +72,8 @@ const ASSETS_LIST = {
       "[Content_Types].xml"
     ],
     templates: ["word/document.xml"]
+=======
+>>>>>>> master
   }
 };
 
@@ -121,10 +124,13 @@ var specificData = {
     period: "styczeń 2018 - listopad 2019",
     reason: "ZNACZNIE_UTRUDNIAJACY"
   },
+<<<<<<< HEAD
   INDYWIDUALNE_ROCZNE: {
     period: "12.05.2018 - 25.12.2019",
     reason: "UNIEMOZLIWIAJACY"
   },
+=======
+>>>>>>> master
   SPECJALNE: {
     period: "pierwszy etap edukacyjny",
     reason: "SPRZEZONA",
