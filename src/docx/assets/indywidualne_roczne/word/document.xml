@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:document 
-	xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-	xmlns:o="urn:schemas-microsoft-com:office:office" 
-	xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
-	xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
-	xmlns:v="urn:schemas-microsoft-com:vml" 
-	xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
-	xmlns:w10="urn:schemas-microsoft-com:office:word" 
-	xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
-	xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
-	<w:body>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>SYGNATURA</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="City-and-date"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ city }}, {{ date }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Title-uppercase"/>
-			</w:pPr>
-			<w:r>
-				<w:t>ORZECZENIE NR {{ no }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Title-lowercase"/>
-			</w:pPr>
-			<w:r>
-				<w:t>o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="LegalBasis"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Działając na podstawie art. 127 ust. 10 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2017 r. poz. 59 i 949),</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
+<w:document xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:o="urn:schemas-microsoft-com:office:office" 
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+  xmlns:v="urn:schemas-microsoft-com:vml" 
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+  xmlns:w10="urn:schemas-microsoft-com:office:word" 
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+  xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>SYGNATURA</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="City-and-date"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ city }}, {{ date }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Title-uppercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>ORZECZENIE NR {{ no }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="LegalBasis"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Działając na podstawie art. 127 ust. 10 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2017 r. poz. 59 i 949),</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
       <w:pPr>
         <w:spacing w:after="0"/>
         <w:jc w:val="center"/>
@@ -80,38 +79,38 @@
         <w:t>{{ applicant.name }}</w:t>
       </w:r>
     </w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(imię i nazwisko wnioskodawcy)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(nazwa i adres publicznej poradni psychologiczno-pedagogicznej)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Pre-staff"/>
-			</w:pPr>
-			<w:r>
-				<w:t>w składzie:</w:t>
-			</w:r>
-		</w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko wnioskodawcy)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(nazwa i adres publicznej poradni psychologiczno-pedagogicznej)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Pre-staff"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w składzie:</w:t>
+      </w:r>
+    </w:p>
     {% for member in supportCenter.members %}
     <w:p>
       <w:pPr>
@@ -126,191 +125,191 @@
       </w:r>
     </w:p>
     {% endfor %}
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="sentence"/>
-			</w:pPr>
-			<w:r>
-				<w:t>orzeka o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ child.name }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(imię/imiona i nazwisko dziecka)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ child.birthDate }}r., {{ child.birthPlace }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(data i miejsce urodzenia dziecka)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ child.pesel }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(numer PESEL dziecka, a w przypadku braku numeru PESEL – seria i numer dokumentu potwierdzającego jego tożsamość)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ child.address }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(adres zamieszkania dziecka)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ school }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(nazwa i adres przedszkola, szkoły podstawowej, w której zorganizowano oddział przedszkolny, lub innej formy wychowania przedszkolnego)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="SubtitledRun"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ parents.name }}, {{ parents.address }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-			<w:r>
-				<w:lastRenderedPageBreak/>
-				<w:t>(imiona i nazwiska rodziców</w:t>
-			</w:r>
-			<w:r>
-				<w:rPr>
-					<w:rStyle w:val="Odwoanieprzypisudolnego"/>
-				</w:rPr>
-				<w:footnoteReference w:id="1"/>
-			</w:r>
-			<w:r>
-				<w:t xml:space="preserve"> oraz adres ich zamieszkania)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:sz w:val="18"/>
-					<w:szCs w:val="16"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:br w:type="page"/>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle1"/>
-			</w:pPr>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="time-span"/>
-			</w:pPr>
-			<w:r>
-				<w:t>na okres</w:t>
-			</w:r>
-			<w:r>
-				<w:rPr>
-					<w:rStyle w:val="Odwoanieprzypisudolnego"/>
-				</w:rPr>
-				<w:footnoteReference w:id="2"/>
-			</w:r>
-			<w:r>
-				<w:t xml:space="preserve"> {{ period }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:jc w:val="both"/>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>ze względu na stan zdrowia dziecka </w:t>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="sentence"/>
+      </w:pPr>
+      <w:r>
+        <w:t>orzeka o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię/imiona i nazwisko dziecka)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.birthDate }}r., {{ child.birthPlace }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(data i miejsce urodzenia dziecka)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.pesel }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(numer PESEL dziecka, a w przypadku braku numeru PESEL – seria i numer dokumentu potwierdzającego jego tożsamość)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(adres zamieszkania dziecka)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ school }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(nazwa i adres przedszkola, szkoły podstawowej, w której zorganizowano oddział przedszkolny, lub innej formy wychowania przedszkolnego)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ parents.name }}, {{ parents.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t>(imiona i nazwiska rodziców</w:t>
       </w:r>
       <w:r>
-          <w:rPr>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteReference w:id="1"/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> oraz adres ich zamieszkania)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="16"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="time-span"/>
+      </w:pPr>
+      <w:r>
+        <w:t>na okres</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteReference w:id="2"/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> {{ period }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>ze względu na stan zdrowia dziecka </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
             {% if reason == "ZNACZNIE_UTRUDNIAJACY" %}
-            <w:strike/>
+          <w:strike/>
             {% endif %}
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-            <w:lang w:val="pl-PL"/>
-          </w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
         <w:t>uniemożliwiający</w:t>
       </w:r>
       <w:r>
         <w:t xml:space="preserve">/ </w:t>
       </w:r>
       <w:r>
-          <w:rPr>
+        <w:rPr>
             {% if reason == "UNIEMOZLIWIAJACY" %}
-            <w:strike/>
+          <w:strike/>
             {% endif %}
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-            <w:lang w:val="pl-PL"/>
-          </w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
         <w:t>znacznie utrudniający</w:t>
       </w:r>
       <w:r>
@@ -319,331 +318,331 @@
         </w:rPr>
         <w:t/>
       </w:r>
-			<w:r>
-				<w:rPr>
-					<w:rStyle w:val="Odwoanieprzypisudolnego"/>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:footnoteReference w:id="3"/>
-			</w:r>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t xml:space="preserve"> uczęszczanie do przedszkola, oddziału przedszkolnego w szkole podstawowej lub innej formy wychowania przedszkolnego.</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Section"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Diagnoza</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Section-desc"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Zespół Orzekający określa ograniczenia w funkcjonowaniu dziecka wynikające z przebiegu choroby lub procesu terapeutycznego:</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>tekst diagnozy</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Section"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Zalecenia</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Section-desc"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Zespół Orzekający zaleca:</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Recommend"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(należy określić zalecane, w zależności od potrzeb, warunki i formy wsparcia umożliwiające realizację indywidualnych potrzeb rozwojowych i edukacyjnych oraz możliwości psychofizycznych dziecka, w tym warunki rozwijania jego potencjalnych możliwości i mocnych stron, wraz z uzasadnieniem)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>tekst zalecen</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Recommend"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(należy określić zalecane działania sprzyjające integracji dziecka ze środowiskiem przedszkolnym oraz ułatwiające powrót dziecka do przedszkola, oddziału przedszkolnego w szkole podstawowej lub innej formy wychowania przedszkolnego, wraz z uzasadnieniem)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>test zalecen</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Recommend"/>
-			</w:pPr>
-			<w:r>
-				<w:t>3) (należy określić zalecane, w zależności od potrzeb, cele rozwojowe i terapeutyczne do realizacji podczas zajęć indywidualnego obowiązkowego rocznego przygotowania przedszkolnego oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej dziecku i, w zależności od potrzeb, jego rodzicom, przez przedszkole, szkołę podstawową, w której zorganizowano oddział przedszkolny, lub inną formę wychowania przedszkolnego oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, wraz z uzasadnieniem)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>tekst zalecen</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Section"/>
-			</w:pPr>
-			<w:r>
-				<w:lastRenderedPageBreak/>
-				<w:t>Dodatkowe informacje</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Additional-info-desc"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(w zależności od potrzeb podaje się dodatkowe istotne informacje o dziecku, w szczególności o wspomagającej lub alternatywnej metodzie komunikacji (AAC), którą posługuje się dziecko)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>dodatkowe zalecenia</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="newdocumentreson"/>
-			</w:pPr>
-			<w:r>
-				<w:t>W przypadku wydania nowego orzeczenia o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
-			</w:r>
-			<w:r>
-				<w:rPr>
-					<w:rStyle w:val="Odwoanieprzypisudolnego"/>
-				</w:rPr>
-				<w:footnoteReference w:id="4"/>
-			</w:r>
-			<w:r>
-				<w:t>:</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>okolicznosci</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="repeal"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Orzeczenie uchyla orzeczenie nr ...... o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego z dnia .............................. wydane przez........................................</w:t>
-			</w:r>
-			<w:r>
-				<w:rPr>
-					<w:rStyle w:val="Odwoanieprzypisudolnego"/>
-				</w:rPr>
-				<w:footnoteReference w:id="5"/>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Revocation"/>
-			</w:pPr>
-			<w:r>
-				<w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty {{ kurator }} za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:jc w:val="right"/>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>(podpis Przewodniczącego Zespołu Orzekającego)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>Otrzymuje:</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-					<w:lang w:val="pl-PL"/>
-				</w:rPr>
-				<w:t>Wnioskodawca</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Recivers-main"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ applicant.name }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle-end"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(imię i nazwisko)</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Recivers-main"/>
-			</w:pPr>
-			<w:r>
-				<w:t>{{ applicant.address }}</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle-end"/>
-			</w:pPr>
-			<w:r>
-				<w:t>(adres zamieszkania albo adres do korespondencji</w:t>
-			</w:r>
-		</w:p>
-		<w:p>
-			<w:pPr>
-				<w:pStyle w:val="Subtitle-end"/>
-			</w:pPr>
-			<w:r>
-				<w:t>– jeżeli jest inny niż adres zamieszkania)</w:t>
-			</w:r>
-		</w:p>
-		<w:sectPr>
-			<w:pgSz w:w="12240" w:h="15840"/>
-			<w:pgMar w:top="990" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
-			<w:cols w:space="720"/>
-			<w:docGrid w:linePitch="360"/>
-		</w:sectPr>
-	</w:body>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:footnoteReference w:id="3"/>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> uczęszczanie do przedszkola, oddziału przedszkolnego w szkole podstawowej lub innej formy wychowania przedszkolnego.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Section"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Diagnoza</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Section-desc"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Zespół Orzekający określa ograniczenia w funkcjonowaniu dziecka wynikające z przebiegu choroby lub procesu terapeutycznego:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>tekst diagnozy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Section"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Zalecenia</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Section-desc"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Zespół Orzekający zaleca:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Recommend"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(należy określić zalecane, w zależności od potrzeb, warunki i formy wsparcia umożliwiające realizację indywidualnych potrzeb rozwojowych i edukacyjnych oraz możliwości psychofizycznych dziecka, w tym warunki rozwijania jego potencjalnych możliwości i mocnych stron, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>tekst zalecen</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Recommend"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(należy określić zalecane działania sprzyjające integracji dziecka ze środowiskiem przedszkolnym oraz ułatwiające powrót dziecka do przedszkola, oddziału przedszkolnego w szkole podstawowej lub innej formy wychowania przedszkolnego, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>test zalecen</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Recommend"/>
+      </w:pPr>
+      <w:r>
+        <w:t>3) (należy określić zalecane, w zależności od potrzeb, cele rozwojowe i terapeutyczne do realizacji podczas zajęć indywidualnego obowiązkowego rocznego przygotowania przedszkolnego oraz w ramach pomocy psychologiczno-pedagogicznej udzielanej dziecku i, w zależności od potrzeb, jego rodzicom, przez przedszkole, szkołę podstawową, w której zorganizowano oddział przedszkolny, lub inną formę wychowania przedszkolnego oraz poradnię, wraz ze wskazaniem zalecanych form pomocy psychologiczno-pedagogicznej, wraz z uzasadnieniem)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>tekst zalecen</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Section"/>
+      </w:pPr>
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t>Dodatkowe informacje</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Additional-info-desc"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(w zależności od potrzeb podaje się dodatkowe istotne informacje o dziecku, w szczególności o wspomagającej lub alternatywnej metodzie komunikacji (AAC), którą posługuje się dziecko)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>dodatkowe zalecenia</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="newdocumentreson"/>
+      </w:pPr>
+      <w:r>
+        <w:t>W przypadku wydania nowego orzeczenia o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteReference w:id="4"/>
+      </w:r>
+      <w:r>
+        <w:t>:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>okolicznosci</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="repeal"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Orzeczenie uchyla orzeczenie nr ...... o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego z dnia .............................. wydane przez........................................</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteReference w:id="5"/>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Revocation"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Od niniejszego orzeczenia przysługuje odwołanie do Kuratora Oświaty {{ kurator }} za pośrednictwem Zespołu Orzekającego, który wydał orzeczenie, w terminie 14 dni od dnia jego doręczenia.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:jc w:val="right"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>(podpis Przewodniczącego Zespołu Orzekającego)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Otrzymuje:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Wnioskodawca</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Recivers-main"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ applicant.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle-end"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Recivers-main"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ applicant.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle-end"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(adres zamieszkania albo adres do korespondencji</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle-end"/>
+      </w:pPr>
+      <w:r>
+        <w:t>– jeżeli jest inny niż adres zamieszkania)</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr>
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="990" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
 </w:document>
