@@ -116,7 +116,7 @@ module.exports = {
   generateDocument
 };
 
-var specificData = {
+const specificData = {
   INDYWIDUALNE: {
     period: "styczeń 2018 - listopad 2019",
     reason: "ZNACZNIE_UTRUDNIAJACY"
