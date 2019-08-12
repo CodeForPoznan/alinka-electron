@@ -71,6 +71,28 @@ const ASSETS_LIST = {
       "[Content_Types].xml"
     ],
     templates: ["word/document.xml"]
+  },
+  REWALIDACYJNE: {
+    prefix: "rewalidacyjne",
+    statics: [
+      "_rels/.rels",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "word/_rels/document.xml.rels",
+      "word/theme/theme1.xml",
+      "word/endnotes.xml",
+      "word/fontTable.xml",
+      "word/footnotes.xml",
+      "word/numbering.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/webSettings.xml",
+      "[Content_Types].xml"
+    ],
+    templates: ["word/document.xml"]
   }
 };
 
@@ -132,6 +154,10 @@ const specificData = {
       "niesłyszące",
       "niepełnosprawne intelektualnie w stopniu znacznym"
     ]
+  },
+  REWALIDACYJNE: {
+    period: "5-ciu lat.",
+    activityForm: "INDYWIDUALNE"
   }
 };
 
