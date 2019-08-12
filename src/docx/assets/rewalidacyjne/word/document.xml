@@ -130,6 +130,12 @@
         <w:pStyle w:val="sentence"/>
       </w:pPr>
       <w:r>
+        <w:t>orzeka o potrzebie zajęć rewalidacyjno-wychowawczych</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r>
         <w:rPr>
             {% if activityForm == "INDYWIDUALNE" %}
           <w:strike/>
