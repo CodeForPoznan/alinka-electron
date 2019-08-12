@@ -49,6 +49,28 @@ const ASSETS_LIST = {
       "[Content_Types].xml"
     ],
     templates: ["word/document.xml"]
+  },
+  INDYWIDUALNE_ROCZNE: {
+    prefix: "indywidualne_roczne",
+    statics: [
+      "_rels/.rels",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "word/_rels/document.xml.rels",
+      "word/theme/theme1.xml",
+      "word/endnotes.xml",
+      "word/fontTable.xml",
+      "word/footnotes.xml",
+      "word/numbering.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/webSettings.xml",
+      "[Content_Types].xml"
+    ],
+    templates: ["word/document.xml"]
   }
 };
 
@@ -94,10 +116,14 @@ module.exports = {
   generateDocument
 };
 
-var specificData = {
+const specificData = {
   INDYWIDUALNE: {
     period: "styczeń 2018 - listopad 2019",
     reason: "ZNACZNIE_UTRUDNIAJACY"
+  },
+  INDYWIDUALNE_ROCZNE: {
+    period: "12.05.2018 - 25.12.2019",
+    reason: "UNIEMOZLIWIAJACY"
   },
   SPECJALNE: {
     period: "pierwszy etap edukacyjny",
