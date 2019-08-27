@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./Dashboard.scss";
+import FormSteps from "./Form/FormSteps";
 
 const Dashboard = () => {
   return (
     <div className={styles.Dashboard}>
-      <p>Dashboard</p>
-      <div className={styles.Wrapper}>test</div>
+      <div className={styles.Wrapper}>
+        <FormSteps />
+      </div>
     </div>
   );
 };
