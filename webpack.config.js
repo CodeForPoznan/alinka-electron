@@ -31,9 +31,7 @@ module.exports = {
         exclude: [/node_modules/, /.json?/],
         use: {
           loader: "babel-loader",
-          query: {
-            presets: ["env", "react"]
-          }
+          options: { presets: ["@babel/env", "@babel/react"] }
         }
       },
       {
@@ -43,9 +41,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              modules: true,
-              localIdentName: "[name]__[local]___[hash:base64:5]",
-              camelCase: true
+              modules: { localIdentName: "[name]__[local]___[hash:base64:5]" }
             }
           },
           {
@@ -55,12 +51,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]'
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]"
+            }
           }
-        }]
+        ]
       }
     ]
   },
