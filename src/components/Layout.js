@@ -7,8 +7,9 @@ import Sidebar from "./Sidebar/Sidebar";
 const Layout = () => {
   return (
     <div className={styles.Layout}>
-      <Header />
-      <Sidebar />
+      <Sidebar>
+        <Header />
+      </Sidebar>
       <Dashboard />
     </div>
   );
