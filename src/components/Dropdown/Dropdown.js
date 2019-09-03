@@ -1,17 +1,15 @@
 import React from "react";
-import Dropdown from 'react-dropdown';
-import styles from './Dropdown.scss';
+import Dropdown from "react-dropdown";
+import styles from "./Dropdown.scss";
 
-const options = [
-  'szkola1', 'szkola2', 'szkola3'
-];
+const options = ["szkola1", "szkola2", "szkola3"];
 
 class Drop extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      selected: ''
-    }
+      selected: ""
+    };
   }
 
   render() {
@@ -25,11 +23,10 @@ class Drop extends React.Component {
           placeholder="Wybierz szkołę"
           placeholderClassName={styles.MyPlaceholderClassName}
         />
-        <span className={styles.DropdownArrow}></span>
+        <span className={styles.DropdownArrow} />
       </div>
-    )
+    );
   }
-
 }
 
 export default Drop;
