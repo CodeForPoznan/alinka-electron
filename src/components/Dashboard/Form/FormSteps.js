@@ -44,6 +44,18 @@ const FormSteps = () => (
           component="input"
         />
       </DocumentForm.Step>
+      <DocumentForm.Step>
+        <FieldWrapper
+          name="childBirthplace"
+          componentSize="medium"
+          component="input"
+        />
+        <FieldWrapper
+          name="childPesel"
+          componentSize="medium"
+          component="input"
+        />
+      </DocumentForm.Step>
     </DocumentForm>
   </React.Fragment>
 );
