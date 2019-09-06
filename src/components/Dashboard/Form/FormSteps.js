@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import Team from "./Team";
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -44,18 +45,7 @@ const FormSteps = () => (
           component="input"
         />
       </DocumentForm.Step>
-      <DocumentForm.Step>
-        <FieldWrapper
-          name="childBirthplace"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="childPesel"
-          componentSize="medium"
-          component="input"
-        />
-      </DocumentForm.Step>
+      <Team />
     </DocumentForm>
   </React.Fragment>
 );
