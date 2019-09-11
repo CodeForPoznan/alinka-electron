@@ -12,12 +12,19 @@ const FieldWrapper = ({ name, componentSize, component }) => {
   return (
     <div className={componentSize}>
       <label>{data[name]}</label>
-      <Field
-        name={name}
-        component={component}
-        type="text"
-        validate={required}
-      />
+        {component !== "select" ? 
+          <Field 
+          name={name}
+          component={component}
+          type="text"
+          validate={required}
+          /> :
+          <Field name={name} component={component}>
+            <option />         
+            <option value="optionA">A</option>
+            <option value="optionB">B</option>
+          </Field>  
+        }
       <Error name={name} />
     </div>
   );
