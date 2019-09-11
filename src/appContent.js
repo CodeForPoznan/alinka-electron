@@ -23,7 +23,6 @@ const appContent = {
   firstReason: "z uwagi (pierwsze)",
   secondReason: "z uwagi (drugie)",
   timePeriod: "na okres"
-
 };
 
 export default appContent;

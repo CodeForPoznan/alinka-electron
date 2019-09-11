@@ -43,11 +43,7 @@ const FormSteps = () => (
           componentSize="medium"
           component="input"
         />
-        <FieldWrapper
-          name="adress"
-          componentSize="medium"
-          component="input"
-        />
+        <FieldWrapper name="adress" componentSize="medium" component="input" />
         <FieldWrapper
           name="postalCode"
           componentSize="medium"
@@ -72,7 +68,7 @@ const FormSteps = () => (
           name="timePeriod"
           componentSize="medium"
           component="input"
-        />       
+        />
       </DocumentForm.Step>
     </DocumentForm>
   </React.Fragment>
