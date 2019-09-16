@@ -1,5 +1,6 @@
+const fs = require("fs");
 const { app, BrowserWindow, ipcMain, Menu } = require("electron");
-const DecisionCreate = require("./doc/decision");
+const { generateDocument } = require("./src/docx/generateDocument");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
@@ -85,8 +86,8 @@ if (inDevelopmentMode) {
 /*********************/
 /* Document Renderer */
 /*********************/
-ipcMain.on("print:value", (event, value) => {
-  var doc = new DecisionCreate(value);
-  doc.create();
-  doc.save();
+ipcMain.on("print:value", (event, commonData) => {
+    generateDocument("INDYWIDUALNE", commonData)
+    .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+    .pipe(fs.createWriteStream(`${commonData.child.name} - ${commonData.date}.docx`));
 });
