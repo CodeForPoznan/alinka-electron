@@ -2,7 +2,7 @@ import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
 
-import commonData from "../../../docx/fixtures"
+import commonData from "../../../docx/fixtures";
 
 const { ipcRenderer } = require("electron");
 
@@ -20,10 +20,7 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-    <DocumentForm
-      initialValues={commonData}
-      onSubmit={onSubmit}
-    >
+    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
         <FieldWrapper
           name="childfullName"

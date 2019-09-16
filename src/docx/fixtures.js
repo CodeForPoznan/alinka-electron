@@ -1,6 +1,3 @@
-
-
-
 const specificData = {
   INDYWIDUALNE: {
     period: "styczeń 2018 - listopad 2019",
@@ -66,10 +63,10 @@ var commonData = {
         function: "socjoterapeuta, tyflopedagog"
       }
     ],
-  name:
-    "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
-  post: "62-065 Grodzisk Wlkp."
-},
+    name:
+      "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+    post: "62-065 Grodzisk Wlkp."
+  },
   kurator: "w Poznaniu, ul Kościuszki 38, 64-400 Poznań"
 };
 

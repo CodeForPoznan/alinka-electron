@@ -86,8 +86,9 @@ if (inDevelopmentMode) {
 /*********************/
 /* Document Renderer */
 /*********************/
-ipcMain.on("print:value", (event, commonData) => {
-    generateDocument("INDYWIDUALNE", commonData)
+ipcMain.on("print:value", (event, values) => {
+  console.log(values);
+    generateDocument("INDYWIDUALNE", values)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-    .pipe(fs.createWriteStream(`${commonData.child.name} - ${commonData.date}.docx`));
+    .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });
