@@ -1,6 +1,6 @@
 import React from "react";
-import TeamMembers from "../TeamMembers";
-import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import TeamMembers from "./TeamMembers";
+import FieldWrapper from "../FieldWrapper/FieldWrapper";
 
 const Team = () => (
   <React.Fragment>
