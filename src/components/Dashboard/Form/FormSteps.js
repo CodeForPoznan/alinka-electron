@@ -18,7 +18,11 @@ const onSubmit = async values => {
 const FormSteps = () => (
   <React.Fragment>
     <DocumentForm
-      initialValues={{ schoolType: "Szkoła Podstawowa", profession: false }}
+      initialValues={{
+        schoolType: "Szkoła Podstawowa",
+        profession: false,
+        members: []
+      }}
       onSubmit={onSubmit}
     >
       <DocumentForm.Step>

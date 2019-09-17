@@ -1,6 +1,14 @@
 @import '../../../../../scss/variables';
 
-.teamMembersContainer {
+.TeamMembersInputWrapper {
   display: flex;
-  flex-flow: wrap;
+
+  input {
+    margin: 3px;
+  }
+
+  span {
+    margin: 3px;
+    color: #ff0000;
+  }
 }

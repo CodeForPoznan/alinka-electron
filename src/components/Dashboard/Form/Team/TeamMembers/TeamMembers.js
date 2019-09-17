@@ -1,38 +1,48 @@
 import React from "react";
-import PropTypes from "prop-types";
 import DocumentForm from "../../DocumentForm";
 import FieldWrapper from "../../FieldWrapper/FieldWrapper";
+import { FieldArray } from "react-final-form-arrays";
 import styles from "./TeamMembers.scss";
 
-const TeamMembers = ({ numberOfMembers }) => (
+const TeamMembers = () => (
   <DocumentForm.Step>
-    {new Array(numberOfMembers).fill(0).map((_, index) => (
-      <div className={styles.teamMembersContainer}>
-        <FieldWrapper
-          key={index}
-          name={`teamMember${index + 1}`}
-          componentSize="medium"
-          component="input"
-          label={`Członek ${index + 1}`}
-        />
-        <FieldWrapper
-          key={index}
-          name={`teamMember${index + 1}Function`}
-          componentSize="medium"
-          component="input"
-          label="Specjalizacja"
-        />
-      </div>
-    ))}
+    <FieldArray name="members">
+      {({ fields }) => (
+        <React.Fragment>
+          <button
+            onClick={() => {
+              fields.push({ name: "", function: "" });
+            }}
+          >
+            Dodaj
+          </button>
+          {fields.map((element, index) => (
+            <div key={index} className={styles.TeamMembersInputWrapper}>
+              <FieldWrapper
+                name={`${element}.name`}
+                component="input"
+                componentSize="medium"
+                label={`Członek ${index + 1}`}
+              />
+              <FieldWrapper
+                name={`${element}.function`}
+                component="input"
+                componentSize="medium"
+                label="Specjalizacja"
+              />
+              <button
+                onClick={() => {
+                  fields.remove(index);
+                }}
+              >
+                Usuń
+              </button>
+            </div>
+          ))}
+        </React.Fragment>
+      )}
+    </FieldArray>
   </DocumentForm.Step>
 );
-
-TeamMembers.propTypes = {
-  numberOfMembers: PropTypes.number
-};
-
-TeamMembers.defaultProps = {
-  numberOfMembers: 5
-};
 
 export default TeamMembers;
