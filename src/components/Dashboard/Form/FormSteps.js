@@ -21,18 +21,7 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-<<<<<<< HEAD
     <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
-=======
-    <DocumentForm
-      initialValues={{
-        schoolType: "Szkoła Podstawowa",
-        profession: false,
-        members: []
-      }}
-      onSubmit={onSubmit}
-    >
->>>>>>> master
       <DocumentForm.Step>
         <FieldWrapper
           name="childfullName"
