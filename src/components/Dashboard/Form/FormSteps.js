@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import Team from "./Team";
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -17,7 +18,11 @@ const onSubmit = async values => {
 const FormSteps = () => (
   <React.Fragment>
     <DocumentForm
-      initialValues={{ schoolType: "Szkoła Podstawowa", profession: false }}
+      initialValues={{
+        schoolType: "Szkoła Podstawowa",
+        profession: false,
+        members: []
+      }}
       onSubmit={onSubmit}
     >
       <DocumentForm.Step>
@@ -44,6 +49,7 @@ const FormSteps = () => (
           component="input"
         />
       </DocumentForm.Step>
+      <Team />
     </DocumentForm>
   </React.Fragment>
 );
