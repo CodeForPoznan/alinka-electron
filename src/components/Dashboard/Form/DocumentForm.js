@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormHeader from "./FormHeader/FormHeader.js";
 import { Form } from "react-final-form";
+import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 
 export default class DocumentForm extends Component {
@@ -49,6 +50,9 @@ export default class DocumentForm extends Component {
 
     return (
       <Form
+        mutators={{
+          ...arrayMutators
+        }}
         initialValues={values}
         validate={this.validate}
         onSubmit={this.handleSubmit}

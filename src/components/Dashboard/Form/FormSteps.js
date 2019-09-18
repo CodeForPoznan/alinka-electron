@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
 
@@ -20,7 +21,18 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
+<<<<<<< HEAD
     <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
+=======
+    <DocumentForm
+      initialValues={{
+        schoolType: "Szkoła Podstawowa",
+        profession: false,
+        members: []
+      }}
+      onSubmit={onSubmit}
+    >
+>>>>>>> master
       <DocumentForm.Step>
         <FieldWrapper
           name="childfullName"
@@ -45,6 +57,7 @@ const FormSteps = () => (
           component="input"
         />
       </DocumentForm.Step>
+      <Team />
     </DocumentForm>
   </React.Fragment>
 );
