@@ -3,12 +3,16 @@ import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
 import Team from "./Team";
 
+import commonData from "../../../docx/fixtures";
+
+const { ipcRenderer } = require("electron");
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = async values => {
   try {
     await sleep(300);
-    window.alert(JSON.stringify(values, 0, 2));
+    ipcRenderer.send("print:value", values);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log("Something went wrong: ", error);
@@ -17,14 +21,7 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-    <DocumentForm
-      initialValues={{
-        schoolType: "Szkoła Podstawowa",
-        profession: false,
-        members: []
-      }}
-      onSubmit={onSubmit}
-    >
+    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
         <FieldWrapper
           name="childfullName"
