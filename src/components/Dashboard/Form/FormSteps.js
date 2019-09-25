@@ -1,28 +1,18 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
-<<<<<<< HEAD
-// const { ipcRenderer } = require("electron");
-=======
 import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
 
 const { ipcRenderer } = require("electron");
->>>>>>> master
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = async values => {
   try {
     await sleep(300);
-<<<<<<< HEAD
-    // ipcRenderer.send("print:value", values);
-
-    window.alert(JSON.stringify(values, 0, 2));
-=======
     ipcRenderer.send("print:value", values);
->>>>>>> master
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log("Something went wrong: ", error);

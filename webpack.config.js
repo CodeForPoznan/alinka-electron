@@ -50,11 +50,7 @@ module.exports = {
         ]
       },
       {
-<<<<<<< HEAD
         test: /\.(ttf|png|jpg|gif|svg)$/,
-=======
-        test: /\.(png|jpg|gif|svg)$/,
->>>>>>> master
         use: [
           {
             loader: "file-loader",
