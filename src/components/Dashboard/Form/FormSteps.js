@@ -1,12 +1,15 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
 import FieldWrapper from "./FieldWrapper/FieldWrapper";
+// const { ipcRenderer } = require("electron");
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = async values => {
   try {
     await sleep(300);
+    // ipcRenderer.send("print:value", values);
+
     window.alert(JSON.stringify(values, 0, 2));
   } catch (error) {
     // eslint-disable-next-line no-console

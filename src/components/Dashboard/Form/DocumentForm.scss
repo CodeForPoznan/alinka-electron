@@ -1,0 +1,7 @@
+@import '../../../scss/_variables.scss';
+@import '../../../scss/_mixins.scss';
+
+.Form {
+  padding: 20px 80px;
+  @include dashboardStyle();
+}

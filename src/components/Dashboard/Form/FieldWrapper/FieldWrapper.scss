@@ -1,0 +1,32 @@
+@import '../../../../scss/_variables.scss';
+
+.small {
+  width: 50px;
+}
+
+.medium {
+  width: 185px;
+}
+
+.large {
+  width: 248px;
+}
+
+.extraLarge {
+  width: 530px;
+}
+
+.Input {
+  width: 100%;
+  height: 32px;
+  background-color: $lightMarine;
+  padding: 2px 10px;
+  border: 2px solid $lightGray;
+  border-radius: 5px;
+  
+  &:focus {
+    outline-style: none;
+    outline-color: rgba(255,255,255,0);
+    border-color: $yellowGreen;
+  }
+}

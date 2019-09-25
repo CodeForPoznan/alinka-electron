@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./FormHeader.scss";
+
 import PropTypes from "prop-types";
 
 const switchHeading = page => {
@@ -26,8 +28,10 @@ const FormHeader = ({ page }) => {
   const heading = switchHeading(page);
 
   return (
-    <div>
-      <h2>{heading}</h2>
+    <div className={styles.FormHeader}>
+      <h2 className={styles.Heading}>
+        <span className={styles.HeadingUnderline}>{heading}</span>
+      </h2>
     </div>
   );
 };

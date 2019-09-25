@@ -2,6 +2,7 @@ import React from "react";
 import { Field } from "react-final-form";
 import appContent from "../../../../appContent";
 import Error from "./ErrorField/ErrorField";
+import styles from "./FieldWrapper.scss";
 import PropTypes from "prop-types";
 
 const required = value => (value ? undefined : "Required");
@@ -10,9 +11,10 @@ const FieldWrapper = ({ name, componentSize, component }) => {
   const data = appContent;
 
   return (
-    <div className={componentSize}>
+    <div className={styles[componentSize]}>
       <label>{data[name]}</label>
       <Field
+        className={styles.Input}
         name={name}
         component={component}
         type="text"

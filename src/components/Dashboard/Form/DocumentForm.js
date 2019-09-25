@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormHeader from "./FormHeader/FormHeader.js";
 import { Form } from "react-final-form";
+import styles from './DocumentForm.scss';
 import PropTypes from "prop-types";
 
 export default class DocumentForm extends Component {
@@ -54,7 +55,7 @@ export default class DocumentForm extends Component {
         onSubmit={this.handleSubmit}
       >
         {({ handleSubmit, submitting, values }) => (
-          <form onSubmit={handleSubmit}>
+          <form className={styles.Form} onSubmit={handleSubmit}>
             <FormHeader page={this.state.page} />
             {activePage}
             <div className="buttons">

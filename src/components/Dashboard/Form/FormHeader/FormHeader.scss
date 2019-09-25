@@ -1,0 +1,16 @@
+@import '../../../../scss/_variables.scss';
+
+.FormHeader {
+  margin-bottom: 30px;
+}
+
+.Heading {
+  font-family: 'PlayfairDisplay';
+  font-size: $font-lg;
+  color: $headingDark;
+  font-weight: $regular;
+}
+
+.HeadingUnderline {
+  border-bottom: 3px solid $orange;
+}

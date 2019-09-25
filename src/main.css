@@ -1,9 +1,5 @@
 /* Force App wrapper to bounds */
-[data-reactroot] {
-	width: 100vw !important;
-	height: 100vh !important;
-	position: relative;
-}
+
 /** Reset Defaults **/
 * {
 	margin: 0;
