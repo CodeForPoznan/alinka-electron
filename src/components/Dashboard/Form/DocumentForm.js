@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import FormHeader from "./FormHeader/FormHeader.js";
 import { Form } from "react-final-form";
+<<<<<<< HEAD
 import styles from './DocumentForm.scss';
+=======
+import arrayMutators from "final-form-arrays";
+>>>>>>> master
 import PropTypes from "prop-types";
 
 export default class DocumentForm extends Component {
@@ -50,12 +54,22 @@ export default class DocumentForm extends Component {
 
     return (
       <Form
+<<<<<<< HEAD
+=======
+        mutators={{
+          ...arrayMutators
+        }}
+>>>>>>> master
         initialValues={values}
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
         {({ handleSubmit, submitting, values }) => (
+<<<<<<< HEAD
           <form className={styles.Form} onSubmit={handleSubmit}>
+=======
+          <form onSubmit={handleSubmit}>
+>>>>>>> master
             <FormHeader page={this.state.page} />
             {activePage}
             <div className="buttons">

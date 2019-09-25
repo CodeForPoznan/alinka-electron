@@ -1,5 +1,6 @@
+const fs = require("fs");
 const { app, BrowserWindow, ipcMain, Menu } = require("electron");
-const DecisionCreate = require("./doc/decision");
+const { generateDocument } = require("./src/docx/generateDocument");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
@@ -38,6 +39,16 @@ app.on("ready", () => {
   mainWindow.on("closed", () => {
     app.quit();
   });
+
+  const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
+
+  installExtension(REACT_DEVELOPER_TOOLS).then((name) => {
+      console.log(`Added Extension:  ${name}`);
+  })
+  .catch((err) => {
+      console.log('An error occurred: ', err);
+  });
+
 });
 
 /********/
@@ -85,8 +96,9 @@ if (inDevelopmentMode) {
 /*********************/
 /* Document Renderer */
 /*********************/
-ipcMain.on("print:value", (event, value) => {
-  var doc = new DecisionCreate(value);
-  doc.create();
-  doc.save();
+ipcMain.on("print:value", (event, values) => {
+  console.log(values);
+    generateDocument("INDYWIDUALNE", values)
+    .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+    .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });

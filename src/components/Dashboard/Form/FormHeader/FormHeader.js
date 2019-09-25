@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./FormHeader.scss";
-
 import PropTypes from "prop-types";
 
 const switchHeading = page => {

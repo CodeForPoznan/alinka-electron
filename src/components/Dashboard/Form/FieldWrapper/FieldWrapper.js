@@ -7,14 +7,13 @@ import PropTypes from "prop-types";
 
 const required = value => (value ? undefined : "Required");
 
-const FieldWrapper = ({ name, componentSize, component }) => {
+const FieldWrapper = ({ name, componentSize, component, label }) => {
   const data = appContent;
 
   return (
     <div className={styles[componentSize]}>
-      <label>{data[name]}</label>
+      <label>{label ? label : data[name]}</label>
       <Field
-        className={styles.Input}
         name={name}
         component={component}
         type="text"
@@ -27,8 +26,13 @@ const FieldWrapper = ({ name, componentSize, component }) => {
 
 FieldWrapper.propTypes = {
   name: PropTypes.string,
-  componentSize: PropTypes.string,
-  component: PropTypes.string
+  componentSize: PropTypes.oneOf(["large", "medium"]).isRequired,
+  component: PropTypes.string,
+  label: PropTypes.string
+};
+
+FieldWrapper.defaultProps = {
+  label: null
 };
 
 export default FieldWrapper;
