@@ -36,12 +36,38 @@ const FormSteps = () => (
       </DocumentForm.Step>
       <DocumentForm.Step>
         <FieldWrapper
-          name="childBirthplace"
+          name="applicantName"
           componentSize="medium"
           component="input"
         />
         <FieldWrapper
-          name="childPesel"
+          name="applicantSurname"
+          componentSize="medium"
+          component="input"
+        />
+        <FieldWrapper name="adress" componentSize="medium" component="input" />
+        <FieldWrapper
+          name="postalCode"
+          componentSize="medium"
+          component="input"
+        />
+        <FieldWrapper
+          name="typeOfApplication"
+          componentSize="medium"
+          component="input"
+        />
+        <FieldWrapper
+          name="firstReason"
+          componentSize="medium"
+          component="select"
+        />
+        <FieldWrapper
+          name="secondReason"
+          componentSize="medium"
+          component="select"
+        />
+        <FieldWrapper
+          name="timePeriod"
           componentSize="medium"
           component="input"
         />
