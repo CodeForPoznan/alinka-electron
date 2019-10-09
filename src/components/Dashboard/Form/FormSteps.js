@@ -72,7 +72,9 @@ const FormSteps = () => (
           component="input"
         />
       </DocumentForm.Step>
-      <Team />
+      <DocumentForm.Step>
+        <Team />
+      </DocumentForm.Step>
     </DocumentForm>
   </React.Fragment>
 );

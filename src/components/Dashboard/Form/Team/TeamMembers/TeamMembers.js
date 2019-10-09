@@ -5,7 +5,6 @@ import { FieldArray } from "react-final-form-arrays";
 import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
-  <DocumentForm.Step>
     <FieldArray name="members">
       {({ fields }) => (
         <React.Fragment>
@@ -42,7 +41,6 @@ const TeamMembers = () => (
         </React.Fragment>
       )}
     </FieldArray>
-  </DocumentForm.Step>
 );
 
 export default TeamMembers;
