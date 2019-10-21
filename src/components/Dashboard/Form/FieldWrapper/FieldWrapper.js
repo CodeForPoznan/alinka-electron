@@ -4,26 +4,34 @@ import appContent from "../../../../appContent";
 import Error from "./ErrorField/ErrorField";
 import PropTypes from "prop-types";
 
+import Opts from "./SelectOptions";
+
 const required = value => (value ? undefined : "Required");
 
-const FieldWrapper = ({ name, componentSize, component, label }) => {
-  const data = appContent;
-
+const FieldWrapper = ({ name, componentSize, component, options, label }) => {
+  const fieldLabels = appContent;
   return (
     <div className={componentSize}>
-      <label>{data[name]}</label>
+      <label>{fieldLabels[name]}</label>
       {component !== "select" ? (
         <Field
           name={name}
           component={component}
           type="text"
           validate={required}
+          label={label}
         />
       ) : (
-        <Field name={name} component={component}>
-          <option />
-          <option value="optionA">A</option>
-          <option value="optionB">B</option>
+        <Field name={name} component={component} options={options}>
+          {({ input, options }) => {
+            return (
+              <Opts
+                options={options}
+                name={input.name}
+                onChange={value => input.onChange(value)}
+              />
+            );
+          }}
         </Field>
       )}
 
@@ -36,6 +44,7 @@ FieldWrapper.propTypes = {
   name: PropTypes.string,
   componentSize: PropTypes.oneOf(["large", "medium"]).isRequired,
   component: PropTypes.string,
+  options: PropTypes.array,
   label: PropTypes.string
 };
 

@@ -4,6 +4,7 @@ import FieldWrapper from "./FieldWrapper/FieldWrapper";
 import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
+import { reasonsList, disabitilyList } from "../../../staticData";
 
 const { ipcRenderer } = require("electron");
 
@@ -21,56 +22,63 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
+    <DocumentForm
+      initialValues={commonData}
+      reasonsList={reasonsList}
+      onSubmit={onSubmit}
+    >
       <DocumentForm.Step>
         <FieldWrapper
-          name="childfullName"
+          name="child.name"
           componentSize="large"
           component="input"
         />
         <FieldWrapper
-          name="childfullNameGenetiv"
+          name="child.nameGenetiv"
           componentSize="large"
           component="input"
         />
       </DocumentForm.Step>
       <DocumentForm.Step>
         <FieldWrapper
-          name="applicantName"
+          name="applicant.name"
           componentSize="medium"
           component="input"
         />
         <FieldWrapper
-          name="applicantSurname"
+          name="applicant.nameGenetive"
           componentSize="medium"
           component="input"
         />
-        <FieldWrapper name="adress" componentSize="medium" component="input" />
         <FieldWrapper
-          name="postalCode"
+          name="applicant.address"
+          componentSize="medium"
+          component="input"
+        />
+        <FieldWrapper
+          name="applicant.postalCode"
           componentSize="medium"
           component="input"
         />
         <FieldWrapper
           name="typeOfApplication"
           componentSize="medium"
-          component="input"
+          component="select"
+          options={reasonsList}
         />
         <FieldWrapper
           name="firstReason"
           componentSize="medium"
           component="select"
+          options={disabitilyList}
         />
         <FieldWrapper
           name="secondReason"
           componentSize="medium"
           component="select"
+          options={disabitilyList}
         />
-        <FieldWrapper
-          name="timePeriod"
-          componentSize="medium"
-          component="input"
-        />
+        <FieldWrapper name="period" componentSize="medium" component="input" />
       </DocumentForm.Step>
       <Team />
     </DocumentForm>

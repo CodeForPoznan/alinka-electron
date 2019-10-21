@@ -6,7 +6,7 @@ import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
   <DocumentForm.Step>
-    <FieldArray name="members">
+    <FieldArray name="supportCenter.members">
       {({ fields }) => (
         <React.Fragment>
           <button

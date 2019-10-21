@@ -1,4 +1,4 @@
-const appContent = {
+const fieldLabels = {
   childData: "Dane dziecka",
   childfullName: "Imię i nazwisko",
   childfullNameGenetiv: "Imię i nazwisko (dopełniacz)",
@@ -15,14 +15,17 @@ const appContent = {
   fatherFullName: "Imię i nazwisko ojca",
   motherFullName: "Imię i nazwisko matki",
   parentsHome: "Miejsce zamieszkania rodziców",
-  applicantName: "wnioskodawcy (mianownik)",
-  applicantSurname: "wnioskodawcy (dopełniacz)",
-  adress: "adres (ulica i numer, ew miejscowosc)",
-  postalCode: "kod pocztowy i miasto",
+  "applicant.name": "wnioskodawcy (mianownik)",
+  "applicant.nameGenetive": "wnioskodawcy (dopełniacz)",
+  "applicant.address": "adres (ulica i numer, ew miejscowosc)",
+  "applicant.postalCode": "kod pocztowy i miasto",
   typeOfApplication: "wniosek o",
   firstReason: "z uwagi (pierwsze)",
   secondReason: "z uwagi (drugie)",
-  timePeriod: "na okres"
+  period: "na okres",
+  "supportCenter.name": "Nazwa poradni",
+  "supportCenter.address": "Adres poradni",
+  "supportCenter.post": "Kod pocztowy poradni"
 };
 
-export default appContent;
+export default fieldLabels;

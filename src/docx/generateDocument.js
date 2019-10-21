@@ -118,7 +118,7 @@ const ASSETS_LIST = {
   }
 };
 
-function generateDocument(type = "INDYWIDUALNE", data) {
+function generateDocument(type , data) {
   const zip = new JSZip();
   for (let staticPath of ASSETS_LIST[type].statics) {
     zip.file(

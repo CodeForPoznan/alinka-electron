@@ -5,22 +5,19 @@ import FieldWrapper from "../FieldWrapper/FieldWrapper";
 const Team = () => (
   <React.Fragment>
     <FieldWrapper
-      name="name"
+      name="supportCenter.name"
       componentSize="medium"
       component="input"
-      label="Nazwa"
     />
     <FieldWrapper
-      name="address"
+      name="supportCenter.address"
       componentSize="medium"
       component="input"
-      label="Adres"
     />
     <FieldWrapper
-      name="post"
+      name="supportCenter.post"
       componentSize="medium"
       component="input"
-      label="Kod pocztowy"
     />
     <TeamMembers />
   </React.Fragment>

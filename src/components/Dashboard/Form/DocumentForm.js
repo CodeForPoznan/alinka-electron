@@ -7,7 +7,9 @@ import PropTypes from "prop-types";
 export default class DocumentForm extends Component {
   state = {
     page: 0,
-    values: this.props.initialValues || {}
+    values: this.props.initialValues || {},
+    reasonsList: this.props.reasonsList || {},
+    applicationsTypeList: this.props.applicationsTypeList || {}
   };
 
   static Step = ({ children }) => children;
@@ -87,5 +89,7 @@ export default class DocumentForm extends Component {
 DocumentForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   initialValues: PropTypes.object,
-  children: PropTypes.node
+  children: PropTypes.node,
+  reasonsList: PropTypes.array,
+  applicationsTypeList: PropTypes.array
 };
