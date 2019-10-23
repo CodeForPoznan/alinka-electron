@@ -31,7 +31,7 @@ const reasonsList = [
   }
 ];
 
-const disabitilyList = [
+const disabilityList = [
   {
     key: "x",
     text: "wybierz przyczynę...",
@@ -59,30 +59,44 @@ const disabitilyList = [
   },
   {
     key: "4",
-    text: "niepełnosprawność ruchowa (w tym afazja)",
+    text: "niepełnosprawne ruchowo, w tym z afazją",
     value: "RUCHOWA"
   },
   {
     key: "5",
-    text: "niesłyszenie lub słabosłyszenie",
-    value: "SŁUCH"
+    text: "słabosłyszenie",
+    value: "SLABOSLYSZACE"
   },
   {
     key: "6",
-    text: "niewidzenie lub słabowidzenie",
-    value: "WZROK"
+    text: "niesłyszenie",
+    value: "NIESLYSZACE"
   },
   {
     key: "7",
-    text: "autyzm",
-    value: "AUTYZM"
+    text: "słabowidzenie",
+    value: "SLABOWIDZACE"
   },
   {
     key: "8",
+    text: "niewidzenie",
+    value: "NIEWIDZACE"
+  },
+  {
+    key: "9",
+    text: "autyzm w tym zespół Aspergera",
+    value: "AUTYZM"
+  },
+  {
+    key: "10",
     text: "zagrożenie niedostosowaniem społecznym",
     value: "ZAGROŻENIE"
   },
-  { key: "9", text: "niedostosowanie społeczne", value: "NIEDOSTOSOWANIE" }
+  {
+    key: "11",
+    text: "niedostosowanie społeczne",
+    value: "NIEDOSTOSOWANIE"
+  }
 ];
 
-export { reasonsList, disabitilyList };
+export { reasonsList, disabilityList };

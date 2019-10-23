@@ -1,9 +1,11 @@
 const fs = require("fs");
 const { app, BrowserWindow, ipcMain, Menu } = require("electron");
 const { generateDocument } = require("./src/docx/generateDocument");
+const { calculateValues } = require("./src/utils/utils");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
+
 
 /***************/
 /* Main Window */
@@ -97,7 +99,9 @@ if (inDevelopmentMode) {
 /* Document Renderer */
 /*********************/
 ipcMain.on("print:value", (event, values) => {
-  console.log(values);
+    console.log(values);
+    values = calculateValues(values);
+    console.log(values);
     generateDocument(values.typeOfApplication, values)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));

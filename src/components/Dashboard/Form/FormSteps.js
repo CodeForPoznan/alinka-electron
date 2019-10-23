@@ -4,7 +4,7 @@ import FieldWrapper from "./FieldWrapper/FieldWrapper";
 import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
-import { reasonsList, disabitilyList } from "../../../staticData";
+import { reasonsList, disabilityList } from "../../../staticData";
 
 const { ipcRenderer } = require("electron");
 
@@ -67,16 +67,16 @@ const FormSteps = () => (
           options={reasonsList}
         />
         <FieldWrapper
-          name="firstReason"
+          name="reason"
           componentSize="medium"
           component="select"
-          options={disabitilyList}
+          options={disabilityList}
         />
         <FieldWrapper
           name="secondReason"
           componentSize="medium"
           component="select"
-          options={disabitilyList}
+          options={disabilityList}
         />
         <FieldWrapper name="period" componentSize="medium" component="input" />
       </DocumentForm.Step>

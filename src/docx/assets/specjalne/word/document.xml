@@ -485,7 +485,7 @@
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
-        <w:t>{{ multipleDisability.join() }}</w:t>
+        <w:t>{{ multipleDisability.join(", ") }}</w:t>
       </w:r>
             {% endif %}
     </w:p>

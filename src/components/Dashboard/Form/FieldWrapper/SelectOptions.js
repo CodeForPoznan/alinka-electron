@@ -1,24 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Opts = props => {
+const OptionList = props => {
+  const { name, onChange, options } = props;
   return (
-    <select name={props.name} onChange={props.onChange}>
-      {props.options.map(x => {
-        return (
-          <option key={x.key} value={x.value}>
-            {x.text}
-          </option>
-        );
-      })}
+    <select name={name} onChange={onChange}>
+      {options.map(item => (
+        <option key={item.key} value={item.value}>
+          {item.text}
+        </option>
+      ))}
     </select>
   );
 };
 
-Opts.propTypes = {
+OptionList.propTypes = {
   onChange: PropTypes.func.isRequired,
   name: PropTypes.string,
   options: PropTypes.array
 };
 
-export default Opts;
+export default OptionList;

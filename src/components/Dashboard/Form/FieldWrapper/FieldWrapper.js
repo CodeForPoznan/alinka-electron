@@ -4,7 +4,7 @@ import appContent from "../../../../appContent";
 import Error from "./ErrorField/ErrorField";
 import PropTypes from "prop-types";
 
-import Opts from "./SelectOptions";
+import OptionList from "./SelectOptions";
 
 const required = value => (value ? undefined : "Required");
 
@@ -23,15 +23,13 @@ const FieldWrapper = ({ name, componentSize, component, options, label }) => {
         />
       ) : (
         <Field name={name} component={component} options={options}>
-          {({ input, options }) => {
-            return (
-              <Opts
-                options={options}
-                name={input.name}
-                onChange={value => input.onChange(value)}
-              />
-            );
-          }}
+          {({ input, options }) => (
+            <OptionList
+              options={options}
+              name={input.name}
+              onChange={value => input.onChange(value)}
+            />
+          )}
         </Field>
       )}
 

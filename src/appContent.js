@@ -1,7 +1,7 @@
 const fieldLabels = {
   childData: "Dane dziecka",
-  childfullName: "Imię i nazwisko",
-  childfullNameGenetiv: "Imię i nazwisko (dopełniacz)",
+  "child.name": "Imię i nazwisko",
+  "child.nameGenetiv": "Imię i nazwisko (dopełniacz)",
   childBirthplace: "Miejsce urodzenia",
   childPesel: "PESEL",
   childHome: "Miejsce zamieszkania",

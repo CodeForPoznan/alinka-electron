@@ -118,23 +118,23 @@ const ASSETS_LIST = {
   }
 };
 
-function generateDocument(type , data) {
+function generateDocument(documentType, data) {
   const zip = new JSZip();
-  for (let staticPath of ASSETS_LIST[type].statics) {
+  for (let staticPath of ASSETS_LIST[documentType].statics) {
     zip.file(
       staticPath,
       fs.readFileSync(
         path.posix.resolve(
           __dirname,
           "assets",
-          ASSETS_LIST[type].prefix,
+          ASSETS_LIST[documentType].prefix,
           staticPath
         )
       )
     );
   }
 
-  for (let tempalatePath of ASSETS_LIST[type].templates) {
+  for (let tempalatePath of ASSETS_LIST[documentType].templates) {
     zip.file(
       tempalatePath,
       nunjucks.renderString(
@@ -142,7 +142,7 @@ function generateDocument(type , data) {
           path.posix.resolve(
             __dirname,
             "assets",
-            ASSETS_LIST[type].prefix,
+            ASSETS_LIST[documentType].prefix,
             tempalatePath
           ),
           "utf8"
