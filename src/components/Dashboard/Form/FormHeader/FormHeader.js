@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FormHeader.scss";
 import PropTypes from "prop-types";
+import headerIcon from "../../../../assets/icons/profile.svg";
 
 const switchHeading = page => {
   let heading = "";
@@ -28,8 +29,9 @@ const FormHeader = ({ page }) => {
 
   return (
     <div className={styles.FormHeader}>
+      <img className={styles.Icon} src={headerIcon} />
       <h2 className={styles.Heading}>
-        <span className={styles.HeadingUnderline}>{heading}</span>
+        <span className={styles.Underline}>{heading}</span>
       </h2>
     </div>
   );

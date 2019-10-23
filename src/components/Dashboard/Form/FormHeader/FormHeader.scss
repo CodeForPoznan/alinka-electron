@@ -1,7 +1,9 @@
 @import '../../../../scss/_variables.scss';
+@import '../../../../scss/_mixins.scss';
 
 .FormHeader {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  @include flex(flex-start center);
 }
 
 .Heading {
@@ -9,8 +11,14 @@
   font-size: $font-lg;
   color: $headingDark;
   font-weight: $regular;
+  padding-left: 13px;
 }
 
-.HeadingUnderline {
+.Underline {
   border-bottom: 3px solid $orange;
+}
+
+.Icon {
+  width: 76px;
+  height: auto;
 }
