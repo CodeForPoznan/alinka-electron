@@ -1,18 +1,31 @@
 @import '../../../../scss/_variables.scss';
 
+.default{
+  font-family: 'Poppins';
+  font-size: $font-xs;
+  line-height: $line-height-sm;
+  padding: 10px 0;
+  margin-right: 25px;
+}
+
 .small {
+  composes: default;
   width: 50px;
+  margin-right: 0px;
 }
 
 .medium {
+  composes: default;
   width: 185px;
 }
 
 .large {
+  composes: default;
   width: 248px;
 }
 
 .extraLarge {
+  composes: default;
   width: 530px;
 }
 
@@ -23,10 +36,17 @@
   padding: 2px 10px;
   border: 2px solid $lightGray;
   border-radius: 5px;
+  font-family: inherit;
+  font-size: $font-sm;
   
   &:focus {
     outline-style: none;
     outline-color: rgba(255,255,255,0);
     border-color: $yellowGreen;
   }
+}
+
+.Label {
+  
+
 }

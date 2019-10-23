@@ -3,7 +3,7 @@ import TeamMembers from "./TeamMembers";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 
 const Team = () => (
-  <React.Fragment>
+  <div className={`FormContent`}>
     <FieldWrapper
       name="name"
       componentSize="medium"
@@ -23,7 +23,7 @@ const Team = () => (
       label="Kod pocztowy"
     />
     <TeamMembers />
-  </React.Fragment>
+  </div>
 );
 
 export default Team;

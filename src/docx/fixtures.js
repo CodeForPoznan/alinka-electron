@@ -25,6 +25,7 @@ const specificData = {
 };
 
 var commonData = {
+  test: "testowe cuś",
   applicant: {
     address: "Wielka 4/6, 55-789 Studnia",
     name: "Tomasz Rzeźniczak i Adelajda Kieł"

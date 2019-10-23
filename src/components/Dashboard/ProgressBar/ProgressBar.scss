@@ -2,6 +2,8 @@
 @import '../../../scss/_mixins.scss';
 
 .ProgressBar {
-  @include dashboardStyle();
-  margin-bottom: 25px;
+  @include containerStyle();
+  @include flex(space-between);
+  height: 60px;
+  margin-bottom: 20px;
 }

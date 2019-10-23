@@ -1,6 +1,6 @@
 //COLORS
 $white: #fff;
-$lightBlack: #1E2025;
+$lightBlack: #2A2A2A;
 $black: #000;
 $lightMarine: rgba(#0D4C5E, 0.02);
 $yellowGreen: #d3d02e;
@@ -15,7 +15,8 @@ $gray: #ADADAD;
 //TYPOGRAPFY
 
 //font-sizes
-$font-sm: 12px;
+$font-xs: 12px;
+$font-sm: 13px;
 $font-md: 16px;
 $font-lg: 30px;
 
@@ -28,8 +29,6 @@ $regular: 400;
 $bold: 700;
 
 $letter-spacing-default: 1.25px;
-
-
 
 //GLOBAL
 $bodyBackground: $lightOrange;

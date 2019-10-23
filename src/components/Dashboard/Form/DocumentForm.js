@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormHeader from "./FormHeader/FormHeader.js";
 import { Form } from "react-final-form";
-import styles from './DocumentForm.scss';
+import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 
