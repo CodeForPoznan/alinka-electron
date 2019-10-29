@@ -7,6 +7,7 @@ import arrayMutators from "final-form-arrays";
 describe("TeamComponent", () => {
   let formWrapper;
   beforeEach(() => {
+    // eslint-disable-next-line react/display-name
     formWrapper = component => (
       <Form
         onSubmit={() => {}}

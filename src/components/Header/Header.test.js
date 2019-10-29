@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Layout from "./Layout.js";
+import Header from "./Header";
 
-describe("Layout", () => {
-  it("renders without crashing", () => {
+describe("Sidebar", () => {
+  it("should be created", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<Layout />, div);
+    ReactDOM.render(<Header />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

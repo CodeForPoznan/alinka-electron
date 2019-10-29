@@ -18,7 +18,7 @@ describe("Sidebar", () => {
     );
     const subject = component.toJSON();
 
-    expect(subject.children.length).toEqual(1);
+    expect(subject.children).toHaveLength(1);
     expect(subject.children[0].type).toEqual("span");
     expect(subject.children[0].children).toEqual(["test"]);
   });
