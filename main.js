@@ -98,7 +98,7 @@ if (inDevelopmentMode) {
 /*********************/
 ipcMain.on("print:value", (event, values) => {
   console.log(values);
-    generateDocument("INDYWIDUALNE", values)
+    generateDocument("SPECJALNE", values)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });
