@@ -9,8 +9,6 @@ const ASSETS_LIST = {
     prefix: "indywidualne",
     statics: [
       "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
       "word/fontTable.xml",
       "word/footnotes.xml",
       "word/styles.xml",
@@ -23,8 +21,6 @@ const ASSETS_LIST = {
     prefix: "specjalne",
     statics: [
       "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
       "word/fontTable.xml",
       "word/footnotes.xml",
       "word/styles.xml",
@@ -36,8 +32,6 @@ const ASSETS_LIST = {
     prefix: "indywidualne_roczne",
     statics: [
       "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
       "word/fontTable.xml",
       "word/footnotes.xml",
       "word/styles.xml",
@@ -49,8 +43,6 @@ const ASSETS_LIST = {
     prefix: "rewalidacyjne",
     statics: [
       "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
       "word/fontTable.xml",
       "word/footnotes.xml",
       "word/styles.xml",
@@ -62,8 +54,6 @@ const ASSETS_LIST = {
     prefix: "opinia",
     statics: [
       "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
       "word/fontTable.xml",
       "word/footnotes.xml",
       "word/styles.xml",
