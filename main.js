@@ -105,7 +105,7 @@ ipcMain.on("print:value", (event, values) => {
     console.log(values);
     values = calculateValues(values);
     console.log(values);
-    generateDocument(values.typeOfApplication, values)
+    generateDocument(values.applicant.issue, values)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });

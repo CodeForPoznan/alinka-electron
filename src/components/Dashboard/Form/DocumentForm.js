@@ -9,8 +9,8 @@ export default class DocumentForm extends Component {
   state = {
     page: 0,
     values: this.props.initialValues || {},
-    reasonsList: this.props.reasonsList || {},
-    applicationsTypeList: this.props.applicationsTypeList || {}
+    disabilityList: this.props.disabilityList || {},
+    reasonsList: this.props.reasonsList || {}
   };
 
   static Step = ({ children }) => children;
@@ -47,7 +47,7 @@ export default class DocumentForm extends Component {
 
   render() {
     const children = this.props.children;
-    const { page, values } = this.state;
+    const { disabilityList, page, reasonsList, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
 
@@ -57,6 +57,8 @@ export default class DocumentForm extends Component {
           ...arrayMutators
         }}
         initialValues={values}
+        reasonsList={reasonsList}
+        disabilityList={disabilityList}
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
@@ -92,5 +94,5 @@ DocumentForm.propTypes = {
   initialValues: PropTypes.object,
   children: PropTypes.node,
   reasonsList: PropTypes.array,
-  applicationsTypeList: PropTypes.array
+  disabilityList: PropTypes.array
 };

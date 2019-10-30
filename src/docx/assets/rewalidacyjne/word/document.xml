@@ -317,7 +317,7 @@
         <w:footnoteReference w:id="4"/>
       </w:r>
       <w:r>
-        <w:t xml:space="preserve"> {{ period }}</w:t>
+        <w:t xml:space="preserve"> {{ applicant.period }}</w:t>
       </w:r>
     </w:p>
     <w:p>

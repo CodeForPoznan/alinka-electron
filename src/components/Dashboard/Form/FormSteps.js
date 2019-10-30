@@ -26,6 +26,7 @@ const FormSteps = () => (
     <DocumentForm
       initialValues={commonData}
       reasonsList={reasonsList}
+      disabilityList={disabilityList}
       onSubmit={onSubmit}
     >
       <DocumentForm.Step>

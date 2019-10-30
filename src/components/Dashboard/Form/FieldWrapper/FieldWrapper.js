@@ -9,7 +9,7 @@ import OptionList from "./SelectOptions";
 
 const required = value => (value ? undefined : "Required");
 
-const FieldWrapper = ({ name, componentSize, component, options, label }) => {
+const FieldWrapper = ({ name, componentSize, component, options }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
@@ -23,7 +23,6 @@ const FieldWrapper = ({ name, componentSize, component, options, label }) => {
           component={component}
           type="text"
           validate={required}
-          label={label}
         />
       ) : (
         <Field className={styles.Input} name={name} component={component} options={options}>

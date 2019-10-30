@@ -89,6 +89,16 @@ const disabilityList = [
   },
   {
     key: "10",
+    text: "stan zdrowia uniemożliwiający uczęszczanie do szkoły",
+    value: "UNIEMOZLIWIAJACY"
+  },
+  {
+    key: "11",
+    text: "stan zdrowia znacznie utrudniający uczęszczanie do szkoły",
+    value: "ZNACZNIE_UTRUDNIAJACY"
+  },
+  {
+    key: "10",
     text: "zagrożenie niedostosowaniem społecznym",
     value: "ZAGROŻENIE"
   },

@@ -12,13 +12,13 @@ const disabilityMap = {
 };
 
 const calculateValues = values => {
-  const reason = values.reason;
-  let secondReason = values.secondReason;
+  const reason = values.applicant.reason;
+  let secondReason = values.applicant.secondReason;
   if (reason && secondReason) {
     const firstReason = disabilityMap[reason];
     secondReason = disabilityMap[secondReason];
-    values.multipleDisability = [firstReason, secondReason];
-    values.reason = "SPRZEZONA";
+    values.applicant.multipleDisability = [firstReason, secondReason];
+    values.applicant.issue = "SPRZEZONA";
   }
   return values;
 };
