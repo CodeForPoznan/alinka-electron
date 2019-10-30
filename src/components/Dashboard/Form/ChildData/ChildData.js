@@ -39,7 +39,7 @@ const ChildData = () => (
     <FieldWrapper
       name={`child.schoolType`}
       componentSize="large"
-      component="select"
+      component="input"
     />
     <FieldWrapper
       name={`child.profession`}

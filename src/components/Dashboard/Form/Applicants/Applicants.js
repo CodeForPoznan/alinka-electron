@@ -2,6 +2,8 @@ import React from "react";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
+import { reasonsList, disabilityList } from "../../../../staticData";
+
 const Applicants = () => (
   <div className={`FormContent ${styles.Applicants}`}>
     <FieldWrapper
@@ -38,16 +40,24 @@ const Applicants = () => (
       name={`applicant.issue`}
       componentSize="large"
       component="select"
-    />
-    <FieldWrapper
-      name={`applicant.period`}
-      componentSize="medium"
-      component="input"
+      options={reasonsList}
     />
     <FieldWrapper
       name={`applicant.reason`}
       componentSize="extraLarge"
       component="select"
+      options={disabilityList}
+    />
+    <FieldWrapper
+      name={`applicant.secondReason`}
+      componentSize="extraLarge"
+      component="select"
+      options={disabilityList}
+    />
+    <FieldWrapper
+      name={`applicant.period`}
+      componentSize="medium"
+      component="input"
     />
   </div>
 );

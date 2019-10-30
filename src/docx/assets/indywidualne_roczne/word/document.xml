@@ -271,7 +271,7 @@
         <w:footnoteReference w:id="2"/>
       </w:r>
       <w:r>
-        <w:t xml:space="preserve"> {{ period }}</w:t>
+        <w:t xml:space="preserve"> {{ applicant.period }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -287,11 +287,11 @@
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
           <w:lang w:val="pl-PL"/>
         </w:rPr>
-        <w:t>ze względu na stan zdrowia dziecka </w:t>
+        <w:t xml:space="preserve">ze względu na stan zdrowia dziecka </w:t>
       </w:r>
       <w:r>
         <w:rPr>
-            {% if reason == "ZNACZNIE_UTRUDNIAJACY" %}
+            {% if applicant.reason == "ZNACZNIE_UTRUDNIAJACY" %}
           <w:strike/>
             {% endif %}
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -304,7 +304,7 @@
       </w:r>
       <w:r>
         <w:rPr>
-            {% if reason == "UNIEMOZLIWIAJACY" %}
+            {% if applicant.reason == "UNIEMOZLIWIAJACY" %}
           <w:strike/>
             {% endif %}
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>

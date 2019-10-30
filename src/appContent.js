@@ -1,4 +1,4 @@
-const appContent = {
+const fieldLabels = {
   childData: "Dane dziecka",
   child: {
     name: "Imię i nazwisko",
@@ -22,9 +22,10 @@ const appContent = {
     houseNumber: "Numer lokalu/mieszkania",
     issue: "wniosek o",
     period: "Na okres czasu",
-    reason: "Z uwagi na"
+    reason: "Z uwagi na",
+    secondReason: "Dodatkowa niepełnosprawność"
   },
-  team: {
+  supportCenter: {
     instituteName: "Nazwa instytucji",
     city: "Miejscowość",
     postalCode: "Kod pocztowy",
@@ -34,4 +35,4 @@ const appContent = {
   }
 };
 
-export default appContent;
+export default fieldLabels;
