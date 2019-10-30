@@ -25,7 +25,12 @@ const FieldWrapper = ({ name, componentSize, component, options }) => {
           validate={required}
         />
       ) : (
-        <Field className={styles.Input} name={name} component={component} options={options}>
+        <Field
+          className={styles.Input}
+          name={name}
+          component={component}
+          options={options}
+        >
           {({ input, options }) => (
             <OptionList
               options={options}

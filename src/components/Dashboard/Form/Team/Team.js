@@ -9,7 +9,11 @@ const Team = () => (
       componentSize="medium"
       component="input"
     />
-    <FieldWrapper name={`supportCenter.city`} componentSize="medium" component="input" />
+    <FieldWrapper
+      name={`supportCenter.city`}
+      componentSize="medium"
+      component="input"
+    />
     <FieldWrapper
       name={`supportCenter.postalCode`}
       componentSize="medium"

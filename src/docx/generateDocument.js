@@ -120,7 +120,6 @@ const ASSETS_LIST = {
 
 function generateDocument(documentType, data) {
   const zip = new JSZip();
-  console.log(`documentType ${documentType}`)
   for (let staticPath of ASSETS_LIST[documentType].statics) {
     zip.file(
       staticPath,

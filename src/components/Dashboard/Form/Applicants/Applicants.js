@@ -59,7 +59,6 @@ const Applicants = () => (
       componentSize="medium"
       component="input"
     />
-
   </div>
 );
 
