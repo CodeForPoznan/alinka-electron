@@ -1,0 +1,9 @@
+@import '../../../scss/_variables.scss';
+@import '../../../scss/_mixins.scss';
+
+.ProgressBar {
+  @include containerStyle();
+  @include flex(space-between);
+  height: 60px;
+  margin-bottom: 20px;
+}

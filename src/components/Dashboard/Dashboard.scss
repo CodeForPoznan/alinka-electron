@@ -1,17 +1,18 @@
 @import '../../scss/_variables.scss';
 
 .Dashboard {
-  background-color: $sidebarBackground;
+  background-color: $bodyBackground;
+  font-family: 'Poppins';
+  font-size: $font-sm;
+  font-weight: $regular;
   color: $textColor;
   height: 100%;
-  width: 60%;
+  width: 80%;
   flex-grow: 1;
 }
 
 .Wrapper {
-  background-color: $white;
-  height: 80%;
+  height: 100%;
   width: 90%;
-  margin: 0 auto;
-  border-radius: 20px;
+  margin: 15px auto;
 }

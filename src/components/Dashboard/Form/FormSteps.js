@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
-import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import ChildData from "./ChildData/ChildData";
+import Applicants from "./Applicants/Applicants";
 import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
@@ -28,59 +29,14 @@ const FormSteps = () => (
       onSubmit={onSubmit}
     >
       <DocumentForm.Step>
-        <FieldWrapper
-          name="child.name"
-          componentSize="large"
-          component="input"
-        />
-        <FieldWrapper
-          name="child.nameGenetiv"
-          componentSize="large"
-          component="input"
-        />
+        <ChildData />
       </DocumentForm.Step>
       <DocumentForm.Step>
-        <FieldWrapper
-          name="applicant.name"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="applicant.nameGenetive"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="applicant.address"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="applicant.postalCode"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="typeOfApplication"
-          componentSize="medium"
-          component="select"
-          options={reasonsList}
-        />
-        <FieldWrapper
-          name="reason"
-          componentSize="medium"
-          component="select"
-          options={disabilityList}
-        />
-        <FieldWrapper
-          name="secondReason"
-          componentSize="medium"
-          component="select"
-          options={disabilityList}
-        />
-        <FieldWrapper name="period" componentSize="medium" component="input" />
+        <Applicants />
       </DocumentForm.Step>
-      <Team />
+      <DocumentForm.Step>
+        <Team />
+      </DocumentForm.Step>
     </DocumentForm>
   </React.Fragment>
 );

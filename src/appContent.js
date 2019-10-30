@@ -1,31 +1,37 @@
 const fieldLabels = {
   childData: "Dane dziecka",
-  "child.name": "Imię i nazwisko",
-  "child.nameGenetiv": "Imię i nazwisko (dopełniacz)",
-  childBirthplace: "Miejsce urodzenia",
-  childPesel: "PESEL",
-  childHome: "Miejsce zamieszkania",
-  childPostalCode: "Kod pocztowy",
-  childHomeStreet: "Ulica",
-  childHomeNumber: "Numer lokalu/mieszkania",
-  childSchoolType: "Rodzaj szkoły",
-  childProfession: "Zawód",
-  childClass: "Klasa",
-  childSchoolName: "Szkoła",
-  fatherFullName: "Imię i nazwisko ojca",
-  motherFullName: "Imię i nazwisko matki",
-  parentsHome: "Miejsce zamieszkania rodziców",
-  "applicant.name": "wnioskodawcy (mianownik)",
-  "applicant.nameGenetive": "wnioskodawcy (dopełniacz)",
-  "applicant.address": "adres (ulica i numer, ew miejscowosc)",
-  "applicant.postalCode": "kod pocztowy i miasto",
-  typeOfApplication: "wniosek o",
-  firstReason: "z uwagi (pierwsze)",
-  secondReason: "z uwagi (drugie)",
-  period: "na okres",
-  "supportCenter.name": "Nazwa poradni",
-  "supportCenter.address": "Adres poradni",
-  "supportCenter.post": "Kod pocztowy poradni"
+  child: {
+    name: "Imię i nazwisko",
+    nameGenetive: "Imię i nazwisko (dopełniacz)",
+    pesel: "PESEL",
+    birthPlace: "Miejsce urodzenia",
+    city: "Miejsce zamieszkania",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    houseNumber: "Numer lokalu/mieszkania",
+    schoolType: "Rodzaj szkoły",
+    schoolName: "Szkoła",
+    profession: "Zawód",
+    class: "Klasa"
+  },
+  applicant: {
+    names: "Imię i nazwisko aplikanta",
+    city: "Miejsce zamieszkania",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    houseNumber: "Numer lokalu/mieszkania",
+    issue: "wniosek o",
+    period: "Na okres czasu",
+    reason: "Z uwagi na"
+  },
+  team: {
+    instituteName: "Nazwa instytucji",
+    city: "Miejscowość",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    name: "Imię i nazwisko członka",
+    function: "Funkcja"
+  }
 };
 
 export default fieldLabels;

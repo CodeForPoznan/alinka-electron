@@ -3,24 +3,20 @@ import TeamMembers from "./TeamMembers";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 
 const Team = () => (
-  <React.Fragment>
+  <div className={`FormContent`}>
     <FieldWrapper
-      name="supportCenter.name"
+      name={`team.instituteName`}
       componentSize="medium"
       component="input"
     />
+    <FieldWrapper name={`team.city`} componentSize="medium" component="input" />
     <FieldWrapper
-      name="supportCenter.address"
-      componentSize="medium"
-      component="input"
-    />
-    <FieldWrapper
-      name="supportCenter.post"
+      name={`team.postalCode`}
       componentSize="medium"
       component="input"
     />
     <TeamMembers />
-  </React.Fragment>
+  </div>
 );
 
 export default Team;

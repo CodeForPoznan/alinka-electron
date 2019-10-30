@@ -1,0 +1,12 @@
+@import '../../../scss/_variables.scss';
+@import '../../../scss/_mixins.scss';
+
+.Form {
+  padding: 20px 40px;
+  height: 84%;
+  @include containerStyle();
+}
+
+:global(.FormContent) {
+  padding-left: 90px;
+}

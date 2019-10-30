@@ -1,11 +1,10 @@
 import React from "react";
-import DocumentForm from "../../DocumentForm";
 import FieldWrapper from "../../FieldWrapper/FieldWrapper";
 import { FieldArray } from "react-final-form-arrays";
 import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
-  <DocumentForm.Step>
+  // <DocumentForm.Step>
     <FieldArray name="supportCenter.members">
       {({ fields }) => (
         <React.Fragment>
@@ -42,7 +41,7 @@ const TeamMembers = () => (
         </React.Fragment>
       )}
     </FieldArray>
-  </DocumentForm.Step>
+  // </DocumentForm.Step>
 );
 
 export default TeamMembers;
