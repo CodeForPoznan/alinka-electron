@@ -1,27 +1,30 @@
 import React from "react";
 import { Field } from "react-final-form";
-import appContent from "../../../../appContent";
 import Error from "./ErrorField/ErrorField";
+import fieldLabel from "../../../../appContent.js";
+import styles from "./FieldWrapper.scss";
 import PropTypes from "prop-types";
 
 const required = value => (value ? undefined : "Required");
 
 const FieldWrapper = ({ name, componentSize, component, label }) => {
-  const data = appContent;
+  const dataKeys = name.split(".");
+  const mainKey = dataKeys[0];
+  const subKey = dataKeys[1];
 
   return (
-    <div className={componentSize}>
-      <label>{data[name]}</label>
+    <div className={styles[componentSize]}>
+      <label className={styles.Label}>{fieldLabel[mainKey][subKey]}</label>
       {component !== "select" ? (
         <Field
+          className={styles.Input}
           name={name}
           component={component}
           type="text"
           validate={required}
         />
       ) : (
-        <Field name={name} component={component}>
-          <option />
+        <Field className={styles.Input} name={name} component={component}>
           <option value="optionA">A</option>
           <option value="optionB">B</option>
         </Field>
@@ -34,7 +37,8 @@ const FieldWrapper = ({ name, componentSize, component, label }) => {
 
 FieldWrapper.propTypes = {
   name: PropTypes.string,
-  componentSize: PropTypes.oneOf(["large", "medium"]).isRequired,
+  componentSize: PropTypes.oneOf(["extraLarge", "large", "medium", "small"])
+    .isRequired,
   component: PropTypes.string,
   label: PropTypes.string
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import DocumentForm from "./DocumentForm";
-import FieldWrapper from "./FieldWrapper/FieldWrapper";
+import ChildData from "./ChildData/ChildData";
+import Applicants from "./Applicants/Applicants";
 import Team from "./Team";
 
 import commonData from "../../../docx/fixtures";
@@ -23,56 +24,14 @@ const FormSteps = () => (
   <React.Fragment>
     <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
-        <FieldWrapper
-          name="childfullName"
-          componentSize="large"
-          component="input"
-        />
-        <FieldWrapper
-          name="childfullNameGenetiv"
-          componentSize="large"
-          component="input"
-        />
+        <ChildData />
       </DocumentForm.Step>
       <DocumentForm.Step>
-        <FieldWrapper
-          name="applicantName"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="applicantSurname"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper name="adress" componentSize="medium" component="input" />
-        <FieldWrapper
-          name="postalCode"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="typeOfApplication"
-          componentSize="medium"
-          component="input"
-        />
-        <FieldWrapper
-          name="firstReason"
-          componentSize="medium"
-          component="select"
-        />
-        <FieldWrapper
-          name="secondReason"
-          componentSize="medium"
-          component="select"
-        />
-        <FieldWrapper
-          name="timePeriod"
-          componentSize="medium"
-          component="input"
-        />
+        <Applicants />
       </DocumentForm.Step>
-      <Team />
+      <DocumentForm.Step>
+        <Team />
+      </DocumentForm.Step>
     </DocumentForm>
   </React.Fragment>
 );
