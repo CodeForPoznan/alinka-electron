@@ -1,0 +1,24 @@
+@import '../../../../scss/_variables.scss';
+@import '../../../../scss/_mixins.scss';
+
+.FormHeader {
+  margin-bottom: 20px;
+  @include flex(flex-start center);
+}
+
+.Heading {
+  font-family: 'PlayfairDisplay';
+  font-size: $font-lg;
+  color: $headingDark;
+  font-weight: $regular;
+  padding-left: 13px;
+}
+
+.Underline {
+  border-bottom: 3px solid $orange;
+}
+
+.Icon {
+  width: 76px;
+  height: auto;
+}

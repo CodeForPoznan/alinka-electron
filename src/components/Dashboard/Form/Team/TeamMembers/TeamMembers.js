@@ -4,7 +4,7 @@ import { FieldArray } from "react-final-form-arrays";
 import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
-  <FieldArray name="members">
+  <FieldArray name="supportCenter.members">
     {({ fields }) => (
       <React.Fragment>
         <button

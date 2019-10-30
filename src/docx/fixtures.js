@@ -25,16 +25,33 @@ const specificData = {
 };
 
 var commonData = {
+  child: {
+    name: "Wiktor Eridfasdfz2",
+    nameGenetive: "Wiktor Eridfasdfz2",
+    pesel: "12121244441",
+    birthPlace: "Pachy Wielkie",
+    city: "Poznań",
+    postalCode: "61-854",
+    street: "Mostowa 38",
+    houseNumber: "4",
+    schoolType: ["Szkoła podstawowa"],
+    schoolName: "Szkoła Podstawowa nr 4 w Grodzisku Wlkp.",
+    profession: "murarz",
+    class: "3b",
+    address: "55-789 Studnia, Wielka 4/6",
+    birthDate: "12.12.1912"
+  },
   applicant: {
     address: "Wielka 4/6, 55-789 Studnia",
-    name: "Tomasz Rzeźniczak i Adelajda Kieł"
-  },
-  child: {
-    address: "55-789 Studnia, Wielka 4/6",
-    birthDate: "12.12.1912",
-    birthPlace: "Pachy Wielkie",
-    name: "Wiktor Eridfasdfz2",
-    pesel: "12121244441"
+    name: "Tomasz Rzeźniczak i Adelajda Kieł",
+    names: ["Tomasz Rzeźniczak", "Adelajda Kieł"],
+    city: "Poznań",
+    postalCode: "61-854",
+    street: "Mostowa 38",
+    houseNumber: "4",
+    issue: [""],
+    period: "styczeń 2018 - listopad 2019",
+    reason: ["ZNACZNIE_UTRUDNIAJACY"]
   },
   city: "Grodzisk Wielkopolski",
   date: "15.07.2019",
@@ -45,7 +62,6 @@ var commonData = {
   },
   school:
     "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
-  period: "styczeń 2018 - listopad 2019",
   reason: "ZNACZNIE_UTRUDNIAJACY",
   supportCenter: {
     address: "ul. Zbąszyńska 11",
@@ -65,7 +81,12 @@ var commonData = {
     ],
     name:
       "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
-    post: "62-065 Grodzisk Wlkp."
+    instituteName:
+      "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+    post: "62-065 Grodzisk Wlkp.",
+    city: "Poznań",
+    postalCode: "61-854",
+    street: "Mostowa 38"
   },
   kurator: "w Poznaniu, ul Kościuszki 38, 64-400 Poznań"
 };

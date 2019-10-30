@@ -1,8 +1,9 @@
 @import '../../scss/_variables.scss';
 
 .Sidebar {
-  background-color: $themeColor;
+  background-color: $sidebarBg;
   color: $white;
-  width: 30vw;
+  width: 20%;
+  max-width: 300px;
   height: 100%;
 }

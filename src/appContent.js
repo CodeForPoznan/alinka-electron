@@ -1,28 +1,38 @@
-const appContent = {
+const fieldLabels = {
   childData: "Dane dziecka",
-  childfullName: "Imię i nazwisko",
-  childfullNameGenetiv: "Imię i nazwisko (dopełniacz)",
-  childBirthplace: "Miejsce urodzenia",
-  childPesel: "PESEL",
-  childHome: "Miejsce zamieszkania",
-  childPostalCode: "Kod pocztowy",
-  childHomeStreet: "Ulica",
-  childHomeNumber: "Numer lokalu/mieszkania",
-  childSchoolType: "Rodzaj szkoły",
-  childProfession: "Zawód",
-  childClass: "Klasa",
-  childSchoolName: "Szkoła",
-  fatherFullName: "Imię i nazwisko ojca",
-  motherFullName: "Imię i nazwisko matki",
-  parentsHome: "Miejsce zamieszkania rodziców",
-  applicantName: "wnioskodawcy (mianownik)",
-  applicantSurname: "wnioskodawcy (dopełniacz)",
-  adress: "adres (ulica i numer, ew miejscowosc)",
-  postalCode: "kod pocztowy i miasto",
-  typeOfApplication: "wniosek o",
-  firstReason: "z uwagi (pierwsze)",
-  secondReason: "z uwagi (drugie)",
-  timePeriod: "na okres"
+  child: {
+    name: "Imię i nazwisko",
+    nameGenetive: "Imię i nazwisko (dopełniacz)",
+    pesel: "PESEL",
+    birthPlace: "Miejsce urodzenia",
+    city: "Miejsce zamieszkania",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    houseNumber: "Numer lokalu/mieszkania",
+    schoolType: "Rodzaj szkoły",
+    schoolName: "Szkoła",
+    profession: "Zawód",
+    class: "Klasa"
+  },
+  applicant: {
+    names: "Imię i nazwisko aplikanta",
+    city: "Miejsce zamieszkania",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    houseNumber: "Numer lokalu/mieszkania",
+    issue: "wniosek o",
+    period: "Na okres czasu",
+    reason: "Z uwagi na",
+    secondReason: "Dodatkowa niepełnosprawność"
+  },
+  supportCenter: {
+    instituteName: "Nazwa instytucji",
+    city: "Miejscowość",
+    postalCode: "Kod pocztowy",
+    street: "Ulica",
+    name: "Imię i nazwisko członka",
+    function: "Funkcja"
+  }
 };
 
-export default appContent;
+export default fieldLabels;
