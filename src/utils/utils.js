@@ -18,7 +18,7 @@ const calculateValues = values => {
     const firstReason = disabilityMap[reason];
     secondReason = disabilityMap[secondReason];
     values.applicant.multipleDisability = [firstReason, secondReason];
-    values.applicant.issue = "SPRZEZONA";
+    values.applicant.reason = "SPRZEZONA";
   }
   return values;
 };
