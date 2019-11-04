@@ -98,15 +98,28 @@ const disabilityList = [
     value: "ZNACZNIE_UTRUDNIAJACY"
   },
   {
-    key: "10",
+    key: "12",
     text: "zagrożenie niedostosowaniem społecznym",
     value: "ZAGROŻENIE"
   },
   {
-    key: "11",
+    key: "13",
     text: "niedostosowanie społeczne",
     value: "NIEDOSTOSOWANIE"
   }
 ];
 
-export { reasonsList, disabilityList };
+typeOfClasses = [
+  {
+    key: "1",
+    text: "indywidualne",
+    value: "INDYWIDUALNE"
+  },
+  {
+    key: "2",
+    text: "grupowe",
+    value: "GRUPOWE"
+  }
+];
+
+export { reasonsList, disabilityList, typeOfClasses };
