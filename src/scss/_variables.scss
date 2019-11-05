@@ -1,6 +1,47 @@
-//colors:
-$sidebarBackground: #ececec;
-$headerBackground: #2A2A2A;
+//COLORS
 $white: #fff;
-$themeColor: #0D4C5E;
-$textColor: #1E2025;
+$lightBlack: #2A2A2A;
+$black: #000;
+$lightMarine: rgba(#0D4C5E, 0.02);
+$yellowGreen: #d3d02e;
+$lightOrange: #F1E8E6;
+$orange: #F55951;
+$red: #DD1313;
+$violet: #4B3549;
+$darkViolet: #361D32;
+$lightGray: #DCD8D8;
+$gray: #ADADAD;
+
+//TYPOGRAPFY
+
+//font-sizes
+$font-xs: 12px;
+$font-sm: 13px;
+$font-md: 16px;
+$font-lg: 30px;
+
+$line-height-sm: 18px;
+$line-height-md: 24px;
+$line-height-ld: 40px;
+
+//font-weight
+$regular: 400;
+$bold: 700;
+
+$letter-spacing-default: 1.25px;
+
+//GLOBAL
+$bodyBackground: $lightOrange;
+$textColor: $lightBlack;
+$alertColor: $red;
+
+$headingLight: $white;
+$headingDark: $black;
+
+$radiusContainer: 20px;
+
+//LAYOUT
+$headerBg: $darkViolet;
+$sidebarBg: $violet;
+$dashboardBg: $white;
+

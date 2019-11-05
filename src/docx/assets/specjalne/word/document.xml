@@ -266,7 +266,7 @@
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t>: {{ period }}</w:t>
+        <w:t>: {{ applicant.period }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -303,7 +303,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "NIESLYSZACE" %}
+                {% if applicant.reason == "NIESLYSZACE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -320,7 +320,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "SLABOSLYSZACE" %}
+                {% if applicant.reason == "SLABOSLYSZACE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -337,7 +337,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "NIEWIDZACE" %}
+                {% if applicant.reason == "NIEWIDZACE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -354,7 +354,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "SLABOWIDZACE" %}
+                {% if applicant.reason == "SLABOWIDZACE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -371,7 +371,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "RUCHOWA" %}
+                {% if applicant.reason == "RUCHOWA" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -388,7 +388,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "LEKKIE" %}
+                {% if applicant.reason == "LEKKIE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -405,7 +405,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "UMIARKOWANE" %}
+                {% if applicant.reason == "UMIARKOWANE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -422,7 +422,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "ZNACZNE" %}
+                {% if applicant.reason == "ZNACZNE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -439,7 +439,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "AUTYZM" %}
+                {% if applicant.reason == "AUTYZM" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -456,7 +456,7 @@
         </w:numPr>
       </w:pPr>
       <w:r>
-                {% if reason == "SPRZEZONA" %}
+                {% if applicant.reason == "SPRZEZONA" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -466,26 +466,26 @@
       <w:r>
         <w:rPr>
           <w:rStyle w:val="Odwoanieprzypisudolnego"/>
-                    {% if reason == "SPRZEZONA" %}
+                    {% if applicant.reason == "SPRZEZONA" %}
           <w:u w:val="single"/>
                     {% endif %}
         </w:rPr>
         <w:footnoteReference w:id="5"/>
       </w:r>
       <w:r>
-                {% if reason == "SPRZEZONA" %}
+                {% if applicant.reason == "SPRZEZONA" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
                 {% endif %}
         <w:t>: </w:t>
       </w:r>
-            {% if reason == "SPRZEZONA" %}
+            {% if applicant.reason == "SPRZEZONA" %}
       <w:r>
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
-        <w:t>{{ multipleDisability.join() }}</w:t>
+        <w:t>{{ applicant.multipleDisability.join(", ") }}</w:t>
       </w:r>
             {% endif %}
     </w:p>
@@ -494,7 +494,7 @@
         <w:pStyle w:val="Reason-list"/>
       </w:pPr>
       <w:r>
-                {% if reason == "NIEDOSTOSOWANIE" %}
+                {% if applicant.reason == "NIEDOSTOSOWANIE" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>
@@ -507,7 +507,7 @@
         <w:pStyle w:val="Reason-list"/>
       </w:pPr>
       <w:r>
-                {% if reason == "ZAGROZENIE_NIEDOSTOSOWANIEM" %}
+                {% if applicant.reason == "ZAGROZENIE_NIEDOSTOSOWANIEM" %}
         <w:rPr>
           <w:u w:val="single"/>
         </w:rPr>

@@ -1,0 +1,36 @@
+@import './_variables.scss';
+
+@mixin flex($params: null) {
+  display: flex;
+  $justify-content: null;
+  $align-items: null;
+  @each $value in $params {
+    @if $value == "wrap" {
+      flex-wrap: wrap;
+    } @else if $value == "column" {
+      flex-direction: column;
+    } @else if index(space-between space-evenly space-around, $value) {
+      $justify-content: $value;
+    } @else if index(baseline, $value) {
+      $align-items: $value;
+    } @else if index(flex-start center flex-end, $value) {
+      @if $justify-content {
+        $align-items: $value;
+      } @else {
+        $justify-content: $value;
+        @if not $align-items {
+          $align-items: $value;
+        }
+      }
+    }
+  }
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin containerStyle() {
+  background-color: $dashboardBg;
+  border-radius: $radiusContainer;
+  box-shadow: -2px 4px 4px 0px rgba(0,0,0,0.2);
+}
+
