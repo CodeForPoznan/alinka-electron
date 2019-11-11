@@ -98,12 +98,12 @@ const disabilityList = [
     value: "ZNACZNIE_UTRUDNIAJACY"
   },
   {
-    key: "10",
+    key: "12",
     text: "zagrożenie niedostosowaniem społecznym",
     value: "ZAGROŻENIE"
   },
   {
-    key: "11",
+    key: "13",
     text: "niedostosowanie społeczne",
     value: "NIEDOSTOSOWANIE"
   }

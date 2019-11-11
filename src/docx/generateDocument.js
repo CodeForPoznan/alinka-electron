@@ -70,9 +70,8 @@ const ASSETS_LIST = {
     "word/endnotes.xml",
     "word/numbering.xml",
     "word/settings.xml",
-    "word/webSettings.xml",
+    "word/webSettings.xml"
   ]
-
 };
 
 function generateDocument(documentType, data) {
@@ -95,12 +94,7 @@ function generateDocument(documentType, data) {
     zip.file(
       commonStaticPath,
       fs.readFileSync(
-        path.posix.resolve(
-          __dirname,
-          "assets",
-          "commons",
-          commonStaticPath
-        )
+        path.posix.resolve(__dirname, "assets", "commons", commonStaticPath)
       )
     );
   }
