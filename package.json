@@ -71,7 +71,13 @@
     "appId": "com.alinka.app",
     "asar": true,
     "win": {
-      "target": "NSIS",
+      "target": {
+        "target": "NSIS",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
       "icon": "./assets/icon.png"
     },
     "nsis": {
