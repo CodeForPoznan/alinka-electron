@@ -1,0 +1,21 @@
+@import "../../../../scss/variables";
+
+.Button{
+
+  width: 129px;
+  height: 39px;
+  background-color: $gray;
+  border-radius: 20px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $font-md;
+  border-bottom-style: none;
+  margin: 5px;
+  cursor: pointer;
+
+
+  .Button:visited {
+    border: transparent;
+  }
+
+}

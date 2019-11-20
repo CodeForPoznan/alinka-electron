@@ -5,8 +5,18 @@
   padding: 20px 40px;
   height: 84%;
   @include containerStyle();
+
 }
 
 :global(.FormContent) {
   padding-left: 90px;
+}
+div .buttons{
+  position: absolute;
+  bottom: 93px;
+  right: 130px;
+  //left: 1080px;
+display: flex;
+  justify-content: space-between;
+
 }
