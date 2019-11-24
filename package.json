@@ -108,14 +108,13 @@
       "output": "dist"
     },
     "files": [
-      "**/*",
-      "build/**/*",
-      "assets/**/*",
-      "!dist/**/*",
-      "!src/**/*",
-      "src/docx/**/*",
-      "src/utils/**/*",
-      "node_modules/**/*"
+      "package.json",
+      "build/",
+      "assets/",
+      "src/docx/",
+      "src/utils/",
+      "main.js",
+      "node_modules/"
     ]
   },
   "browserslist": [
