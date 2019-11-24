@@ -113,6 +113,8 @@
       "assets/**/*",
       "!dist/**/*",
       "!src/**/*",
+      "src/docx/**/*",
+      "src/utils/**/*",
       "node_modules/**/*"
     ]
   },
