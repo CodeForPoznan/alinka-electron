@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import FormHeader from "./FormHeader/FormHeader.js";
 import { Form } from "react-final-form";
+import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 
 export default class DocumentForm extends Component {
   state = {
     page: 0,
-    values: this.props.initialValues || {}
+    values: this.props.initialValues || {},
+    disabilityList: this.props.disabilityList || {},
+    reasonsList: this.props.reasonsList || {}
   };
 
   static Step = ({ children }) => children;
@@ -44,7 +47,7 @@ export default class DocumentForm extends Component {
 
   render() {
     const children = this.props.children;
-    const { page, values } = this.state;
+    const { disabilityList, page, reasonsList, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
 
@@ -54,11 +57,13 @@ export default class DocumentForm extends Component {
           ...arrayMutators
         }}
         initialValues={values}
+        reasonsList={reasonsList}
+        disabilityList={disabilityList}
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
         {({ handleSubmit, submitting, values }) => (
-          <form onSubmit={handleSubmit}>
+          <form className={styles.Form} onSubmit={handleSubmit}>
             <FormHeader page={this.state.page} />
             {activePage}
             <div className="buttons">
@@ -87,5 +92,7 @@ export default class DocumentForm extends Component {
 DocumentForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   initialValues: PropTypes.object,
-  children: PropTypes.node
+  children: PropTypes.node,
+  reasonsList: PropTypes.array,
+  disabilityList: PropTypes.array
 };

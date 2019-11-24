@@ -281,7 +281,7 @@
         <w:t>3</w:t>
       </w:r>
       <w:r>
-        <w:t>: {{ period }}</w:t>
+        <w:t>: {{ applicant.period }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -297,7 +297,7 @@
         <w:t xml:space="preserve">ze względu na stan zdrowia ucznia </w:t>
       </w:r>
       <w:r>
-        {% if reason == "ZNACZNIE_UTRUDNIAJACY" %}
+        {% if applicant.reason == "ZNACZNIE_UTRUDNIAJACY" %}
           <w:rPr>
             <w:strike/>
           </w:rPr>
@@ -308,7 +308,7 @@
         <w:t xml:space="preserve">/ </w:t>
       </w:r>
       <w:r>
-        {% if reason == "UNIEMOZLIWIAJACY" %}
+        {% if applicant.reason == "UNIEMOZLIWIAJACY" %}
           <w:rPr>
             <w:strike/>
           </w:rPr>

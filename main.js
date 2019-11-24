@@ -1,9 +1,11 @@
 const fs = require("fs");
 const { app, BrowserWindow, ipcMain, Menu } = require("electron");
 const { generateDocument } = require("./src/docx/generateDocument");
+const { calculateValues } = require("./src/utils/utils");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
+
 
 /***************/
 /* Main Window */
@@ -11,8 +13,8 @@ const inDevelopmentMode = process.env.MODE === "dev";
 app.on("ready", () => {
   // Configure the main window
   let mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 665,
     icon: path.join(__dirname, "assets/Alinka-logo.png"),
     webPreferences: {
       backgroundThrottling: false
@@ -40,15 +42,18 @@ app.on("ready", () => {
     app.quit();
   });
 
-  const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
+  const {
+    default: installExtension,
+    REACT_DEVELOPER_TOOLS
+  } = require("electron-devtools-installer");
 
-  installExtension(REACT_DEVELOPER_TOOLS).then((name) => {
+  installExtension(REACT_DEVELOPER_TOOLS)
+    .then(name => {
       console.log(`Added Extension:  ${name}`);
-  })
-  .catch((err) => {
-      console.log('An error occurred: ', err);
-  });
-
+    })
+    .catch(err => {
+      console.log("An error occurred: ", err);
+    });
 });
 
 /********/
@@ -97,8 +102,8 @@ if (inDevelopmentMode) {
 /* Document Renderer */
 /*********************/
 ipcMain.on("print:value", (event, values) => {
-  console.log(values);
-    generateDocument("INDYWIDUALNE", values)
+    values = calculateValues(values);
+    generateDocument(values.applicant.issue, values)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
     .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });
