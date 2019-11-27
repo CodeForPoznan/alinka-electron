@@ -1,4 +1,5 @@
 @import "../../../../scss/variables";
+@import "../../../../scss/mixins";
 
 .Button{
 
@@ -12,10 +13,7 @@
   border-bottom-style: none;
   margin: 5px;
   cursor: pointer;
-
-
-  .Button:visited {
-    border: transparent;
-  }
+  border-color: transparent;
+  outline: none;
 
 }

@@ -70,16 +70,11 @@ export default class DocumentForm extends Component {
             {activePage}
             <div className={styles.buttons}>
               {page > 0 && <Button  onClick={this.previous} label="wróć"/>}
-              {/*{page > 0 && (*/}
-              {/*    <button type="button" onClick={this.previous}>*/}
-              {/*      Wróć2*/}
-              {/*    </button>*/}
-              {/*)}*/}
               {isLastPage ? (
-                  <Button type="submit" disabled={submitting} label="utwórz dokument"/>
+                  <Button  type="submit" disabled={submitting} label="utwórz dokument"/>
 
               ) : (
-                  <Button label="dalej" />
+                  <Button label="dalej"  onClick={(values) =>this.next(values)}/>
               )}
             </div>
 
