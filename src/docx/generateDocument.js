@@ -59,18 +59,18 @@ const ASSETS_LIST = {
       path.join("word", "styles.xml"),
       path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   common: [
-    "customXml/_rels/item1.xml.rels",
-    "customXml/item1.xml",
-    "_rels/.rels",
-    "word/_rels/document.xml.rels",
-    "word/theme/theme1.xml",
-    "word/endnotes.xml",
-    "word/numbering.xml",
-    "word/settings.xml",
-    "word/webSettings.xml"
+    path.join("customXml", "_rels", "item1.xml.rels"),
+    path.join("customXml", "item1.xml"),
+    path.join("_rels", ".rels"),
+    path.join("word", "_rels", "document.xml.rels"),
+    path.join("word", "theme", "theme1.xml"),
+    path.join("word", "endnotes.xml"),
+    path.join("word", "numbering.xml"),
+    path.join("word", "settings.xml"),
+    path.join("word", "webSettings.xml")
   ]
 };
 
