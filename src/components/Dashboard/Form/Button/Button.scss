@@ -1,19 +1,14 @@
 @import "../../../../scss/variables";
-@import "../../../../scss/mixins";
 
-.Button{
-
-  width: 129px;
-  height: 39px;
+.Button {
   background-color: $gray;
   border-radius: 20px;
   color: $white;
-  text-transform: uppercase;
-  font-size: $font-md;
-  border-bottom-style: none;
-  margin: 5px;
   cursor: pointer;
-  border-color: transparent;
+  font-size: $font-md;
+  height: 39px;
+  margin: 5px;
   outline: none;
-
+  padding: 0 15px;
+  text-transform: uppercase;
 }
