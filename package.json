@@ -78,7 +78,7 @@
   "build": {
     "productName": "Alinka",
     "appId": "com.alinka.app",
-    "asar": false,
+    "asar": true,
     "win": {
       "target": {
         "target": "NSIS",
