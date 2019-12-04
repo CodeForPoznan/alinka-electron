@@ -1,15 +1,18 @@
-const knex = require('./db_config').knex;
-const bookshelf = require('bookshelf')(knex);
+const Sequelize = require("sequelize");
 
+const sequelize = require("./db_config").sequelize;
 
-const SchoolType = bookshelf.Model.extend({
-    tableName:"schooltypes",
-}, {
-    schoolTypeList: "", 
-    getSchoolTypeList: async () => {
-        const data =  await SchoolType.forge().fetchAll();
-        return data.toJSON()
+const SchoolType = sequelize.define(
+  "schooltype",
+  {
+    schoolType: {
+      type: Sequelize.STRING,
+      allowNull: false
     }
-})
+  },
+  {
+    // options
+  }
+);
 
 module.exports = SchoolType;

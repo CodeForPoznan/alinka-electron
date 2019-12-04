@@ -1,18 +1,21 @@
-const knex = require('knex')({
-    client: 'sqlite3',
-    connection: {
-        filename: '../alinka.db'
-    },
-    useNullAsDefault: true
+const path = require("path");
+const Sequelize = require("sequelize");
+
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: path.resolve(__dirname, "../alinka.db"),
+  dialectOptions: {
+    requestTimeout: 300000
+  }
 });
 
-knex.schema.createTable('schooltypes', function(table) {
-    table.increments('id').primary();
-    table.string('type');
-}).then( function() {
-    console.log("Table was created")
-}).catch( function() {
-    console.log("Table already exists")
-});
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Connection has been established successfully.");
+  })
+  .catch(err => {
+    console.error("Unable to connect to the database:", err);
+  });
 
-module.exports.knex = knex;
+module.exports = { sequelize };

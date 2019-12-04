@@ -9,7 +9,7 @@ import OptionList from "./SelectOptions";
 
 const required = value => (value ? undefined : "Required");
 
-const FieldWrapper = ({ name, componentSize, component, options }) => {
+const FieldWrapper = ({ name, componentSize, component, options, onFocus }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
@@ -36,6 +36,7 @@ const FieldWrapper = ({ name, componentSize, component, options }) => {
               options={options}
               name={input.name}
               onChange={value => input.onChange(value)}
+              onFocus={onFocus}
             />
           )}
         </Field>
@@ -52,7 +53,8 @@ FieldWrapper.propTypes = {
     .isRequired,
   component: PropTypes.string,
   options: PropTypes.array,
-  label: PropTypes.string
+  label: PropTypes.string,
+  onFocus: PropTypes.func.isRequired
 };
 
 FieldWrapper.defaultProps = {

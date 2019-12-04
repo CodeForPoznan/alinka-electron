@@ -109,7 +109,7 @@ const disabilityList = [
   }
 ];
 
-typeOfClasses = [
+const typeOfClasses = [
   {
     key: "1",
     text: "indywidualne",
