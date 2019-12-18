@@ -2,7 +2,11 @@
   "name": "alinka",
   "version": "0.1.0",
   "private": true,
-  "author": "Code for Poznan",
+  "author": {
+    "name": "Code for Poznan",
+    "email": "hello@codeforpoznan.pl",
+    "url": "https://codeforpoznan.pl/"
+  },
   "description": "Aplication for Supporting Center for Children",
   "main": "main.js",
   "license": "MIT",
@@ -16,7 +20,7 @@
     "webpack:dev": "MODE=dev webpack-dev-server --mode development --progress",
     "electron:dev": "MODE=dev electron .",
     "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
-    "build": "webpack --mode production && electron-builder --windows",
+    "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest"
   },
   "dependencies": {
@@ -79,24 +83,41 @@
     "appId": "com.alinka.app",
     "asar": true,
     "win": {
-      "target": "NSIS",
+      "target": {
+        "target": "NSIS",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
       "icon": "./assets/icon.png"
     },
     "nsis": {
       "allowToChangeInstallationDirectory": true,
       "oneClick": false
     },
+    "linux": {
+      "target": {
+        "target": "deb",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
+      "icon": "./assets/icon.png"
+    },
     "directories": {
       "buildResources": "build",
       "output": "dist"
     },
     "files": [
-      "**/*",
-      "build/**/*",
-      "assets/**/*",
-      "!dist/**/*",
-      "!src/**/*",
-      "node_modules/**/*"
+      "package.json",
+      "build/",
+      "assets/",
+      "src/docx/",
+      "src/utils/",
+      "main.js",
+      "node_modules/"
     ]
   },
   "browserslist": [
