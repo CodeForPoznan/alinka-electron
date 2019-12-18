@@ -5,7 +5,6 @@
   padding: 20px 40px;
   height: 84%;
   @include containerStyle();
-
 }
 
 :global(.FormContent) {
@@ -13,6 +12,6 @@
 }
 
 div .buttons {
-  @include flex(flex-end);
-  padding-top: 30px;
+  @include flex(space-between flex-end);
+  padding: 30px 90px;
 }

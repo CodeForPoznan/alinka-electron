@@ -2,17 +2,15 @@ import React from "react";
 import styles from "./Button.scss";
 import PropTypes from "prop-types";
 
-const Button = props => {
-  return (
-    <button type={props.type} className={styles.Button} onClick={props.onClick}>
-      {props.children}
-    </button>
-  );
-};
+const Button = props => (
+  <button type={props.type} className={styles.Button} onClick={props.onClick}>
+    {props.children}
+  </button>
+);
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  children: PropTypes.string,
+  children: PropTypes.node,
   type: PropTypes.oneOf(["button", "submit"])
 };
 
