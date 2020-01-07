@@ -4,6 +4,7 @@ import { Form } from "react-final-form";
 import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
+import Button from "../../Button/Button";
 
 export default class DocumentForm extends Component {
   state = {
@@ -66,18 +67,14 @@ export default class DocumentForm extends Component {
           <form className={styles.Form} onSubmit={handleSubmit}>
             <FormHeader page={this.state.page} />
             {activePage}
-            <div className="buttons">
-              {page > 0 && (
-                <button type="button" onClick={this.previous}>
-                  Wróć
-                </button>
-              )}
+            <div className={styles.buttons}>
+              {page > 0 && <Button onClick={this.previous}>wróć</Button>}
               {isLastPage ? (
-                <button type="submit" disabled={submitting}>
-                  Utwórz dokument
-                </button>
+                <Button type="submit" disabled={submitting}>
+                  utwórz dokument
+                </Button>
               ) : (
-                <button type="submit">Dalej</button>
+                <Button type="submit">dalej</Button>
               )}
             </div>
 
