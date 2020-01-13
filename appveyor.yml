@@ -5,8 +5,15 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
+  - ps: Install-Product wine
   - npm install
 
 test_script:
   - npm run lint
   - npm run test
+
+before_deploy:
+  - ps: Install-Product wine
+
+deploy_script:
+  - npm run build
