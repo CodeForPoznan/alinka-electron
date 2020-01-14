@@ -16,7 +16,7 @@ install:
 
 script:
   - |
-      docker exec publisher:v1 npm run release
+      docker exec publisher npm run release
 
 deploy:
   provider: script
