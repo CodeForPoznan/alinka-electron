@@ -10,9 +10,19 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
+install:
+  - docker build -t publisher:v1 .
+  - docker run -d --name publisher publisher:v1
+
 script:
   - |
-      docker build -t publisher:v1 . && docker run -d --name publisher publisher:v1 && docker exec publisher:v1 npm run release
+      docker exec publisher:v1 npm run release
+
+deploy:
+  provider: script
+  script: docker build -t publisher:v1 . && docker run -d --name publisher publisher:v1 && docker exec publisher:v1 npm run release
+  on:
+    branch: master
 
 branches:
   except:
