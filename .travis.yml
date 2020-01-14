@@ -1,7 +1,6 @@
 matrix:
   include:
     - os: linux
-      services: docker
       language: javascript
 
 cache:
@@ -11,16 +10,15 @@ cache:
     - $HOME/.cache/electron-builder
 
 install:
-  - docker build -t publisher:v1 .
-  - docker run -d --name publisher -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY publisher:v1
+  - npm install
 
 script:
-  - docker exec publisher npm run lint
-  - docker exec publisher npm run test
-  - docker exec publisher npm run release
+  - npm run lint
+  - npm run test
+  - npm run release
 
 deploy:
   provider: script
-  script: docker exec publisher npm run release
+  script: npm run release
   on:
     branch: master
