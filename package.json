@@ -20,7 +20,8 @@
     "webpack:dev": "MODE=dev webpack-dev-server --mode development --progress",
     "electron:dev": "MODE=dev electron .",
     "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
-    "build": "webpack --mode production && electron-builder --windows --linux",
+    "build": "webpack --mode production && electron-builder --windows --linux -p never",
+    "release": "webpack --mode production && electron-builder --windows --linux -p always",
     "test": "jest"
   },
   "dependencies": {
@@ -82,6 +83,11 @@
     "productName": "Alinka",
     "appId": "com.alinka.app",
     "asar": true,
+    "publish": {
+      "provider": "s3",
+      "bucket": "alinka-dev",
+      "path": "installer"
+    },
     "win": {
       "target": {
         "target": "NSIS",
