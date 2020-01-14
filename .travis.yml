@@ -12,7 +12,7 @@ cache:
 
 script:
   - |
-      docker built -t publisher:v1 . && \
+      docker build -t publisher:v1 . && \
       docker docker container run --detach --name publisher publisher:v1 \
       docker exec publisher:v1 npm run release
 
