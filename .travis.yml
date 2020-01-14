@@ -10,7 +10,8 @@ cache:
     - $HOME/.cache/electron-builder
 
 install:
-  - sudo apt-get update && apt-get install --no-install-recommends -y wine wine32
+  - sudo apt-get update
+  - sudo apt-get install --no-install-recommends -y wine wine32
   - npm install
 
 script:
