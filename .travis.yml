@@ -10,6 +10,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 install:
+  - apt install wine wine32
   - npm install
 
 script:
