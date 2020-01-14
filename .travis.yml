@@ -16,9 +16,6 @@ script:
       docker docker container run --detach --name publisher publisher:v1 \
       docker exec publisher:v1 npm run release
 
-before_cache:
-  - rm -rf $HOME/.cache/electron-builder/wine
-
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
