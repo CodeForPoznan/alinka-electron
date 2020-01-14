@@ -10,6 +10,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 install:
+  - sudo dpkg --add-architecture i386
   - sudo apt-get update
   - sudo apt-get install --no-install-recommends -y wine wine32
   - npm install
