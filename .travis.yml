@@ -15,8 +15,8 @@ install:
   - docker run -d --name publisher -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY publisher:v1
 
 script:
-  - npm run lint
-  - npm run test
+  - docker exec publisher npm run lint
+  - docker exec publisher npm run test
   - docker exec publisher npm run release
 
 deploy:
