@@ -2,7 +2,7 @@ matrix:
   include:
     - os: linux
       services: docker
-      language: generic
+      language: javascript
 
 cache:
   directories:
@@ -15,15 +15,12 @@ install:
   - docker run -d --name publisher -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY publisher:v1
 
 script:
-  - |
-      docker exec publisher npm run release
+  - npm run lint
+  - npm run test
+  - docker exec publisher npm run release
 
 deploy:
   provider: script
-  script: docker build -t publisher:v1 . && docker run -d --name publisher publisher:v1 && docker exec publisher:v1 npm run release
+  script: docker exec publisher npm run release
   on:
     branch: master
-
-branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
