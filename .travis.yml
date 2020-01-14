@@ -12,7 +12,7 @@ cache:
 
 script:
   - |
-      docker build -t publisher:v1 . && docker container run -d --name publisher publisher:v1 && docker exec publisher:v1 npm run release
+      docker build -t publisher:v1 . && docker run -d --name publisher publisher:v1 && docker exec publisher:v1 npm run release
 
 branches:
   except:
