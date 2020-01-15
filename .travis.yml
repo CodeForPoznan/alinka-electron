@@ -10,15 +10,14 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
-  - ls /etc/*release
   - python -m platform
   - sudo dpkg --add-architecture i386
-  - wget -qO - https://dl.winehq.org/wine-builds/Release.key | sudo apt-key add -
-  - sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+  - wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+  - sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
   
 install:
   - sudo apt-get update
-  - sudo apt-get install --no-install-recommends -y wine32
+  - sudo apt install --install-recommends winehq-stable
   - npm install
 
 script:
