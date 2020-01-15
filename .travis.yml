@@ -11,12 +11,16 @@ cache:
 
 before_install:
   - sudo dpkg --add-architecture i386
-  - wget -qO - https://dl.winehq.org/wine-builds/Release.key | sudo apt-key add -
-  - sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+  - deb http://httpredir.debian.org/debian jessie-backports main && sudo apt-get update
   
 install:
-  - sudo apt-get update
-  - sudo apt-get install --no-install-recommends -y wine-stable
+  - sudo apt install \
+    wine/jessie-backports \
+    wine32/jessie-backports \
+    wine64/jessie-backports \
+    libwine/jessie-backports \
+    libwine:i386/jessie-backports \
+    fonts-wine/jessie-backports
   - npm install
 
 script:
