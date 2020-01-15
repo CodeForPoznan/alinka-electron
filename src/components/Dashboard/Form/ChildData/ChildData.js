@@ -6,11 +6,6 @@ const ChildData = () => (
   <div className={`FormContent ${styles.ChildData}`}>
     <FieldWrapper name={`child.name`} componentSize="large" component="input" />
     <FieldWrapper
-      name={`child.nameGenetive`}
-      componentSize="large"
-      component="input"
-    />
-    <FieldWrapper
       name={`child.birthPlace`}
       componentSize="large"
       component="input"

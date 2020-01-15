@@ -2,7 +2,11 @@
   "name": "alinka",
   "version": "0.1.0",
   "private": true,
-  "author": "Code for Poznan",
+  "author": {
+    "name": "Code for Poznan",
+    "email": "hello@codeforpoznan.pl",
+    "url": "https://codeforpoznan.pl/"
+  },
   "description": "Aplication for Supporting Center for Children",
   "main": "main.js",
   "license": "MIT",
@@ -15,8 +19,8 @@
     "lint:fix": "npm run lint -- --fix",
     "webpack:dev": "MODE=dev webpack-dev-server --mode development --progress",
     "electron:dev": "MODE=dev electron .",
-    "start": "concurrently \"BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
-    "build": "webpack --mode production && electron-builder --windows",
+    "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
+    "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest"
   },
   "dependencies": {
@@ -42,12 +46,14 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^9.3.2",
     "@svgr/webpack": "^4.3.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.0",
     "concurrently": "^4.1.0",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
     "electron": "^3.0.11",
     "electron-builder": "^20.38.3",
@@ -78,24 +84,41 @@
     "appId": "com.alinka.app",
     "asar": true,
     "win": {
-      "target": "NSIS",
+      "target": {
+        "target": "NSIS",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
       "icon": "./assets/icon.png"
     },
     "nsis": {
       "allowToChangeInstallationDirectory": true,
       "oneClick": false
     },
+    "linux": {
+      "target": {
+        "target": "deb",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
+      "icon": "./assets/icon.png"
+    },
     "directories": {
       "buildResources": "build",
       "output": "dist"
     },
     "files": [
-      "**/*",
-      "build/**/*",
-      "assets/**/*",
-      "!dist/**/*",
-      "!src/**/*",
-      "node_modules/**/*"
+      "package.json",
+      "build/",
+      "assets/",
+      "src/docx/",
+      "src/utils/",
+      "main.js",
+      "node_modules/"
     ]
   },
   "browserslist": [

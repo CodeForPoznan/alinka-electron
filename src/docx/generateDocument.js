@@ -8,69 +8,69 @@ const ASSETS_LIST = {
   INDYWIDUALNE: {
     prefix: "indywidualne",
     statics: [
-      "customXml/itemProps1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/styles.xml",
-      "word/stylesWithEffects.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("word", "stylesWithEffects.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   SPECJALNE: {
     prefix: "specjalne",
     statics: [
-      "customXml/itemProps1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/styles.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   INDYWIDUALNE_ROCZNE: {
     prefix: "indywidualne_roczne",
     statics: [
-      "customXml/itemProps1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/styles.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   REWALIDACYJNE: {
     prefix: "rewalidacyjne",
     statics: [
-      "customXml/itemProps1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/styles.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   OPINIA: {
     prefix: "opinia",
     statics: [
-      "customXml/itemProps1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/styles.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   common: [
-    "customXml/_rels/item1.xml.rels",
-    "customXml/item1.xml",
-    "_rels/.rels",
-    "word/_rels/document.xml.rels",
-    "word/theme/theme1.xml",
-    "word/endnotes.xml",
-    "word/numbering.xml",
-    "word/settings.xml",
-    "word/webSettings.xml"
+    path.join("customXml", "_rels", "item1.xml.rels"),
+    path.join("customXml", "item1.xml"),
+    path.join("_rels", ".rels"),
+    path.join("word", "_rels", "document.xml.rels"),
+    path.join("word", "theme", "theme1.xml"),
+    path.join("word", "endnotes.xml"),
+    path.join("word", "numbering.xml"),
+    path.join("word", "settings.xml"),
+    path.join("word", "webSettings.xml")
   ]
 };
 
@@ -80,7 +80,7 @@ function generateDocument(documentType, data) {
     zip.file(
       staticPath,
       fs.readFileSync(
-        path.posix.resolve(
+        path.resolve(
           __dirname,
           "assets",
           ASSETS_LIST[documentType].prefix,
@@ -94,7 +94,7 @@ function generateDocument(documentType, data) {
     zip.file(
       commonStaticPath,
       fs.readFileSync(
-        path.posix.resolve(__dirname, "assets", "commons", commonStaticPath)
+        path.resolve(__dirname, "assets", "commons", commonStaticPath)
       )
     );
   }
@@ -104,7 +104,7 @@ function generateDocument(documentType, data) {
       tempalatePath,
       nunjucks.renderString(
         fs.readFileSync(
-          path.posix.resolve(
+          path.resolve(
             __dirname,
             "assets",
             ASSETS_LIST[documentType].prefix,
