@@ -48,7 +48,7 @@ export default class DocumentForm extends Component {
 
   render() {
     const children = this.props.children;
-    const { disabilityList, page, reasonsList, values, disabilityListItem } = this.state;
+    const { page, reasonsList, values, disabilityListItem } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
 

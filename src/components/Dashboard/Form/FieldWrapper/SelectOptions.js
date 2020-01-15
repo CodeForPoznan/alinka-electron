@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OptionList = props => {
-  const { name, options, disabled, onChange} = props;
+  const { name, options, disabled, onChange } = props;
 
   return (
     <select name={name} onChange={e => onChange(e)} disabled={disabled}>

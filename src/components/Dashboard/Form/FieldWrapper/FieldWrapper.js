@@ -9,7 +9,13 @@ import OptionList from "./SelectOptions";
 
 const required = value => (value ? undefined : "Required");
 
-const FieldWrapper = ({ name, componentSize, component, options, onChange }) => {
+const FieldWrapper = ({
+  name,
+  componentSize,
+  component,
+  options,
+  onChange
+}) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];

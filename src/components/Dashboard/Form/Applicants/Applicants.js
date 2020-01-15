@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
@@ -7,7 +7,8 @@ import { reasonsList } from "../../../../staticData";
 const Applicants = () => {
   const [chosenParent, setChosenParent] = useState("WYBIERZ_WNIOSEK");
 
-  const getOptions = () => reasonsList.find(el => el.value === chosenParent).disabilityListItems;
+  const getOptions = () =>
+    reasonsList.find(el => el.value === chosenParent).disabilityListItems;
 
   return (
     <div className={`FormContent ${styles.Applicants}`}>
@@ -67,6 +68,6 @@ const Applicants = () => {
       />
     </div>
   );
-}
+};
 
 export default Applicants;

@@ -81,13 +81,15 @@ const reasonsList = [
     key: "x",
     text: "Wybierz rodzaj wniosku...",
     value: "WYBIERZ_WNIOSEK",
-    disabilityListItems: disabilityList,
+    disabilityListItems: disabilityList
   },
   {
     key: "0",
     text: "Kształcenie specjalne",
     value: "SPECJALNE",
-    disabilityListItems: disabilityList.filter(el => !['UNIEMOZLIWIAJACY', 'ZNACZNIE_UTRUDNIAJACY'].includes(el.value))
+    disabilityListItems: disabilityList.filter(
+      el => !["UNIEMOZLIWIAJACY", "ZNACZNIE_UTRUDNIAJACY"].includes(el.value)
+    )
   },
   {
     key: "1",
