@@ -16,7 +16,7 @@ before_install:
   
 install:
   - sudo apt-get update
-  - sudo apt-get install --no-install-recommends -y wine
+  - sudo apt-get install --no-install-recommends -y wine-stable
   - npm install
 
 script:
