@@ -35,7 +35,7 @@ const FieldWrapper = ({ name, componentSize, component, options, onChange }) => 
             <OptionList
               options={options}
               name={input.name}
-              onChange={e => onChange(e)}
+              onChange={e => onChange && onChange(e)}
             />
           )}
         </Field>

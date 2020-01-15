@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
-import { reasonsList, disabilityList } from "../../../../staticData";
+import { reasonsList } from "../../../../staticData";
 
 const Applicants = () => {
-  const [chosenParent, setChosenParent] = useState("x");
-  const [chosenChild1, setChosenChild1] = useState();
-  const [chosenChild2, setChosenChild2] = useState();
+  const [chosenParent, setChosenParent] = useState("WYBIERZ_WNIOSEK");
+
+  const getOptions = () => reasonsList.find(el => el.value === chosenParent).disabilityListItems;
 
   return (
     <div className={`FormContent ${styles.Applicants}`}>
@@ -48,19 +48,18 @@ const Applicants = () => {
         options={reasonsList}
         onChange={e => setChosenParent(e.target.value)}
       />
-      {/* <FieldWrapper
+      <FieldWrapper
         name={`applicant.reason`}
         componentSize="extraLarge"
         component="select"
-        options={typeof chosenParent.disabilityListItems !== "undefined" ? chosenParent.disabilityListItems : []}
-      /> */}
-      <span>{chosenParent}</span>
-      {/* <FieldWrapper
+        options={getOptions()}
+      />
+      <FieldWrapper
         name={`applicant.secondReason`}
         componentSize="extraLarge"
         component="select"
-        options={chosenParent.disabilityListItems.filter(el => !chosenChild2)}
-      /> */}
+        options={getOptions()}
+      />
       <FieldWrapper
         name={`applicant.period`}
         componentSize="medium"

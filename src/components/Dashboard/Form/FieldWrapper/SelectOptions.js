@@ -7,7 +7,7 @@ const OptionList = props => {
   return (
     <select name={name} onChange={e => onChange(e)} disabled={disabled}>
       {options.map(item => (
-        <option key={item.key} value={item.key}>
+        <option key={item.key} value={item.value}>
           {item.text}
         </option>
       ))}

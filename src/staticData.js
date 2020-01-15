@@ -1,42 +1,3 @@
-const reasonsList = [
-  {
-    key: "x",
-    text: "Wybierz rodzaj wniosku...",
-    value: "",
-    disabilityListItems: null,
-  },
-  {
-    key: "0",
-    text: "Kształcenie specjalne",
-    value: "SPECJALNE",
-    disabilityListItems: ["0", "1", "2", "4", "5", "6", "7", "8", "9"]
-  },
-  {
-    key: "1",
-    text: "Indywidualne nauczanie",
-    value: "INDYWIDUALNE",
-    disabilityListItems: ["10", "11"]
-  },
-  {
-    key: "2",
-    text: "Indywidualne roczne przygotowanie przedszkolne",
-    value: "INDYWIDUALNE_ROCZNE",
-    disabilityListItems: ["10", "11"]
-  },
-  {
-    key: "3",
-    text: "Zajęcia rewalidacyjne",
-    value: "REWALIDACYJNE",
-    disabilityListItems: null
-  },
-  {
-    key: "4",
-    text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
-    value: "OPINIA",
-    disabilityListItems: null
-  }
-];
-
 const disabilityList = [
   {
     key: "x",
@@ -112,6 +73,45 @@ const disabilityList = [
     key: "13",
     text: "niedostosowanie społeczne",
     value: "NIEDOSTOSOWANIE"
+  }
+];
+
+const reasonsList = [
+  {
+    key: "x",
+    text: "Wybierz rodzaj wniosku...",
+    value: "WYBIERZ_WNIOSEK",
+    disabilityListItems: disabilityList,
+  },
+  {
+    key: "0",
+    text: "Kształcenie specjalne",
+    value: "SPECJALNE",
+    disabilityListItems: disabilityList.filter(el => !['UNIEMOZLIWIAJACY', 'ZNACZNIE_UTRUDNIAJACY'].includes(el.value))
+  },
+  {
+    key: "1",
+    text: "Indywidualne nauczanie",
+    value: "INDYWIDUALNE",
+    disabilityListItems: disabilityList
+  },
+  {
+    key: "2",
+    text: "Indywidualne roczne przygotowanie przedszkolne",
+    value: "INDYWIDUALNE_ROCZNE",
+    disabilityListItems: disabilityList
+  },
+  {
+    key: "3",
+    text: "Zajęcia rewalidacyjne",
+    value: "REWALIDACYJNE",
+    disabilityListItems: disabilityList
+  },
+  {
+    key: "4",
+    text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
+    value: "OPINIA",
+    disabilityListItems: disabilityList
   }
 ];
 
