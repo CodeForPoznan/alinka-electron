@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OptionList = props => {
-  const { name, onChange, options, onFocus, disabled} = props;
+  const { name, onChange, options, onFocus, disabled } = props;
 
   return (
-    <select name={name} onChange={onChange} onFocus={onFocus} disabled={disabled}>
+    <select
+      name={name}
+      onChange={onChange}
+      onFocus={onFocus}
+      disabled={disabled}
+    >
       {options.map(item => (
         <option key={item.key} value={item.value}>
           {item.text}

@@ -23,8 +23,7 @@
     "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest",
     "rebuild": "electron-rebuild -f -w sqlite3",
-    "apply_fixture": "node src/db/apply_fixture.js",
-    "test1": "mocha src/test/models/test.js --recursive"
+    "apply_fixture": "node src/db/apply_fixture.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
@@ -57,7 +56,6 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.0",
-    "chai": "^4.2.0",
     "concurrently": "^4.1.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
@@ -77,7 +75,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "lodash": "^4.17.15",
-    "mocha": "^6.2.2",
     "node-sass": "^4.13.1",
     "prettier": "1.17.1",
     "react-test-renderer": "16.8.0",
