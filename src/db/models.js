@@ -7,7 +7,8 @@ const SchoolType = sequelize.define(
   {
     schoolType: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     }
   },
   {

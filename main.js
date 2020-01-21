@@ -30,12 +30,9 @@ app.on("ready", () => {
   );
 
   // Get list of school types from data base.
-  ipcMain.on("db:schoolType", () => {
-    getSchoolTypeList().then(data => {
-      mainWindow.webContents.send("sendData", data)
-    })
+  ipcMain.on("db:schoolType", async () => {
+    mainWindow.webContents.send("sendData", await getSchoolTypeList())
   })
-
 
   // Build Menu from template and insert it
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);

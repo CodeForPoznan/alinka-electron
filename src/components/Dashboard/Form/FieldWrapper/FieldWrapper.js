@@ -54,7 +54,7 @@ FieldWrapper.propTypes = {
   component: PropTypes.string,
   options: PropTypes.array,
   label: PropTypes.string,
-  onFocus: PropTypes.func.isRequired
+  onFocus: PropTypes.func
 };
 
 FieldWrapper.defaultProps = {

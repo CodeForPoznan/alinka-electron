@@ -1,9 +1,9 @@
 const SchoolType = require("./models");
 
-const createSchoolType = () => {
+const createSchoolType = (schoolType) => {
   SchoolType.sync({ force: true }).then(() => {
     return SchoolType.create({
-      schoolType: "szkoła podstawowa"
+      schoolType: schoolType
     });
   });
 };

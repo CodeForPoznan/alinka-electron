@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import PropTypes from "prop-types";
 
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./ChildData.scss";
