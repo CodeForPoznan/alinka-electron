@@ -1,11 +1,8 @@
-const { sequelize } = require('../../db/db_config');
-const schoolTypeFactory = require('../factories/schoolTypeFactory');
-const truncate = require('../truncate');
+const { sequelize } = require("../../db/db_config");
+const schoolTypeFactory = require("../factories/schoolTypeFactory");
+const truncate = require("../truncate");
 
-console.log(sequelize)
-// sequelize.close()
-
-describe('SchoolType model', () => {
+describe("SchoolType model", () => {
   beforeEach(async () => {
     await truncate();
   });
@@ -14,9 +11,11 @@ describe('SchoolType model', () => {
     await truncate();
   });
 
-  it('should be created', async () => {
-    const schoolType = await schoolTypeFactory("mock school type");
-    expect(schoolType)
-    expect(schoolType.dataValues.schoolType).toBe("mock school type")
+  it("should be created", async () => {
+    const schoolType = await sequelize
+      .sync({ force: true })
+      .then(() => schoolTypeFactory("mock school type"));
+    expect(schoolType).toBeTruthy();
+    expect(schoolType.dataValues.schoolType).toBe("mock school type");
   });
 });
