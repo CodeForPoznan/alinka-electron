@@ -10,3 +10,8 @@
 :global(.FormContent) {
   padding-left: 90px;
 }
+
+div .buttons {
+  @include flex(space-between flex-end);
+  padding: 30px 90px;
+}

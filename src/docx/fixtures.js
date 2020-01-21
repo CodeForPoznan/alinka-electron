@@ -26,8 +26,7 @@ const specificData = {
 
 var commonData = {
   child: {
-    name: "Wiktor Eridfasdfz2",
-    nameGenetive: "Wiktor Eridfasdfz2",
+    name: "Wiktor Rzeźniczak",
     pesel: "12121244441",
     birthPlace: "Pachy Wielkie",
     city: "Poznań",

@@ -50,7 +50,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|png|jpg|gif|svg)$/,
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(ttf|png|jpg|gif)$/,
         use: [
           {
             loader: "file-loader",
@@ -73,6 +77,7 @@ module.exports = {
     lazy: false,
     compress: true,
     historyApiFallback: true,
-    port: 9000
+    port: 9000,
+    host: '0.0.0.0'
   }
 };
