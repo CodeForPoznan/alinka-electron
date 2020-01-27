@@ -40,7 +40,7 @@ describe("Applicants", () => {
       div
     );
 
-    expect(div.querySelector("select[name='applicant.reason']")).toBeTruthly();
+    expect(div.querySelector("select[name='applicant.reason']")).toBeDefined();
     ReactDOM.unmountComponentAtNode(div);
   });
 });
