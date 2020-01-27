@@ -13,8 +13,8 @@ const inDevelopmentMode = process.env.MODE === "dev";
 app.on("ready", () => {
   // Configure the main window
   let mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 665,
+    width: 1400,
+    height: 865,
     icon: path.join(__dirname, "assets/Alinka-logo.png"),
     webPreferences: {
       backgroundThrottling: false

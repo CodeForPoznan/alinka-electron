@@ -7,6 +7,7 @@ import Team from "./Team";
 import commonData from "../../../docx/fixtures";
 import { reasonsList, disabilityList } from "../../../staticData";
 
+
 const { ipcRenderer } = require("electron");
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -23,17 +24,12 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-    <DocumentForm
-      initialValues={commonData}
-      reasonsList={reasonsList}
-      disabilityList={disabilityList}
-      onSubmit={onSubmit}
-    >
+    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
         <ChildData />
       </DocumentForm.Step>
       <DocumentForm.Step>
-        <Applicants />
+        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
       </DocumentForm.Step>
       <DocumentForm.Step>
         <Team />
