@@ -6,8 +6,7 @@ import { useFormState } from "react-final-form";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
-
-const Applicants = ({ reasonsList, disabilityList}) => {
+const Applicants = ({ reasonsList, disabilityList }) => {
   /**
    * Calculate if second disable select is enabled
    * Select should be enabled if - user want decision of special education
@@ -15,11 +14,18 @@ const Applicants = ({ reasonsList, disabilityList}) => {
    * @returns {bool}
    */
   const getSecondReasonDisabled = () => {
-    const actualValues = useFormState().values
-    const canBeMultipleDisability = Array.from(disabilityList.slice(1,11), disability => disability.value)
-    const issuesManyDisable = reasonsList[1].value != actualValues.applicant.issue
-    return !canBeMultipleDisability.includes(actualValues.applicant.reason) || issuesManyDisable
-  }
+    const actualValues = useFormState().values;
+    const canBeMultipleDisability = Array.from(
+      disabilityList.slice(1, 11),
+      disability => disability.value
+    );
+    const issuesManyDisable =
+      reasonsList[1].value != actualValues.applicant.issue;
+    return (
+      !canBeMultipleDisability.includes(actualValues.applicant.reason) ||
+      issuesManyDisable
+    );
+  };
 
   return (
     <div className={`FormContent ${styles.Applicants}`}>

@@ -7,7 +7,6 @@ import Team from "./Team";
 import commonData from "../../../docx/fixtures";
 import { reasonsList, disabilityList } from "../../../staticData";
 
-
 const { ipcRenderer } = require("electron");
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));

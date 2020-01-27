@@ -15,7 +15,7 @@ describe("Applicants", () => {
         onSubmit={() => {}}
         render={() => component}
         mutators={{ ...arrayMutators }}
-        initialValues={{applicant: {reason: "mock_state_name"}}}
+        initialValues={{ applicant: { reason: "mock_state_name" } }}
       />
     );
   });
@@ -23,8 +23,10 @@ describe("Applicants", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-        formWrapper(<Applicants reasonsList={reasonsList} disabilityList={disabilityList}/>),
-        div
+      formWrapper(
+        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
+      ),
+      div
     );
     ReactDOM.unmountComponentAtNode(div);
   });
@@ -32,11 +34,13 @@ describe("Applicants", () => {
   it("contains select with first reason", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-        formWrapper(<Applicants reasonsList={reasonsList} disabilityList={disabilityList}/>),
-        div
+      formWrapper(
+        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
+      ),
+      div
     );
 
-    expect(div.querySelector("select[name='applicant.reason']"))
+    expect(div.querySelector("select[name='applicant.reason']")).toBeTruthly();
     ReactDOM.unmountComponentAtNode(div);
   });
 });
