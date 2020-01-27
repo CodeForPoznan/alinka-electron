@@ -23,17 +23,12 @@ const onSubmit = async values => {
 
 const FormSteps = () => (
   <React.Fragment>
-    <DocumentForm
-      initialValues={commonData}
-      reasonsList={reasonsList}
-      disabilityList={disabilityList}
-      onSubmit={onSubmit}
-    >
+    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
-        <ChildData />
+        <ChildData reasonsList={reasonsList} />
       </DocumentForm.Step>
       <DocumentForm.Step>
-        <Applicants />
+        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
       </DocumentForm.Step>
       <DocumentForm.Step>
         <Team />

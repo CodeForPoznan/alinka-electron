@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
-import { reasonsList, disabilityList } from "../../../../staticData";
-
-const Applicants = () => (
+const Applicants = ({ reasonsList, disabilityList }) => (
   <div className={`FormContent ${styles.Applicants}`}>
     <FieldWrapper
       name={`applicant.names`}
@@ -63,3 +63,8 @@ const Applicants = () => (
 );
 
 export default Applicants;
+
+Applicants.propTypes = {
+  reasonsList: PropTypes.array,
+  disabilityList: PropTypes.array
+};

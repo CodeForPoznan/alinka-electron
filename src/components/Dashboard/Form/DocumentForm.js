@@ -9,9 +9,7 @@ import Button from "../../Button/Button";
 export default class DocumentForm extends Component {
   state = {
     page: 0,
-    values: this.props.initialValues || {},
-    disabilityList: this.props.disabilityList || {},
-    reasonsList: this.props.reasonsList || {}
+    values: this.props.initialValues || {}
   };
 
   static Step = ({ children }) => children;
@@ -48,7 +46,7 @@ export default class DocumentForm extends Component {
 
   render() {
     const children = this.props.children;
-    const { disabilityList, page, reasonsList, values } = this.state;
+    const { page, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
 
@@ -58,8 +56,6 @@ export default class DocumentForm extends Component {
           ...arrayMutators
         }}
         initialValues={values}
-        reasonsList={reasonsList}
-        disabilityList={disabilityList}
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
