@@ -109,4 +109,17 @@ const disabilityList = [
   }
 ];
 
-export { reasonsList, disabilityList };
+const typeOfClasses = [
+  {
+    key: "1",
+    text: "indywidualne",
+    value: "INDYWIDUALNE"
+  },
+  {
+    key: "2",
+    text: "grupowe",
+    value: "GRUPOWE"
+  }
+];
+
+export { reasonsList, disabilityList, typeOfClasses };

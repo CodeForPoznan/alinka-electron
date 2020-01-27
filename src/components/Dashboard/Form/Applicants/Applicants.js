@@ -86,4 +86,4 @@ export default Applicants;
 Applicants.propTypes = {
   reasonsList: PropTypes.array,
   disabilityList: PropTypes.array
-}
+};

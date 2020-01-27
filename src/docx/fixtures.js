@@ -33,7 +33,7 @@ var commonData = {
     postalCode: "61-854",
     street: "Mostowa 38",
     houseNumber: "4",
-    schoolType: ["Szkoła podstawowa"],
+    schoolType: "Szkoła podstawowa",
     schoolName: "Szkoła Podstawowa nr 4 w Grodzisku Wlkp.",
     profession: "murarz",
     class: "3b",
