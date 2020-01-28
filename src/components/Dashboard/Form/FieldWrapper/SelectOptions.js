@@ -13,7 +13,7 @@ const OptionList = props => {
       disabled={disabled}
     >
       {options.map(item => (
-        <option key={item.key} value={item.value}>
+        <option key={item.key} disabled={item.disable} value={item.value}>
           {item.text}
         </option>
       ))}

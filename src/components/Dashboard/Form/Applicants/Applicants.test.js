@@ -4,7 +4,7 @@ import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 
 import Applicants from "./Applicants";
-import { reasonsList, disabilityList } from "../../../../staticData";
+
 
 describe("Applicants", () => {
   let formWrapper;
@@ -24,7 +24,7 @@ describe("Applicants", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       formWrapper(
-        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
+        <Applicants reasonsList={[]} disabilityList={[]} />
       ),
       div
     );
@@ -35,7 +35,7 @@ describe("Applicants", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       formWrapper(
-        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
+        <Applicants reasonsList={[]} disabilityList={[]} />
       ),
       div
     );

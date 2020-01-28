@@ -15,15 +15,17 @@ const Applicants = ({ reasonsList, disabilityList }) => {
    */
   const getSecondReasonDisabled = () => {
     const actualValues = useFormState().values;
-    const canBeMultipleDisability = Array.from(
-      disabilityList.slice(1, 11),
+    const joinableDisabilitylist = Array.from(
+      disabilityList.filter(disability => disability.multiple),
       disability => disability.value
     );
-    const issuesManyDisable =
-      reasonsList[1].value != actualValues.applicant.issue;
-    return (
-      !canBeMultipleDisability.includes(actualValues.applicant.reason) ||
-      issuesManyDisable
+    const issuesAllowingMultipleDisablity = Array.from(
+      reasonsList.filter(issue => issue.allowMultiple),
+      issue => issue.value
+    );
+    return !(
+      joinableDisabilitylist.includes(actualValues.applicant.reason) &&
+      issuesAllowingMultipleDisablity.includes(actualValues.applicant.issue)
     );
   };
 
