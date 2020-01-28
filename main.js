@@ -14,8 +14,8 @@ const { getSchoolTypeList } = require("./src/db/api");
 app.on("ready", () => {
   // Configure the main window
   let mainWindow = new BrowserWindow({
-    width: 1400,
-    height: 865,
+    width: 1200,
+    height: 665,
     icon: path.join(__dirname, "assets/Alinka-logo.png"),
     webPreferences: {
       backgroundThrottling: false
