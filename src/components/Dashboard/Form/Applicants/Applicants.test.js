@@ -5,7 +5,6 @@ import arrayMutators from "final-form-arrays";
 
 import Applicants from "./Applicants";
 
-
 describe("Applicants", () => {
   let formWrapper;
   beforeEach(() => {
@@ -23,9 +22,7 @@ describe("Applicants", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-      formWrapper(
-        <Applicants reasonsList={[]} disabilityList={[]} />
-      ),
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
       div
     );
     ReactDOM.unmountComponentAtNode(div);
@@ -34,9 +31,7 @@ describe("Applicants", () => {
   it("contains select with first reason", () => {
     const div = document.createElement("div");
     ReactDOM.render(
-      formWrapper(
-        <Applicants reasonsList={[]} disabilityList={[]} />
-      ),
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
       div
     );
 
