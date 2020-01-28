@@ -33,7 +33,7 @@ var commonData = {
     postalCode: "61-854",
     street: "Mostowa 38",
     houseNumber: "4",
-    schoolType: ["Szkoła podstawowa"],
+    schoolType: "Szkoła podstawowa",
     schoolName: "Szkoła Podstawowa nr 4 w Grodzisku Wlkp.",
     profession: "murarz",
     class: "3b",
@@ -48,9 +48,9 @@ var commonData = {
     postalCode: "61-854",
     street: "Mostowa 38",
     houseNumber: "4",
-    issue: [""],
+    issue: "INDYWIDUALNE",
     period: "styczeń 2018 - listopad 2019",
-    reason: ["ZNACZNIE_UTRUDNIAJACY"]
+    reason: "ZNACZNIE_UTRUDNIAJACY"
   },
   city: "Grodzisk Wielkopolski",
   date: "15.07.2019",
@@ -61,7 +61,6 @@ var commonData = {
   },
   school:
     "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
-  reason: "ZNACZNIE_UTRUDNIAJACY",
   supportCenter: {
     address: "ul. Zbąszyńska 11",
     members: [

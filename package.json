@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
-    "docx": "^4.7.1",
     "file-system": "^2.2.2",
     "final-form": "^4.18.6",
     "final-form-arrays": "^3.0.2",
@@ -134,5 +133,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
