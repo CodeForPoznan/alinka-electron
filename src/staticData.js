@@ -2,44 +2,40 @@ const reasonsList = [
   {
     key: "x",
     text: "Wybierz rodzaj wniosku...",
-    value: "",
-    disable: true,
-    allowMultiple: false
+    value: "WYBIERZ_WNIOSEK",
+    disabilityListItems: disabilityList
   },
   {
     key: "0",
     text: "Kształcenie specjalne",
     value: "SPECJALNE",
-    disable: false,
-    allowMultiple: true
+    disabilityListItems: disabilityList.filter(
+      el => !["UNIEMOZLIWIAJACY", "ZNACZNIE_UTRUDNIAJACY"].includes(el.value)
+    )
   },
   {
     key: "1",
     text: "Indywidualne nauczanie",
     value: "INDYWIDUALNE",
-    disable: false,
-    allowMultiple: false
+    disabilityListItems: disabilityList
   },
   {
     key: "2",
     text: "Indywidualne roczne przygotowanie przedszkolne",
     value: "INDYWIDUALNE_ROCZNE",
-    disable: false,
-    allowMultiple: false
+    disabilityListItems: disabilityList
   },
   {
     key: "3",
     text: "Zajęcia rewalidacyjne",
     value: "REWALIDACYJNE",
-    disable: false,
-    allowMultiple: false
+    disabilityListItems: disabilityList
   },
   {
     key: "4",
     text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
     value: "OPINIA",
-    disable: false,
-    allowMultiple: false
+    disabilityListItems: disabilityList
   }
 ];
 
@@ -160,47 +156,6 @@ const typeOfClasses = [
     key: "2",
     text: "grupowe",
     value: "GRUPOWE"
-  }
-];
-
-const reasonsList = [
-  {
-    key: "x",
-    text: "Wybierz rodzaj wniosku...",
-    value: "WYBIERZ_WNIOSEK",
-    disabilityListItems: disabilityList
-  },
-  {
-    key: "0",
-    text: "Kształcenie specjalne",
-    value: "SPECJALNE",
-    disabilityListItems: disabilityList.filter(
-      el => !["UNIEMOZLIWIAJACY", "ZNACZNIE_UTRUDNIAJACY"].includes(el.value)
-    )
-  },
-  {
-    key: "1",
-    text: "Indywidualne nauczanie",
-    value: "INDYWIDUALNE",
-    disabilityListItems: disabilityList
-  },
-  {
-    key: "2",
-    text: "Indywidualne roczne przygotowanie przedszkolne",
-    value: "INDYWIDUALNE_ROCZNE",
-    disabilityListItems: disabilityList
-  },
-  {
-    key: "3",
-    text: "Zajęcia rewalidacyjne",
-    value: "REWALIDACYJNE",
-    disabilityListItems: disabilityList
-  },
-  {
-    key: "4",
-    text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
-    value: "OPINIA",
-    disabilityListItems: disabilityList
   }
 ];
 

@@ -26,8 +26,6 @@ OptionList.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   options: PropTypes.array,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   disabled: PropTypes.bool
 };

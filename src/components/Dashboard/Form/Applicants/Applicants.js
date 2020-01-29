@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { useFormState } from "react-final-form";
+import { useState, useFormState } from "react-final-form";
 
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
@@ -73,7 +73,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="extraLarge"
         component="select"
         options={getOptions()}
-        options={disabilityList}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
@@ -81,7 +80,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         component="select"
         options={getOptions()}
         disabled={getSecondReasonDisabled()}
-        options={disabilityList}
       />
       <FieldWrapper
         name={`applicant.period`}
