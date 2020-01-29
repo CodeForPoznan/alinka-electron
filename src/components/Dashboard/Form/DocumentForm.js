@@ -51,6 +51,7 @@ export default class DocumentForm extends Component {
     const { page, reasonsList, values, disabilityListItem } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
+    console.log(`Actual form data: ${JSON.stringify(values, 0, 2)}`);
 
     return (
       <Form
@@ -63,7 +64,7 @@ export default class DocumentForm extends Component {
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
-        {({ handleSubmit, submitting, values }) => (
+        {({ handleSubmit, submitting }) => (
           <form className={styles.Form} onSubmit={handleSubmit}>
             <FormHeader page={this.state.page} />
             {activePage}
@@ -77,8 +78,6 @@ export default class DocumentForm extends Component {
                 <Button type="submit">dalej</Button>
               )}
             </div>
-
-            <pre>{JSON.stringify(values, 0, 2)}</pre>
           </form>
         )}
       </Form>

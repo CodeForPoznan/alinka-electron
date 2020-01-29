@@ -5,6 +5,7 @@ const { calculateValues } = require("./src/utils/utils");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
+const { getSchoolTypeList } = require("./src/db/api");
 
 
 /***************/
@@ -27,6 +28,11 @@ app.on("ready", () => {
       ? `http://localhost:9000`
       : `file://${__dirname}/build/index.html`
   );
+
+  // Get list of school types from data base.
+  ipcMain.on("db:schoolType", async () => {
+    mainWindow.webContents.send("sendData", await getSchoolTypeList())
+  })
 
   // Build Menu from template and insert it
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);

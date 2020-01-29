@@ -2,12 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OptionList = props => {
-  const { name, options, disabled, onChange } = props;
+  const { value, name, onChange, options, onFocus, disabled } = props;
 
   return (
-    <select name={name} onChange={e => onChange(e)} disabled={disabled}>
+    <select
+      value={value}
+      name={name}
+      onChange={e => onChange(e)}
+      onFocus={onFocus}
+      disabled={disabled}
+    >
       {options.map(item => (
-        <option key={item.key} value={item.value}>
+        <option key={item.key} disabled={item.disable} value={item.value}>
           {item.text}
         </option>
       ))}
@@ -16,10 +22,14 @@ const OptionList = props => {
 };
 
 OptionList.propTypes = {
+  value: PropTypes.string,
   name: PropTypes.string,
+  onChange: PropTypes.func,
   options: PropTypes.array,
   disabled: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 export default OptionList;
