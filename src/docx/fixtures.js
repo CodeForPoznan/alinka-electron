@@ -41,7 +41,16 @@ var commonData = {
     birthDate: "12.12.1912"
   },
   applicant: {
-    address: "Wielka 4/6, 55-789 Studnia",
+    firstName1: "Tomasz",
+    lastName1: "Rzeźniczak",
+    address1: "Wielka 4/6",
+    postalCode1: "55-789 Studnia",
+    addressChildcheCkbox: false,
+    firstName2: "Adelajda",
+    lastName2: "Słoneczko",
+    address2: "Odnowy Stare, ul. Zamkowa 15/6a",
+    postalCode2: "15-671 Sadowisko",
+    addresFirstParentCheckbox: false,
     name: "Tomasz Rzeźniczak i Adelajda Kieł",
     names: ["Tomasz Rzeźniczak", "Adelajda Kieł"],
     city: "Poznań",

@@ -12,35 +12,89 @@ const disabilityMap = {
 };
 
 class DocumentData {
-  constructor (values) {
+  constructor(values) {
     this.values = values;
   }
 
-  isMultipleDisability () {
-    return Boolean(this.values.reason && this.values.secondReason)
+  isMultipleDisability() {
+    return Boolean(
+      this.values.applicant.reason && this.values.applicant.secondReason
+    );
   }
 
-  reason () {
-    if (this.isMultipleDisability) {
-      return "SPRZEZONA"
+  reason() {
+    if (this.isMultipleDisability()) {
+      return "SPRZEZONA";
     }
-    return this.values.applicant.reason
+    return this.values.applicant.reason;
   }
 
-  multipleDisability () {
+  multipleDisability() {
     if (!this.isMultipleDisability) {
-      return []
+      return [];
     }
-    const firstReasonDescription = disabilityMap[this.values.applicant.reason]
-    const secondReasonDescription = disabilityMap[this.values.applicant.secondReason]
-    return [firstReasonDescription, secondReasonDescription]
+    const firstReasonDescription = disabilityMap[this.values.applicant.reason];
+    const secondReasonDescription =
+      disabilityMap[this.values.applicant.secondReason];
+    return [firstReasonDescription, secondReasonDescription];
   }
 
-  teamMembers () {
-    return this.values.teamMembers
+  applicantsList() {
+    const applicants = [
+      {
+        firstName: this.values.applicant.firstName1,
+        lastName: this.values.applicant.lastName1,
+        address: this.values.applicant.address1,
+        postalCode: this.values.applicant.postalCode1
+      }
+    ];
+    if (this.values.applicant.firstName2) {
+      applicants.push({
+        firstName: this.values.applicant.firstName2,
+        lastName: this.values.applicant.lastName2,
+        address: this.values.applicant.address2,
+        postalCode: this.values.applicant.postalCode2
+      });
+    }
+    return applicants;
   }
 
-  templateData () {
+  parentsDescription() {
+    const applicant = this.values.applicant;
+    if (!applicant.firstName2) {
+      return `${applicant.firstName1} ${applicant.lastName1}, ${
+        applicant.address1
+      }, ${applicant.postalCode1}`;
+    }
+    if (applicant.addresFirstParentCheckbox) {
+      return `${applicant.firstName1} ${applicant.lastName1} i ${
+        applicant.firstName2
+      } ${applicant.lastName2}, ${applicant.address1}, ${
+        applicant.postalCode1
+      }`;
+    }
+    return `${applicant.firstName1} ${applicant.lastName1}, ${
+      applicant.address1
+    }, ${applicant.postalCode1} i ${applicant.firstName2} ${
+      applicant.lastName2
+    }, ${applicant.address2}, ${applicant.postalCode2}`;
+  }
+
+  onRequest() {
+    const applicant = this.values.applicant;
+    if (!applicant.firstName2) {
+      return `${applicant.firstName1} ${applicant.lastName1}`;
+    }
+    return `${applicant.firstName1} ${applicant.lastName1} i ${
+      applicant.firstName2
+    } ${applicant.lastName2}`;
+  }
+
+  teamMembers() {
+    return this.values.supportCenter.members;
+  }
+
+  templateData() {
     return {
       child: {
         name: this.values.child.name,
@@ -58,15 +112,18 @@ class DocumentData {
         birthDate: this.values.child.birthDate
       },
       applicant: {
-        address: this.values.applicant.address,
+        applicants: this.applicantsList(),
         name: this.values.applicant.name,
+        address: this.values.applicant.address,
         city: this.values.applicant.city,
         postalCode: this.values.applicant.postalCode,
         street: this.values.applicant.street,
         houseNumber: this.values.applicant.houseNumber,
+        onRequest: this.onRequest(),
+        parentsDescription: this.parentsDescription(),
         issue: this.values.applicant.issue,
         period: this.values.applicant.period,
-        reason: this.values.applicant.reason,
+        reason: this.reason(),
         multipleDisability: this.multipleDisability()
       },
       city: this.values.city,
@@ -87,7 +144,7 @@ class DocumentData {
         street: this.values.supportCenter.street
       },
       kurator: this.values.kurator
-    }
+    };
   }
 }
 

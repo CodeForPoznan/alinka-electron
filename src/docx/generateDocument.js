@@ -75,6 +75,7 @@ const ASSETS_LIST = {
 };
 
 function generateDocument(documentType, data) {
+  nunjucks.configure(path.resolve(__dirname, "assets"));
   const zip = new JSZip();
   for (let staticPath of ASSETS_LIST[documentType].statics) {
     zip.file(

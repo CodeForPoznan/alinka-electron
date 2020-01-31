@@ -242,7 +242,7 @@
         <w:pStyle w:val="Text_my"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ parents.name }}, {{ parents.address }}</w:t>
+        <w:t>{{ applicant.parentsDescription }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -575,46 +575,9 @@
         <w:t>Wnioskodawca:</w:t>
       </w:r>
     </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-      <w:r>
-        <w:t>{{ applicant.name }}</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-      <w:r>
-        <w:rPr>
-          <w:sz w:val="16"/>
-        </w:rPr>
-        <w:t xml:space="preserve">(imię i nazwisko)</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-      <w:r>
-        <w:t>{{ applicant.address }}</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Normal_left_my"/>
-      </w:pPr>
-      <w:r>
-        <w:rPr>
-          <w:sz w:val="16"/>
-        </w:rPr>
-        <w:t xml:space="preserve">(adres zamieszkania albo adres do korespondencji</w:t>
-        <w:br/>
-        <w:t xml:space="preserve">– jeżeli jest inny niż adres zamieszkania)</w:t>
-      </w:r>
-    </w:p>
+    {% for applicantData in applicant.applicants %}
+      {% include "template_parts/receiver.xml" %}
+    {% endfor %}
     <w:sectPr w:rsidR="00FC693F" w:rsidRPr="0006063C" w:rsidSect="00034616">
       <w:pgSz w:h="15840" w:w="12240"/>
       <w:pgMar w:bottom="1440" w:footer="720" w:gutter="0" w:header="720" w:left="1800" w:right="1800" w:top="1440"/>
