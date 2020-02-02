@@ -17,7 +17,7 @@ class DocumentData {
   }
 
   isMultipleDisability() {
-    return Boolean(
+    return !!(
       this.values.applicant.reason && this.values.applicant.secondReason
     );
   }
@@ -96,21 +96,7 @@ class DocumentData {
 
   templateData() {
     return {
-      child: {
-        name: this.values.child.name,
-        pesel: this.values.child.pesel,
-        birthPlace: this.values.child.birthPlace,
-        city: this.values.child.city,
-        postalCode: this.values.child.postalCode,
-        street: this.values.child.street,
-        houseNumber: this.values.child.houseNumber,
-        schoolType: this.values.child.schoolType,
-        schoolName: this.values.child.schoolName,
-        profession: this.values.child.profession,
-        class: this.values.child.class,
-        address: this.values.child.address,
-        birthDate: this.values.child.birthDate
-      },
+      child: this.values.child,
       applicant: {
         applicants: this.applicantsList(),
         name: this.values.applicant.name,
@@ -129,10 +115,7 @@ class DocumentData {
       city: this.values.city,
       date: this.values.date,
       no: this.values.no,
-      parents: {
-        address: this.values.parents.address,
-        name: this.values.parents.name
-      },
+      parents: this.values.parents,
       school: this.values.school,
       supportCenter: {
         address: this.values.supportCenter.address,
