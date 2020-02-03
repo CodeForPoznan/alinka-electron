@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import renderer from "react-test-renderer";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 
@@ -20,22 +21,18 @@ describe("Applicants", () => {
   });
 
   it("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(
-      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
-      div
+    const div = renderer.create(
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
-    ReactDOM.unmountComponentAtNode(div);
+    div.unmount();
   });
 
   it("contains select with first reason", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(
-      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
-      div
+    const div = renderer.create(
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
-
-    expect(div.querySelector("select[name='applicant.reason']")).toBeDefined();
-    ReactDOM.unmountComponentAtNode(div);
+    const applicants = div.root
+      expect(applicants.findByProps({component: "select", name: "applicant.reason"})).toBeDefined();
+    div.unmount();
   });
 });

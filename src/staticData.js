@@ -4,7 +4,7 @@ const reasonsList = [
     text: "Wybierz rodzaj wniosku...",
     value: "",
     disable: true,
-    allowMultiple: false
+    allowMultiple: false,
   },
   {
     key: "0",
@@ -18,14 +18,16 @@ const reasonsList = [
     text: "Indywidualne nauczanie",
     value: "INDYWIDUALNE",
     disable: false,
-    allowMultiple: false
+    allowMultiple: false,
+    issueType: "Individual"
   },
   {
     key: "2",
     text: "Indywidualne roczne przygotowanie przedszkolne",
     value: "INDYWIDUALNE_ROCZNE",
     disable: false,
-    allowMultiple: false
+    allowMultiple: false,
+    issueType: "Individual"
   },
   {
     key: "3",
@@ -48,7 +50,7 @@ const disabilityList = [
     key: "x",
     text: "wybierz przyczynę...",
     value: "",
-    disable: true
+    disable: true, 
   },
   {
     key: "0",
@@ -125,14 +127,16 @@ const disabilityList = [
     text: "stan zdrowia uniemożliwiający uczęszczanie do szkoły",
     value: "UNIEMOZLIWIAJACY",
     multiple: false,
-    disable: false
+    disable: false,
+    issueType: "Individual"
   },
   {
     key: "11",
     text: "stan zdrowia znacznie utrudniający uczęszczanie do szkoły",
     value: "ZNACZNIE_UTRUDNIAJACY",
     multiple: false,
-    disable: false
+    disable: false,
+    issueType: "Individual"
   },
   {
     key: "12",
