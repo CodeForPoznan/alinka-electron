@@ -108,7 +108,7 @@ if (inDevelopmentMode) {
 /* Document Renderer */
 /*********************/
 ipcMain.on("print:value", (event, values) => {
-  const documentData = new DocumentData(values).templateData()
+  const documentData = new DocumentData(values).templateData
   generateDocument(values.applicant.issue, documentData)
   .generateNodeStream({ type: "nodebuffer", streamFiles: true })
   .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));

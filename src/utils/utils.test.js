@@ -39,7 +39,7 @@ describe("DocumentData", () => {
   });
 
   it("can get template data", () => {
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData).toBeDefined();
   });
 
@@ -51,7 +51,7 @@ describe("DocumentData", () => {
     expectedApplicants.pop();
     Object.assign(commonDataFixture, applicantsFixture);
 
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
 
     expect(documentData.applicant.parentsDescription).toBe(expectedParentsData);
     expect(documentData.applicant.onRequest).toBe(onRequest);
@@ -65,7 +65,7 @@ describe("DocumentData", () => {
       "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2";
     applicantsFixture.applicant.addresFirstParentCheckbox = true;
     Object.assign(commonDataFixture, applicantsFixture);
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
 
     expect(documentData.applicant.parentsDescription).toBe(expectedParentsData);
     expect(documentData.applicant.onRequest).toBe(onRequest);
@@ -78,7 +78,7 @@ describe("DocumentData", () => {
     const onRequest =
       "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2";
     Object.assign(commonDataFixture, applicantsFixture);
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
 
     expect(documentData.applicant.parentsDescription).toBe(expectedParentsData);
     expect(documentData.applicant.onRequest).toBe(onRequest);
@@ -87,13 +87,13 @@ describe("DocumentData", () => {
 
   it("return only first reason if there's only one disability", () => {
     commonDataFixture.applicant["reason"] = "mock_reason";
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData.applicant.reason).toBe("mock_reason");
   });
 
   it("return reason SPRZEZONE if there's more that one disability", () => {
     commonDataFixture.applicant["secondReason"] = "mock_second_reason";
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData.applicant.reason).toBe("SPRZEZONA");
   });
 
@@ -104,7 +104,7 @@ describe("DocumentData", () => {
       "niepełnosprawne intelektualnie w stopniu lekkim",
       "niepełnosprawne ruchowo, w tym z afazją"
     ];
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData.applicant.multipleDisability).toEqual(
       expectedDisabilities
     );
@@ -119,7 +119,7 @@ describe("DocumentData", () => {
       { name: "mock name1", function: "mock function1" },
       { name: "mock name2", function: "mock function2" }
     ];
-    const documentData = new DocumentData(commonDataFixture).templateData();
+    const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData.supportCenter.members).toEqual(expectedMembers);
   });
 });

@@ -16,20 +16,20 @@ class DocumentData {
     this.values = values;
   }
 
-  isMultipleDisability() {
+  get isMultipleDisability() {
     return !!(
       this.values.applicant.reason && this.values.applicant.secondReason
     );
   }
 
-  reason() {
-    if (this.isMultipleDisability()) {
+  get reason() {
+    if (this.isMultipleDisability) {
       return "SPRZEZONA";
     }
     return this.values.applicant.reason;
   }
 
-  multipleDisability() {
+  get multipleDisability() {
     if (!this.isMultipleDisability) {
       return [];
     }
@@ -39,28 +39,29 @@ class DocumentData {
     return [firstReasonDescription, secondReasonDescription];
   }
 
-  applicantsList() {
+  get applicantsList() {
+    const { applicant } = this.values;
     const applicants = [
       {
-        firstName: this.values.applicant.firstName1,
-        lastName: this.values.applicant.lastName1,
-        address: this.values.applicant.address1,
-        postalCode: this.values.applicant.postalCode1
+        firstName: applicant.firstName1,
+        lastName: applicant.lastName1,
+        address: applicant.address1,
+        postalCode: applicant.postalCode1
       }
     ];
-    if (this.values.applicant.firstName2) {
+    if (applicant.firstName2) {
       applicants.push({
-        firstName: this.values.applicant.firstName2,
-        lastName: this.values.applicant.lastName2,
-        address: this.values.applicant.address2,
-        postalCode: this.values.applicant.postalCode2
+        firstName: applicant.firstName2,
+        lastName: applicant.lastName2,
+        address: applicant.address2,
+        postalCode: applicant.postalCode2
       });
     }
     return applicants;
   }
 
-  parentsDescription() {
-    const applicant = this.values.applicant;
+  get parentsDescription() {
+    const { applicant } = this.values;
     if (!applicant.firstName2) {
       return `${applicant.firstName1} ${applicant.lastName1}, ${
         applicant.address1
@@ -80,8 +81,8 @@ class DocumentData {
     }, ${applicant.address2}, ${applicant.postalCode2}`;
   }
 
-  onRequest() {
-    const applicant = this.values.applicant;
+  get onRequest() {
+    const { applicant } = this.values;
     if (!applicant.firstName2) {
       return `${applicant.firstName1} ${applicant.lastName1}`;
     }
@@ -90,27 +91,28 @@ class DocumentData {
     } ${applicant.lastName2}`;
   }
 
-  teamMembers() {
+  get teamMembers() {
     return this.values.supportCenter.members;
   }
 
-  templateData() {
+  get templateData() {
+    const { applicant, supportCenter } = this.values;
     return {
       child: this.values.child,
       applicant: {
-        applicants: this.applicantsList(),
-        name: this.values.applicant.name,
-        address: this.values.applicant.address,
-        city: this.values.applicant.city,
-        postalCode: this.values.applicant.postalCode,
-        street: this.values.applicant.street,
-        houseNumber: this.values.applicant.houseNumber,
-        onRequest: this.onRequest(),
-        parentsDescription: this.parentsDescription(),
-        issue: this.values.applicant.issue,
-        period: this.values.applicant.period,
-        reason: this.reason(),
-        multipleDisability: this.multipleDisability()
+        applicants: this.applicantsList,
+        name: applicant.name,
+        address: applicant.address,
+        city: applicant.city,
+        postalCode: applicant.postalCode,
+        street: applicant.street,
+        houseNumber: applicant.houseNumber,
+        onRequest: this.onRequest,
+        parentsDescription: this.parentsDescription,
+        issue: applicant.issue,
+        period: applicant.period,
+        reason: this.reason,
+        multipleDisability: this.multipleDisability
       },
       city: this.values.city,
       date: this.values.date,
@@ -118,19 +120,17 @@ class DocumentData {
       parents: this.values.parents,
       school: this.values.school,
       supportCenter: {
-        address: this.values.supportCenter.address,
-        members: this.teamMembers(),
-        name: this.values.supportCenter.name,
-        post: this.values.supportCenter.post,
-        city: this.values.supportCenter.city,
-        postalCode: this.values.supportCenter.postalCode,
-        street: this.values.supportCenter.street
+        address: supportCenter.address,
+        members: this.teamMembers,
+        name: supportCenter.name,
+        post: supportCenter.post,
+        city: supportCenter.city,
+        postalCode: supportCenter.postalCode,
+        street: supportCenter.street
       },
       kurator: this.values.kurator
     };
   }
 }
 
-module.exports = {
-  DocumentData
-};
+module.exports = { DocumentData };
