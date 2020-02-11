@@ -4,7 +4,7 @@ const reasonsList = [
     text: "Wybierz rodzaj wniosku...",
     value: "",
     disable: true,
-    allowMultiple: false,
+    allowMultiple: false
   },
   {
     key: "0",
@@ -50,7 +50,7 @@ const disabilityList = [
     key: "x",
     text: "wybierz przyczynę...",
     value: "",
-    disable: true, 
+    disable: true
   },
   {
     key: "0",

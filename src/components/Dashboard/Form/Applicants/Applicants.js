@@ -30,15 +30,17 @@ const Applicants = ({ reasonsList, disabilityList }) => {
   };
   const disabilityListUpdated = () => {
     const indivitualIssuesList = Array.from(
-      reasonsList.filter(reason => (reason.issueType == "Individual")),
+      reasonsList.filter(reason => reason.issueType == "Individual"),
       reason => reason.value
     );
     if (indivitualIssuesList.includes(actualValues.applicant.issue)) {
-      return disabilityList.filter(disability => (disability.issueType == "Individual"))
+      return disabilityList.filter(
+        disability => disability.issueType == "Individual"
+      );
     }
 
-    return disabilityList
-    }
+    return disabilityList;
+  };
 
   return (
     <div className={`FormContent ${styles.Applicants}`}>

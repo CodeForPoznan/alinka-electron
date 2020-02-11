@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { act, create } from "react-test-renderer";
+import { create } from "react-test-renderer";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 
@@ -31,8 +30,10 @@ describe("Applicants", () => {
     const div = create(
       formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
-    const applicants = div.root
-      expect(applicants.findByProps({component: "select", name: "applicant.reason"})).toBeDefined();
+    const applicants = div.root;
+    expect(
+      applicants.findByProps({ component: "select", name: "applicant.reason" })
+    ).toBeDefined();
     div.unmount();
   });
 
@@ -40,16 +41,13 @@ describe("Applicants", () => {
     const div = create(
       formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
-    const applicants = div.root
-      expect(applicants.findByProps({component: "select", name: "applicant.secondReason"})).toBeDefined();
+    const applicants = div.root;
+    expect(
+      applicants.findByProps({
+        component: "select",
+        name: "applicant.secondReason"
+      })
+    ).toBeDefined();
     div.unmount();
   });
-
-  it("contains only znacznie utrudniajacy uniemozliwiajacy when indywidualne is selected", () => {
-    const div = create(
-      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
-    );
-    const applicants = div.root
-    expect(1).toBeDefined()
-  })
 });
