@@ -21,7 +21,7 @@ const FieldWrapper = ({
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
   return (
-    <div className={styles[componentSize]}>
+    <div className={styles[componentSize]} id={name}>
       <label className={styles.Label}>{fieldLabel[mainKey][subKey]}</label>
       {component !== "select" ? (
         <Field

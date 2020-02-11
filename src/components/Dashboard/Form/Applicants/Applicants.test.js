@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { create } from "react-test-renderer";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 
@@ -20,22 +20,34 @@ describe("Applicants", () => {
   });
 
   it("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(
-      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
-      div
+    const div = create(
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
-    ReactDOM.unmountComponentAtNode(div);
+    div.unmount();
   });
 
   it("contains select with first reason", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(
-      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />),
-      div
+    const div = create(
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
     );
+    const applicants = div.root;
+    expect(
+      applicants.findByProps({ component: "select", name: "applicant.reason" })
+    ).toBeDefined();
+    div.unmount();
+  });
 
-    expect(div.querySelector("select[name='applicant.reason']")).toBeDefined();
-    ReactDOM.unmountComponentAtNode(div);
+  it("contains select with second reason", () => {
+    const div = create(
+      formWrapper(<Applicants reasonsList={[]} disabilityList={[]} />)
+    );
+    const applicants = div.root;
+    expect(
+      applicants.findByProps({
+        component: "select",
+        name: "applicant.secondReason"
+      })
+    ).toBeDefined();
+    div.unmount();
   });
 });

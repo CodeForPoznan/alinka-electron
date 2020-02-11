@@ -7,6 +7,7 @@ import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
 
 const Applicants = ({ reasonsList, disabilityList }) => {
+  const actualValues = useFormState().values;
   /**
    * Calculate if second disable select is enabled
    * Select should be enabled if - user want decision of special education
@@ -14,7 +15,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
    * @returns {bool}
    */
   const getSecondReasonDisabled = () => {
-    const actualValues = useFormState().values;
     const joinableDisabilitylist = Array.from(
       disabilityList.filter(disability => disability.multiple),
       disability => disability.value
@@ -27,6 +27,19 @@ const Applicants = ({ reasonsList, disabilityList }) => {
       joinableDisabilitylist.includes(actualValues.applicant.reason) &&
       issuesAllowingMultipleDisablity.includes(actualValues.applicant.issue)
     );
+  };
+  const disabilityListUpdated = () => {
+    const indivitualIssuesList = Array.from(
+      reasonsList.filter(reason => reason.issueType == "Individual"),
+      reason => reason.value
+    );
+    if (indivitualIssuesList.includes(actualValues.applicant.issue)) {
+      return disabilityList.filter(
+        disability => disability.issueType == "Individual"
+      );
+    }
+
+    return disabilityList;
   };
 
   return (
@@ -66,7 +79,7 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         name={`applicant.reason`}
         componentSize="extraLarge"
         component="select"
-        options={disabilityList}
+        options={disabilityListUpdated()}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
