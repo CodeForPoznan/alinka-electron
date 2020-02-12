@@ -14,5 +14,5 @@ const insertSchool = () => {
   createSchool();
 };
 
-insertSchoolTypes(schoolTypeList);
-// insertSchool();
+// insertSchoolTypes(schoolTypeList);
+insertSchool();

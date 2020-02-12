@@ -23,7 +23,8 @@
     "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest",
     "rebuild": "electron-rebuild -f -w sqlite3",
-    "apply_fixture": "node src/db/apply_fixture.js"
+    "apply_fixture": "node src/db/apply_fixture.js",
+    "apply_fixture2": "node src/db/ttt.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
@@ -39,7 +40,7 @@
     "react-final-form": "^6.3.3",
     "react-final-form-arrays": "^3.1.1",
     "sequelize": "5.21.2",
-    "sqlite3": "4.1.0"
+    "sqlite3": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -78,7 +79,6 @@
     "prettier": "1.17.1",
     "react-test-renderer": "16.8.0",
     "sass-loader": "^7.1.0",
-    "sqlite3": "4.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^2.3.0",
     "wait-on": "^3.2.0",
