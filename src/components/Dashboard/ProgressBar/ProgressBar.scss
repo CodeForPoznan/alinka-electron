@@ -1,9 +1,80 @@
-@import '../../../scss/_variables.scss';
-@import '../../../scss/_mixins.scss';
+@import "../../../scss/_variables.scss";
+@import "../../../scss/_mixins.scss";
 
 .ProgressBar {
   @include containerStyle();
-  @include flex(space-between);
-  height: 60px;
+  @include flex(center);
   margin-bottom: 20px;
+  height: 100px;
+
+  .Progressbar__list {
+    align-items: center;
+    @include flex(center);
+    width: 100%;
+
+
+    li {
+      color: #dcd8d8;
+      list-style-type: none;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      width: 100%;
+    }
+
+    li:before {
+      background-color: #fff;
+      border: 10px solid #dcd8d8;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 10px;
+      line-height: 60px;
+      margin: 0 auto 5px auto;
+      position: relative;
+      text-align: center;
+      width: 10px;
+      z-index: 2;
+
+    }
+
+    li:after {
+      background-color: #dcd8d8;
+      content: "";
+      height: 2px;
+      left: -50%;
+      position: absolute;
+      top: 25px;
+      width: 100%;
+      z-index: 0;
+    }
+
+    li:first-child:after {
+      content: none;
+    }
+
+    li.active {
+      color: #f55951;
+    }
+
+    li.active:before {
+      //border-color: #55b776;
+      background: white;
+      border: 10px solid #f55951;
+    }
+
+    li.active + li:after {
+      background-color: #f55951;
+    }
+
+    li.active:before {
+      background: white;
+      background-size: 60%;
+    }
+
+    li::before {
+      background: #fff;
+      background-size: 60%;
+    }
+  }
 }

@@ -4,6 +4,7 @@ import { Form } from "react-final-form";
 import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 export default class DocumentForm extends Component {
   state = {
@@ -52,6 +53,8 @@ export default class DocumentForm extends Component {
     const isLastPage = page === React.Children.count(children) - 1;
 
     return (
+        <>
+          <ProgressBar pageCounter={this.state.page}/>
       <Form
         mutators={{
           ...arrayMutators
@@ -85,6 +88,7 @@ export default class DocumentForm extends Component {
           </form>
         )}
       </Form>
+          </>
     );
   }
 }
