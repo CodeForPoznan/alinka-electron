@@ -4,14 +4,13 @@ import { Form } from "react-final-form";
 import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
+import Button from "../../Button/Button";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 export default class DocumentForm extends Component {
   state = {
     page: 0,
-    values: this.props.initialValues || {},
-    disabilityList: this.props.disabilityList || {},
-    reasonsList: this.props.reasonsList || {}
+    values: this.props.initialValues || {}
   };
 
   static Step = ({ children }) => children;
@@ -48,47 +47,40 @@ export default class DocumentForm extends Component {
 
   render() {
     const children = this.props.children;
-    const { disabilityList, page, reasonsList, values } = this.state;
+    const { page, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
+    console.log(`Actual form data: ${JSON.stringify(values, 0, 2)}`);
 
     return (
-        <>
-          <ProgressBar pageCounter={this.state.page}/>
-      <Form
-        mutators={{
-          ...arrayMutators
-        }}
-        initialValues={values}
-        reasonsList={reasonsList}
-        disabilityList={disabilityList}
-        validate={this.validate}
-        onSubmit={this.handleSubmit}
-      >
-        {({ handleSubmit, submitting, values }) => (
-          <form className={styles.Form} onSubmit={handleSubmit}>
-            <FormHeader page={this.state.page} />
-            {activePage}
-            <div className="buttons">
-              {page > 0 && (
-                <button type="button" onClick={this.previous}>
-                  Wróć
-                </button>
-              )}
-              {isLastPage ? (
-                <button type="submit" disabled={submitting}>
-                  Utwórz dokument
-                </button>
-              ) : (
-                <button type="submit">Dalej</button>
-              )}
-            </div>
-
-            <pre>{JSON.stringify(values, 0, 2)}</pre>
-          </form>
-        )}
-      </Form>
-          </>
+      <>
+        <ProgressBar pageCounter={this.state.page} />
+        <Form
+          mutators={{
+            ...arrayMutators
+          }}
+          initialValues={values}
+          validate={this.validate}
+          onSubmit={this.handleSubmit}
+        >
+          {({ handleSubmit, submitting }) => (
+            <form className={styles.Form} onSubmit={handleSubmit}>
+              <FormHeader page={this.state.page} />
+              {activePage}
+              <div className={styles.buttons}>
+                {page > 0 && <Button onClick={this.previous}>wróć</Button>}
+                {isLastPage ? (
+                  <Button type="submit" disabled={submitting}>
+                    utwórz dokument
+                  </Button>
+                ) : (
+                  <Button type="submit">dalej</Button>
+                )}
+              </div>
+            </form>
+          )}
+        </Form>
+      </>
     );
   }
 }

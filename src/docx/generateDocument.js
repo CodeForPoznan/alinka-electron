@@ -8,123 +8,80 @@ const ASSETS_LIST = {
   INDYWIDUALNE: {
     prefix: "indywidualne",
     statics: [
-      "_rels/.rels",
-      "customXml/_rels/item1.xml.rels",
-      "customXml/item1.xml",
-      "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "docProps/thumbnail.jpeg",
-      "word/_rels/document.xml.rels",
-      "word/theme/theme1.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/numbering.xml",
-      "word/settings.xml",
-      "word/styles.xml",
-      "word/stylesWithEffects.xml",
-      "word/webSettings.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("word", "stylesWithEffects.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   SPECJALNE: {
     prefix: "specjalne",
     statics: [
-      "_rels/.rels",
-      "customXml/_rels/item1.xml.rels",
-      "customXml/item1.xml",
-      "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "word/_rels/document.xml.rels",
-      "word/theme/theme1.xml",
-      "word/endnotes.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/numbering.xml",
-      "word/settings.xml",
-      "word/styles.xml",
-      "word/webSettings.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   INDYWIDUALNE_ROCZNE: {
     prefix: "indywidualne_roczne",
     statics: [
-      "_rels/.rels",
-      "customXml/_rels/item1.xml.rels",
-      "customXml/item1.xml",
-      "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "word/_rels/document.xml.rels",
-      "word/theme/theme1.xml",
-      "word/endnotes.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/numbering.xml",
-      "word/settings.xml",
-      "word/styles.xml",
-      "word/webSettings.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   REWALIDACYJNE: {
     prefix: "rewalidacyjne",
     statics: [
-      "_rels/.rels",
-      "customXml/_rels/item1.xml.rels",
-      "customXml/item1.xml",
-      "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "word/_rels/document.xml.rels",
-      "word/theme/theme1.xml",
-      "word/endnotes.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/numbering.xml",
-      "word/settings.xml",
-      "word/styles.xml",
-      "word/webSettings.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
+    templates: [path.join("word", "document.xml")]
   },
   OPINIA: {
     prefix: "opinia",
     statics: [
-      "_rels/.rels",
-      "customXml/_rels/item1.xml.rels",
-      "customXml/item1.xml",
-      "customXml/itemProps1.xml",
-      "docProps/app.xml",
-      "docProps/core.xml",
-      "word/_rels/document.xml.rels",
-      "word/theme/theme1.xml",
-      "word/endnotes.xml",
-      "word/fontTable.xml",
-      "word/footnotes.xml",
-      "word/numbering.xml",
-      "word/settings.xml",
-      "word/styles.xml",
-      "word/webSettings.xml",
-      "[Content_Types].xml"
+      path.join("customXml", "itemProps1.xml"),
+      path.join("word", "fontTable.xml"),
+      path.join("word", "footnotes.xml"),
+      path.join("word", "styles.xml"),
+      path.join("[Content_Types].xml")
     ],
-    templates: ["word/document.xml"]
-  }
+    templates: [path.join("word", "document.xml")]
+  },
+  common: [
+    path.join("customXml", "_rels", "item1.xml.rels"),
+    path.join("customXml", "item1.xml"),
+    path.join("_rels", ".rels"),
+    path.join("word", "_rels", "document.xml.rels"),
+    path.join("word", "theme", "theme1.xml"),
+    path.join("word", "endnotes.xml"),
+    path.join("word", "numbering.xml"),
+    path.join("word", "settings.xml"),
+    path.join("word", "webSettings.xml")
+  ]
 };
 
 function generateDocument(documentType, data) {
+  nunjucks.configure(path.resolve(__dirname, "assets"));
   const zip = new JSZip();
   for (let staticPath of ASSETS_LIST[documentType].statics) {
     zip.file(
       staticPath,
       fs.readFileSync(
-        path.posix.resolve(
+        path.resolve(
           __dirname,
           "assets",
           ASSETS_LIST[documentType].prefix,
@@ -134,12 +91,21 @@ function generateDocument(documentType, data) {
     );
   }
 
+  for (let commonStaticPath of ASSETS_LIST.common) {
+    zip.file(
+      commonStaticPath,
+      fs.readFileSync(
+        path.resolve(__dirname, "assets", "commons", commonStaticPath)
+      )
+    );
+  }
+
   for (let tempalatePath of ASSETS_LIST[documentType].templates) {
     zip.file(
       tempalatePath,
       nunjucks.renderString(
         fs.readFileSync(
-          path.posix.resolve(
+          path.resolve(
             __dirname,
             "assets",
             ASSETS_LIST[documentType].prefix,

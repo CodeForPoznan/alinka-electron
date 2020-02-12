@@ -1,0 +1,48 @@
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="Recivers-main"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">{{ applicantData.firstName }} {{ applicantData.lastName }} </w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="Subtitle-end"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">             (imię i nazwisko)</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="Recivers-main"/>
+  </w:pPr>
+  <w:r>
+    <w:t xml:space="preserve">{{ applicantData.address }} {{ applicantData.postalCode }}</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="Subtitle-end"/>
+  </w:pPr>
+  <w:r>
+    <w:t>(adres zamieszkania albo adres do korespondencji</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="Subtitle-end"/>
+  </w:pPr>
+  <w:r>
+    <w:t>– jeżeli jest inny niż adres zamieszkania)</w:t>
+  </w:r>
+</w:p>
+    <w:p>
+    <w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+        <w:lang w:val="pl-PL"/>
+      </w:rPr>
+    </w:pPr>
+  </w:p>
