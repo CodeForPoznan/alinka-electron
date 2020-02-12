@@ -120,7 +120,7 @@ const reasonsList = [
     value: "SPECJALNE",
     disable: false,
     allowMultiple: true,
-    excludedDisabilities: ['UNIEMOZLIWIAJACY', 'ZNACZNIE_UTRUDNIAJACY']
+    excludedDisabilities: ["UNIEMOZLIWIAJACY", "ZNACZNIE_UTRUDNIAJACY"]
   },
   {
     key: "1",

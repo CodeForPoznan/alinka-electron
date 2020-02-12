@@ -49,7 +49,7 @@ export default class DocumentForm extends Component {
     const { page, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
-    
+
     return (
       <Form
         mutators={{

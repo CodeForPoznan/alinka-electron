@@ -34,7 +34,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
 
   const getOptions = () => {
     const parentItem = reasonsList.find(el => el.value === chosenParent);
-    return disabilityList.filter(disability => !parentItem.excludedDisabilities.includes(disability.value));
+    return disabilityList.filter(
+      disability => !parentItem.excludedDisabilities.includes(disability.value)
+    );
   };
 
   return (
