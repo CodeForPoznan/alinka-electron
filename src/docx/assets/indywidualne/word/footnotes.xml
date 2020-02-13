@@ -31,10 +31,7 @@
   <w:footnote w:id="1">
     <w:p>
       <w:pPr>
-        <w:spacing w:after="0"/>
-        <w:rPr>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
@@ -43,116 +40,87 @@
         <w:footnoteRef/>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
-        <w:t xml:space="preserve"></w:t>
+        <w:t xml:space="preserve">Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.</w:t>
       </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="2">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
       <w:r>
         <w:rPr>
-          <w:rStyle w:val="FootnoteZnak"/>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
         </w:rPr>
-        <w:t>Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.</w:t>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Zgodnie z art. 4 pkt 19 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe przez rodziców należy rozumieć także prawnych opiekunów dziecka oraz osoby (podmioty) sprawujące pieczę zastępczą nad dzieckiem.</w:t>
       </w:r>
     </w:p>
   </w:footnote>
   <w:footnote w:id="3">
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Przypisdolny"/>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:sz w:val="14"/>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
         </w:rPr>
         <w:footnoteRef/>
-        <w:t>)</w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Zgodnie z art. 4 pkt 19 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe przez rodziców należy rozumieć także prawnych opiekunów dziecka oraz osoby (podmioty) sprawujące pieczę zastępczą nad dzieckiem.</w:t>
+        <w:t xml:space="preserve"> Orzeczenie wydaje się na okres wychowania przedszkolnego, roku szkolnego albo etapu edukacyjnego. W przypadku ucznia szkoły ponadpodstawowej lub ponadgimnazjalnej termin ważności orzeczenia nie może przypadać później niż koniec roku szkolnego, w roku kalendarzowym, w którym uczeń kończy 24. rok życia.</w:t>
       </w:r>
     </w:p>
   </w:footnote>
   <w:footnote w:id="4">
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Przypisdolny"/>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:sz w:val="14"/>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
         </w:rPr>
         <w:footnoteRef/>
-        <w:t>)</w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Orzeczenie wydaje się na okres nie krótszy niż 30 dni i nie dłuższy niż jeden rok szkolny.</w:t>
+        <w:t xml:space="preserve"> Niepotrzebne skreślić.</w:t>
       </w:r>
     </w:p>
   </w:footnote>
   <w:footnote w:id="5">
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Przypisdolny"/>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:sz w:val="14"/>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
         </w:rPr>
         <w:footnoteRef/>
-        <w:t>)</w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Niepotrzebne skreślić.</w:t>
+        <w:t xml:space="preserve"> Wypełnia się w przypadkach, o których mowa w § 19 ust. 1 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz. U. poz. 1743).</w:t>
       </w:r>
     </w:p>
   </w:footnote>
   <w:footnote w:id="6">
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Przypisdolny"/>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:sz w:val="14"/>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
         </w:rPr>
         <w:footnoteRef/>
-        <w:t>)</w:t>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Wypełnia się w przypadkach, o których mowa w § 19 ust. 1 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz. U. poz. 1743).</w:t>
-      </w:r>
-    </w:p>
-  </w:footnote>
-  <w:footnote w:id="7">
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Przypisdolny"/>
-      </w:pPr>
-      <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:footnoteRef/>
-        <w:t>)</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:sz w:val="14"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Wypełnia się w przypadku wydania nowego orzeczenia o potrzebie indywidualnego nauczania.</w:t>
+        <w:t xml:space="preserve"> Wypełnia się w przypadku wydania nowego orzeczenia o potrzebie indywidualnego nauczania.</w:t>
       </w:r>
     </w:p>
   </w:footnote>

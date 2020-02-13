@@ -486,7 +486,7 @@
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
           <w:lang w:val="pl-PL"/>
         </w:rPr>
-        <w:footnoteReference w:id="6"/>
+        <w:footnoteReference w:id="5"/>
       </w:r>
       <w:r>
         <w:rPr>
@@ -509,7 +509,7 @@
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
           <w:lang w:val="pl-PL"/>
         </w:rPr>
-        <w:footnoteReference w:id="7"/>
+        <w:footnoteReference w:id="6"/>
       </w:r>
     </w:p>
     <w:p>
