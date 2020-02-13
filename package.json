@@ -23,8 +23,9 @@
     "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest",
     "rebuild": "electron-rebuild -f -w sqlite3",
-    "apply_fixture": "node src/db/apply_fixture.js",
-    "apply_fixture2": "node src/db/ttt.js"
+    "apply_school_types": "node src/test/fixtures/apply_school_types.js",
+    "apply_schools": "node src/test/fixtures/apply_schools.js",
+    "apply_fixtures": "npm run apply_school_types && npm run apply_schools"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
@@ -50,8 +51,8 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@testing-library/react": "^9.3.2",
     "@svgr/webpack": "^4.3.3",
+    "@testing-library/react": "^9.3.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.9.0",

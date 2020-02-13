@@ -3,15 +3,10 @@ const Sequelize = require("sequelize");
 const sequelize = require("./db_config").sequelize;
 
 const SchoolType = sequelize.define(
-  "schooltype",
+  "SchoolType",
   {
-    // id: {
-    //   type: Sequelize.INTEGER,
-    //   autoIncrement: true,
-    //   primaryKey: true
-    // },
-    schoolType: {
-      type: Sequelize.STRING,
+    name: {
+      type: Sequelize.STRING(80),
       allowNull: false,
       unique: true,
       primaryKey: true
@@ -41,10 +36,7 @@ const School = sequelize.define(
     },
     postCode: {
       type: Sequelize.STRING(6),
-      allowNull: false,
-      validation: {
-        postCodeFormatValidation: value => {}
-      }
+      allowNull: false
     },
     street: {
       type: Sequelize.STRING(80),
