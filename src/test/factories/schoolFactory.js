@@ -2,8 +2,8 @@ const { School } = require("../../db/models");
 const schoolTypeList = require("../../db/school_types");
 const faker = require("faker/locale/pl");
 
-const schoolData = () => {
-  const schoolType = faker.random.arrayElement(schoolTypeList);
+const schoolData = type => {
+  const schoolType = type || faker.random.arrayElement(schoolTypeList);
   return {
     type: schoolType,
     name: `${schoolType} nr. ${faker.random.number(200)}`,
@@ -14,8 +14,8 @@ const schoolData = () => {
 };
 
 const schoolFixture = async (props = {}) => {
-  const schoolData = schoolData();
-  return await School.create({ schoolData, ...props });
+  const data = schoolData(props.type);
+  return await School.create({ ...data, ...props });
 };
 
 module.exports = schoolFixture;
