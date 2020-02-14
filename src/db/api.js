@@ -12,7 +12,14 @@ const getSchoolTypeList = () => {
   return SchoolType.findAll();
 };
 
-const createSchool = ({ name, city, postCode, street, SchoolTypeName, postOffice }) => {
+const createSchool = ({
+  name,
+  city,
+  postCode,
+  street,
+  SchoolTypeName,
+  postOffice
+}) => {
   School.sync({ force: true }).then(() =>
     School.create({
       name,

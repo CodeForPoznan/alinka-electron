@@ -6,9 +6,9 @@ const schoolTypeData = () => {
   return faker.random.arrayElement(schoolTypeList);
 };
 
-const schoolTypeFixture = async name =>{
+const schoolTypeFixture = async name => {
   return await SchoolType.create({ name: name || schoolTypeData() });
-}
+};
 
 module.exports = schoolTypeFixture;
 module.exports.schoolTypeData = schoolTypeData;

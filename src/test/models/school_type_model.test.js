@@ -13,8 +13,8 @@ describe("SchoolType model", () => {
   });
 
   afterAll(async () => {
-    await SchoolType.drop()
-  })
+    await SchoolType.drop();
+  });
 
   it("should be created", async () => {
     const schoolType = await sequelize
