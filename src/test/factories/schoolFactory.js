@@ -4,12 +4,14 @@ const faker = require("faker/locale/pl");
 
 const schoolData = type => {
   const schoolType = type || faker.random.arrayElement(schoolTypeList);
+  const city = faker.address.city();
   return {
     type: schoolType,
     name: `${schoolType} nr. ${faker.random.number(200)}`,
-    city: faker.address.city(),
+    city: city,
     postCode: faker.address.zipCode(),
-    street: faker.address.streetAddress()
+    street: faker.address.streetAddress(),
+    postOffice: city
   };
 };
 

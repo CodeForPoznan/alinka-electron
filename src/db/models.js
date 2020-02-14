@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 const sequelize = require("./db_config").sequelize;
 
@@ -38,22 +39,34 @@ const School = sequelize.define(
       type: Sequelize.STRING(6),
       allowNull: false
     },
+    postOffice: {
+      type: Sequelize.STRING(80),
+      allowNull: false
+    },
     street: {
       type: Sequelize.STRING(80),
       allowNull: false
     },
     address: {
-      type: Sequelize.VIRTUAL,
-      get: () => {
-        return this.get("street");
+      type: Sequelize.VIRTUAL(DataTypes.STRING, ["city", "street"]),
+      get() {
+        return `${this.getDataValue('city')}, ${this.getDataValue("street")}`;
       }
-    }
+    },
+    post: {
+      type: Sequelize.VIRTUAL(DataTypes.STRING, ["postCode", "postOffice"]),
+      get() {
+        const {postOffice, city, postCode} = this;
+        const postLocation = postOffice === city ? city : postOffice;
+        return `${postCode} ${postLocation}`;
+      }
+    },
   },
   {
     // options
   }
 );
 
-SchoolType.hasMany(School);
+SchoolType.hasMany(School, { allowNull: false });
 
 module.exports = { SchoolType, School };
