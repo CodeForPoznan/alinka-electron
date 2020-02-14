@@ -1,24 +1,22 @@
 const { sequelize } = require("../../db/db_config");
 const schoolFactory = require("../factories/schoolFactory");
 const schoolTypeFactory = require("../factories/schoolTypeFactory");
-const truncate = require("../truncate");
-const { School, SchoolType } = require("../../db/models");
+const { schoolData } = require("../factories/schoolFactory");
+const { School } = require("../../db/models");
 
 describe("School model", () => {
-  beforeEach(async () => {
-    await truncate([School, SchoolType]);
-    await SchoolType.sync({ force: true });
-    await schoolTypeFactory("przedszkole")
+  beforeAll(() => {
+    return sequelize
+      .sync({ force: true })
+      .then(() => schoolTypeFactory("mock"));
   });
 
-  afterEach(async () => {
-    await truncate([School, SchoolType]);
+  afterAll(async () => {
+    await sequelize.drop();
   });
 
   it("should be created", async () => {
-    const school = await sequelize
-      .sync({ force: true })
-      .then(() => schoolFactory({ name: "TEST", type: "przedszkole" }));
+    const school = await School.create({ ...schoolData("mock"), name: "TEST" });
 
     expect(school).toBeTruthy();
     expect(school.name).toEqual("TEST");
@@ -30,31 +28,23 @@ describe("School model", () => {
   //   .then(() => schoolFactory({ name: "TEST", type: "przedszkole" }));
   // })
 
-  describe("schould has virtual methods which", () => {
+  describe("has virtual methods which", () => {
     it("return concatenated address data by calling `address`", async () => {
-      const school = await sequelize
-        .sync({ force: true })
-        .then(() =>
-          schoolFactory({
-            street: "Testowa 2",
-            city: "Poznan",
-            type: "przedszkole"
-          })
-        );
+      const school = await schoolFactory({
+        street: "Testowa 2",
+        city: "Poznan",
+        SchoolTypeName: "mock"
+      });
 
       expect(school.address).toEqual("Poznan, Testowa 2");
     });
 
     it("return concatenated post data by calling `post`", async () => {
-      const school = await sequelize
-        .sync({ force: true })
-        .then(() =>
-          schoolFactory({
-            postCode: "12-345",
-            postOffice: "Poznan",
-            type: "przedszkole"
-          })
-        );
+      const school = await schoolFactory({
+        postCode: "12-345",
+        postOffice: "Poznan",
+        SchoolTypeName: "mock"
+      });
 
       expect(school.post).toEqual("12-345 Poznan");
     });
