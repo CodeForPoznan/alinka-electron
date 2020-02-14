@@ -21,7 +21,7 @@
     "electron:dev": "MODE=dev electron .",
     "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
     "build": "webpack --mode production && electron-builder --windows --linux",
-    "test": "MODE=dev jest",
+    "test": "cross-env MODE=dev jest",
     "rebuild": "electron-rebuild -f -w sqlite3",
     "apply_school_types": "node src/test/fixtures/apply_school_types.js",
     "apply_schools": "node src/test/fixtures/apply_schools.js",
