@@ -778,17 +778,9 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:jc w:val="both"/>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
+        <w:pStyle w:val="newdocumentreason"/>
       </w:pPr>
       <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
         <w:t>W przypadku wydania nowego orzeczenia o potrzebie kształcenia specjalnego należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
       </w:r>
       <w:r>
@@ -809,16 +801,9 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
+        <w:pStyle w:val="repeal"/>
       </w:pPr>
       <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
         <w:t>Orzeczenie uchyla</w:t>
       </w:r>
       <w:r>

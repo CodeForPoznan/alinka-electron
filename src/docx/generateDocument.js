@@ -11,8 +11,6 @@ const ASSETS_LIST = {
       path.join("customXml", "itemProps1.xml"),
       path.join("word", "fontTable.xml"),
       path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("word", "stylesWithEffects.xml"),
       path.join("[Content_Types].xml")
     ],
     templates: [path.join("word", "document.xml")]
@@ -23,7 +21,6 @@ const ASSETS_LIST = {
       path.join("customXml", "itemProps1.xml"),
       path.join("word", "fontTable.xml"),
       path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
       path.join("[Content_Types].xml")
     ],
     templates: [path.join("word", "document.xml")]
@@ -34,7 +31,6 @@ const ASSETS_LIST = {
       path.join("customXml", "itemProps1.xml"),
       path.join("word", "fontTable.xml"),
       path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
       path.join("[Content_Types].xml")
     ],
     templates: [path.join("word", "document.xml")]
@@ -45,7 +41,6 @@ const ASSETS_LIST = {
       path.join("customXml", "itemProps1.xml"),
       path.join("word", "fontTable.xml"),
       path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
       path.join("[Content_Types].xml")
     ],
     templates: [path.join("word", "document.xml")]
@@ -56,7 +51,6 @@ const ASSETS_LIST = {
       path.join("customXml", "itemProps1.xml"),
       path.join("word", "fontTable.xml"),
       path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
       path.join("[Content_Types].xml")
     ],
     templates: [path.join("word", "document.xml")]
@@ -70,6 +64,7 @@ const ASSETS_LIST = {
     path.join("word", "endnotes.xml"),
     path.join("word", "numbering.xml"),
     path.join("word", "settings.xml"),
+    path.join("word", "styles.xml"),
     path.join("word", "webSettings.xml")
   ]
 };
