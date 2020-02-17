@@ -5,7 +5,7 @@ const { schoolData } = require("../factories/schoolFactory");
 const { School } = require("../../db/models");
 
 describe("School model", () => {
-  beforeAll(() => {
+  beforeEach(() => {
     return sequelize
       .sync({ force: true })
       .then(() => schoolTypeFactory("mock"));
@@ -22,11 +22,20 @@ describe("School model", () => {
     expect(school.name).toEqual("TEST");
   });
 
-  // it("should validate `postCode`", () => {
-  //   const school = await sequelize
-  //   .sync({ force: true })
-  //   .then(() => schoolFactory({ name: "TEST", type: "przedszkole" }));
-  // })
+  it("should validate `postCode`", async () => {
+    const school = await sequelize
+      .sync({ force: true })
+      .then(() =>
+        schoolFactory({
+          type: "mock",
+          postCode: "invalid code",
+          SchoolTypeName: "mock"
+        })
+      )
+      .catch(err => err.message);
+
+    expect(school).toEqual("Validation error: Invalid polish postal code");
+  });
 
   describe("has virtual methods which", () => {
     it("return concatenated address data by calling `address`", async () => {

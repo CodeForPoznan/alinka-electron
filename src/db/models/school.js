@@ -22,7 +22,13 @@ const School = sequelize.define(
     },
     postCode: {
       type: Sequelize.STRING(6),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isValidaPolishPostCode(value) {
+          const regex = /^[0-9]{2}-[0-9]{3}$/;
+          if (!regex.test(value)) throw new Error("Invalid polish postal code");
+        }
+      }
     },
     postOffice: {
       type: Sequelize.STRING(80),
