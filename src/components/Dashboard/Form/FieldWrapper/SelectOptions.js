@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const OptionList = props => {
-  const { value, name, onChange, options, onFocus, disabled } = props;
+  const { name, onChange, options, onFocus, disabled } = props;
 
   return (
     <select
-      value={value}
       name={name}
-      onChange={onChange}
+      onChange={event => onChange(event)}
       onFocus={onFocus}
       disabled={disabled}
     >
@@ -22,7 +21,6 @@ const OptionList = props => {
 };
 
 OptionList.propTypes = {
-  value: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   options: PropTypes.array,
