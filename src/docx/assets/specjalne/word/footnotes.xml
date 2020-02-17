@@ -31,10 +31,7 @@
   <w:footnote w:id="1">
     <w:p>
       <w:pPr>
-        <w:spacing w:after="0"/>
-        <w:rPr>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
+        <w:pStyle w:val="Footnote"/>
       </w:pPr>
       <w:r>
         <w:rPr>
@@ -43,16 +40,7 @@
         <w:footnoteRef/>
       </w:r>
       <w:r>
-        <w:rPr>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
-        <w:t xml:space="preserve"></w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rStyle w:val="FootnoteZnak"/>
-        </w:rPr>
-        <w:t>Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.</w:t>
+        <w:t xml:space="preserve"> Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.</w:t>
       </w:r>
     </w:p>
   </w:footnote>

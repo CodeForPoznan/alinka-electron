@@ -417,7 +417,7 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="repeal"/>
+        <w:pStyle w:val="newdocumentreason"/>
       </w:pPr>
       <w:r>
         <w:t>W przypadku wydania nowej opinii o potrzebie wczesnego wspomagania rozwoju dziecka należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowej opinii</w:t>
@@ -487,11 +487,13 @@
           <w:lang w:val="pl-PL"/>
         </w:rPr>
       </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+        <w:jc w:val="right"/>
+      </w:pPr>
       <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
         <w:t>(podpis Przewodniczącego Zespołu Orzekającego)</w:t>
       </w:r>
     </w:p>
