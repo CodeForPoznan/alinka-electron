@@ -8,7 +8,7 @@ class ProgressBar extends Component {
     let menuStep3;
     let menuStep4;
 
-    // eslint-disable-next-line react/prop-types
+
     switch (this.props.pageCounter) {
       case 0:
         menuStep1 = styles.active;
@@ -29,13 +29,16 @@ class ProgressBar extends Component {
         menuStep1 = styles.active;
         break;
     }
+
+
     return (
       <div className={styles.ProgressBar}>
-        <ul className={styles.Progressbar__list}>
+        <ul className={styles.ProgressBar__list}>
           <li className={menuStep1}>Dane dziecka</li>
           <li className={menuStep2}>Wnioskodawcy</li>
           <li className={menuStep3}>Zespół</li>
           <li className={menuStep4}>Podsumowanie</li>
+
         </ul>
       </div>
     );
