@@ -1,24 +1,22 @@
 import React from "react";
-import { Route, withRouter, useHistory } from "react-router-dom";
+import { Route, withRouter, Switch } from "react-router-dom";
 import styles from "./Dashboard.scss";
-import ProgressBar from "./ProgressBar/ProgressBar";
-import Home from "./Home/Home";
-import FormSteps from "./Form/FormSteps";
+import routes from "../../routing/routes";
 
 const Dashboard = () => {
   return (
     <div className={styles.Dashboard}>
       <div className={styles.Wrapper}>
-        <Route exact path="/" component={Home} />
-        <Route
-          path="/create-document"
-          render={() => (
-            <React.Fragment>
-              <ProgressBar />
-              <FormSteps />
-            </React.Fragment>
-          )}
-        />
+        <Switch>
+          {Object.keys(routes).map(key => (
+            <Route
+              key={routes[key].id}
+              path={routes[key].path}
+              render={() => routes[key].component}
+              exact={routes[key].exact}
+            />
+          ))}
+        </Switch>
       </div>
     </div>
   );
