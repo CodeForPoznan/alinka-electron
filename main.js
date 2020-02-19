@@ -1,10 +1,11 @@
 const fs = require("fs");
 const { app, BrowserWindow, ipcMain, Menu } = require("electron");
 const { generateDocument } = require("./src/docx/generateDocument");
-const { calculateValues } = require("./src/utils/utils");
+const { DocumentData } = require("./src/utils/utils");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
+const { getSchoolTypeList } = require("./src/db/api");
 
 
 /***************/
@@ -27,6 +28,11 @@ app.on("ready", () => {
       ? `http://localhost:9000`
       : `file://${__dirname}/build/index.html`
   );
+
+  // Get list of school types from data base.
+  ipcMain.on("db:schoolType", async () => {
+    mainWindow.webContents.send("sendData", await getSchoolTypeList())
+  })
 
   // Build Menu from template and insert it
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
@@ -102,8 +108,8 @@ if (inDevelopmentMode) {
 /* Document Renderer */
 /*********************/
 ipcMain.on("print:value", (event, values) => {
-    values = calculateValues(values);
-    generateDocument(values.applicant.issue, values)
-    .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-    .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
+  const documentData = new DocumentData(values).templateData
+  generateDocument(values.applicant.issue, documentData)
+  .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+  .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
 });
