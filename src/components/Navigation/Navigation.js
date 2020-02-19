@@ -1,33 +1,34 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.scss";
-import PropTypes from "prop-types";
+import routes from "../../routing/routes";
 
 const Navigation = () => {
+  const content = {
+    home: "Panel",
+    createDocument: "Utwórz nowy dokument",
+    children: "Wyszukaj dzieci",
+    statements: "Wyszukaj orzeczenie"
+  };
+
   return (
     <nav>
       <ul>
-        <li>
-          <NavLink exact to="/">
-            Panel
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/create-document">Utwórz nowy dokument</NavLink>
-        </li>
-        <li>
-          <NavLink to="/children">Wyszukaj dzieci</NavLink>
-        </li>
-        <li>
-          <NavLink to="/statements">Wyszukaj orzeczenie</NavLink>
-        </li>
+        {Object.keys(routes).map(key => (
+          <li key={key} className={styles.NavItem}>
+            <NavLink
+              exact
+              to={routes[key].path}
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+            >
+              {content[routes[key].id]}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
 };
-
-// Navigation.propTypes = {
-
-// };
 
 export default Navigation;

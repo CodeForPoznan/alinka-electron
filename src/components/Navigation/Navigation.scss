@@ -1,0 +1,20 @@
+@import '../../scss/_variables.scss';
+
+.NavItem {
+  color: $sidebarColor;
+  letter-spacing: $letter-spacing-default;
+  line-height: $line-height-md;
+  text-transform: uppercase;
+}
+
+.NavLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 10px 20px 15px;
+}
+
+.Active { 
+  color: $lightBlack;
+  background-color: $bodyBackground;
+}
