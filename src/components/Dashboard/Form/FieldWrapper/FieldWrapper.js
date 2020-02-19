@@ -8,7 +8,10 @@ import PropTypes from "prop-types";
 import OptionList from "./SelectOptions";
 
 const required = value => (value ? undefined : "Required");
-
+const composeValidators = (required, validator) => value => {
+  if (typeof validator === "undefined") return required(value);
+  return validator(value);
+}
 const FieldWrapper = ({
   name,
   componentSize,
@@ -16,7 +19,8 @@ const FieldWrapper = ({
   disabled,
   onFocus,
   options,
-  onChange
+  onChange,
+  validator
 }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
@@ -30,7 +34,7 @@ const FieldWrapper = ({
           name={name}
           component={component}
           type="text"
-          validate={required}
+          validate={composeValidators(required, validator)}
           disabled={disabled}
         />
       ) : (
@@ -66,7 +70,8 @@ FieldWrapper.propTypes = {
   options: PropTypes.array,
   label: PropTypes.string,
   onFocus: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  validator: PropTypes.func
 };
 
 FieldWrapper.defaultProps = {
