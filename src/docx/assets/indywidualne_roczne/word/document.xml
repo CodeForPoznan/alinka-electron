@@ -76,7 +76,7 @@
         <w:rPr>
           <w:rStyle w:val="SubtitledRunZnak"/>
         </w:rPr>
-        <w:t>{{ applicant.name }}</w:t>
+        <w:t>{{ applicant.onRequest }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -218,7 +218,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ parents.name }}, {{ parents.address }}</w:t>
+        <w:t>{{ applicant.parentsDescription }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -492,7 +492,7 @@
     </w:p>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="newdocumentreson"/>
+        <w:pStyle w:val="newdocumentreason"/>
       </w:pPr>
       <w:r>
         <w:t>W przypadku wydania nowego orzeczenia o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego należy wskazać okoliczności, które Zespół Orzekający uznał za istotne dla rozstrzygnięcia, oraz wyjaśnić powody, na podstawie których stwierdzono potrzebę wydania nowego orzeczenia</w:t>
@@ -560,11 +560,13 @@
           <w:lang w:val="pl-PL"/>
         </w:rPr>
       </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+        <w:jc w:val="right"/>
+      </w:pPr>
       <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-          <w:lang w:val="pl-PL"/>
-        </w:rPr>
         <w:t>(podpis Przewodniczącego Zespołu Orzekającego)</w:t>
       </w:r>
     </w:p>
@@ -598,46 +600,9 @@
         <w:t>Wnioskodawca</w:t>
       </w:r>
     </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Recivers-main"/>
-      </w:pPr>
-      <w:r>
-        <w:t>{{ applicant.name }}</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Subtitle-end"/>
-      </w:pPr>
-      <w:r>
-        <w:t>(imię i nazwisko)</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Recivers-main"/>
-      </w:pPr>
-      <w:r>
-        <w:t>{{ applicant.address }}</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Subtitle-end"/>
-      </w:pPr>
-      <w:r>
-        <w:t>(adres zamieszkania albo adres do korespondencji</w:t>
-      </w:r>
-    </w:p>
-    <w:p>
-      <w:pPr>
-        <w:pStyle w:val="Subtitle-end"/>
-      </w:pPr>
-      <w:r>
-        <w:t>– jeżeli jest inny niż adres zamieszkania)</w:t>
-      </w:r>
-    </w:p>
+    {% for applicantData in applicant.applicants %}
+      {% include "template_parts/receiver.xml" %}
+    {% endfor %}
     <w:sectPr>
       <w:pgSz w:w="12240" w:h="15840"/>
       <w:pgMar w:top="990" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>

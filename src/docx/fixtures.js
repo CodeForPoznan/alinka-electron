@@ -26,15 +26,14 @@ const specificData = {
 
 var commonData = {
   child: {
-    name: "Wiktor Eridfasdfz2",
-    nameGenetive: "Wiktor Eridfasdfz2",
+    name: "Wiktor Rzeźniczak",
     pesel: "12121244441",
     birthPlace: "Pachy Wielkie",
     city: "Poznań",
     postalCode: "61-854",
     street: "Mostowa 38",
     houseNumber: "4",
-    schoolType: ["Szkoła podstawowa"],
+    schoolType: "Szkoła podstawowa",
     schoolName: "Szkoła Podstawowa nr 4 w Grodzisku Wlkp.",
     profession: "murarz",
     class: "3b",
@@ -42,16 +41,25 @@ var commonData = {
     birthDate: "12.12.1912"
   },
   applicant: {
-    address: "Wielka 4/6, 55-789 Studnia",
+    firstName1: "Tomasz",
+    lastName1: "Rzeźniczak",
+    address1: "Wielka 4/6",
+    postalCode1: "55-789 Studnia",
+    addressChildcheCkbox: false,
+    firstName2: "Adelajda",
+    lastName2: "Słoneczko",
+    address2: "Odnowy Stare, ul. Zamkowa 15/6a",
+    postalCode2: "15-671 Sadowisko",
+    addresFirstParentCheckbox: false,
     name: "Tomasz Rzeźniczak i Adelajda Kieł",
     names: ["Tomasz Rzeźniczak", "Adelajda Kieł"],
     city: "Poznań",
     postalCode: "61-854",
     street: "Mostowa 38",
     houseNumber: "4",
-    issue: [""],
+    issue: "INDYWIDUALNE",
     period: "styczeń 2018 - listopad 2019",
-    reason: ["ZNACZNIE_UTRUDNIAJACY"]
+    reason: "ZNACZNIE_UTRUDNIAJACY"
   },
   city: "Grodzisk Wielkopolski",
   date: "15.07.2019",
@@ -62,7 +70,6 @@ var commonData = {
   },
   school:
     "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
-  reason: "ZNACZNIE_UTRUDNIAJACY",
   supportCenter: {
     address: "ul. Zbąszyńska 11",
     members: [

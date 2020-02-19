@@ -4,93 +4,40 @@ const path = require("path");
 const JSZip = require("jszip");
 const nunjucks = require("nunjucks");
 
-const ASSETS_LIST = {
-  INDYWIDUALNE: {
-    prefix: "indywidualne",
-    statics: [
-      path.join("customXml", "itemProps1.xml"),
-      path.join("word", "fontTable.xml"),
-      path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("word", "stylesWithEffects.xml"),
-      path.join("[Content_Types].xml")
-    ],
-    templates: [path.join("word", "document.xml")]
-  },
-  SPECJALNE: {
-    prefix: "specjalne",
-    statics: [
-      path.join("customXml", "itemProps1.xml"),
-      path.join("word", "fontTable.xml"),
-      path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("[Content_Types].xml")
-    ],
-    templates: [path.join("word", "document.xml")]
-  },
-  INDYWIDUALNE_ROCZNE: {
-    prefix: "indywidualne_roczne",
-    statics: [
-      path.join("customXml", "itemProps1.xml"),
-      path.join("word", "fontTable.xml"),
-      path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("[Content_Types].xml")
-    ],
-    templates: [path.join("word", "document.xml")]
-  },
-  REWALIDACYJNE: {
-    prefix: "rewalidacyjne",
-    statics: [
-      path.join("customXml", "itemProps1.xml"),
-      path.join("word", "fontTable.xml"),
-      path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("[Content_Types].xml")
-    ],
-    templates: [path.join("word", "document.xml")]
-  },
-  OPINIA: {
-    prefix: "opinia",
-    statics: [
-      path.join("customXml", "itemProps1.xml"),
-      path.join("word", "fontTable.xml"),
-      path.join("word", "footnotes.xml"),
-      path.join("word", "styles.xml"),
-      path.join("[Content_Types].xml")
-    ],
-    templates: [path.join("word", "document.xml")]
-  },
-  common: [
-    path.join("customXml", "_rels", "item1.xml.rels"),
-    path.join("customXml", "item1.xml"),
-    path.join("_rels", ".rels"),
-    path.join("word", "_rels", "document.xml.rels"),
-    path.join("word", "theme", "theme1.xml"),
-    path.join("word", "endnotes.xml"),
-    path.join("word", "numbering.xml"),
-    path.join("word", "settings.xml"),
-    path.join("word", "webSettings.xml")
-  ]
+const TEMPLATE_PATH_NAME = {
+  INDYWIDUALNE: "indywidualne",
+  SPECJALNE: "specjalne",
+  INDYWIDUALNE_ROCZNE: "indywidualne_roczne",
+  REWALIDACYJNE: "rewalidacyjne",
+  OPINIA: "opinia"
 };
 
-function generateDocument(documentType, data) {
-  const zip = new JSZip();
-  for (let staticPath of ASSETS_LIST[documentType].statics) {
-    zip.file(
-      staticPath,
-      fs.readFileSync(
-        path.resolve(
-          __dirname,
-          "assets",
-          ASSETS_LIST[documentType].prefix,
-          staticPath
-        )
-      )
-    );
-  }
+const COMMON_FILES = [
+  path.join("_rels", ".rels"),
+  path.join("word", "_rels", "document.xml.rels"),
+  path.join("word", "theme", "theme1.xml"),
+  path.join("word", "endnotes.xml"),
+  path.join("word", "fontTable.xml"),
+  path.join("word", "numbering.xml"),
+  path.join("word", "settings.xml"),
+  path.join("word", "styles.xml"),
+  path.join("word", "webSettings.xml"),
+  path.join("[Content_Types].xml")
+];
 
-  for (let commonStaticPath of ASSETS_LIST.common) {
+function generateDocument(documentType, data) {
+  nunjucks.configure(path.resolve(__dirname, "assets"));
+  const zip = new JSZip();
+  const templatePath = TEMPLATE_PATH_NAME[documentType];
+
+  zip.file(
+    path.join("word", "footnotes.xml"),
+    fs.readFileSync(
+      path.resolve(__dirname, "assets", templatePath, "word", "footnotes.xml")
+    )
+  );
+
+  for (let commonStaticPath of COMMON_FILES) {
     zip.file(
       commonStaticPath,
       fs.readFileSync(
@@ -99,23 +46,16 @@ function generateDocument(documentType, data) {
     );
   }
 
-  for (let tempalatePath of ASSETS_LIST[documentType].templates) {
-    zip.file(
-      tempalatePath,
-      nunjucks.renderString(
-        fs.readFileSync(
-          path.resolve(
-            __dirname,
-            "assets",
-            ASSETS_LIST[documentType].prefix,
-            tempalatePath
-          ),
-          "utf8"
-        ),
-        data
-      )
-    );
-  }
+  zip.file(
+    path.join("word", "document.xml"),
+    nunjucks.renderString(
+      fs.readFileSync(
+        path.resolve(__dirname, "assets", templatePath, "word", "document.xml"),
+        "utf8"
+      ),
+      data
+    )
+  );
 
   return zip;
 }
