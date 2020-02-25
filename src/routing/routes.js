@@ -12,31 +12,31 @@ const Statements = loadable(() =>
   import("../components/Dashboard/Statements/Statements")
 );
 
-const routes = {
-  panel: {
+const routes = [
+  {
     id: "home",
     path: "/",
     exact: true,
     component: <Home />
   },
-  create: {
+  {
     id: "createDocument",
     path: "/create-document",
     exact: true,
     component: <FormSteps />
   },
-  children: {
+  {
     id: "children",
     path: "/children",
     exact: true,
     component: <Children />
   },
-  statements: {
+  {
     id: "statements",
     path: "/statements",
     exact: true,
     component: <Statements />
   }
-};
+];
 
 export default routes;

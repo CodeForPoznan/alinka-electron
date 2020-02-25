@@ -14,15 +14,15 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        {Object.keys(routes).map(key => (
-          <li key={key} className={styles.NavItem}>
+        {routes.map((route, index) => (
+          <li key={index} className={styles.NavItem}>
             <NavLink
               exact
-              to={routes[key].path}
+              to={route.path}
               className={styles.NavLink}
               activeClassName={styles.Active}
             >
-              {content[routes[key].id]}
+              {content[route.id]}
             </NavLink>
           </li>
         ))}

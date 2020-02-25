@@ -8,12 +8,13 @@ const Dashboard = () => {
     <div className={styles.Dashboard}>
       <div className={styles.Wrapper}>
         <Switch>
-          {Object.keys(routes).map(key => (
+          {routes.map((route, index) => (
             <Route
-              key={routes[key].id}
-              path={routes[key].path}
-              render={() => routes[key].component}
-              exact={routes[key].exact}
+              key={index}
+              index={route.id}
+              path={route.path}
+              render={() => route.component}
+              exact={route.exact}
             />
           ))}
         </Switch>
