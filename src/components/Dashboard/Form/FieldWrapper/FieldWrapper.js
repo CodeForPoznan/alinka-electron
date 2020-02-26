@@ -11,7 +11,7 @@ const required = value => (value ? undefined : "Required");
 const composeValidators = (required, validator) => value => {
   if (typeof validator === "undefined") return required(value);
   return validator(value);
-}
+};
 const FieldWrapper = ({
   name,
   componentSize,
