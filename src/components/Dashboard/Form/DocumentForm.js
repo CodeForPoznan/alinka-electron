@@ -4,6 +4,7 @@ import { Form } from "react-final-form";
 import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import Button from "../../Button/Button";
 
 export default class DocumentForm extends Component {
@@ -49,34 +50,36 @@ export default class DocumentForm extends Component {
     const { page, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
-    console.log(`Actual form data: ${JSON.stringify(values, 0, 2)}`);
 
     return (
-      <Form
-        mutators={{
-          ...arrayMutators
-        }}
-        initialValues={values}
-        validate={this.validate}
-        onSubmit={this.handleSubmit}
-      >
-        {({ handleSubmit, submitting }) => (
-          <form className={styles.Form} onSubmit={handleSubmit}>
-            <FormHeader page={this.state.page} />
-            {activePage}
-            <div className={styles.buttons}>
-              {page > 0 && <Button onClick={this.previous}>wróć</Button>}
-              {isLastPage ? (
-                <Button type="submit" disabled={submitting}>
-                  utwórz dokument
-                </Button>
-              ) : (
-                <Button type="submit">dalej</Button>
-              )}
-            </div>
-          </form>
-        )}
-      </Form>
+      <React.Fragment>
+        <ProgressBar />
+        <Form
+          mutators={{
+            ...arrayMutators
+          }}
+          initialValues={values}
+          validate={this.validate}
+          onSubmit={this.handleSubmit}
+        >
+          {({ handleSubmit, submitting }) => (
+            <form className={styles.Form} onSubmit={handleSubmit}>
+              <FormHeader page={this.state.page} />
+              {activePage}
+              <div className={styles.buttons}>
+                {page > 0 && <Button onClick={this.previous}>wróć</Button>}
+                {isLastPage ? (
+                  <Button type="submit" disabled={submitting}>
+                    utwórz dokument
+                  </Button>
+                ) : (
+                  <Button type="submit">dalej</Button>
+                )}
+              </div>
+            </form>
+          )}
+        </Form>
+      </React.Fragment>
     );
   }
 }

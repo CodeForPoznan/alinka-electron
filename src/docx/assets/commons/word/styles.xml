@@ -158,13 +158,11 @@
   <w:style w:type="paragraph" w:default="1" w:styleId="Normalny">
     <w:name w:val="Normal"/>
     <w:qFormat/>
-    <w:rPr>
-      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
-    </w:rPr>
   </w:style>
   <w:style w:type="character" w:default="1" w:styleId="Domylnaczcionkaakapitu">
     <w:name w:val="Default Paragraph Font"/>
     <w:uiPriority w:val="1"/>
+    <w:semiHidden/>
     <w:unhideWhenUsed/>
   </w:style>
   <w:style w:type="table" w:default="1" w:styleId="Standardowy">
@@ -243,7 +241,7 @@
       <w:jc w:val="center"/>
     </w:pPr>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:szCs w:val="16"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
@@ -279,7 +277,7 @@
     <w:link w:val="LegalBasisZnak"/>
     <w:qFormat/>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:i/>
       <w:sz w:val="20"/>
       <w:lang w:val="pl-PL"/>
@@ -306,6 +304,7 @@
       <w:jc w:val="both"/>
     </w:pPr>
     <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
       <w:sz w:val="16"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
@@ -392,7 +391,7 @@
       <w:jc w:val="center"/>
     </w:pPr>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:b/>
       <w:sz w:val="24"/>
       <w:lang w:val="pl-PL"/>
@@ -412,7 +411,7 @@
       <w:jc w:val="both"/>
     </w:pPr>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:sz w:val="20"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
@@ -441,7 +440,7 @@
       <w:jc w:val="both"/>
     </w:pPr>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:sz w:val="18"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
@@ -620,7 +619,7 @@
     <w:link w:val="Pre-reasonZnak"/>
     <w:qFormat/>
     <w:rPr>
-      <w:rFonts w:cs="Times New Roman"/>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
   </w:style>
@@ -815,3 +814,4 @@
     </w:rPr>
   </w:style>
 </w:styles>
+

@@ -1,17 +1,26 @@
 import React from "react";
+import { Route, withRouter, Switch } from "react-router-dom";
 import styles from "./Dashboard.scss";
-import ProgressBar from "./ProgressBar/ProgressBar";
-import FormSteps from "./Form/FormSteps";
+import routes from "../../routing/routes";
 
 const Dashboard = () => {
   return (
     <div className={styles.Dashboard}>
       <div className={styles.Wrapper}>
-        <ProgressBar />
-        <FormSteps />
+        <Switch>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              index={route.id}
+              path={route.path}
+              render={() => route.component}
+              exact={route.exact}
+            />
+          ))}
+        </Switch>
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default withRouter(Dashboard);
