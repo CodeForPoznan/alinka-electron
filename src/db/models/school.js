@@ -24,7 +24,7 @@ const School = sequelize.define(
       type: Sequelize.STRING(6),
       allowNull: false,
       validate: {
-        isValidaPolishPostCode(value) {
+        isValidPolishPostCode(value) {
           const regex = /^[0-9]{2}-[0-9]{3}$/;
           if (!regex.test(value)) throw new Error("Invalid polish postal code");
         }
