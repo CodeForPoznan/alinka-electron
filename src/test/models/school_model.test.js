@@ -1,36 +1,61 @@
 const { sequelize } = require("../../db/db_config");
 const schoolFactory = require("../factories/schoolFactory");
-const {schoolData} = require("../factories/schoolFactory");
 const schoolTypeFactory = require("../factories/schoolTypeFactory");
-const truncate = require("../truncate");
-const { School, SchoolType } = require("../../db/models");
+const { schoolData } = require("../factories/schoolFactory");
+const { School } = require("../../db/models");
 
 describe("School model", () => {
-
-  beforeEach(async () => {
-    await truncate([School, SchoolType]);
-    await schoolTypeFactory("przedszkole")
+  beforeEach(() => {
+    return sequelize
+      .sync({ force: true })
+      .then(() => schoolTypeFactory("mock"));
   });
-  
-  afterEach(async () => {
-    await truncate([School, SchoolType]);
+
+  afterAll(async () => {
+    await sequelize.drop();
   });
 
   it("should be created", async () => {
-    const school = await sequelize
-      .sync({ force: true })
-      .then(() => schoolFactory({ name: "TEST", type: "przedszkole" }));
+    const school = await School.create({ ...schoolData("mock"), name: "TEST" });
 
     expect(school).toBeTruthy();
-    expect(school.dataValues.name).toBe("TEST");
+    expect(school.name).toEqual("TEST");
   });
 
-  it("should return concatenated data by calling `address`", async () => {
+  it("should validate `postCode`", async () => {
     const school = await sequelize
       .sync({ force: true })
-      .then(() => schoolFactory({ street: "TEST STREET", type: "przedszkole" }));
-      
-      expect(school).toBeTruthy();
-      expect(school.dataValues.address).toBe("TEST STREET");
+      .then(() =>
+        schoolFactory({
+          type: "mock",
+          postCode: "invalid code",
+          SchoolTypeName: "mock"
+        })
+      )
+      .catch(err => err.message);
+
+    expect(school).toEqual("Validation error: Invalid polish postal code");
+  });
+
+  describe("has virtual methods which", () => {
+    it("return concatenated address data by calling `address`", async () => {
+      const school = await schoolFactory({
+        street: "Testowa 2",
+        city: "Poznan",
+        SchoolTypeName: "mock"
+      });
+
+      expect(school.address).toEqual("Poznan, Testowa 2");
+    });
+
+    it("return concatenated post data by calling `post`", async () => {
+      const school = await schoolFactory({
+        postCode: "12-345",
+        postOffice: "Poznan",
+        SchoolTypeName: "mock"
+      });
+
+      expect(school.post).toEqual("12-345 Poznan");
+    });
   });
 });
