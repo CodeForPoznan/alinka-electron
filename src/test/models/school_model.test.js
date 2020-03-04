@@ -5,7 +5,15 @@ const { schoolData } = require("../factories/schoolFactory");
 const { School } = require("../../db/models");
 
 describe("School model", () => {
+  beforeAll(() => {
+    return sequelize
+      .sync({ force: true })
+      .then(() => schoolTypeFactory("mock"));
+  });
+
   beforeEach(() => {
+    // I know, this is the same as code in `beforeAll` but
+    // this is temporary solution until problem with creating DB in tests should be resolved
     return sequelize
       .sync({ force: true })
       .then(() => schoolTypeFactory("mock"));
