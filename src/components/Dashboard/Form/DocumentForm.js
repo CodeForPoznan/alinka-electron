@@ -6,7 +6,7 @@ import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Button from "../../Button/Button";
-import ProgressBar from "../ProgressBar/ProgressBar";
+
 
 export default class DocumentForm extends Component {
   state = {

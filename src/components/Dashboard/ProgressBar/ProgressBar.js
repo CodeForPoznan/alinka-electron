@@ -5,7 +5,6 @@ class ProgressBar extends Component {
   
 isActive=(stepNumber)=>{
   if(this.props.pageCounter>=stepNumber){
-    console.log(this.props.pageCounter)
     return styles.active
   }
 }
