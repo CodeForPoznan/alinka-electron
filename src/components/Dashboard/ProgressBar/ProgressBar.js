@@ -1,25 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "./ProgressBar.scss";
 
-class ProgressBar extends Component {
+const ProgressBar=(props)=> {
   
-isActive=(stepNumber)=>{
-  if(this.props.pageCounter>=stepNumber){
+const isActive=(stepNumber)=>{
+  if(props.pageCounter>=stepNumber){
     return styles.active
   }
 }
-    render() {
-
     return (
       <div className={styles.ProgressBar}>
       <ul className={styles.List}>
-        <li className={this.isActive(0)} >Dane</li>
-        <li className={this.isActive(1) }>Wnioskodawcy</li>
-        <li className={this.isActive(2) }>Zespół</li>
+        <li className={isActive(0)} >Dane</li>
+        <li className={isActive(1) }>Wnioskodawcy</li>
+        <li className={isActive(2) }>Zespół</li>
        </ul>
     </div>
     );
-  }
+  
 }
 
 export default ProgressBar;
