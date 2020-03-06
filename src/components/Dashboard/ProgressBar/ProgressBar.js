@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ProgressBar.scss";
+import PropTypes from "prop-types";
 
 const ProgressBar = props => {
   const isActive = stepNumber => {
@@ -16,6 +17,10 @@ const ProgressBar = props => {
       </ul>
     </div>
   );
+};
+
+ProgressBar.propTypes = {
+  props: PropTypes.number
 };
 
 export default ProgressBar;
