@@ -20,7 +20,7 @@ const ProgressBar = props => {
 };
 
 ProgressBar.propTypes = {
-  props: PropTypes.number
+  pageCounter: PropTypes.number
 };
 
 export default ProgressBar;
