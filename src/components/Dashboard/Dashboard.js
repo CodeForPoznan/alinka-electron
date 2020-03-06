@@ -7,7 +7,6 @@ const Dashboard = () => {
   return (
     <div className={styles.Dashboard}>
       <div className={styles.Wrapper}>
-
         <Switch>
           {routes.map((route, index) => (
             <Route
@@ -19,7 +18,6 @@ const Dashboard = () => {
             />
           ))}
         </Switch>
-
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Button from "../../Button/Button";
 
-
 export default class DocumentForm extends Component {
   state = {
     page: 0,
@@ -53,9 +52,8 @@ export default class DocumentForm extends Component {
     const isLastPage = page === React.Children.count(children) - 1;
 
     return (
-
       <React.Fragment>
-      <ProgressBar pageCounter={this.state.page} />
+        <ProgressBar pageCounter={this.state.page} />
         <Form
           mutators={{
             ...arrayMutators
@@ -81,9 +79,7 @@ export default class DocumentForm extends Component {
             </form>
           )}
         </Form>
-
       </React.Fragment>
-
     );
   }
 }

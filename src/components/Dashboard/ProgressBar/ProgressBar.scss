@@ -49,9 +49,11 @@
       }
       @keyframes stepBack {
         from {
-          background-color: $fieryRed;}
+          background-color: $fieryRed;
+        }
         to {
-          background-color: $lightGrey;}
+          background-color: $lightGrey;
+        }
       }
 
       &:first-child::after {
@@ -70,9 +72,11 @@
       }
       @keyframes stepNextCircle {
         from {
-          border: 10px solid $lightGrey;}
+          border: 10px solid $lightGrey;
+        }
         to {
-          border: 10px solid $fieryRed;}
+          border: 10px solid $fieryRed;
+        }
       }
       &.active::after {
         background-color: $fieryRed;
@@ -81,10 +85,11 @@
       }
       @keyframes stepNextLine {
         from {
-          background-color: $lightGrey;}
+          background-color: $lightGrey;
+        }
         to {
-          background-color: $fieryRed;}
-
+          background-color: $fieryRed;
+        }
       }
 
       &.active::before {
@@ -99,5 +104,3 @@
     }
   }
 }
-
-

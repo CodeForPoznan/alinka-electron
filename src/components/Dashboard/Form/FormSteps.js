@@ -3,7 +3,6 @@ import DocumentForm from "./DocumentForm";
 import ChildData from "./ChildData/ChildData";
 import Applicants from "./Applicants/Applicants";
 import Team from "./Team";
-
 import commonData from "../../../docx/fixtures";
 import { reasonsList, disabilityList } from "../../../staticData";
 
