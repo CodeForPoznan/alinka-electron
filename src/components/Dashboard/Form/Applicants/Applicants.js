@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { useFormState } from "react-final-form";
@@ -13,6 +13,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
    * and as a reason choose disability that can be engage with other
    * @returns {bool}
    */
+
+  const [chosenParent, setChosenParent] = useState("WYBIERZ_WNIOSEK");
+
   const getSecondReasonDisabled = () => {
     const actualValues = useFormState().values;
     const joinableDisabilitylist = Array.from(
@@ -26,6 +29,13 @@ const Applicants = ({ reasonsList, disabilityList }) => {
     return !(
       joinableDisabilitylist.includes(actualValues.applicant.reason) &&
       issuesAllowingMultipleDisablity.includes(actualValues.applicant.issue)
+    );
+  };
+
+  const getOptions = () => {
+    const parentItem = reasonsList.find(el => el.value === chosenParent);
+    return disabilityList.filter(
+      disability => !parentItem.excludedDisabilities.includes(disability.value)
     );
   };
 
@@ -61,19 +71,20 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="large"
         component="select"
         options={reasonsList}
+        onChange={event => setChosenParent(event.target.value)}
       />
       <FieldWrapper
         name={`applicant.reason`}
         componentSize="extraLarge"
         component="select"
-        options={disabilityList}
+        options={getOptions()}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
         componentSize="extraLarge"
         component="select"
         disabled={getSecondReasonDisabled()}
-        options={disabilityList}
+        options={getOptions()}
       />
       <FieldWrapper
         name={`applicant.period`}

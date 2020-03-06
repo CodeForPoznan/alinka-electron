@@ -1,48 +1,3 @@
-const reasonsList = [
-  {
-    key: "x",
-    text: "Wybierz rodzaj wniosku...",
-    value: "",
-    disable: true,
-    allowMultiple: false
-  },
-  {
-    key: "0",
-    text: "Kształcenie specjalne",
-    value: "SPECJALNE",
-    disable: false,
-    allowMultiple: true
-  },
-  {
-    key: "1",
-    text: "Indywidualne nauczanie",
-    value: "INDYWIDUALNE",
-    disable: false,
-    allowMultiple: false
-  },
-  {
-    key: "2",
-    text: "Indywidualne roczne przygotowanie przedszkolne",
-    value: "INDYWIDUALNE_ROCZNE",
-    disable: false,
-    allowMultiple: false
-  },
-  {
-    key: "3",
-    text: "Zajęcia rewalidacyjne",
-    value: "REWALIDACYJNE",
-    disable: false,
-    allowMultiple: false
-  },
-  {
-    key: "4",
-    text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
-    value: "OPINIA",
-    disable: false,
-    allowMultiple: false
-  }
-];
-
 const disabilityList = [
   {
     key: "x",
@@ -150,6 +105,57 @@ const disabilityList = [
   }
 ];
 
+const reasonsList = [
+  {
+    key: "x",
+    text: "Wybierz rodzaj wniosku...",
+    value: "WYBIERZ_WNIOSEK",
+    disable: true,
+    allowMultiple: false,
+    excludedDisabilities: []
+  },
+  {
+    key: "0",
+    text: "Kształcenie specjalne",
+    value: "SPECJALNE",
+    disable: false,
+    allowMultiple: true,
+    excludedDisabilities: ["UNIEMOZLIWIAJACY", "ZNACZNIE_UTRUDNIAJACY"]
+  },
+  {
+    key: "1",
+    text: "Indywidualne nauczanie",
+    value: "INDYWIDUALNE",
+    disable: false,
+    allowMultiple: false,
+    excludedDisabilities: []
+  },
+  {
+    key: "2",
+    text: "Indywidualne roczne przygotowanie przedszkolne",
+    value: "INDYWIDUALNE_ROCZNE",
+    disable: false,
+    allowMultiple: false,
+    excludedDisabilities: []
+  },
+  {
+    key: "3",
+    text: "Zajęcia rewalidacyjne",
+    value: "REWALIDACYJNE",
+    disable: false,
+    allowMultiple: false,
+    excludedDisabilities: []
+  },
+  {
+    key: "4",
+    text: "Opinia o potrzebie wczesnego wspomagania rozwoju dziecka",
+    value: "OPINIA",
+    disable: false,
+    allowMultiple: false,
+    excludedDisabilities: []
+  }
+];
+
 const typeOfClasses = [
   {
     key: "1",
@@ -163,4 +169,4 @@ const typeOfClasses = [
   }
 ];
 
-export { reasonsList, disabilityList, typeOfClasses };
+export { disabilityList, reasonsList, typeOfClasses };

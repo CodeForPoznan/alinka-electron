@@ -4,6 +4,7 @@ import { Form } from "react-final-form";
 import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import Button from "../../Button/Button";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
@@ -50,11 +51,11 @@ export default class DocumentForm extends Component {
     const { page, values } = this.state;
     const activePage = React.Children.toArray(children)[page];
     const isLastPage = page === React.Children.count(children) - 1;
-    console.log(`Actual form data: ${JSON.stringify(values, 0, 2)}`);
 
     return (
-      <>
-        <ProgressBar pageCounter={this.state.page} />
+
+      <React.Fragment>
+      <ProgressBar pageCounter={this.state.page} />
         <Form
           mutators={{
             ...arrayMutators
@@ -80,7 +81,9 @@ export default class DocumentForm extends Component {
             </form>
           )}
         </Form>
-      </>
+
+      </React.Fragment>
+
     );
   }
 }
