@@ -1,3 +1,5 @@
+const required = value => (value ? undefined : "Required");
+
 export const isPeselValid = pesel => {
   if (typeof pesel === "undefined" || !/^[0-9]{11}$/.test(pesel))
     return "Type PESEL";
@@ -12,6 +14,8 @@ export const isPeselValid = pesel => {
   const checkSum = sum % 10 === 0 ? 0 : 10 - (sum % 10);
 
   if (checkSum !== +pesel.substring(10, 11)) return "Invalid PESEL";
+};
 
-  return undefined;
+export const composeValidators = validator => value => {
+  return typeof validator === "undefined" ? required(value) : validator(value);
 };

@@ -7,11 +7,8 @@ import PropTypes from "prop-types";
 
 import OptionList from "./SelectOptions";
 
-const required = value => (value ? undefined : "Required");
-const composeValidators = (required, validator) => value => {
-  if (typeof validator === "undefined") return required(value);
-  return validator(value);
-};
+const { composeValidators } = require("./../../../../../src/utils/validators");
+
 const FieldWrapper = ({
   name,
   componentSize,
@@ -34,7 +31,7 @@ const FieldWrapper = ({
           name={name}
           component={component}
           type="text"
-          validate={composeValidators(required, validator)}
+          validate={composeValidators(validator)}
           disabled={disabled}
         />
       ) : (

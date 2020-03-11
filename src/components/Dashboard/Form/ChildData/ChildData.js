@@ -4,7 +4,7 @@ import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./ChildData.scss";
 
 const { ipcRenderer } = require("electron");
-const { isPeselValid } = require("./../../../../../src/utils/DataHelper");
+const { isPeselValid } = require("./../../../../../src/utils/validators");
 
 const ChildData = () => {
   const [childDataState, setChildDataState] = useState({
