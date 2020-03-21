@@ -11,11 +11,74 @@
   <w:body>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Uppercase"/>
+        <w:pStyle w:val="numberOfProtocol"/>
       </w:pPr>
       <w:r>
-        <w:t>PROTOKÓŁ nr ..............19.20 nr karty:...........</w:t>
+        <w:t>PROTOKÓŁ nr {{ no }} 19.20 nr karty:...........</w:t>
       </w:r>
     </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="sentence"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Z posiedzenia {{ supportCenter.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="inDay"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w dniu {{ date }} r.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="LegalBasis"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Na podstawie Rozporządzenia Ministra Edukacji Narodowej z dnia 7 września  2017r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz.U. z 2017r. Poz. 1743);</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:after="0"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">na wniosek </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="SubtitledRunZnak"/>
+        </w:rPr>
+        <w:t>{{ applicant.onRequest }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="inCaseOf"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w sprawie o wydanie:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="chosenIssuesLabel"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Orzeczenia o potrzebie kształcenia specjalnego z uwagi na niepełnosprawność dziecka lub ucznia:</w:t>
+      </w:r>
+    </w:p>
+    
   </w:body>
   </w:document>
