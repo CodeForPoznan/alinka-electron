@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:footnotes xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:o="urn:schemas-microsoft-com:office:office" 
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+  xmlns:v="urn:schemas-microsoft-com:vml" 
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+  xmlns:w10="urn:schemas-microsoft-com:office:word" 
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+  xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+  <w:footnote w:type="separator" w:id="-1">
+    <w:p>
+      <w:pPr>
+        <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:separator/>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:type="continuationSeparator" w:id="0">
+    <w:p>
+      <w:pPr>
+        <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+      </w:pPr>
+      <w:r>
+        <w:continuationSeparator/>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="1">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve">Nazwę zawodu wpisuje się wyłącznie w przypadku ucznia uczęszczającego do szkoły prowadzącej kształcenie zawodowe.</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="2">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Zgodnie z art. 4 pkt 19 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe przez rodziców należy rozumieć także prawnych opiekunów dziecka oraz osoby (podmioty) sprawujące pieczę zastępczą nad dzieckiem.</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="3">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Orzeczenie wydaje się na okres wychowania przedszkolnego, roku szkolnego albo etapu edukacyjnego. W przypadku ucznia szkoły ponadpodstawowej lub ponadgimnazjalnej termin ważności orzeczenia nie może przypadać później niż koniec roku szkolnego, w roku kalendarzowym, w którym uczeń kończy 24. rok życia.</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="4">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Niepotrzebne skreślić.</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="5">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Wypełnia się w przypadkach, o których mowa w § 19 ust. 1 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz. U. poz. 1743).</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+  <w:footnote w:id="6">
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Footnote"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="Odwoanieprzypisudolnego"/>
+        </w:rPr>
+        <w:footnoteRef/>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Wypełnia się w przypadku wydania nowego orzeczenia o potrzebie indywidualnego nauczania.</w:t>
+      </w:r>
+    </w:p>
+  </w:footnote>
+</w:footnotes>

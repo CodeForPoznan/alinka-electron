@@ -4,12 +4,22 @@ const path = require("path");
 const JSZip = require("jszip");
 const nunjucks = require("nunjucks");
 
+// const TEMPLATE_PATH_NAME = {
+//   INDYWIDUALNE: "indywidualne",
+//   SPECJALNE: "specjalne",
+//   INDYWIDUALNE_ROCZNE: "indywidualne_roczne",
+//   REWALIDACYJNE: "rewalidacyjne",
+//   OPINIA: "opinia",
+//   PROTOKÓŁ: "protokol"
+// };
+
 const TEMPLATE_PATH_NAME = {
   INDYWIDUALNE: "indywidualne",
   SPECJALNE: "specjalne",
   INDYWIDUALNE_ROCZNE: "indywidualne_roczne",
   REWALIDACYJNE: "rewalidacyjne",
-  OPINIA: "opinia"
+  OPINIA: "opinia",
+  PROTOKÓŁ: "protokol"
 };
 
 const COMMON_FILES = [
