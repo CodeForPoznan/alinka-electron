@@ -5,8 +5,9 @@ import PropTypes from "prop-types";
 const ProgressBar = props => {
   const isActive = stepNumber => {
     if (props.pageCounter >= stepNumber) {
-      return styles.active;
-    }
+      return   styles.active
+    }else{
+   return styles.menu}
   };
   return (
     <div className={styles.ProgressBar}>

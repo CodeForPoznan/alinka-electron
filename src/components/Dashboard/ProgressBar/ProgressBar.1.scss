@@ -11,16 +11,16 @@
     align-items: center;
     @include flex(center);
     width: 100%;
-  }
-  li{
+
+    .step {
       color: $lightGrey;
       list-style-type: none;
       text-align: center;
       text-transform: uppercase;
       position: relative;
       width: 100%;
-  }
-    .menu::before {
+
+      &::before {
         background-color: white;
         border: 10px solid $lightGrey;
         border-radius: 50%;
@@ -35,8 +35,8 @@
         z-index: 2;
       }
 
-      .menu::after {
-        background-color: $lightGrey;
+      &::after {
+        background-color: greenyellow;
         content: "";
         height: 2px;
         left: -50%;
@@ -55,31 +55,22 @@
           background-color: $lightGrey;
         }
       }
+    }
 
-      li:first-child::after {
+      .step:first-child::after {
         content: none;
+        b
       }
-    
+
       .active {
         color: $fieryRed;
-
       }
+
       .active::before {
+        background: white;
         border: 10px solid $fieryRed;
         animation-name: stepNextCircle;
         animation-duration: 1s;
-        background-color: white;
-        border-radius: 50%;
-        content: "";
-        display: flex;
-        height: 10px;
-        line-height: 60px;
-        margin: 0 auto 5px auto;
-        position: relative;
-        text-align: center;
-        width: 10px;
-        z-index: 2;
-        
       }
       @keyframes stepNextCircle {
         from {
@@ -93,14 +84,6 @@
         background-color: $fieryRed;
         animation-name: stepNextLine;
         animation-duration: 1s;
-           content: "";
-        height: 2px;
-        left: -50%;
-        position: absolute;
-        top: 15px;
-        width: 100%;
-        z-index: 0;
-      
       }
       @keyframes stepNextLine {
         from {
@@ -111,12 +94,15 @@
         }
       }
 
-      li.active::before {
+      .active::before {
         background: white;
         background-size: 60%;
       }
-    }
- 
+
+      .step::before {
+        background: white;
+        background-size: 60%;
+      }
     
-  
-  
+  }
+}
