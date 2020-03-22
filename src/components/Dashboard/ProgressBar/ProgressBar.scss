@@ -12,15 +12,15 @@
     @include flex(center);
     width: 100%;
   }
-  li{
+    li{
       color: $lightGrey;
       list-style-type: none;
       text-align: center;
       text-transform: uppercase;
       position: relative;
       width: 100%;
-  }
-    .menu::before {
+    }
+      .menu::before {
         background-color: white;
         border: 10px solid $lightGrey;
         border-radius: 50%;
@@ -56,14 +56,14 @@
         }
       }
 
-      li:first-child::after {
+      &:first-child::after {
         content: none;
       }
     
       .active {
         color: $fieryRed;
-
       }
+    
       .active::before {
         border: 10px solid $fieryRed;
         animation-name: stepNextCircle;
@@ -110,12 +110,11 @@
           background-color: $fieryRed;
         }
       }
-
-      li.active::before {
+      .active::before {
         background: white;
         background-size: 60%;
       }
-    }
+}
  
     
   
