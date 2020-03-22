@@ -852,9 +852,39 @@
       <w:lang w:val="pl-PL"/>
     </w:rPr>
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="chosenIssuesLabel">
-    <w:name w:val="chosenIssuesLabel"/>
-    <w:link w:val="chosenIssuesLabel"/>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="chosenReasonLabel">
+    <w:name w:val="chosenReasonLabel"/>
+    <w:link w:val="chosenReasonLabel"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:sz w:val="22"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="chosenReason">
+    <w:name w:val="chosenReason"/>
+    <w:link w:val="chosenReason"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+      <w:sz w:val="22"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="forChildren">
+    <w:name w:val="forChildren"/>
+    <w:link w:val="forChildren"/>
     <w:qFormat/>
     <w:pPr>
       <w:jc w:val="both"/>
@@ -863,7 +893,50 @@
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
       <w:b/>
-      <w:sz w:val="18"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="childrenDetails">
+    <w:name w:val="childrenDetails"/>
+    <w:link w:val="childrenDetails"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamTitle">
+    <w:name w:val="teamTitle"/>
+    <w:link w:val="teamTitle"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamMembers">
+    <w:name w:val="teamMembers"/>
+    <w:basedOn w:val="Akapitzlist"/>
+    <w:link w:val="teamMembers"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:numPr>
+        <w:numId w:val="1"/>
+      </w:numPr>
+      <w:ind w:left="360"/>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:sz w:val="22"/>
+      <w:lang w:val="pl-PL"/>
     </w:rPr>
   </w:style>
 </w:styles>
