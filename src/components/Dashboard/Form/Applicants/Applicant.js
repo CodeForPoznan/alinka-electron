@@ -6,25 +6,21 @@ class Applicant extends Component {
   state = {
     isVisible: false
   };
-  handleOnButton = () => {
-    if (this.state.isVisible === false) {
-      this.setState({ isVisible: true });
-    } else {
-      this.setState({ isVisible: false });
-    }
+  handleButtonClick = () => {
+    this.setState({ isVisible: !this.state.isVisible });
   };
   render() {
     return (
       <div className={styles.Applicant}>
+        {/*<Button onClick={this.handleButtonClick}>+</Button>*/}
         <button
-          onClick={this.handleOnButton}
+          onClick={this.handleButtonClick}
           type="button"
           className={styles.developedDiv}
         >
-          {" "}
-          +{" "}
+          {" + "}
         </button>
-        <label className={styles.labelForAdd}>
+        <label className={styles.labelForAddApplicantButton}>
           Dodaj drugiego wnioskodawcę
         </label>
         {this.state.isVisible && (

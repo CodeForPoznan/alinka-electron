@@ -24,7 +24,6 @@ const fieldLabels = {
     postalCode2: "Kod pocztowy",
     street1: "Ulica i numer domu",
     street2: "Ulica i numer domu",
-    //houseNumber: "Numer lokalu/mieszkania",
     issue: "wniosek o",
     period: "Na okres czasu",
     reason: "Z uwagi na",

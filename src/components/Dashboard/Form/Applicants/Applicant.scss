@@ -3,7 +3,7 @@
   @include flex(wrap);
   width: 650px ;
 }
-button.developedDiv {
+.developedDiv {
   background-color: $orange;
   border: none;
   border-radius: 50%;
@@ -12,9 +12,10 @@ button.developedDiv {
   font-size: $font-lg;
   font-weight: $bold;
   margin: 30px 0;
-  outline: none;
+  outline-color: transparent;
+  outline-style: none;
   padding: 0 9px ;
 }
-label.labelForAdd {
+.labelForAddApplicantButton {
   margin: 38px 10px;
 }
