@@ -187,5 +187,112 @@
       </w:r>
       </w:p>
     {% endfor %}
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="applicant"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Wnioskodawca: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">{{ applicant.onRequest }} zgodnie z zawiadomieniem z dnia ........................... r.</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> stawili się/nie stawili się</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>.......................................................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+      <w:spacing w:before="500"/>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Osoby o których mowa w § 4 ust 4: ..................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>przeprowadził postępowanie orzekające /zapis przebiegu dyskusji/</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="sessionDescription"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Pani .................................... przedstawiła diagnozę psychologiczną, dokonała jej analizy i interpretacji. Pani ................................... przedstawiła diagnozę logopedyczną, dokonała jej analizy i interpretacji. Pani doktor ................................... dokonała analizy dokumentacji medycznej dziecka zawartej w karcie indywidualnej dziecka.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Stanowisko wnioskodawcy o którym mowa w § 4 ust 5:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Stanowisko osób uczestniczących w posiedzeniu zespołu z głosem doradczym, o których mowa w  § 4 ust 4:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Przeprowadzono głosowanie.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Wyniki głosowania:</w:t>
+      </w:r>
+    </w:p>
   </w:body>
-  </w:document>
+</w:document>

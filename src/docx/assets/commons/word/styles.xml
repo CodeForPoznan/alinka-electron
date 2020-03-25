@@ -939,5 +939,55 @@
       <w:lang w:val="pl-PL"/>
     </w:rPr>
   </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="applicant">
+    <w:name w:val="applicant"/>
+    <w:link w:val="applicant"/>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:b/>
+      <w:sz w:val="22"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="boldTitle">
+    <w:name w:val="boldTitle"/>
+    <w:link w:val="boldTitle"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="sessionDescription">
+    <w:name w:val="sessionDescription"/>
+    <w:link w:val="sessionDescription"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="boldText">
+    <w:name w:val="boldText"/>
+    <w:link w:val="boldText"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
 </w:styles>
 
