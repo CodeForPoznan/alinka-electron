@@ -129,7 +129,15 @@
         <w:pStyle w:val="childrenDetails"/>
       </w:pPr>
       <w:r>
-        <w:t>imię i nazwisko: {{ child.name }}</w:t>
+        <w:t>{{ child.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -137,7 +145,15 @@
         <w:pStyle w:val="childrenDetails"/>
       </w:pPr>
       <w:r>
-        <w:t>data i miejsce urodzenia: {{ child.birthDate }} {{ child.birthPlace }}</w:t>
+        <w:t>{{ child.birthDate }} {{ child.birthPlace }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(data i miejsce urodzenia)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -145,7 +161,15 @@
         <w:pStyle w:val="childrenDetails"/>
       </w:pPr>
       <w:r>
-        <w:t>adres zamieszkania dziecka: {{ child.street }}/{{ child.houseNumber }} {{ child.postalCode }} {{ child.city }}</w:t>
+        <w:t>{{ child.street }}/{{ child.houseNumber }} {{ child.postalCode }} {{ child.city }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(adres zamieszkania dziecka)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -153,7 +177,15 @@
         <w:pStyle w:val="childrenDetails"/>
       </w:pPr>
       <w:r>
-        <w:t>nazwa i adres przedszkola lub nazwa i adres szkoły oraz oznaczenie klasy: {{ school }}</w:t>
+        <w:t>{{ school }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(nazwa i adres przedszkola lub nazwa i adres szkoły oraz oznaczenie klasy)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -161,7 +193,15 @@
         <w:pStyle w:val="childrenDetails"/>
       </w:pPr>
       <w:r>
-        <w:t>imiona i nazwiska rodziców/ prawnych opiekunów: {{ parents.name }}</w:t>
+        <w:t>{{ parents.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imiona i nazwiska rodziców/ prawnych opiekunów)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -179,12 +219,12 @@
           <w:spacing w:after="0"/>
         </w:pPr>
         <w:r>
-        {% if member == supportCenter.members[0] %}
-          <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
-        {% else %}
-          <w:t>{{ member.name }} - {{ member.function }}</w:t>
-        {% endif %}
-      </w:r>
+          {% if member == supportCenter.members[0] %}
+            <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+          {% else %}
+            <w:t>{{ member.name }} - {{ member.function }}</w:t>
+          {% endif %}
+        </w:r>
       </w:p>
     {% endfor %}
     <w:p>
@@ -218,6 +258,14 @@
       </w:pPr>
       <w:r>
         <w:t>.......................................................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(podpis wnioskodawcy)</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -292,6 +340,129 @@
           <w:lang w:val="pl-PL"/>
         </w:rPr>
         <w:t>Wyniki głosowania:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość za: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość osób przeciw: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość osób wstrzymujących się: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">W przypadku równej ilości głosów, rozstrzygający głos przewodniczącego zespołu:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+          <w:b/>
+        </w:rPr>
+        <w:t xml:space="preserve">nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">.................................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>W związku z powyższym Zespół Orzekający orzeka o:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:i/>
+        </w:rPr>
+        <w:t>o potrzebie kształcenia specjalnego z uwagi na niepełnosprawność dziecka lub ucznia:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="chosenReason"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:i/>
+        </w:rPr>
+        {% if applicant.reason == "LEKKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu lekkim</w:t>
+          {% elseif applicant.reason === "UMIARKOWANE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu umiarkowanym</w:t>
+          {% elseif applicant.reason === "ZNACZNE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu znacznym</w:t>
+          {% elseif applicant.reason === "GŁĘBOKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu głębokim</w:t>
+          {% elseif applicant.reason === "RUCHOWA" %}
+        <w:t>z niepełnosprawnością ruchową, w tym z afazją</w:t>
+          {% elseif applicant.reason === "SLABOSLYSZACE" %}
+        <w:t>ze słabosłyszeniem</w:t>
+          {% elseif applicant.reason === "NIESLYSZACE" %}
+        <w:t>z niesłyszeniem</w:t>
+          {% elseif applicant.reason === "SLABOWIDZACE" %}
+        <w:t>ze słabowidzeniem</w:t>
+          {% elseif applicant.reason === "NIEWIDZACE" %}
+        <w:t>z niewidzeniem</w:t>
+          {% elseif applicant.reason === "AUTYZM" %}
+        <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
+          {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
+        <w:t>ze stanem zdrowia uniemożliwiający, uczęszczanie do szkoły</w:t>
+          {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
+        <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły</w:t>
+          {% elseif applicant.reason === "ZAGROŻENIE" %}
+        <w:t>z zagrożeniem niedostosowania społecznego</w:t>
+          {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
+        <w:t>z niedostosowaniem społecznym</w:t>
+        {% endif %}
       </w:r>
     </w:p>
   </w:body>

@@ -901,11 +901,13 @@
     <w:qFormat/>
     <w:pPr>
       <w:jc w:val="both"/>
-      <w:spacing w:after="180"/>
+      <w:spacing w:before="180"/>
+      <w:jc w:val="center"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
+      <w:b/>
     </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamTitle">
@@ -914,6 +916,7 @@
     <w:qFormat/>
     <w:pPr>
       <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
