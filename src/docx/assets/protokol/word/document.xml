@@ -106,7 +106,7 @@
           {% elseif applicant.reason === "AUTYZM" %}
         <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
           {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
-        <w:t>ze stanem zdrowia uniemożliwiający, uczęszczanie do szkoły</w:t>
+        <w:t>ze stanem zdrowia uniemożliwiający uczęszczanie do szkoły</w:t>
           {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
         <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły</w:t>
           {% elseif applicant.reason === "ZAGROŻENIE" %}
@@ -121,7 +121,7 @@
         <w:pStyle w:val="forChildren"/>
       </w:pPr>
       <w:r>
-        <w:t>Dla</w:t>
+        <w:t>Dla:</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -379,6 +379,9 @@
       </w:r>
     </w:p>
     <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+      </w:pPr>
       <w:r>
         <w:rPr>
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
@@ -435,34 +438,185 @@
           <w:i/>
         </w:rPr>
         {% if applicant.reason == "LEKKIE" %}
-        <w:t>z niepełnosprawnością intelektualną w stopniu lekkim</w:t>
+        <w:t>z niepełnosprawnością intelektualną w stopniu lekkim.</w:t>
           {% elseif applicant.reason === "UMIARKOWANE" %}
-        <w:t>z niepełnosprawnością intelektualną w stopniu umiarkowanym</w:t>
+        <w:t>z niepełnosprawnością intelektualną w stopniu umiarkowanym.</w:t>
           {% elseif applicant.reason === "ZNACZNE" %}
-        <w:t>z niepełnosprawnością intelektualną w stopniu znacznym</w:t>
+        <w:t>z niepełnosprawnością intelektualną w stopniu znacznym.</w:t>
           {% elseif applicant.reason === "GŁĘBOKIE" %}
-        <w:t>z niepełnosprawnością intelektualną w stopniu głębokim</w:t>
+        <w:t>z niepełnosprawnością intelektualną w stopniu głębokim.</w:t>
           {% elseif applicant.reason === "RUCHOWA" %}
-        <w:t>z niepełnosprawnością ruchową, w tym z afazją</w:t>
+        <w:t>z niepełnosprawnością ruchową, w tym z afazją.</w:t>
           {% elseif applicant.reason === "SLABOSLYSZACE" %}
-        <w:t>ze słabosłyszeniem</w:t>
+        <w:t>ze słabosłyszeniem.</w:t>
           {% elseif applicant.reason === "NIESLYSZACE" %}
-        <w:t>z niesłyszeniem</w:t>
+        <w:t>z niesłyszeniem.</w:t>
           {% elseif applicant.reason === "SLABOWIDZACE" %}
-        <w:t>ze słabowidzeniem</w:t>
+        <w:t>ze słabowidzeniem.</w:t>
           {% elseif applicant.reason === "NIEWIDZACE" %}
-        <w:t>z niewidzeniem</w:t>
+        <w:t>z niewidzeniem.</w:t>
           {% elseif applicant.reason === "AUTYZM" %}
-        <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
+        <w:t>z autyzmem, w tym z zespołem Aspergera.</w:t>
           {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
-        <w:t>ze stanem zdrowia uniemożliwiający, uczęszczanie do szkoły</w:t>
+        <w:t>ze stanem zdrowia uniemożliwiający uczęszczanie do szkoły.</w:t>
           {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
-        <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły</w:t>
+        <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły.</w:t>
           {% elseif applicant.reason === "ZAGROŻENIE" %}
-        <w:t>z zagrożeniem niedostosowania społecznego</w:t>
+        <w:t>z zagrożeniem niedostosowania społecznego.</w:t>
           {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
-        <w:t>z niedostosowaniem społecznym</w:t>
+        <w:t>z niedostosowaniem społecznym.</w:t>
         {% endif %}
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Uzasadnienie – z uwagi na: niepełnosprawność dziecka lub ucznia: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        {% if applicant.reason == "LEKKIE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu lekkim.</w:t>
+          {% elseif applicant.reason === "UMIARKOWANE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu umiarkowanym.</w:t>
+          {% elseif applicant.reason === "ZNACZNE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu znacznym.</w:t>
+          {% elseif applicant.reason === "GŁĘBOKIE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu głębokim.</w:t>
+          {% elseif applicant.reason === "RUCHOWA" %}
+        <w:t>niepełnosprawność ruchowa, w tym z afazją.</w:t>
+          {% elseif applicant.reason === "SLABOSLYSZACE" %}
+        <w:t>słabosłyszenie.</w:t>
+          {% elseif applicant.reason === "NIESLYSZACE" %}
+        <w:t>niesłyszenie.</w:t>
+          {% elseif applicant.reason === "SLABOWIDZACE" %}
+        <w:t>słabowidzenie.</w:t>
+          {% elseif applicant.reason === "NIEWIDZACE" %}
+        <w:t>niewidzenie.</w:t>
+          {% elseif applicant.reason === "AUTYZM" %}
+        <w:t>autyzmem, w tym z zespół Aspergera.</w:t>
+          {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
+        <w:t>stan zdrowia uniemożliwiający uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
+        <w:t>stan zdrowia znacznie utrudniającym uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZAGROŻENIE" %}
+        <w:t>zagrożenie niedostosowania społecznego.</w:t>
+          {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
+        <w:t>niedostosowanie społeczne.</w:t>
+        {% endif %}
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Zgłoszenie innego stanowiska przez członka zespołu:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>........................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko członka zespołu)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Zgłoszone inne stanowisko dotyczące podjętego rozstrzygnięcia wraz z uzasadnieniem:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Przewodniczący zespołu orzekającego wyznaczył osobę która przygotuje orzeczenie/opinię: </w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>........................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko osoby)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Podpis przewodniczącego zespołu orzekającego:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="700"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Podpisy członków zespołu orzekającego:</w:t>
       </w:r>
     </w:p>
   </w:body>
