@@ -17,8 +17,8 @@
   "scripts": {
     "lint": "eslint ./src",
     "lint:fix": "npm run lint -- --fix",
-    "webpack:dev": "MODE=dev webpack-dev-server --mode development --progress",
-    "electron:dev": "MODE=dev electron .",
+    "webpack:dev": "cross-env MODE=dev webpack-dev-server --mode development --progress",
+    "electron:dev": "cross-env MODE=dev electron .",
     "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
     "build": "webpack --mode production && electron-builder --windows --linux",
     "test": "jest",
