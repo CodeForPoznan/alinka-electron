@@ -12,15 +12,18 @@ class Applicant extends Component {
   render() {
     return (
       <div className={styles.Applicant}>
-        {/*<Button onClick={this.handleButtonClick}>+</Button>*/}
         <button
           onClick={this.handleButtonClick}
           type="button"
           className={styles.developedDiv}
+          id="addSecondAplicant"
         >
-          {" + "}
+          {/* eslint-disable-next-line react */}+
         </button>
-        <label className={styles.labelForAddApplicantButton}>
+        <label
+          className={styles.labelForAddApplicantButton}
+          htmlFor="addSecondAplicant"
+        >
           Dodaj drugiego wnioskodawcę
         </label>
         {this.state.isVisible && (
