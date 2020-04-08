@@ -5,13 +5,16 @@
   padding: 20px 40px;
   height: 84%;
   @include containerStyle();
+  overflow-y: auto;
 }
 
 :global(.FormContent) {
   padding-left: 90px;
+  padding-right: 120px;
 }
 
 div .buttons {
   @include flex(space-between flex-end);
   padding: 30px 90px;
 }
+

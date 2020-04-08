@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
 import { useFormState } from "react-final-form";
-
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicants.scss";
+import Applicant from "./Applicant";
 
 const Applicants = ({ reasonsList, disabilityList }) => {
   /**
@@ -42,30 +41,31 @@ const Applicants = ({ reasonsList, disabilityList }) => {
   return (
     <div className={`FormContent ${styles.Applicants}`}>
       <FieldWrapper
-        name={`applicant.names`}
+        name={`applicant.name1`}
         componentSize="large"
         component="input"
       />
       <FieldWrapper
-        name={`applicant.city`}
+        name={`applicant.lastName1`}
         componentSize="large"
         component="input"
       />
       <FieldWrapper
-        name={`applicant.postalCode`}
-        componentSize="medium"
-        component="input"
-      />
-      <FieldWrapper
-        name={`applicant.street`}
+        name={`applicant.street1`}
         componentSize="large"
         component="input"
       />
       <FieldWrapper
-        name={`applicant.houseNumber`}
-        componentSize="medium"
+        name={`applicant.postalCode1`}
+        componentSize="large"
         component="input"
       />
+      <FieldWrapper
+        name={`applicant.city1`}
+        componentSize="large"
+        component="input"
+      />
+      <Applicant />
       <FieldWrapper
         name={`applicant.issue`}
         componentSize="large"
@@ -96,7 +96,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
 };
 
 export default Applicants;
-
 Applicants.propTypes = {
   reasonsList: PropTypes.array,
   disabilityList: PropTypes.array
