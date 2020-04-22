@@ -870,4 +870,22 @@
       <w:sz w:val="24"/>
     </w:rPr>
   </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamMembers">
+    <w:name w:val="teamMembers"/>
+    <w:basedOn w:val="Akapitzlist"/>
+    <w:link w:val="teamMembers"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:numPr>
+        <w:numId w:val="1"/>
+      </w:numPr>
+      <w:ind w:left="360"/>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:sz w:val="22"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
 </w:styles>
