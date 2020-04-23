@@ -6,6 +6,8 @@ const ProgressBar = props => {
   const isActive = stepNumber => {
     if (props.pageCounter >= stepNumber) {
       return styles.active;
+    } else {
+      return styles.menu;
     }
   };
   return (
