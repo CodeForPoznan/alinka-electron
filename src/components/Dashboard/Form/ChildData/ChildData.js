@@ -4,6 +4,7 @@ import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./ChildData.scss";
 
 const { ipcRenderer } = require("electron");
+const { isPeselValid } = require("./../../../../../src/utils/validators");
 
 const ChildData = () => {
   const [childDataState, setChildDataState] = useState({
@@ -43,6 +44,7 @@ const ChildData = () => {
         name={`child.pesel`}
         componentSize="medium"
         component="input"
+        validator={isPeselValid}
       />
       <FieldWrapper
         name={`child.city`}
