@@ -1,9 +1,112 @@
-@import '../../../scss/_variables.scss';
-@import '../../../scss/_mixins.scss';
+@import "../../../scss/_variables.scss";
+@import "../../../scss/_mixins.scss";
 
 .ProgressBar {
   @include containerStyle();
-  @include flex(space-between);
-  height: 60px;
+  @include flex(center);
   margin-bottom: 20px;
+  height: 100px;
+
+  .List {
+    align-items: center;
+    @include flex(center);
+    width: 100%;
+  }
+  li {
+    color: $lightGrey;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+  }
+  .menu::before {
+    background-color: white;
+    border: 10px solid $lightGrey;
+    border-radius: 50%;
+    content: "";
+    display: flex;
+    height: 10px;
+    line-height: 60px;
+    margin: 0 auto 5px auto;
+    position: relative;
+    text-align: center;
+    width: 10px;
+    z-index: 2;
+  }
+  .menu::after {
+    background-color: $lightGrey;
+    content: "";
+    height: 2px;
+    left: -50%;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: 0;
+    animation-name: stepBack;
+    animation-duration: 1s;
+  }
+  @keyframes stepBack {
+    from {
+      background-color: $fieryRed;
+    }
+    to {
+      background-color: $lightGrey;
+    }
+  }
+  .active {
+    color: $fieryRed;
+  }
+
+  .active::before {
+    border: 10px solid $fieryRed;
+    animation-name: stepNextCircle;
+    animation-duration: 1s;
+    background-color: white;
+    border-radius: 50%;
+    content: "";
+    display: flex;
+    height: 10px;
+    line-height: 60px;
+    margin: 0 auto 5px auto;
+    position: relative;
+    text-align: center;
+    width: 10px;
+    z-index: 2;
+  }
+  @keyframes stepNextCircle {
+    from {
+      border: 10px solid $lightGrey;
+    }
+    to {
+      border: 10px solid $fieryRed;
+    }
+  }
+  .active::after {
+    background-color: $fieryRed;
+    animation-name: stepNextLine;
+    animation-duration: 1s;
+    content: "";
+    height: 2px;
+    left: -50%;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: 0;
+  }
+  .active:first-child::after {
+    content: none;
+  }
+  @keyframes stepNextLine {
+    from {
+      background-color: $lightGrey;
+    }
+    to {
+      background-color: $fieryRed;
+    }
+  }
+  .active::before {
+    background: white;
+    background-size: 60%;
+  }
 }

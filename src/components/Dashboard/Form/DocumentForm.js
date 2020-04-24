@@ -53,7 +53,7 @@ export default class DocumentForm extends Component {
 
     return (
       <React.Fragment>
-        <ProgressBar />
+        <ProgressBar pageCounter={this.state.page} />
         <Form
           mutators={{
             ...arrayMutators
