@@ -1,23 +1,14 @@
-const SchoolType = require("../../db/models");
+const SchoolType = require("../../db/models/school_type");
+const schoolTypeList = require("../../db/school_types");
+const faker = require("faker/locale/pl");
 
-const schoolTypeData = (props = {}) => {
-  const schoolTypeList = [
-    "przedszkole",
-    "szkoła podstawowa",
-    "szkoła zawodowa",
-    "liceum ogólnokształcące"
-  ];
-
-  const getSchoolType = array => {
-    const randomArrayItemNumber = Math.floor(Math.random() * array.length);
-    const school_type = schoolTypeList[randomArrayItemNumber];
-    return school_type;
-  };
-
-  return { schoolType: props || getSchoolType(schoolTypeList) };
+const schoolTypeData = () => {
+  return faker.random.arrayElement(schoolTypeList);
 };
 
-const schoolTypeFixture = async (props = {}) =>
-  await SchoolType.create(schoolTypeData(props));
+const schoolTypeFixture = async name => {
+  return await SchoolType.create({ name: name || schoolTypeData() });
+};
 
 module.exports = schoolTypeFixture;
+module.exports.schoolTypeData = schoolTypeData;

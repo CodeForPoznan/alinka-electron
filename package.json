@@ -21,9 +21,11 @@
     "electron:dev": "cross-env MODE=dev electron .",
     "start": "concurrently \"cross-env BROWSER=none npm run webpack:dev\" \"wait-on http://localhost:9000 && npm run electron:dev\"",
     "build": "webpack --mode production && electron-builder --windows --linux",
-    "test": "jest",
+    "test": "cross-env MODE=dev jest",
     "rebuild": "electron-rebuild -f -w sqlite3",
-    "apply_fixture": "node src/db/apply_fixture.js"
+    "apply_school_types": "node src/test/fixtures/apply_school_types.js",
+    "apply_schools": "node src/test/fixtures/apply_schools.js",
+    "apply_fixtures": "npm run apply_school_types && npm run apply_schools"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",
@@ -81,7 +83,6 @@
     "prettier": "1.17.1",
     "react-test-renderer": "16.8.0",
     "sass-loader": "^7.1.0",
-    "sqlite3": "4.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^2.3.0",
     "wait-on": "^3.2.0",

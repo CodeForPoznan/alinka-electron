@@ -6,7 +6,8 @@ const sequelize = new Sequelize({
   storage: path.resolve(__dirname, "../alinka.db"),
   dialectOptions: {
     requestTimeout: 300000
-  }
+  },
+  logging: false
 });
 
 sequelize
