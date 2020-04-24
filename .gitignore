@@ -5,5 +5,8 @@
 /build/
 /dist/
 /node_modules/
+/src/alinka.db
 
 output.docx
+
+.db
