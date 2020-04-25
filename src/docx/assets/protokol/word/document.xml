@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:o="urn:schemas-microsoft-com:office:office" 
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+  xmlns:v="urn:schemas-microsoft-com:vml" 
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+  xmlns:w10="urn:schemas-microsoft-com:office:word" 
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+  xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="numberOfProtocol"/>
+      </w:pPr>
+      <w:r>
+        <w:t>PROTOKÓŁ nr {{ no }} 19.20 nr karty:...........</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="sentence"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Z posiedzenia {{ supportCenter.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="inDay"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w dniu {{ date }} r.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="LegalBasis"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Na podstawie Rozporządzenia Ministra Edukacji Narodowej z dnia 7 września  2017r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz.U. z 2017r. Poz. 1743);</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:after="0"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">na wniosek </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="SubtitledRunZnak"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>{{ applicant.onRequest }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="inCaseOf"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w sprawie o wydanie:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="chosenReasonLabel"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Orzeczenia o potrzebie kształcenia specjalnego z uwagi na niepełnosprawność dziecka lub ucznia:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="chosenReason"/>
+      </w:pPr>
+      <w:r>
+        {% if applicant.reason == "LEKKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu lekkim</w:t>
+          {% elseif applicant.reason === "UMIARKOWANE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu umiarkowanym</w:t>
+          {% elseif applicant.reason === "ZNACZNE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu znacznym</w:t>
+          {% elseif applicant.reason === "GŁĘBOKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu głębokim</w:t>
+          {% elseif applicant.reason === "RUCHOWA" %}
+        <w:t>z niepełnosprawnością ruchową, w tym z afazją</w:t>
+          {% elseif applicant.reason === "SLABOSLYSZACE" %}
+        <w:t>ze słabosłyszeniem</w:t>
+          {% elseif applicant.reason === "NIESLYSZACE" %}
+        <w:t>z niesłyszeniem</w:t>
+          {% elseif applicant.reason === "SLABOWIDZACE" %}
+        <w:t>ze słabowidzeniem</w:t>
+          {% elseif applicant.reason === "NIEWIDZACE" %}
+        <w:t>z niewidzeniem</w:t>
+          {% elseif applicant.reason === "AUTYZM" %}
+        <w:t>z autyzmem, w tym z zespołem Aspergera</w:t>
+          {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
+        <w:t>ze stanem zdrowia uniemożliwiający uczęszczanie do szkoły</w:t>
+          {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
+        <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły</w:t>
+          {% elseif applicant.reason === "ZAGROŻENIE" %}
+        <w:t>z zagrożeniem niedostosowania społecznego</w:t>
+          {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
+        <w:t>z niedostosowaniem społecznym</w:t>
+        {% endif %}
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="forChildren"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Dla:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="childrenDetails"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="childrenDetails"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.birthDate }} {{ child.birthPlace }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(data i miejsce urodzenia)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="childrenDetails"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ child.street }}/{{ child.houseNumber }} {{ child.postalCode }} {{ child.city }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(adres zamieszkania dziecka)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="childrenDetails"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ school }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(nazwa i adres przedszkola lub nazwa i adres szkoły oraz oznaczenie klasy)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="childrenDetails"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ parents.name }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imiona i nazwiska rodziców/ prawnych opiekunów)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="teamTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Zespół Orzekający w składzie:</w:t>
+      </w:r>
+    </w:p>
+    {% for member in supportCenter.members %}
+      <w:p>
+        <w:pPr>
+          <w:pStyle w:val="teamMembers"/>
+          <w:spacing w:after="0"/>
+        </w:pPr>
+        <w:r>
+          {% if member == supportCenter.members[0] %}
+            <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+          {% else %}
+            <w:t>{{ member.name }} - {{ member.function }}</w:t>
+          {% endif %}
+        </w:r>
+      </w:p>
+    {% endfor %}
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="applicant"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Wnioskodawca: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">{{ applicant.onRequest }} zgodnie z zawiadomieniem z dnia ........................... r.</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> stawili się/nie stawili się</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>.......................................................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(podpis wnioskodawcy)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+      <w:spacing w:before="500"/>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Osoby o których mowa w § 4 ust 4: ..................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>przeprowadził postępowanie orzekające /zapis przebiegu dyskusji/</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="sessionDescription"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Pani .................................... przedstawiła diagnozę psychologiczną, dokonała jej analizy i interpretacji. Pani ................................... przedstawiła diagnozę logopedyczną, dokonała jej analizy i interpretacji. Pani doktor ................................... dokonała analizy dokumentacji medycznej dziecka zawartej w karcie indywidualnej dziecka.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Stanowisko wnioskodawcy o którym mowa w § 4 ust 5:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Stanowisko osób uczestniczących w posiedzeniu zespołu z głosem doradczym, o których mowa w  § 4 ust 4:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldTitle"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Przeprowadzono głosowanie.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Wyniki głosowania:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość za: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość osób przeciw: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Reason-list"/>
+        <w:numPr>
+          <w:ilvl w:val="1"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+      </w:pPr>
+      <w:r>
+        <w:t>Ilość osób wstrzymujących się: ....</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">W przypadku równej ilości głosów, rozstrzygający głos przewodniczącego zespołu:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+          <w:b/>
+        </w:rPr>
+        <w:t xml:space="preserve">nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">.................................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:t>W związku z powyższym Zespół Orzekający orzeka o:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:i/>
+        </w:rPr>
+        <w:t>o potrzebie kształcenia specjalnego z uwagi na niepełnosprawność dziecka lub ucznia:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="chosenReason"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:i/>
+        </w:rPr>
+        {% if applicant.reason == "LEKKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu lekkim.</w:t>
+          {% elseif applicant.reason === "UMIARKOWANE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu umiarkowanym.</w:t>
+          {% elseif applicant.reason === "ZNACZNE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu znacznym.</w:t>
+          {% elseif applicant.reason === "GŁĘBOKIE" %}
+        <w:t>z niepełnosprawnością intelektualną w stopniu głębokim.</w:t>
+          {% elseif applicant.reason === "RUCHOWA" %}
+        <w:t>z niepełnosprawnością ruchową, w tym z afazją.</w:t>
+          {% elseif applicant.reason === "SLABOSLYSZACE" %}
+        <w:t>ze słabosłyszeniem.</w:t>
+          {% elseif applicant.reason === "NIESLYSZACE" %}
+        <w:t>z niesłyszeniem.</w:t>
+          {% elseif applicant.reason === "SLABOWIDZACE" %}
+        <w:t>ze słabowidzeniem.</w:t>
+          {% elseif applicant.reason === "NIEWIDZACE" %}
+        <w:t>z niewidzeniem.</w:t>
+          {% elseif applicant.reason === "AUTYZM" %}
+        <w:t>z autyzmem, w tym z zespołem Aspergera.</w:t>
+          {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
+        <w:t>ze stanem zdrowia uniemożliwiający uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
+        <w:t>ze stanem zdrowia znacznie utrudniającym uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZAGROŻENIE" %}
+        <w:t>z zagrożeniem niedostosowania społecznego.</w:t>
+          {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
+        <w:t>z niedostosowaniem społecznym.</w:t>
+        {% endif %}
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Uzasadnienie – z uwagi na: niepełnosprawność dziecka lub ucznia: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        {% if applicant.reason == "LEKKIE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu lekkim.</w:t>
+          {% elseif applicant.reason === "UMIARKOWANE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu umiarkowanym.</w:t>
+          {% elseif applicant.reason === "ZNACZNE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu znacznym.</w:t>
+          {% elseif applicant.reason === "GŁĘBOKIE" %}
+        <w:t>niepełnosprawność intelektualna w stopniu głębokim.</w:t>
+          {% elseif applicant.reason === "RUCHOWA" %}
+        <w:t>niepełnosprawność ruchowa, w tym z afazją.</w:t>
+          {% elseif applicant.reason === "SLABOSLYSZACE" %}
+        <w:t>słabosłyszenie.</w:t>
+          {% elseif applicant.reason === "NIESLYSZACE" %}
+        <w:t>niesłyszenie.</w:t>
+          {% elseif applicant.reason === "SLABOWIDZACE" %}
+        <w:t>słabowidzenie.</w:t>
+          {% elseif applicant.reason === "NIEWIDZACE" %}
+        <w:t>niewidzenie.</w:t>
+          {% elseif applicant.reason === "AUTYZM" %}
+        <w:t>autyzmem, w tym z zespół Aspergera.</w:t>
+          {% elseif applicant.reason === "UNIEMOZLIWIAJACY" %}
+        <w:t>stan zdrowia uniemożliwiający uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZNACZNIE_UTRUDNIAJACY" %}
+        <w:t>stan zdrowia znacznie utrudniającym uczęszczanie do szkoły.</w:t>
+          {% elseif applicant.reason === "ZAGROŻENIE" %}
+        <w:t>zagrożenie niedostosowania społecznego.</w:t>
+          {% elseif applicant.reason === "NIEDOSTOSOWANIE" %}
+        <w:t>niedostosowanie społeczne.</w:t>
+        {% endif %}
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Zgłoszenie innego stanowiska przez członka zespołu:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>........................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko członka zespołu)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Zgłoszone inne stanowisko dotyczące podjętego rozstrzygnięcia wraz z uzasadnieniem:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>nie dotyczy</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+        <w:pStyle w:val="boldText"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Przewodniczący zespołu orzekającego wyznaczył osobę która przygotuje orzeczenie/opinię: </w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="SubtitledRun"/>
+      </w:pPr>
+      <w:r>
+        <w:t>........................................................................................</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1"/>
+      </w:pPr>
+      <w:r>
+        <w:t>(imię i nazwisko osoby)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="180"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Podpis przewodniczącego zespołu orzekającego:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="700"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+          <w:lang w:val="pl-PL"/>
+        </w:rPr>
+        <w:t>Podpisy członków zespołu orzekającego:</w:t>
+      </w:r>
+    </w:p>
+  </w:body>
+</w:document>
