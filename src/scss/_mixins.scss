@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@import "./_variables.scss";
 
 @mixin flex($params: null) {
   display: flex;
@@ -31,6 +31,5 @@
 @mixin containerStyle() {
   background-color: $dashboardBg;
   border-radius: $radiusContainer;
-  box-shadow: -2px 4px 4px 0px rgba(0,0,0,0.2);
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
-

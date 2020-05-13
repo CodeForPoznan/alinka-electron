@@ -6,15 +6,18 @@ const sequelize = new Sequelize({
   storage: path.resolve(__dirname, "../alinka.db"),
   dialectOptions: {
     requestTimeout: 300000
-  }
+  },
+  logging: false
 });
 
 sequelize
   .authenticate()
   .then(() => {
+    // eslint-disable-next-line no-console
     console.log("Connection has been established successfully.");
   })
   .catch(err => {
+    // eslint-disable-next-line no-console
     console.error("Unable to connect to the database:", err);
   });
 

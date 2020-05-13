@@ -1,0 +1,21 @@
+@import '../../../../scss/_mixins.scss';
+.Applicant{
+  @include flex(wrap);
+  width: 650px ;
+}
+.developedDiv {
+  background-color: $orange;
+  border: none;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  font-size: $font-lg;
+  font-weight: $bold;
+  margin: 30px 0;
+  outline-color: transparent;
+  outline-style: none;
+  padding: 0 9px ;
+}
+.labelForAddApplicantButton {
+  margin: 38px 10px;
+}

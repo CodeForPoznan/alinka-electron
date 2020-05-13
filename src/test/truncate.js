@@ -1,5 +1,7 @@
-const SchoolType = require("../db/models");
-
-module.exports = async function truncate() {
-  SchoolType.destroy({ where: {}, force: true });
+module.exports = async function truncate(models) {
+  if (models instanceof Array) {
+    models.map(model => model.destroy({ where: {}, force: true }));
+  } else {
+    models.destroy({ where: {}, force: true });
+  }
 };

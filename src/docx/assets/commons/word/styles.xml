@@ -812,7 +812,7 @@
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
-  </w:style>
+  </w:style>  
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="centerAlignedTitleGreenColor">
     <w:name w:val="centerAlignedTitleGreenColor"/>
     <w:link w:val="centerAlignedTitleGreenColor"/>
@@ -829,17 +829,85 @@
       <w:color w:val="4f6228"/>
     </w:rPr>
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="centerHeader">
-    <w:name w:val="centerHeader"/>
-    <w:link w:val="centerHeader"/>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="numberOfProtocol">
+    <w:name w:val="numberOfProtocol"/>
+    <w:link w:val="numberOfProtocol"/>
     <w:qFormat/>
     <w:pPr>
       <w:jc w:val="center"/>
+      <w:spacing w:after="0"/>
     </w:pPr>
     <w:rPr>
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
-      <w:sz w:val="24"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="inDay">
+    <w:name w:val="inDay"/>
+    <w:link w:val="inDay"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="center"/>
+      <w:spacing w:before="300"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="inCaseOf">
+    <w:name w:val="inCaseOf"/>
+    <w:link w:val="inCaseOf"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="chosenReasonLabel">
+    <w:name w:val="chosenReasonLabel"/>
+    <w:link w:val="chosenReasonLabel"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:sz w:val="22"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="chosenReason">
+    <w:name w:val="chosenReason"/>
+    <w:link w:val="chosenReason"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:after="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+      <w:sz w:val="22"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="forChildren">
+    <w:name w:val="forChildren"/>
+    <w:link w:val="forChildren"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
       <w:b/>
     </w:rPr>
   </w:style>
@@ -854,6 +922,35 @@
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
       <w:sz w:val="24"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="childrenDetails">
+    <w:name w:val="childrenDetails"/>
+    <w:link w:val="childrenDetails"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamTitle">
+    <w:name w:val="teamTitle"/>
+    <w:link w:val="teamTitle"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
       <w:b/>
     </w:rPr>
   </w:style>
@@ -886,6 +983,56 @@
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
       <w:sz w:val="22"/>
       <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="applicant">
+    <w:name w:val="applicant"/>
+    <w:link w:val="applicant"/>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:b/>
+      <w:sz w:val="22"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="boldTitle">
+    <w:name w:val="boldTitle"/>
+    <w:link w:val="boldTitle"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="sessionDescription">
+    <w:name w:val="sessionDescription"/>
+    <w:link w:val="sessionDescription"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+      <w:spacing w:before="180"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="boldText">
+    <w:name w:val="boldText"/>
+    <w:link w:val="boldText"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:b/>
     </w:rPr>
   </w:style>
 </w:styles>
