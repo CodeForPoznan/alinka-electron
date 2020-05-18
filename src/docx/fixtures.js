@@ -86,8 +86,8 @@ var commonData = {
         function: "socjoterapeuta, tyflopedagog"
       }
     ],
-    name:
-      "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+    nameNominative: "Poradnia Psychologiczno - Pedagogiczna we Wrześni",
+    nameGenetive: "Poradni Psychologiczno-Pedagogicznej we Wrześni",
     instituteName:
       "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
     post: "62-065 Grodzisk Wlkp.",

@@ -85,7 +85,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
+        <w:t>Zespół Orzekający przy {{ supportCenter.nameGenetive }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
       </w:r>
     </w:p>
     <w:p>

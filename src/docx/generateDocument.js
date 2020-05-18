@@ -10,7 +10,8 @@ const TEMPLATE_PATH_NAME = {
   INDYWIDUALNE_ROCZNE: "indywidualne_roczne",
   REWALIDACYJNE: "rewalidacyjne",
   OPINIA: "opinia",
-  PROTOKÓŁ: "protokol"
+  PROTOKOL: "protokol",
+  NOTIFICATION: "notification"
 };
 
 const COMMON_FILES = [
