@@ -18,9 +18,9 @@ const ChildData = () => {
         schoolTypes: result.map(school => {
           const schoolData = school.dataValues;
           const schoolLine = {
-            key: schoolData.id,
-            text: schoolData.schoolType,
-            value: schoolData.schoolType
+            key: schoolData.createdAt,
+            text: schoolData.name,
+            value: schoolData.name
           };
           return schoolLine;
         })
