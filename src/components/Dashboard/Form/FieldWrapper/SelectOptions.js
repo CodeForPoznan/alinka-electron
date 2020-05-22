@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const OptionList = props => {
   const { name, onChange, options, onFocus, disabled } = props;
-
+  console.log("OPT", onChange);
   return (
     <select
       name={name}

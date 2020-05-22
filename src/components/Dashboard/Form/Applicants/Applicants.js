@@ -33,10 +33,15 @@ const Applicants = ({ reasonsList, disabilityList }) => {
 
   const getOptions = () => {
     const parentItem = reasonsList.find(el => el.value === chosenParent);
-    return disabilityList.filter(
-      disability => !parentItem.excludedDisabilities.includes(disability.value)
-    );
+    return !parentItem
+      ? disabilityList
+      : disabilityList.filter(
+          disability =>
+            !parentItem.excludedDisabilities.includes(disability.value)
+        );
   };
+
+  console.log("APLI", chosenParent, setChosenParent);
 
   return (
     <div className={`FormContent ${styles.Applicants}`}>
@@ -71,13 +76,16 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="large"
         component="select"
         options={reasonsList}
-        onChange={event => setChosenParent(event.target.value)}
+        onChange={setChosenParent}
       />
       <FieldWrapper
         name={`applicant.reason`}
         componentSize="extraLarge"
         component="select"
         options={getOptions()}
+        onChange={() => {
+          console.log("A");
+        }}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
@@ -85,6 +93,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         component="select"
         disabled={getSecondReasonDisabled()}
         options={getOptions()}
+        onChange={() => {
+          console.log("B");
+        }}
       />
       <FieldWrapper
         name={`applicant.period`}

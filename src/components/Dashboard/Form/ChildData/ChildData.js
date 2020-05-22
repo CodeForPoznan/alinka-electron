@@ -22,6 +22,7 @@ const ChildData = () => {
             text: schoolData.name,
             value: schoolData.name
           };
+          console.log(schoolLine)
           return schoolLine;
         })
       });
@@ -72,6 +73,7 @@ const ChildData = () => {
         component="select"
         options={childDataState.schoolTypes}
         onFocus={getSchoolType}
+        onChange={getSchoolType}
       />
       <FieldWrapper
         name={`child.profession`}
