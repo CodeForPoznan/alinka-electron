@@ -11,6 +11,16 @@ const disabilityMap = {
   AUTYZM: "z autyzmem, w tym z zespołem Aspergera"
 };
 
+const issueGenetiveMap = {
+  SPECJALNE: "orzeczenia o potrzebie kształcenia specjalnego",
+  INDYWIDUALNE: "orzeczenia o potrzebie indywidualnego nauczania",
+  INDYWIDUALNE_ROCZNE: "orzeczenia o potrzebie indywidualnego rocznego przygotowania przedszkolnego",
+  REWALIDACYJNE: "orzeczenia o potrzebie zajęć rewalidacyjno - wychowawczych",
+  OPINIA: "opinii o potrzebie wczesnego wspomagania rozwoju",
+}
+
+
+
 class DocumentData {
   constructor(values) {
     this.values = values;
@@ -112,7 +122,8 @@ class DocumentData {
         issue: applicant.issue,
         period: applicant.period,
         reason: this.reason,
-        multipleDisability: this.multipleDisability
+        multipleDisability: this.multipleDisability,
+        description: issueGenetiveMap[applicant.issue]
       },
       city: this.values.city,
       date: this.values.date,
