@@ -22,13 +22,6 @@ const FieldWrapper = ({
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
-  console.log("WRAP", name, onChange);
-
-  if (name == "child.schoolType") {
-    console.log("HEY", options);
-    // console.log(options);
-  }
-
   return (
     <div className={styles[componentSize]}>
       <label className={styles.Label}>{fieldLabel[mainKey][subKey]}</label>
@@ -52,8 +45,11 @@ const FieldWrapper = ({
             <OptionList
               options={options}
               name={input.name}
-              onChange={onChange}
               onFocus={onFocus}
+              onChange={value => {
+                input.onChange(value);
+                onChange && onChange(value);
+              }}
               disabled={disabled}
             />
           )}

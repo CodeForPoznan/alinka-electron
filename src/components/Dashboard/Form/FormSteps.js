@@ -16,7 +16,7 @@ const onSubmit = async values => {
     ipcRenderer.send("print:value", values);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.log("Something went wrong: ", error);
+    console.error("Something went wrong: ", error);
   }
 };
 

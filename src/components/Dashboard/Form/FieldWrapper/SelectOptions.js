@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import styles from "./FieldWrapper.scss";
+
 const OptionList = props => {
   const { name, onChange, options, onFocus, disabled } = props;
-  console.log("OPT", onChange);
   return (
     <select
+      className={styles.Input}
       name={name}
       onChange={event => onChange(event)}
       onFocus={onFocus}

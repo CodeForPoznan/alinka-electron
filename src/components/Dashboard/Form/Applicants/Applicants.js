@@ -41,8 +41,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         );
   };
 
-  console.log("APLI", chosenParent, setChosenParent);
-
   return (
     <div className={`FormContent ${styles.Applicants}`}>
       <FieldWrapper
@@ -83,9 +81,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="extraLarge"
         component="select"
         options={getOptions()}
-        onChange={() => {
-          console.log("A");
-        }}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
@@ -93,9 +88,6 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         component="select"
         disabled={getSecondReasonDisabled()}
         options={getOptions()}
-        onChange={() => {
-          console.log("B");
-        }}
       />
       <FieldWrapper
         name={`applicant.period`}
