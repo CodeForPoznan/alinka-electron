@@ -33,12 +33,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
 
   const getOptions = () => {
     const parentItem = reasonsList.find(el => el.value === chosenParent);
-    return !parentItem
-      ? disabilityList
-      : disabilityList.filter(
-          disability =>
-            !parentItem.excludedDisabilities.includes(disability.value)
-        );
+    return disabilityList.filter(
+      disability => !parentItem.excludedDisabilities.includes(disability.value)
+    );
   };
 
   return (
@@ -74,7 +71,7 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="large"
         component="select"
         options={reasonsList}
-        onChange={setChosenParent}
+        onChange={event => setChosenParent(event.target.value)}
       />
       <FieldWrapper
         name={`applicant.reason`}
