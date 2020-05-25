@@ -44,7 +44,7 @@ const Applicants = ({ reasonsList, disabilityList }) => {
   return (
     <div className={`FormContent ${styles.Applicants}`}>
       <FieldWrapper
-        name={`applicant.name1`}
+        name={`applicant.firstName1`}
         componentSize="large"
         component="input"
       />

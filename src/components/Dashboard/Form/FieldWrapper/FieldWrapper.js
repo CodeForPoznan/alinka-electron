@@ -35,16 +35,12 @@ const FieldWrapper = ({
           disabled={disabled}
         />
       ) : (
-        <Field
-          className={styles.Input}
-          name={name}
-          component={component}
-          options={options}
-        >
+        <Field className={styles.Input} name={name} options={options}>
           {({ input, options }) => (
             <OptionList
               options={options}
               name={input.name}
+              value={input.value}
               onFocus={onFocus}
               onChange={value => {
                 input.onChange(value);

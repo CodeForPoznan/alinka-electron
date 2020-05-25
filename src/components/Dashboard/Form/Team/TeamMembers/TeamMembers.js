@@ -1,19 +1,21 @@
 import React from "react";
 import FieldWrapper from "../../FieldWrapper/FieldWrapper";
 import { FieldArray } from "react-final-form-arrays";
+import Button from "../../../../Button/Button";
+
 import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
   <FieldArray name="supportCenter.members">
     {({ fields }) => (
       <React.Fragment>
-        <button
+        <Button
           onClick={() => {
             fields.push({ name: "", function: "" });
           }}
         >
           Dodaj
-        </button>
+        </Button>
         {fields.map((element, index) => (
           <div key={index} className={styles.TeamMembersInputWrapper}>
             <FieldWrapper
@@ -28,13 +30,13 @@ const TeamMembers = () => (
               componentSize="medium"
               label="Specjalizacja"
             />
-            <button
+            <Button
               onClick={() => {
                 fields.remove(index);
               }}
             >
               Usuń
-            </button>
+            </Button>
           </div>
         ))}
       </React.Fragment>

@@ -8,7 +8,7 @@ const { isPeselValid } = require("./../../../../../src/utils/validators");
 
 const ChildData = () => {
   const [schoolTypes, setSchoolTypes] = useState([
-    { key: 1, text: "wybierz rodzaj szkoły", value: "" }
+    { key: 1, text: "Wybierz rodzaj szkoły", value: "" }
   ]);
 
   const getSchoolType = () => {
@@ -16,8 +16,9 @@ const ChildData = () => {
     console.log("Fetching school types from DB");
     ipcRenderer.send("db:schoolType");
     ipcRenderer.on("sendData", (event, result) => {
-      setSchoolTypes(
-        result.map(school => {
+      setSchoolTypes([
+        ...schoolTypes,
+        ...result.map(school => {
           const schoolData = school.dataValues;
           const schoolLine = {
             key: schoolData.createdAt,
@@ -26,7 +27,7 @@ const ChildData = () => {
           };
           return schoolLine;
         })
-      );
+      ]);
     });
   };
 

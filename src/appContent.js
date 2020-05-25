@@ -14,7 +14,7 @@ const fieldLabels = {
     class: "Klasa"
   },
   applicant: {
-    name1: "Imię  wnioskodawcy",
+    firstName1: "Imię wnioskodawcy",
     city1: "Miasto",
     city2: "Miasto",
     lastName1: "Nazwisko wnioskodawcy",
