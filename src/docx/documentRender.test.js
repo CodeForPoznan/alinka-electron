@@ -97,8 +97,7 @@ describe("In OPINIA decision", () => {
     specificData.child.name = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
-    console.log(generateDocument(issue, documentData))
-    expect(1).toEqual(2)
-    
+    console.log(generateDocument(issue, documentData));
+    expect(1).toEqual(2);
   });
 });
