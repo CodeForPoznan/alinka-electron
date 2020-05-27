@@ -14,7 +14,8 @@ describe("In SPECJALNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .file("word/document.xml")
+      .folder("word")
+      .file("document.xml")
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -34,7 +35,8 @@ describe("In INDYWIDUALNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .file("word/document.xml")
+      .folder("word")
+      .file("document.xml")
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -54,7 +56,8 @@ describe("In INDYWIDUALNE_ROCZNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .file("word/document.xml")
+      .folder("word")
+      .file("document.xml")
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -74,7 +77,8 @@ describe("In REWALIDACYJNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .file("word/document.xml")
+      .folder("word")
+      .file("document.xml")
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -94,7 +98,8 @@ describe("In OPINIA decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .file("word/document.xml")
+      .folder("word")
+      .file("document.xml")
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
