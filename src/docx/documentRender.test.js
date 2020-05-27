@@ -1,3 +1,5 @@
+const path = require("path");
+
 const { generateDocument } = require("./generateDocument");
 const { getSpecificData } = require("./specificData");
 const { DocumentData } = require("../utils/utils");
@@ -14,8 +16,7 @@ describe("In SPECJALNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .folder("word")
-      .file("document.xml")
+      .file(path.join("word", "document.xml"))
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -35,8 +36,7 @@ describe("In INDYWIDUALNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .folder("word")
-      .file("document.xml")
+      .file(path.join("word", "document.xml"))
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -56,8 +56,7 @@ describe("In INDYWIDUALNE_ROCZNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .folder("word")
-      .file("document.xml")
+      .file(path.join("word", "document.xml"))
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -77,8 +76,7 @@ describe("In REWALIDACYJNE decision", () => {
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
-      .folder("word")
-      .file("document.xml")
+      .file(path.join("word", "document.xml"))
       .async("string")
       .then(content => {
         expect(content).toEqual(expect.stringContaining("mock child name"));
@@ -97,7 +95,11 @@ describe("In OPINIA decision", () => {
     specificData.child.name = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
-    console.log(generateDocument(issue, documentData));
-    expect(1).toEqual(2);
+    return generateDocument(issue, documentData)
+      .file(path.join("word", "document.xml"))
+      .async("string")
+      .then(content => {
+        expect(content).toEqual(expect.stringContaining("mock child name"));
+      });
   });
 });
