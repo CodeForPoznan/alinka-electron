@@ -97,12 +97,8 @@ describe("In OPINIA decision", () => {
     specificData.child.name = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
-    return generateDocument(issue, documentData)
-      .folder("word")
-      .file("document.xml")
-      .async("string")
-      .then(content => {
-        expect(content).toEqual(expect.stringContaining("mock child name"));
-      });
+    console.log(generateDocument(issue, documentData))
+    expect(1).toEqual(2)
+    
   });
 });
