@@ -14,6 +14,8 @@ const Applicants = ({ reasonsList, disabilityList }) => {
    */
 
   const [chosenParent, setChosenParent] = useState("WYBIERZ_WNIOSEK");
+  const [chosenFirstReason, setFirstReason] = useState("");
+  const [chosenSecondReason, setSecondReason] = useState("");
 
   const getSecondReasonDisabled = () => {
     const actualValues = useFormState().values;
@@ -71,13 +73,19 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         componentSize="large"
         component="select"
         options={reasonsList}
-        onChange={event => setChosenParent(event.target.value)}
+        onChange={event => {
+          setChosenParent(event.target.value);
+          setFirstReason(null);
+          setSecondReason(null);
+        }}
       />
       <FieldWrapper
         name={`applicant.reason`}
         componentSize="extraLarge"
         component="select"
         options={getOptions()}
+        value={chosenFirstReason}
+        onChange={event => setFirstReason(event.target.value)}
       />
       <FieldWrapper
         name={`applicant.secondReason`}
@@ -85,6 +93,8 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         component="select"
         disabled={getSecondReasonDisabled()}
         options={getOptions()}
+        value={chosenSecondReason}
+        onChange={event => setSecondReason(event.target.value)}
       />
       <FieldWrapper
         name={`applicant.period`}

@@ -17,7 +17,8 @@ const FieldWrapper = ({
   onFocus,
   options,
   onChange,
-  validator
+  validator,
+  value
 }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
@@ -40,11 +41,11 @@ const FieldWrapper = ({
             <OptionList
               options={options}
               name={input.name}
-              value={input.value}
+              value={value === null ? "" : input.value}
               onFocus={onFocus}
-              onChange={value => {
-                input.onChange(value);
-                onChange && onChange(value);
+              onChange={event => {
+                input.onChange(event);
+                onChange && onChange(event);
               }}
               disabled={disabled}
             />
@@ -67,7 +68,8 @@ FieldWrapper.propTypes = {
   label: PropTypes.string,
   onFocus: PropTypes.func,
   onChange: PropTypes.func,
-  validator: PropTypes.func
+  validator: PropTypes.func,
+  value: PropTypes.any
 };
 
 FieldWrapper.defaultProps = {

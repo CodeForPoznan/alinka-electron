@@ -24,7 +24,7 @@ const FormSteps = () => (
   <React.Fragment>
     <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
       <DocumentForm.Step>
-        <ChildData reasonsList={reasonsList} />
+        <ChildData />
       </DocumentForm.Step>
       <DocumentForm.Step>
         <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
