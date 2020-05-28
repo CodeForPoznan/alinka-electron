@@ -29,7 +29,7 @@ class Applicant extends Component {
         {this.state.isVisible && (
           <div className={styles.Applicant}>
             <FieldWrapper
-              name={`applicant.name2`}
+              name={`applicant.firstName2`}
               componentSize="large"
               component="input"
               validate=""
@@ -41,7 +41,7 @@ class Applicant extends Component {
             />
 
             <FieldWrapper
-              name={`applicant.street2`}
+              name={`applicant.address2`}
               componentSize="large"
               component="input"
             />
