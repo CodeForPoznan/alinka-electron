@@ -4,7 +4,7 @@ const disabilityList = [
     text: "wybierz przyczynę...",
     value: "",
     multiple: false,
-    disable: false,
+    disable: false
   },
   {
     key: "0",
