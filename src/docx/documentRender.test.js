@@ -12,7 +12,7 @@ describe("In SPECJALNE decision", () => {
   });
 
   it("child name should be rendered properly", () => {
-    specificData.child.name = "mock child name";
+    specificData.child.firstName = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
@@ -32,7 +32,7 @@ describe("In INDYWIDUALNE decision", () => {
   });
 
   it("child name should be rendered properly", () => {
-    specificData.child.name = "mock child name";
+    specificData.child.firstName = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
@@ -52,7 +52,7 @@ describe("In INDYWIDUALNE_ROCZNE decision", () => {
   });
 
   it("child name should be rendered properly", () => {
-    specificData.child.name = "mock child name";
+    specificData.child.firstName = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
@@ -72,7 +72,7 @@ describe("In REWALIDACYJNE decision", () => {
   });
 
   it("child name should be rendered properly", () => {
-    specificData.child.name = "mock child name";
+    specificData.child.firstName = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
@@ -92,7 +92,7 @@ describe("In OPINIA decision", () => {
   });
 
   it("child name should be rendered properly", () => {
-    specificData.child.name = "mock child name";
+    specificData.child.firstName = "mock child name";
     const documentData = new DocumentData(specificData).templateData;
 
     return generateDocument(issue, documentData)
