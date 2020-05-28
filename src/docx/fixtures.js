@@ -1,29 +1,3 @@
-const specificData = {
-  INDYWIDUALNE: {
-    period: "styczeń 2018 - listopad 2019",
-    reason: "ZNACZNIE_UTRUDNIAJACY"
-  },
-  INDYWIDUALNE_ROCZNE: {
-    period: "12.05.2018 - 25.12.2019",
-    reason: "UNIEMOZLIWIAJACY"
-  },
-  SPECJALNE: {
-    period: "pierwszy etap edukacyjny",
-    reason: "SPRZEZONA",
-    multipleDisability: [
-      "niesłyszące",
-      "niepełnosprawne intelektualnie w stopniu znacznym"
-    ]
-  },
-  REWALIDACYJNE: {
-    period: "5-ciu lat.",
-    activityForm: "INDYWIDUALNE"
-  },
-  OPINIA: {
-    period: "do rozpoczęcia spełniania obowiązku szkolnego"
-  }
-};
-
 var commonData = {
   child: {
     firstName: "Wiktor",
@@ -99,8 +73,4 @@ var commonData = {
   kurator: "w Poznaniu, ul Kościuszki 38, 64-400 Poznań"
 };
 
-const documentType = process.argv[2];
-
-Object.assign(commonData, specificData[documentType]);
-
-export default commonData;
+module.exports = commonData;
