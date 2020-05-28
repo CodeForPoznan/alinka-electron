@@ -138,7 +138,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ child.name }}</w:t>
+        <w:t>{{ child.firstName }} {{ child.lastName }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -186,7 +186,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ child.address }}</w:t>
+        <w:t>{{ child.address }}, {{ child.postalCode }} {{ child.city }}</w:t>
       </w:r>
     </w:p>
     <w:p>

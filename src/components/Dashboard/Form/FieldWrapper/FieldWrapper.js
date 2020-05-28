@@ -36,7 +36,7 @@ const FieldWrapper = ({
           disabled={disabled}
         />
       ) : (
-        <Field className={styles.Input} name={name} options={options}>
+        <Field name={name} options={options}>
           {({ input, options }) => (
             <OptionList
               options={options}

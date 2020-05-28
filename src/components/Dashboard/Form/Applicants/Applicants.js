@@ -53,7 +53,7 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         component="input"
       />
       <FieldWrapper
-        name={`applicant.street1`}
+        name={`applicant.address1`}
         componentSize="large"
         component="input"
       />
