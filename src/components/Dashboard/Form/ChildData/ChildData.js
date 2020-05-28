@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./ChildData.scss";
@@ -7,15 +7,18 @@ const { ipcRenderer } = require("electron");
 const { isPeselValid } = require("./../../../../../src/utils/validators");
 
 const ChildData = () => {
-  const [childDataState, setChildDataState] = useState({
-    schoolTypes: [{ key: 1, text: "wybierz rodzaj szkoły", value: "" }]
-  });
+  const [schoolTypes, setSchoolTypes] = useState([
+    { key: 1, text: "Wybierz rodzaj szkoły", value: "" }
+  ]);
 
   const getSchoolType = () => {
+    // eslint-disable-next-line no-console
+    console.log("Fetching school types from DB");
     ipcRenderer.send("db:schoolType");
     ipcRenderer.on("sendData", (event, result) => {
-      setChildDataState({
-        schoolTypes: result.map(school => {
+      setSchoolTypes([
+        ...schoolTypes,
+        ...result.map(school => {
           const schoolData = school.dataValues;
           const schoolLine = {
             key: schoolData.createdAt,
@@ -24,9 +27,13 @@ const ChildData = () => {
           };
           return schoolLine;
         })
-      });
+      ]);
     });
   };
+
+  useEffect(() => {
+    getSchoolType();
+  }, []);
 
   return (
     <div className={`FormContent ${styles.ChildData}`}>
@@ -70,8 +77,7 @@ const ChildData = () => {
         name={`child.schoolType`}
         componentSize="large"
         component="select"
-        options={childDataState.schoolTypes}
-        onFocus={getSchoolType}
+        options={schoolTypes}
       />
       <FieldWrapper
         name={`child.profession`}

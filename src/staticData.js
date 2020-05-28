@@ -3,7 +3,8 @@ const disabilityList = [
     key: "x",
     text: "wybierz przyczynę...",
     value: "",
-    disable: true
+    multiple: false,
+    disable: false
   },
   {
     key: "0",
@@ -110,7 +111,7 @@ const reasonsList = [
     key: "x",
     text: "Wybierz rodzaj wniosku...",
     value: "WYBIERZ_WNIOSEK",
-    disable: true,
+    disable: false,
     allowMultiple: false,
     excludedDisabilities: []
   },
