@@ -31,7 +31,6 @@ function generateDocument(documentType, data) {
   nunjucks.configure(path.resolve(__dirname, "assets"));
   const zip = new JSZip();
   const templatePath = TEMPLATE_PATH_NAME[documentType];
-
   zip.file(
     path.join("word", "footnotes.xml"),
     fs.readFileSync(
@@ -62,6 +61,4 @@ function generateDocument(documentType, data) {
   return zip;
 }
 
-module.exports = {
-  generateDocument
-};
+module.exports = { generateDocument };
