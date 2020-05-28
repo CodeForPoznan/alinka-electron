@@ -26,7 +26,7 @@
     "apply_school_types": "node src/test/fixtures/apply_school_types.js",
     "apply_schools": "node src/test/fixtures/apply_schools.js",
     "apply_fixtures": "npm run apply_school_types && npm run apply_schools",
-    "gen_documents": "node src/docx/testGenerateDocument.js"
+    "gen_documents": "node src/docx/generateTestDocument.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.3",

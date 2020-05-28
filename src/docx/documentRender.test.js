@@ -6,7 +6,7 @@ const { DocumentData } = require("../utils/utils");
 
 describe("In SPECJALNE decision", () => {
   const issue = "SPECJALNE";
-  var specificData;
+  let specificData;
   beforeEach(() => {
     specificData = getSpecificData(issue);
   });
@@ -26,7 +26,7 @@ describe("In SPECJALNE decision", () => {
 
 describe("In INDYWIDUALNE decision", () => {
   const issue = "INDYWIDUALNE";
-  var specificData;
+  let specificData;
   beforeEach(() => {
     specificData = getSpecificData(issue);
   });
@@ -46,7 +46,7 @@ describe("In INDYWIDUALNE decision", () => {
 
 describe("In INDYWIDUALNE_ROCZNE decision", () => {
   const issue = "INDYWIDUALNE_ROCZNE";
-  var specificData;
+  let specificData;
   beforeEach(() => {
     specificData = getSpecificData(issue);
   });
@@ -66,7 +66,7 @@ describe("In INDYWIDUALNE_ROCZNE decision", () => {
 
 describe("In REWALIDACYJNE decision", () => {
   const issue = "REWALIDACYJNE";
-  var specificData;
+  let specificData;
   beforeEach(() => {
     specificData = getSpecificData(issue);
   });
@@ -86,7 +86,7 @@ describe("In REWALIDACYJNE decision", () => {
 
 describe("In OPINIA decision", () => {
   const issue = "OPINIA";
-  var specificData;
+  let specificData;
   beforeEach(() => {
     specificData = getSpecificData(issue);
   });
