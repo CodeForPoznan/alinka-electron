@@ -77,7 +77,7 @@
         <w:pStyle w:val="normalParagraph"/>
       </w:pPr>
       <w:r>
-        <w:t xml:space="preserve">Dyrektor Poradni Psychologicznej w {{ supportCenter.city }}, {{ supportCenter.post }}, {{ supportCenter.address }}, na podstawie § 4 ust. 1-6 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno – pedagogicznych, (Dz. U. z 2017 r. poz. 1743) powołuje zespół orzekający do rozpatrzenia wniosku </w:t>
+        <w:t xml:space="preserve">Dyrektor Poradni Psychologicznej we Wrześni, {{ supportCenter.post }}, {{ supportCenter.address }}, na podstawie § 4 ust. 1-6 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno – pedagogicznych, (Dz. U. z 2017 r. poz. 1743) powołuje zespół orzekający do rozpatrzenia wniosku </w:t>
       </w:r>
       <w:r>
         <w:rPr>
