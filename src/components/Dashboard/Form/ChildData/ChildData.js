@@ -31,7 +31,12 @@ const ChildData = () => {
   return (
     <div className={`FormContent ${styles.ChildData}`}>
       <FieldWrapper
-        name={`child.name`}
+        name={`child.firstName`}
+        componentSize="large"
+        component="input"
+      />
+      <FieldWrapper
+        name={`child.lastName`}
         componentSize="large"
         component="input"
       />
@@ -57,13 +62,8 @@ const ChildData = () => {
         component="input"
       />
       <FieldWrapper
-        name={`child.street`}
+        name={`child.address`}
         componentSize="large"
-        component="input"
-      />
-      <FieldWrapper
-        name={`child.houseNumber`}
-        componentSize="medium"
         component="input"
       />
       <FieldWrapper
