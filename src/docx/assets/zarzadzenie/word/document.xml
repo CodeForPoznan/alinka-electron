@@ -38,7 +38,7 @@
     <w:p>
       <w:pPr>
         <w:spacing w:before="500"/>
-        <w:pStyle w:val="centerHeader"/>
+        <w:pStyle w:val="Title-lowercase"/>
       </w:pPr>
       <w:r>
         <w:t>Zarządzenie nr {{ no }}/2020</w:t>
@@ -47,7 +47,7 @@
     <w:p>
       <w:pPr>
         <w:spacing w:before="50"/>
-        <w:pStyle w:val="centerHeader"/>
+        <w:pStyle w:val="Title-lowercase"/>
       </w:pPr>
       <w:r>
         <w:t>dyrektora Poradni z dnia {{ date }} r.</w:t>
@@ -56,7 +56,7 @@
     <w:p>
       <w:pPr>
         <w:spacing w:before="50"/>
-        <w:pStyle w:val="centerHeader"/>
+        <w:pStyle w:val="Title-lowercase"/>
       </w:pPr>
       <w:r>
         <w:t>w sprawie powołania zespołu orzekającego</w:t>
@@ -65,7 +65,7 @@
     <w:p>
       <w:pPr>
         <w:spacing w:before="50"/>
-        <w:pStyle w:val="centerHeader"/>
+        <w:pStyle w:val="Title-lowercase"/>
       </w:pPr>
       <w:r>
         <w:t>§1</w:t>
@@ -101,22 +101,13 @@
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t xml:space="preserve">{{ child.name }} </w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">ur. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">{{ child.birthDate }} r. {{ child.birthPlace }}.</w:t>
+        <w:t xml:space="preserve">{{ child.name }} ur. {{ child.birthDate }} r. {{ child.birthPlace }}.</w:t>
       </w:r>
     </w:p>
     <w:p>
       <w:pPr>
         <w:spacing w:before="50"/>
-        <w:pStyle w:val="centerHeader"/>
+        <w:pStyle w:val="Title-lowercase"/>
       </w:pPr>
       <w:r>
         <w:t>§2</w:t>

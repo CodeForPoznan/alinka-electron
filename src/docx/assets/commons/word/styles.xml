@@ -911,20 +911,6 @@
       <w:b/>
     </w:rPr>
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="centerHeader">
-    <w:name w:val="centerHeader"/>
-    <w:link w:val="centerHeader"/>
-    <w:qFormat/>
-    <w:pPr>
-      <w:jc w:val="center"/>
-    </w:pPr>
-    <w:rPr>
-      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
-      <w:lang w:val="pl-PL"/>
-      <w:sz w:val="24"/>
-      <w:b/>
-    </w:rPr>
-  </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="childrenDetails">
     <w:name w:val="childrenDetails"/>
     <w:link w:val="childrenDetails"/>
