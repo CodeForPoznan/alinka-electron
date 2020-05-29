@@ -10,13 +10,15 @@ describe("DocumentData", () => {
         address: "MockAddress1",
         firstName: "MockFirstName1",
         lastName: "MockLastName1",
-        postalCode: "MockPostalCode1"
+        postalCode: "MockPostalCode1",
+        city: "MockCity1"
       },
       {
         firstName: "MockFirstName2",
         lastName: "MockLastName2",
         address: "MockAddress2",
-        postalCode: "MockPostalCode2"
+        postalCode: "MockPostalCode2",
+        city: "MockCity2"
       }
     ];
     applicantsFixture = {
@@ -25,10 +27,12 @@ describe("DocumentData", () => {
         lastName1: "MockLastName1",
         address1: "MockAddress1",
         postalCode1: "MockPostalCode1",
+        city1: "MockCity1",
         firstName2: "MockFirstName2",
         lastName2: "MockLastName2",
         address2: "MockAddress2",
-        postalCode2: "MockPostalCode2"
+        postalCode2: "MockPostalCode2",
+        city2: "MockCity2"
       }
     };
   });
@@ -45,7 +49,7 @@ describe("DocumentData", () => {
 
   it("return single parent data", () => {
     const expectedParentsData =
-      "MockFirstName1 MockLastName1, MockAddress1, MockPostalCode1";
+      "MockFirstName1 MockLastName1, MockAddress1, MockPostalCode1 MockCity1";
     applicantsFixture.applicant.firstName2 = "";
     const onRequest = "MockFirstName1 MockLastName1";
     expectedApplicants.pop();
@@ -60,7 +64,7 @@ describe("DocumentData", () => {
 
   it("return multiple parents data with the same address", () => {
     const expectedParentsData =
-      "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2, MockAddress1, MockPostalCode1";
+      "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2, MockAddress1, MockPostalCode1 MockCity1";
     const onRequest =
       "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2";
     applicantsFixture.applicant.addresFirstParentCheckbox = true;
@@ -74,7 +78,7 @@ describe("DocumentData", () => {
 
   it("return multiple parents data with different address", () => {
     const expectedParentsData =
-      "MockFirstName1 MockLastName1, MockAddress1, MockPostalCode1 i MockFirstName2 MockLastName2, MockAddress2, MockPostalCode2";
+      "MockFirstName1 MockLastName1, MockAddress1, MockPostalCode1 MockCity1 i MockFirstName2 MockLastName2, MockAddress2, MockPostalCode2 MockCity2";
     const onRequest =
       "MockFirstName1 MockLastName1 i MockFirstName2 MockLastName2";
     Object.assign(commonDataFixture, applicantsFixture);
