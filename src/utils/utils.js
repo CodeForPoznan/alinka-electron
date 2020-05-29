@@ -82,20 +82,20 @@ class DocumentData {
     if (!applicant.firstName2) {
       return `${applicant.firstName1} ${applicant.lastName1}, ${
         applicant.address1
-      }, ${applicant.postalCode1}`;
+      }, ${applicant.postalCode1} ${applicant.city1}`;
     }
     if (applicant.addresFirstParentCheckbox) {
       return `${applicant.firstName1} ${applicant.lastName1} i ${
         applicant.firstName2
       } ${applicant.lastName2}, ${applicant.address1}, ${
         applicant.postalCode1
-      }`;
+      } ${applicant.city1}`;
     }
     return `${applicant.firstName1} ${applicant.lastName1}, ${
       applicant.address1
-    }, ${applicant.postalCode1} i ${applicant.firstName2} ${
+    }, ${applicant.postalCode1} ${applicant.city1} i ${applicant.firstName2} ${
       applicant.lastName2
-    }, ${applicant.address2}, ${applicant.postalCode2}`;
+    }, ${applicant.address2}, ${applicant.postalCode2} ${applicant.city2}`;
   }
 
   get onRequest() {
