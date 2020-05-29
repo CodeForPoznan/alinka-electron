@@ -106,11 +106,13 @@ if (inDevelopmentMode) {
 
 // Render documents
 ipcMain.on("print:value", (event, values) => {
-  const documentTypes = [values.applicant.issue, "PROTOKOL", "NOTIFICATION"];
+  const documentTypes = [values.applicant.issue, "PROTOKOL", "ZAWIADOMIENIE", "ZARZADZENIE"];
   for (const documentType of documentTypes ) {
     const documentData = new DocumentData(values).templateData
     generateDocument(documentType, documentData)
     .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-    .pipe(fs.createWriteStream(`${values.child.firstName} - ${documentType} - ${values.date}.docx`));
+    .pipe(fs.createWriteStream(
+      `${values.child.firstName} ${values.child.lastName} - ${documentType} - ${values.date}.docx`
+    ));
   }
 });

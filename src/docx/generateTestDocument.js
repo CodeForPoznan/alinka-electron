@@ -4,7 +4,7 @@ const { generateDocument } = require("./generateDocument");
 const { getSpecificData } = require("./specificData");
 const { DocumentData } = require("../utils/utils");
 
-const DOCUMENT_TYPES = ["DECISION", "NOTIFICATION", "PROTOKOL"];
+const DOCUMENT_TYPES = ["DECISION", "ZARZADZENIE", "PROTOKOL", "ZAWIADOMIENIE"];
 const DECISION_TYPES = [
   "SPECJALNE",
   "INDYWIDUALNE",

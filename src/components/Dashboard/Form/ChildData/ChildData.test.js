@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 import ChildData from "./ChildData.js";
+import renderer from "react-test-renderer";
 
 describe("ChildData", () => {
   let formWrapper;
@@ -18,8 +18,11 @@ describe("ChildData", () => {
   });
 
   it("renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(formWrapper(<ChildData />), div);
-    ReactDOM.unmountComponentAtNode(div);
+    const component = renderer.create(formWrapper(<ChildData />));
+    const subject = component.toJSON();
+
+    expect(subject).not.toBeUndefined();
+    expect(subject.type).toBe("div");
+    expect(subject.props.className).toBe("FormContent ChildData");
   });
 });

@@ -5,7 +5,8 @@ const disabilityList = [
     textGenetive: "",
     textAdjective: "",
     value: "",
-    disable: true
+    multiple: false,
+    disable: false
   },
   {
     key: "0",
@@ -137,7 +138,7 @@ const reasonsList = [
     text: "Wybierz rodzaj wniosku...",
     value: "WYBIERZ_WNIOSEK",
     descriptionGenetive: "",
-    disable: true,
+    disable: false,
     allowMultiple: false,
     excludedDisabilities: []
   },

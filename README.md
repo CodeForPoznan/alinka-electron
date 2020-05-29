@@ -39,9 +39,10 @@ npm run start
 ### Generate documents using fixtures
 For testing purpose, documents can be rendered without _react_ frontend, using bare `npm` command:
 ```
-npm run gen_documents [DOCUMENT_TYPE]
+npm run gen_documents [DOCUMENT_TYPE] [DECISION_TYPE]
 ```
-inserting `SPECJALNE`, `INDYWIDUALNE`, `INDYWIDUALNE_ROCZNE`, `REWALIDACYJNE`, `OPINIA` in place of `[DOCUMENT_TYPE]`
+inserting `DECISION`, `PROTOKOL`, `ZARZADZENIE`, `ZAWIADOMIENIE` in place of `[DOCUMENT_TYPE]`
+and `SPECJALNE`, `INDYWIDUALNE`, `INDYWIDUALNE_ROCZNE`, `REWALIDACYJNE`, `OPINIA` in place of `[DECISION_TYPE]`
 
 
 ## Coding rules
