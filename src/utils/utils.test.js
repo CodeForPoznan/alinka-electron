@@ -85,8 +85,24 @@ describe("DocumentData", () => {
     expect(documentData.applicant.applicants).toEqual(expectedApplicants);
   });
 
+  it("return reason in genetive form with single reason", () => {
+    commonDataFixture.applicant["reason"] = "NIESLYSZACE";
+    const documentData = new DocumentData(commonDataFixture).templateData;
+    expect(documentData.applicant.reasonGenetive).toEqual("niesłyszenie");
+  });
+
+  it("return reason in genetive form with multiple reason", () => {
+    commonDataFixture.applicant["reason"] = "LEKKIE";
+    commonDataFixture.applicant["secondReason"] = "NIESLYSZACE";
+    const documentData = new DocumentData(commonDataFixture).templateData;
+    expect(documentData.applicant.reasonGenetive).toEqual(
+      "niepełnosprawność intelektualną w stopniu lekkim i niesłyszenie"
+    );
+  });
+
   it("return only first reason if there's only one disability", () => {
     commonDataFixture.applicant["reason"] = "mock_reason";
+    delete commonDataFixture.applicant["secondReason"];
     const documentData = new DocumentData(commonDataFixture).templateData;
     expect(documentData.applicant.reason).toBe("mock_reason");
   });

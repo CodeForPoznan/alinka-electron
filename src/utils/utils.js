@@ -1,25 +1,14 @@
-const disabilityMap = {
-  LEKKIE: "niepełnosprawne intelektualnie w stopniu lekkim",
-  UMIARKOWANE: "niepełnosprawne intelektualnie w stopniu umiarkowanym",
-  ZNACZNE: "niepełnosprawne intelektualnie w stopniu znacznym",
-  GŁĘBOKIE: "niepełnosprawne intelektualnie w stopniu głębokim",
-  RUCHOWA: "niepełnosprawne ruchowo, w tym z afazją",
-  SLABOSLYSZACE: "słabosłyszące",
-  NIESLYSZACE: "niesłyszące",
-  SLABOWIDZACE: "słabowidzące",
-  NIEWIDZACE: "niewidzące",
-  AUTYZM: "z autyzmem, w tym z zespołem Aspergera"
-};
+const { disabilityList, reasonsList } = require("../staticData");
 
-const issueGenetiveMap = {
-  SPECJALNE: "orzeczenia o potrzebie kształcenia specjalnego",
-  INDYWIDUALNE: "orzeczenia o potrzebie indywidualnego nauczania",
-  INDYWIDUALNE_ROCZNE: "orzeczenia o potrzebie indywidualnego rocznego przygotowania przedszkolnego",
-  REWALIDACYJNE: "orzeczenia o potrzebie zajęć rewalidacyjno - wychowawczych",
-  OPINIA: "opinii o potrzebie wczesnego wspomagania rozwoju",
-}
-
-
+const disabilityMap = new Map(
+  disabilityList.map(disability => [disability.value, disability.textAdjective])
+);
+const disabilityGenetiveMap = new Map(
+  disabilityList.map(disability => [disability.value, disability.textGenetive])
+);
+const issueGenetiveMap = new Map(
+  reasonsList.map(reason => [reason.value, reason.descriptionGenetive])
+);
 
 class DocumentData {
   constructor(values) {
@@ -43,10 +32,26 @@ class DocumentData {
     if (!this.isMultipleDisability) {
       return [];
     }
-    const firstReasonDescription = disabilityMap[this.values.applicant.reason];
-    const secondReasonDescription =
-      disabilityMap[this.values.applicant.secondReason];
+    const firstReasonDescription = disabilityMap.get(
+      this.values.applicant.reason
+    );
+    const secondReasonDescription = disabilityMap.get(
+      this.values.applicant.secondReason
+    );
     return [firstReasonDescription, secondReasonDescription];
+  }
+
+  get reasonGenetive() {
+    if (!this.isMultipleDisability) {
+      return disabilityGenetiveMap.get(this.values.applicant.reason);
+    }
+    const firstReasonGenetiveDescription = disabilityGenetiveMap.get(
+      this.values.applicant.reason
+    );
+    const secondReasonGenetiveDescription = disabilityGenetiveMap.get(
+      this.values.applicant.secondReason
+    );
+    return `${firstReasonGenetiveDescription} i ${secondReasonGenetiveDescription}`;
   }
 
   get applicantsList() {
@@ -56,7 +61,8 @@ class DocumentData {
         firstName: applicant.firstName1,
         lastName: applicant.lastName1,
         address: applicant.address1,
-        postalCode: applicant.postalCode1
+        postalCode: applicant.postalCode1,
+        city: applicant.city1
       }
     ];
     if (applicant.firstName2) {
@@ -64,7 +70,8 @@ class DocumentData {
         firstName: applicant.firstName2,
         lastName: applicant.lastName2,
         address: applicant.address2,
-        postalCode: applicant.postalCode2
+        postalCode: applicant.postalCode2,
+        city: applicant.city2
       });
     }
     return applicants;
@@ -123,17 +130,19 @@ class DocumentData {
         period: applicant.period,
         reason: this.reason,
         multipleDisability: this.multipleDisability,
-        description: issueGenetiveMap[applicant.issue]
+        description: issueGenetiveMap.get(applicant.issue),
+        reasonGenetive: this.reasonGenetive
       },
-      city: this.values.city,
       date: this.values.date,
+      hour: this.values.hour,
       no: this.values.no,
       parents: this.values.parents,
       school: this.values.school,
       supportCenter: {
         address: supportCenter.address,
         members: this.teamMembers,
-        name: supportCenter.name,
+        nameNominative: supportCenter.nameNominative,
+        nameGenetive: supportCenter.nameGenetive,
         post: supportCenter.post,
         city: supportCenter.city,
         postalCode: supportCenter.postalCode,

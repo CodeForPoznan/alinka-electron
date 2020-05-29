@@ -7,7 +7,7 @@
     <w:rPr>
       <w:b />
     </w:rPr>
-    <w:t>Zenobia Kisiel</w:t>
+    <w:t>{{ applicantData.firstName }} {{ applicantData.lastName }}</w:t>
   </w:r>
 </w:p>
 <w:p>
@@ -16,7 +16,7 @@
     <w:ind w:left="3600" />
   </w:pPr>
   <w:r>
-    <w:t>Ul. Sekwany 13/6</w:t>
+    <w:t>{{ applicantData.address }}</w:t>
   </w:r>
 </w:p>
 <w:p>
@@ -25,6 +25,12 @@
     <w:ind w:left="3600" />
   </w:pPr>
   <w:r>
-    <w:t>64-789 Poznań</w:t>
+    <w:t>{{ applicantData.postalCode }} {{applicantData.city}}</w:t>
   </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="plane-text" />
+    <w:ind w:left="3600" />
+  </w:pPr>
 </w:p>

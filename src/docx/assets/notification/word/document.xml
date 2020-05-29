@@ -15,7 +15,7 @@
         <w:pStyle w:val="City-and-date" />
       </w:pPr>
       <w:r>
-        <w:t>{{ city }}, {{ date }}</w:t>
+        <w:t>{{ supportCenter.city }}, {{ date }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -39,7 +39,7 @@
         <w:pStyle w:val="Uppercase" />
       </w:pPr>
       <w:r>
-        <w:t>{{ supportCenter.post }}</w:t>
+        <w:t>{{ supportCenter.postalCode }} {{ supportCenter.city }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -93,7 +93,6 @@
         </w:rPr>
       </w:pPr>
       <w:r>
-        <w:tab />
         <w:t xml:space="preserve">W związku ze złożonym wnioskiem w sprawie wydania </w:t>
       </w:r>
       <w:r>
@@ -115,7 +114,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>niepełnosprawność ruchowa w stopniu lekkim</w:t>
+        <w:t>{{ applicant.reasonGenetive }}</w:t>
       </w:r>
       <w:r>
         <w:t>,</w:t>
@@ -127,7 +126,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>I etapu edukacyjnego</w:t>
+        <w:t>{{ applicant.period }}</w:t>
       </w:r>
       <w:r>
         <w:t xml:space="preserve"> dla </w:t>
@@ -136,7 +135,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>Wiktor Rzezimieszek</w:t>
+        <w:t>{{ child.firstName }} {{ child.lastName }}</w:t>
       </w:r>
       <w:r>
         <w:t xml:space="preserve">, </w:t>
@@ -145,7 +144,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>PESEL 12230544402</w:t>
+        <w:t>PESEL {{ child.pesel }}</w:t>
       </w:r>
       <w:r>
         <w:t>,</w:t>
@@ -155,27 +154,18 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:bCs />
+          <w:b />
         </w:rPr>
-        <w:t xml:space="preserve"></w:t>
+        <w:t xml:space="preserve"> {{ date }} </w:t>
       </w:r>
       <w:r>
         <w:rPr>
           <w:b />
-          <w:bCs />
-        </w:rPr>
-        <w:t xml:space="preserve">12.12.2020 </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b />
-          <w:bCs />
         </w:rPr>
         <w:t>r.</w:t>
       </w:r>
       <w:r>
         <w:rPr>
-          <w:bCs />
         </w:rPr>
         <w:t xml:space="preserve"></w:t>
       </w:r>
@@ -186,7 +176,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>8.00</w:t>
+        <w:t>{{ hour }}</w:t>
       </w:r>
       <w:r>
         <w:t>.</w:t>

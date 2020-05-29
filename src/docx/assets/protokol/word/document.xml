@@ -22,7 +22,7 @@
         <w:pStyle w:val="sentence"/>
       </w:pPr>
       <w:r>
-        <w:t>Z posiedzenia {{ supportCenter.name }}</w:t>
+        <w:t>Z posiedzenia {{ supportCenter.nameGenetive }}</w:t>
       </w:r>
     </w:p>
     <w:p>
