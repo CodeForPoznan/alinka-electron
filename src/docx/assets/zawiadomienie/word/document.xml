@@ -15,7 +15,7 @@
         <w:pStyle w:val="City-and-date" />
       </w:pPr>
       <w:r>
-        <w:t>{{ supportCenter.city }}, {{ date }}</w:t>
+        <w:t>{{ supportCenter.city }}, {{ meeting.date }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -156,7 +156,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t xml:space="preserve"> {{ date }} </w:t>
+        <w:t xml:space="preserve"> {{ meeting.date }} </w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -176,7 +176,7 @@
         <w:rPr>
           <w:b />
         </w:rPr>
-        <w:t>{{ hour }}</w:t>
+        <w:t>{{ meeting.hour }}</w:t>
       </w:r>
       <w:r>
         <w:t>.</w:t>

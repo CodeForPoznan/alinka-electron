@@ -109,7 +109,7 @@ class DocumentData {
   }
 
   get teamMembers() {
-    return this.values.supportCenter.members;
+    return this.values.meeting.members;
   }
 
   get templateData() {
@@ -133,14 +133,16 @@ class DocumentData {
         description: issueGenetiveMap.get(applicant.issue),
         reasonGenetive: this.reasonGenetive
       },
-      date: this.values.date,
-      hour: this.values.hour,
       no: this.values.no,
       parents: this.values.parents,
       school: this.values.school,
+      meeting: {
+        members: this.teamMembers,
+        date: this.values.meeting.date,
+        hour: this.values.meeting.hour
+      },
       supportCenter: {
         address: supportCenter.address,
-        members: this.teamMembers,
         nameNominative: supportCenter.nameNominative,
         nameGenetive: supportCenter.nameGenetive,
         post: supportCenter.post,

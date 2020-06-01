@@ -6,7 +6,7 @@ import Button from "../../../../Button/Button";
 import styles from "./TeamMembers.scss";
 
 const TeamMembers = () => (
-  <FieldArray name="supportCenter.members">
+  <FieldArray name="meeting.members">
     {({ fields }) => (
       <React.Fragment>
         <Button
@@ -19,16 +19,14 @@ const TeamMembers = () => (
         {fields.map((element, index) => (
           <div key={index} className={styles.TeamMembersInputWrapper}>
             <FieldWrapper
-              name={`${element}.name`}
+              name={`meeting.name`}
               component="input"
               componentSize="medium"
-              label={`Członek ${index + 1}`}
             />
             <FieldWrapper
-              name={`${element}.function`}
+              name={`meeting.function`}
               component="input"
               componentSize="medium"
-              label="Specjalizacja"
             />
             <Button
               onClick={() => {

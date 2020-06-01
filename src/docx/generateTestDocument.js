@@ -38,8 +38,4 @@ const documentData = new DocumentData(specificData).templateData;
 
 generateDocument(template, documentData)
   .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-  .pipe(
-    fs.createWriteStream(
-      `${specificData.child.firstName} - ${specificData.date}.docx`
-    )
-  );
+  .pipe(fs.createWriteStream(`${template}- ${specificData.meeting.date}.docx`));

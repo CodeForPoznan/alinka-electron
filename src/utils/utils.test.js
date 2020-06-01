@@ -135,11 +135,23 @@ describe("DocumentData", () => {
       { name: "mock name1", function: "mock function1" },
       { name: "mock name2", function: "mock function2" }
     ];
-    commonDataFixture.supportCenter["members"] = [
+    commonDataFixture.meeting["members"] = [
       { name: "mock name1", function: "mock function1" },
       { name: "mock name2", function: "mock function2" }
     ];
     const documentData = new DocumentData(commonDataFixture).templateData;
-    expect(documentData.supportCenter.members).toEqual(expectedMembers);
+    expect(documentData.meeting.members).toEqual(expectedMembers);
+  });
+
+  it("return proper date of meeting", () => {
+    commonDataFixture.meeting["date"] = "14.12.2020";
+    const documentData = new DocumentData(commonDataFixture).templateData;
+    expect(documentData.meeting.date).toEqual("14.12.2020");
+  });
+
+  it("return proper hour of meeting", () => {
+    commonDataFixture.meeting["date"] = "9.15";
+    const documentData = new DocumentData(commonDataFixture).templateData;
+    expect(documentData.meeting.hour).toEqual("9.15");
   });
 });
