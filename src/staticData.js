@@ -102,6 +102,7 @@ const disabilityList = [
     key: "10",
     text: "stan zdrowia uniemożliwiający uczęszczanie do szkoły",
     textGenetive: "stan zdrowia uniemożliwiający uczęszczanie do szkoły",
+    textAdjective: "",
     value: "UNIEMOZLIWIAJACY",
     multiple: false,
     disable: false
@@ -110,6 +111,7 @@ const disabilityList = [
     key: "11",
     text: "stan zdrowia znacznie utrudniający uczęszczanie do szkoły",
     textGenetive: "stan zdrowia znacznie utrudniający uczęszczanie do szkoły",
+    textAdjective: "",
     value: "ZNACZNIE_UTRUDNIAJACY",
     multiple: false,
     disable: false
@@ -118,6 +120,7 @@ const disabilityList = [
     key: "12",
     text: "zagrożenie niedostosowaniem społecznym",
     textGenetive: "zagrożenie niedostosowaniem społecznym",
+    textAdjective: "",
     value: "ZAGROŻENIE",
     multiple: false,
     disable: false
@@ -126,6 +129,7 @@ const disabilityList = [
     key: "13",
     text: "niedostosowanie społeczne",
     textGenetive: "niedostosowanie społeczne",
+    textAdjective: "",
     value: "NIEDOSTOSOWANIE",
     multiple: false,
     disable: false
