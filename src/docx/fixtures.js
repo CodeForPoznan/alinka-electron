@@ -36,8 +36,6 @@ var commonData = {
     period: "styczeń 2018 - listopad 2019",
     reason: "ZNACZNIE_UTRUDNIAJACY"
   },
-  date: "15.07.2019",
-  hour: "9.15",
   no: "42",
   parents: {
     address: "65-898 Ugody, Zielona 29b/5",
@@ -45,8 +43,9 @@ var commonData = {
   },
   school:
     "Szkoła Podstawowa nr 4 w Grodzisku Wlkp., szkoła podstawowa, 62-065 Grodzisk Wlkp., ul. Środkowa 56, murarz, 5a",
-  supportCenter: {
-    address: "ul. Zbąszyńska 11",
+  meeting: {
+    date: "15.07.2019",
+    hour: "9.15",
     members: [
       {
         name: "Antoni Stąsz-Lebieź",
@@ -61,6 +60,10 @@ var commonData = {
         function: "socjoterapeuta, tyflopedagog"
       }
     ],
+  },
+  supportCenter: {
+    address: "ul. Zbąszyńska 11",
+
     nameNominative: "Poradnia Psychologiczno - Pedagogiczna we Wrześni",
     nameGenetive: "Poradni Psychologiczno-Pedagogicznej we Wrześni",
     instituteName:

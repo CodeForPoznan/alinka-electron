@@ -29,13 +29,17 @@ const fieldLabels = {
     reason: "Z uwagi na",
     secondReason: "Dodatkowa niepełnosprawność"
   },
-  supportCenter: {
-    instituteName: "Nazwa instytucji",
-    city: "Miejscowość",
-    postalCode: "Kod pocztowy",
-    street: "Ulica",
+  meeting: {
+    date: "Data zespołu",
+    hour: "Godzina zespołu",
     name: "Imię i nazwisko członka",
     function: "Funkcja"
+  },
+  supportCenter: {
+    instituteName: "Nazwa poradni",
+    city: "Miejscowość",
+    postalCode: "Kod pocztowy",
+    street: "Ulica"
   }
 };
 

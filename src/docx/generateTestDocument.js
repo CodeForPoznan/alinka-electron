@@ -40,6 +40,6 @@ generateDocument(template, documentData)
   .generateNodeStream({ type: "nodebuffer", streamFiles: true })
   .pipe(
     fs.createWriteStream(
-      `${specificData.child.firstName} - ${specificData.date}.docx`
+      `${template}- ${specificData.meeting.date}.docx`
     )
   );

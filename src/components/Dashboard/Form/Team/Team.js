@@ -5,17 +5,12 @@ import FieldWrapper from "../FieldWrapper/FieldWrapper";
 const Team = () => (
   <div className={`FormContent`}>
     <FieldWrapper
-      name={`supportCenter.instituteName`}
+      name={`meeting.date`}
       componentSize="medium"
       component="input"
     />
     <FieldWrapper
-      name={`supportCenter.city`}
-      componentSize="medium"
-      component="input"
-    />
-    <FieldWrapper
-      name={`supportCenter.postalCode`}
+      name={`meeting.hour`}
       componentSize="medium"
       component="input"
     />
