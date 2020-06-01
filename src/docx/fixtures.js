@@ -36,8 +36,8 @@ var commonData = {
     period: "styczeń 2018 - listopad 2019",
     reason: "ZNACZNIE_UTRUDNIAJACY"
   },
-  city: "Grodzisk Wielkopolski",
   date: "15.07.2019",
+  hour: "9.15",
   no: "42",
   parents: {
     address: "65-898 Ugody, Zielona 29b/5",
@@ -61,12 +61,12 @@ var commonData = {
         function: "socjoterapeuta, tyflopedagog"
       }
     ],
-    name:
-      "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
+    nameNominative: "Poradnia Psychologiczno - Pedagogiczna we Wrześni",
+    nameGenetive: "Poradni Psychologiczno-Pedagogicznej we Wrześni",
     instituteName:
       "Zespół Orzekający przy Poradni Psychologiczno-Pedagogicznej w Grodzisku Wlkp.",
     post: "62-065 Grodzisk Wlkp.",
-    city: "Poznań",
+    city: "Wrześnica",
     postalCode: "61-854",
     street: "Mostowa 38"
   },

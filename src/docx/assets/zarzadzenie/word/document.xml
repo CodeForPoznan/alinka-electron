@@ -32,7 +32,7 @@
         <w:pStyle w:val="City-and-date"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ city }}, {{ date }}</w:t>
+        <w:t>{{ supportCenter.city }}, {{ date }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -77,22 +77,13 @@
         <w:pStyle w:val="normalParagraph"/>
       </w:pPr>
       <w:r>
-        <w:t xml:space="preserve">Dyrektor Poradni Psychologicznej we Wrześni, {{ supportCenter.post }}, {{ supportCenter.address }}, na podstawie § 4 ust. 1-6 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno – pedagogicznych, (Dz. U. z 2017 r. poz. 1743) powołuje zespół orzekający do rozpatrzenia wniosku </w:t>
+        <w:t xml:space="preserve">Dyrektor {{ supportCenter.nameGenetive }}, {{ supportCenter.post }}, {{ supportCenter.address }}, na podstawie § 4 ust. 1-6 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno – pedagogicznych, (Dz. U. z 2017 r. poz. 1743) powołuje zespół orzekający do rozpatrzenia wniosku </w:t>
       </w:r>
       <w:r>
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t xml:space="preserve">{{ applicant.name }} </w:t>
-      </w:r>
-      <w:r>
-        <w:t xml:space="preserve">zam. </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t xml:space="preserve">{{ applicant.street }}/{{ applicant.houseNumber }}, {{ applicant.postalCode }} {{ applicant.city }} </w:t>
+        <w:t xml:space="preserve">{{ applicant.parentsDescription }} </w:t>
       </w:r>
       <w:r>
         <w:t xml:space="preserve">w sprawie wydania orzeczenia o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego dla </w:t>
@@ -101,7 +92,7 @@
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t xml:space="preserve">{{ child.name }} ur. {{ child.birthDate }} r. {{ child.birthPlace }}.</w:t>
+        <w:t xml:space="preserve">{{ child.firstName }} {{ child.lastName }} ur. {{ child.birthDate }} r. w {{ child.birthPlace }}.</w:t>
       </w:r>
     </w:p>
     <w:p>

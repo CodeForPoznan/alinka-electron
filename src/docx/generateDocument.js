@@ -11,7 +11,8 @@ const TEMPLATE_PATH_NAME = {
   REWALIDACYJNE: "rewalidacyjne",
   OPINIA: "opinia",
   ZARZADZENIE: "zarzadzenie",
-  PROTOKÓŁ: "protokol"
+  PROTOKOL: "protokol",
+  ZAWIADOMIENIE: "zawiadomienie"
 };
 
 const COMMON_FILES = [

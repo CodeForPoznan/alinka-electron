@@ -29,7 +29,7 @@
         <w:pStyle w:val="City-and-date"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ city }}, {{ date }}</w:t>
+        <w:t>{{ supportCenter.city }}, {{ date }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -96,7 +96,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
+        <w:t>{{ supportCenter.nameNominative }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
       </w:r>
     </w:p>
     <w:p>

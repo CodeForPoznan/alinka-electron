@@ -995,6 +995,36 @@
       <w:b/>
     </w:rPr>
   </w:style>
+
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="plane-text">
+    <w:name w:val="plane-text" />
+    <w:basedOn w:val="Normalny" />
+    <w:link w:val="plane-textZnak" />
+    <w:qFormat />
+    <w:rsid w:val="00552664" />
+    <w:pPr>
+      <w:widowControl w:val="0" />
+      <w:spacing w:after="0" />
+      <w:ind w:firstLine="720" />
+      <w:jc w:val="both" />
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" />
+      <w:sz w:val="24" />
+      <w:lang w:val="pl-PL" />
+    </w:rPr>
+  </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="plane-textZnak">
+    <w:name w:val="plane-text Znak" />
+    <w:basedOn w:val="Domylnaczcionkaakapitu" />
+    <w:link w:val="plane-text" />
+    <w:rsid w:val="00552664" />
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" />
+      <w:sz w:val="24" />
+      <w:lang w:val="pl-PL" />
+    </w:rPr>
+  </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="sessionDescription">
     <w:name w:val="sessionDescription"/>
     <w:link w:val="sessionDescription"/>
