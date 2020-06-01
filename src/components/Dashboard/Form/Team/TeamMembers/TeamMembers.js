@@ -22,13 +22,11 @@ const TeamMembers = () => (
               name={`meeting.name`}
               component="input"
               componentSize="medium"
-              // label={`Członek ${index + 1}`}
             />
             <FieldWrapper
               name={`meeting.function`}
               component="input"
               componentSize="medium"
-              // label="Specjalizacja"
             />
             <Button
               onClick={() => {
