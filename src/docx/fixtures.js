@@ -59,7 +59,7 @@ var commonData = {
         name: "mgr Eleonora Roseveelt",
         function: "socjoterapeuta, tyflopedagog"
       }
-    ],
+    ]
   },
   supportCenter: {
     address: "ul. Zbąszyńska 11",
