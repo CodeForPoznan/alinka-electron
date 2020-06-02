@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import Error from "./ErrorField/ErrorField";
-import fieldLabel from "../../../../appContent.js";
+import fieldLabels from "../../../../appContent.js";
 import styles from "./FieldWrapper.scss";
 import PropTypes from "prop-types";
 
@@ -18,14 +18,16 @@ const FieldWrapper = ({
   options,
   onChange,
   validator,
-  value
+  value,
+  label
 }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
+  const fieldLabel = fieldLabels[mainKey][subKey] || label;
   return (
     <div className={styles[componentSize]}>
-      <label className={styles.Label}>{fieldLabel[mainKey][subKey]}</label>
+      <label className={styles.Label}>{fieldLabel}</label>
       {component !== "select" ? (
         <Field
           className={styles.Input}
