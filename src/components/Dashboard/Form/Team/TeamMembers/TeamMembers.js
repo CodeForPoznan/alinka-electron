@@ -19,14 +19,16 @@ const TeamMembers = () => (
         {fields.map((element, index) => (
           <div key={index} className={styles.TeamMembersInputWrapper}>
             <FieldWrapper
-              name={`meeting.name`}
+              name={`${element}.name`}
               component="input"
               componentSize="medium"
+              label="Imię i nazwisko"
             />
             <FieldWrapper
-              name={`meeting.function`}
+              name={`${element}.function`}
               component="input"
               componentSize="medium"
+              label="Funkcja"
             />
             <Button
               onClick={() => {
