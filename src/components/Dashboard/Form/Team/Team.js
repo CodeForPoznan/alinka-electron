@@ -1,14 +1,16 @@
 import React from "react";
 import TeamMembers from "./TeamMembers/TeamMembers.js";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
+import { DateField } from "../FieldWrapper";
 
 const Team = () => (
   <div className={`FormContent`}>
-    <FieldWrapper
+    <DateField name="meeting.date" />
+    {/* <FieldWrapper
       name={`meeting.date`}
       componentSize="medium"
       component="input"
-    />
+    /> */}
     <FieldWrapper
       name={`meeting.hour`}
       componentSize="medium"
