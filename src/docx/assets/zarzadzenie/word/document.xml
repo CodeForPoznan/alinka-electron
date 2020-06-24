@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<w:document xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:o="urn:schemas-microsoft-com:office:office" 
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
+  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
+  xmlns:v="urn:schemas-microsoft-com:vml" 
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
+  xmlns:w10="urn:schemas-microsoft-com:office:word" 
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+  xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
+  xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="centerAlignedTitleGreenColor"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Poradnia Psychologiczno – Pedagogiczna we Wrześni</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100"/>
+        <w:pStyle w:val="Uppercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>PPP</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="City-and-date"/>
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.city }}, {{ meeting.date }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="500"/>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Zarządzenie nr {{ no }}/2020</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>dyrektora Poradni z dnia {{ meeting.date }} r.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>w sprawie powołania zespołu orzekającego</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>§1</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="normalParagraph"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Dyrektor {{ supportCenter.nameGenetive }}, {{ supportCenter.post }}, {{ supportCenter.address }}, na podstawie § 4 ust. 1-6 rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno – pedagogicznych, (Dz. U. z 2017 r. poz. 1743) powołuje zespół orzekający do rozpatrzenia wniosku </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t xml:space="preserve">{{ applicant.parentsDescription }} </w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve">w sprawie wydania orzeczenia o potrzebie indywidualnego obowiązkowego rocznego przygotowania przedszkolnego dla </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t xml:space="preserve">{{ child.firstName }} {{ child.lastName }} ur. {{ child.birthDate }} r. w {{ child.birthPlace }}.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="Title-lowercase"/>
+      </w:pPr>
+      <w:r>
+        <w:t>§2</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="50"/>
+        <w:pStyle w:val="normalParagraph"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Skład zespołu orzekającego:</w:t>
+      </w:r>
+    </w:p>
+    {% for member in meeting.members %}
+      <w:p>
+        <w:pPr>
+          <w:pStyle w:val="teamMembers"/>
+          <w:spacing w:after="0"/>
+        </w:pPr>
+        <w:r>
+          {% if member == meeting.members[0] %}
+            <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
+          {% else %}
+            <w:t>{{ member.name }} - {{ member.function }}</w:t>
+          {% endif %}
+        </w:r>
+      </w:p>
+    {% endfor %}
+  </w:body>
+</w:document>

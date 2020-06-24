@@ -36,6 +36,15 @@ Run application
 npm run start
 ```
 
+### Generate documents using fixtures
+For testing purpose, documents can be rendered without _react_ frontend, using bare `npm` command:
+```
+npm run gen_documents [DOCUMENT_TYPE] [DECISION_TYPE]
+```
+inserting `DECISION`, `PROTOKOL`, `ZARZADZENIE`, `ZAWIADOMIENIE` in place of `[DOCUMENT_TYPE]`
+and `SPECJALNE`, `INDYWIDUALNE`, `INDYWIDUALNE_ROCZNE`, `REWALIDACYJNE`, `OPINIA` in place of `[DECISION_TYPE]`
+
+
 ## Coding rules
 
 1. General components (for example Dropdown, Icon which you can use anywhere in the app) place in components folder but custom components which depends on a parent component place within parent folder (Sidebar -> Navigation)

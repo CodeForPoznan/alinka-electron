@@ -104,12 +104,15 @@ if (inDevelopmentMode) {
   });
 }
 
-/*********************/
-/* Document Renderer */
-/*********************/
+// Render documents
 ipcMain.on("print:value", (event, values) => {
-  const documentData = new DocumentData(values).templateData
-  generateDocument(values.applicant.issue, documentData)
-  .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-  .pipe(fs.createWriteStream(`${values.child.name} - ${values.date}.docx`));
+  const documentTypes = [values.applicant.issue, "PROTOKOL", "ZAWIADOMIENIE", "ZARZADZENIE"];
+  for (const documentType of documentTypes ) {
+    const documentData = new DocumentData(values).templateData
+    generateDocument(documentType, documentData)
+    .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+    .pipe(fs.createWriteStream(
+      `${values.child.firstName} ${values.child.lastName} - ${documentType} - ${values.date}.docx`
+    ));
+  }
 });

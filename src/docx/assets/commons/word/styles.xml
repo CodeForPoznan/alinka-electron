@@ -812,6 +812,22 @@
       <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
       <w:lang w:val="pl-PL"/>
     </w:rPr>
+  </w:style>  
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="centerAlignedTitleGreenColor">
+    <w:name w:val="centerAlignedTitleGreenColor"/>
+    <w:link w:val="centerAlignedTitleGreenColor"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:u w:val="single"/>
+      <w:sz w:val="28"/>
+      <w:b/>
+      <w:color w:val="4f6228"/>
+    </w:rPr>
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="numberOfProtocol">
     <w:name w:val="numberOfProtocol"/>
@@ -924,6 +940,19 @@
       <w:b/>
     </w:rPr>
   </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="normalParagraph">
+    <w:name w:val="normalParagraph"/>
+    <w:link w:val="normalParagraph"/>
+    <w:qFormat/>
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+      <w:lang w:val="pl-PL"/>
+      <w:sz w:val="24"/>
+    </w:rPr>
+  </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="teamMembers">
     <w:name w:val="teamMembers"/>
     <w:basedOn w:val="Akapitzlist"/>
@@ -966,6 +995,36 @@
       <w:b/>
     </w:rPr>
   </w:style>
+
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="plane-text">
+    <w:name w:val="plane-text" />
+    <w:basedOn w:val="Normalny" />
+    <w:link w:val="plane-textZnak" />
+    <w:qFormat />
+    <w:rsid w:val="00552664" />
+    <w:pPr>
+      <w:widowControl w:val="0" />
+      <w:spacing w:after="0" />
+      <w:ind w:firstLine="720" />
+      <w:jc w:val="both" />
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" />
+      <w:sz w:val="24" />
+      <w:lang w:val="pl-PL" />
+    </w:rPr>
+  </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="plane-textZnak">
+    <w:name w:val="plane-text Znak" />
+    <w:basedOn w:val="Domylnaczcionkaakapitu" />
+    <w:link w:val="plane-text" />
+    <w:rsid w:val="00552664" />
+    <w:rPr>
+      <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" />
+      <w:sz w:val="24" />
+      <w:lang w:val="pl-PL" />
+    </w:rPr>
+  </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="sessionDescription">
     <w:name w:val="sessionDescription"/>
     <w:link w:val="sessionDescription"/>
@@ -993,4 +1052,3 @@
     </w:rPr>
   </w:style>
 </w:styles>
-

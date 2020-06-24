@@ -1,0 +1,36 @@
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="plane-text" />
+    <w:ind w:left="3600" />
+  </w:pPr>
+  <w:r>
+    <w:rPr>
+      <w:b />
+    </w:rPr>
+    <w:t>{{ applicantData.firstName }} {{ applicantData.lastName }}</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="plane-text" />
+    <w:ind w:left="3600" />
+  </w:pPr>
+  <w:r>
+    <w:t>{{ applicantData.address }}</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="plane-text" />
+    <w:ind w:left="3600" />
+  </w:pPr>
+  <w:r>
+    <w:t>{{ applicantData.postalCode }} {{applicantData.city}}</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="plane-text" />
+    <w:ind w:left="3600" />
+  </w:pPr>
+</w:p>

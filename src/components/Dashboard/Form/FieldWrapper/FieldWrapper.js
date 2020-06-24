@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import Error from "./ErrorField/ErrorField";
-import fieldLabel from "../../../../appContent.js";
+import fieldLabels from "../../../../appContent.js";
 import styles from "./FieldWrapper.scss";
 import PropTypes from "prop-types";
 
@@ -17,14 +17,17 @@ const FieldWrapper = ({
   onFocus,
   options,
   onChange,
-  validator
+  validator,
+  value,
+  label
 }) => {
   const dataKeys = name.split(".");
   const mainKey = dataKeys[0];
   const subKey = dataKeys[1];
+  const fieldLabel = fieldLabels[mainKey][subKey] || label;
   return (
     <div className={styles[componentSize]}>
-      <label className={styles.Label}>{fieldLabel[mainKey][subKey]}</label>
+      <label className={styles.Label}>{fieldLabel}</label>
       {component !== "select" ? (
         <Field
           className={styles.Input}
@@ -35,18 +38,17 @@ const FieldWrapper = ({
           disabled={disabled}
         />
       ) : (
-        <Field
-          className={styles.Input}
-          name={name}
-          component={component}
-          options={options}
-        >
+        <Field name={name} options={options}>
           {({ input, options }) => (
             <OptionList
               options={options}
               name={input.name}
-              onChange={event => onChange && onChange(event)}
+              value={value === null ? "" : input.value}
               onFocus={onFocus}
+              onChange={event => {
+                input.onChange(event);
+                onChange && onChange(event);
+              }}
               disabled={disabled}
             />
           )}
@@ -68,7 +70,8 @@ FieldWrapper.propTypes = {
   label: PropTypes.string,
   onFocus: PropTypes.func,
   onChange: PropTypes.func,
-  validator: PropTypes.func
+  validator: PropTypes.func,
+  value: PropTypes.any
 };
 
 FieldWrapper.defaultProps = {

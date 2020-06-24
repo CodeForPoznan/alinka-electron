@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<w:document xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="City-and-date" />
+        <w:jc w:val="left" />
+      </w:pPr>
+      <w:r>
+        <w:t>PPP ……………………</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="City-and-date" />
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.city }}, {{ meeting.date }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Uppercase" />
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.nameNominative }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Uppercase" />
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.address }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Uppercase" />
+      </w:pPr>
+      <w:r>
+        <w:t>{{ supportCenter.postalCode }} {{ supportCenter.city }}</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:left="3600" />
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:u w:val="single" />
+        </w:rPr>
+        <w:t>Wnioskodawca:</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+        <w:rPr>
+          <w:u w:val="single" />
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+
+    {% for applicantData in applicant.applicants %}
+      {% include "template_parts/applicants.xml" %}
+    {% endfor %}
+
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Title-uppercase" />
+        <w:spacing w:after="240" />
+      </w:pPr>
+      <w:r>
+        <w:t>ZAWIADOMIENIE  O POSIEDZENIU ZESPOŁU ORZEKAJĄCEGO</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="LegalBasis" />
+      </w:pPr>
+      <w:r>
+        <w:t>Podstawa prawna: §7 ust.4 oraz §4 ust.5 Rozporządzenia Ministra Edukacji Narodowej z dnia 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych (Dz.U. z 2017r. poz.1743)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:rPr>
+          <w:i />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">W związku ze złożonym wnioskiem w sprawie wydania </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>{{ applicant.description }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>,</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"></w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> z uwagi na </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>{{ applicant.reasonGenetive }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>,</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> na okres </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>{{ applicant.period }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> dla </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>{{ child.firstName }} {{ child.lastName }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve">, </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>PESEL {{ child.pesel }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>,</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> zawiadamiam, że posiedzenie Zespołu Orzekającego, na którym będzie rozpatrywany złożony wniosek odbędzie się w dniu</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t xml:space="preserve"> {{ meeting.date }} </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>r.</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+        </w:rPr>
+        <w:t xml:space="preserve"></w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> o godzinie </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:b />
+        </w:rPr>
+        <w:t>{{ meeting.hour }}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Informuję, że Rodzice dziecka lub ucznia, jak i pełnoletni uczeń mają prawo wziąć udział w posiedzeniu Zespołu i przedstawić swoje stanowisko. Obecność wnioskodawcy na posiedzeniu Zespołu nie jest obowiązkowa. Informację o przebiegu posiedzenia i podjętym rozstrzygnięciu wnioskodawca może uzyskać od Przewodniczącego Zespołu. </w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+      </w:pPr>
+      <w:r>
+        <w:t>Orzeczenie lub opinię można odebrać w sekretariacie Poradni w ciągu 7 dni od dnia wydania dokumentu.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1" />
+        <w:ind w:left="2880" w:firstLine="720" />
+      </w:pPr>
+      <w:r>
+        <w:t>(Przewodniczący Zespołu Orzekającego)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+      <w:r>
+        <w:t>Oświadczam, że zawiadomiono mnie o terminie posiedzenia ZO.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="plane-text" />
+        <w:ind w:firstLine="0" />
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="Subtitle1" />
+        <w:ind w:left="2160" w:firstLine="720" />
+      </w:pPr>
+      <w:r>
+        <w:t>(data i podpis wnioskodawcy)</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr w:rsidR="00D312A8" w:rsidRPr="00F1435D" w:rsidSect="00D312A8">
+      <w:pgSz w:w="12240" w:h="15840" />
+      <w:pgMar w:top="990" w:right="1440" w:bottom="1170" w:left="1440" w:header="720" w:footer="720" w:gutter="0" />
+      <w:cols w:space="720" />
+      <w:docGrid w:linePitch="360" />
+    </w:sectPr>
+  </w:body>
+</w:document>

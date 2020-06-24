@@ -29,7 +29,7 @@
         <w:pStyle w:val="City-and-date"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ city }}, {{ date }}</w:t>
+        <w:t>{{ supportCenter.city }}, {{ meeting.date }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -92,7 +92,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ supportCenter.name }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
+        <w:t>{{ supportCenter.nameNominative }}, {{ supportCenter.address }}, {{ supportCenter.post }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -111,13 +111,13 @@
         <w:t>w składzie:</w:t>
       </w:r>
     </w:p>
-    {% for member in supportCenter.members %}
+    {% for member in meeting.members %}
     <w:p>
       <w:pPr>
         <w:pStyle w:val="Staff"/>
       </w:pPr>
       <w:r>
-                {% if member == supportCenter.members[0] %}
+                {% if member == meeting.members[0] %}
         <w:t>{{ member.name }} - Przewodniczący Zespołu Orzekającego</w:t>
                 {% else %}
         <w:t>{{ member.name }} - {{ member.function }}</w:t>
@@ -176,7 +176,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ child.name }}</w:t>
+        <w:t>{{ child.firstName }} {{ child.lastName }}</w:t>
       </w:r>
     </w:p>
     <w:p>
@@ -224,7 +224,7 @@
         <w:pStyle w:val="SubtitledRun"/>
       </w:pPr>
       <w:r>
-        <w:t>{{ child.address }}</w:t>
+        <w:t>{{ child.address }}, {{ child.postalCode }} {{ child.city }}</w:t>
       </w:r>
     </w:p>
     <w:p>

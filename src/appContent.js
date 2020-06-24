@@ -1,41 +1,45 @@
 const fieldLabels = {
   childData: "Dane dziecka",
   child: {
-    name: "Imię i nazwisko",
+    firstName: "Imię",
+    lastName: "Nazwisko",
     pesel: "PESEL",
     birthPlace: "Miejsce urodzenia",
-    city: "Miejsce zamieszkania",
+    city: "Miejscowość",
     postalCode: "Kod pocztowy",
-    street: "Ulica",
-    houseNumber: "Numer lokalu/mieszkania",
+    address: "Ulica i numer domu",
     schoolType: "Rodzaj szkoły",
     schoolName: "Szkoła",
     profession: "Zawód",
     class: "Klasa"
   },
   applicant: {
-    name1: "Imię  wnioskodawcy",
-    city1: "Miasto",
-    city2: "Miasto",
+    firstName1: "Imię  wnioskodawcy",
+    firstName2: "Imię drugiego wnioskodawcy",
     lastName1: "Nazwisko wnioskodawcy",
-    name2: "Imię drugiego wnioskodawcy",
     lastName2: "Nazwisko drugiego wnioskodawcy",
+    city1: "Miejscowość",
+    city2: "Miejscowość",
     postalCode1: "Kod pocztowy",
     postalCode2: "Kod pocztowy",
-    street1: "Ulica i numer domu",
-    street2: "Ulica i numer domu",
+    address1: "Ulica i numer domu",
+    address2: "Ulica i numer domu",
     issue: "wniosek o",
-    period: "Na okres czasu",
+    period: "Na okres",
     reason: "Z uwagi na",
     secondReason: "Dodatkowa niepełnosprawność"
   },
-  supportCenter: {
-    instituteName: "Nazwa instytucji",
-    city: "Miejscowość",
-    postalCode: "Kod pocztowy",
-    street: "Ulica",
+  meeting: {
+    date: "Data zespołu",
+    hour: "Godzina zespołu",
     name: "Imię i nazwisko członka",
     function: "Funkcja"
+  },
+  supportCenter: {
+    instituteName: "Nazwa poradni",
+    city: "Miejscowość",
+    postalCode: "Kod pocztowy",
+    street: "Ulica"
   }
 };
 
