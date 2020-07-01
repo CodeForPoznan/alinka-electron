@@ -41,13 +41,17 @@ const ChildData = () => {
       <TextField name="child.firstName" />
       <TextField name="child.lastName" />
       <TextField name="child.birthPlace" />
-      <TextField name="child.pesel" validator={isPeselValid} />
+      <TextField
+        name="child.pesel"
+        validator={isPeselValid}
+        componentSize="medium"
+      />
       <TextField name="child.city" />
-      <TextField name="child.postalCode" />
+      <TextField name="child.postalCode" componentSize="medium" />
       <TextField name="child.address" />
       <SelectField name="child.schoolType" options={schoolTypes} />
-      <TextField name="child.profession" />
-      <TextField name="child.class" />
+      <TextField name="child.profession" componentSize="medium" />
+      <TextField name="child.class" componentSize="small" />
       <TextField name="child.schoolName" componentSize="extraLarge" />
     </div>
   );

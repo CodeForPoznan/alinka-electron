@@ -66,6 +66,7 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         options={getOptions()}
         value={chosenFirstReason}
         onChange={event => setFirstReason(event.target.value)}
+        componentSize="extraLarge"
       />
       <SelectField
         name="applicant.secondReason"
@@ -73,8 +74,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
         disabled={getSecondReasonDisabled()}
         value={chosenSecondReason}
         onChange={event => setSecondReason(event.target.value)}
+        componentSize="extraLarge"
       />
-      <TextField name="applicant.period" />
+      <TextField name="applicant.period" componentSize="medium" />
     </div>
   );
 };
