@@ -48,6 +48,9 @@ const Applicants = ({ reasonsList, disabilityList }) => {
     setSecondReason(null);
   };
 
+  const selectOptions = getOptions();
+  const isSecondReasonDisabled = getSecondReasonDisabled();
+
   return (
     <div className={`FormContent ${styles.Applicants}`}>
       <TextField name="applicant.firstName1" />
@@ -63,15 +66,15 @@ const Applicants = ({ reasonsList, disabilityList }) => {
       />
       <SelectField
         name="applicant.reason"
-        options={getOptions()}
+        options={selectOptions}
         value={chosenFirstReason}
         onChange={event => setFirstReason(event.target.value)}
         componentSize="extraLarge"
       />
       <SelectField
         name="applicant.secondReason"
-        options={getOptions()}
-        disabled={getSecondReasonDisabled()}
+        options={selectOptions}
+        disabled={isSecondReasonDisabled}
         value={chosenSecondReason}
         onChange={event => setSecondReason(event.target.value)}
         componentSize="extraLarge"

@@ -12,6 +12,7 @@ const { composeValidators } = require("./../../../../../src/utils/validators");
 const TextField = props => {
   const { name, componentSize, validator } = props;
   const [mainKey, subKey] = name.split(".");
+  const validators = composeValidators(validator);
 
   return (
     <div className={styles[componentSize]} data-testid="textField">
@@ -22,7 +23,7 @@ const TextField = props => {
         className={styles.Input}
         name={name}
         component="input"
-        validate={composeValidators(validator)}
+        validate={validators}
       />
       <Error name={name} />
     </div>

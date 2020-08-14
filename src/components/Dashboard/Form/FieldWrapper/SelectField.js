@@ -8,6 +8,7 @@ import fieldLabel from "../../../../appContent.js";
 import styles from "./FieldWrapper.scss";
 
 const Options = ({ options }) =>
+  options &&
   options.map(({ key, value, text }) => (
     <option key={key} value={value}>
       {text}
