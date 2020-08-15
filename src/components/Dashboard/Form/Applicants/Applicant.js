@@ -30,31 +30,10 @@ class Applicant extends Component {
         {this.state.isVisible && (
           <div className={styles.Applicant}>
             <TextField name={`applicant.firstName1`} />
-            <FieldWrapper
-              componentSize="large"
-              component="input"
-            />
             <TextField name={`applicant.lastName2`} />
-            <FieldWrapper
-              componentSize="large"
-              component="input"
-            />
             <TextField name={`applicant.address2`} />
-            <FieldWrapper
-              componentSize="large"
-              component="input"
-            />
             <TextField name={`applicant.postalCode2`} />
-            <FieldWrapper
-              componentSize="large"
-              component="input"
-            />
             <TextField name={`applicant.city2`} />
-            <FieldWrapper
-              name={`applicant.city2`}
-              componentSize="large"
-              component="input"
-            />
           </div>
         )}
       </div>
