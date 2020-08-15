@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FieldWrapper from "../FieldWrapper/FieldWrapper";
 import styles from "./Applicant.scss";
+import TextField from "../FieldWrapper/TextField";
 
 class Applicant extends Component {
   state = {
@@ -28,33 +29,11 @@ class Applicant extends Component {
         </label>
         {this.state.isVisible && (
           <div className={styles.Applicant}>
-            <FieldWrapper
-              name={`applicant.firstName2`}
-              componentSize="large"
-              component="input"
-              validate=""
-            />
-            <FieldWrapper
-              name={`applicant.lastName2`}
-              componentSize="large"
-              component="input"
-            />
-
-            <FieldWrapper
-              name={`applicant.address2`}
-              componentSize="large"
-              component="input"
-            />
-            <FieldWrapper
-              name={`applicant.postalCode2`}
-              componentSize="large"
-              component="input"
-            />
-            <FieldWrapper
-              name={`applicant.city2`}
-              componentSize="large"
-              component="input"
-            />
+            <TextField name={`applicant.firstName1`} />
+            <TextField name={`applicant.lastName2`} />
+            <TextField name={`applicant.address2`} />
+            <TextField name={`applicant.postalCode2`} />
+            <TextField name={`applicant.city2`} />
           </div>
         )}
       </div>
