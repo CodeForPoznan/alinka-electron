@@ -3,9 +3,7 @@
 
 .Children {
     @include containerStyle;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    @include flex(column);
     height: 90%;
     padding: 20px 40px;
 }
@@ -30,7 +28,7 @@
 .ChildrenFilterContainer {
     display: inline-flex;
     align-items: center;
-    width: 70%;
+    width: 60%;
 
     input {
         margin-right: 20px;
