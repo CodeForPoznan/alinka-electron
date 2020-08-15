@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useFormState } from "react-final-form";
-import FieldWrapper from "../FieldWrapper/FieldWrapper";
-import styles from "./Applicants.scss";
 import Applicant from "./Applicant";
+import TextField from "../FieldWrapper/TextField";
+import SelectField from "../FieldWrapper/SelectField";
+
+import styles from "./Applicants.scss";
 
 const Applicants = ({ reasonsList, disabilityList }) => {
   /**
@@ -40,67 +42,44 @@ const Applicants = ({ reasonsList, disabilityList }) => {
     );
   };
 
+  const issueOnChange = event => {
+    setChosenParent(event.target.value);
+    setFirstReason(null);
+    setSecondReason(null);
+  };
+
+  const selectOptions = getOptions();
+  const isSecondReasonDisabled = getSecondReasonDisabled();
+
   return (
     <div className={`FormContent ${styles.Applicants}`}>
-      <FieldWrapper
-        name={`applicant.firstName1`}
-        componentSize="large"
-        component="input"
-      />
-      <FieldWrapper
-        name={`applicant.lastName1`}
-        componentSize="large"
-        component="input"
-      />
-      <FieldWrapper
-        name={`applicant.address1`}
-        componentSize="large"
-        component="input"
-      />
-      <FieldWrapper
-        name={`applicant.postalCode1`}
-        componentSize="large"
-        component="input"
-      />
-      <FieldWrapper
-        name={`applicant.city1`}
-        componentSize="large"
-        component="input"
-      />
+      <TextField name="applicant.firstName1" />
+      <TextField name="applicant.lastName1" />
+      <TextField name="applicant.address1" />
+      <TextField name="applicant.postalCode1" />
+      <TextField name="applicant.city1" />
       <Applicant />
-      <FieldWrapper
-        name={`applicant.issue`}
-        componentSize="large"
-        component="select"
+      <SelectField
+        name="applicant.issue"
         options={reasonsList}
-        onChange={event => {
-          setChosenParent(event.target.value);
-          setFirstReason(null);
-          setSecondReason(null);
-        }}
+        onChange={issueOnChange}
       />
-      <FieldWrapper
-        name={`applicant.reason`}
-        componentSize="extraLarge"
-        component="select"
-        options={getOptions()}
+      <SelectField
+        name="applicant.reason"
+        options={selectOptions}
         value={chosenFirstReason}
         onChange={event => setFirstReason(event.target.value)}
-      />
-      <FieldWrapper
-        name={`applicant.secondReason`}
         componentSize="extraLarge"
-        component="select"
-        disabled={getSecondReasonDisabled()}
-        options={getOptions()}
+      />
+      <SelectField
+        name="applicant.secondReason"
+        options={selectOptions}
+        disabled={isSecondReasonDisabled}
         value={chosenSecondReason}
         onChange={event => setSecondReason(event.target.value)}
+        componentSize="extraLarge"
       />
-      <FieldWrapper
-        name={`applicant.period`}
-        componentSize="medium"
-        component="input"
-      />
+      <TextField name="applicant.period" componentSize="medium" />
     </div>
   );
 };
