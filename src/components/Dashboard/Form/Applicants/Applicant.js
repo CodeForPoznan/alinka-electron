@@ -29,30 +29,29 @@ class Applicant extends Component {
         </label>
         {this.state.isVisible && (
           <div className={styles.Applicant}>
-            <TextField
-              name={`applicant.firstName1`}
-              componentSize="large"
-              component="input"
-              validate=""
-            />
-            <TextField
-              name={`applicant.lastName1`}
+            <TextField name={`applicant.firstName1`} />
+            <FieldWrapper
               componentSize="large"
               component="input"
             />
-
-            <TextField
-              name={`applicant.address1`}
+            <TextField name={`applicant.lastName2`} />
+            <FieldWrapper
               componentSize="large"
               component="input"
             />
-            <TextField
-              name={`applicant.postalCode1`}
+            <TextField name={`applicant.address2`} />
+            <FieldWrapper
               componentSize="large"
               component="input"
             />
-            <TextField
-              name={`applicant.city1`}
+            <TextField name={`applicant.postalCode2`} />
+            <FieldWrapper
+              componentSize="large"
+              component="input"
+            />
+            <TextField name={`applicant.city2`} />
+            <FieldWrapper
+              name={`applicant.city2`}
               componentSize="large"
               component="input"
             />
