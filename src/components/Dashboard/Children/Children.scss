@@ -51,16 +51,18 @@
 .ChildrenTable {
     border: 1px solid $black;
     border-radius: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    tr:nth-child(even) {background-color: #f2f2f2;}
 
     thead {
         border-bottom: 1px solid $black;
     }
 
-    td {
-        height: 40px;
-        border-top: 1px solid $black;
-        border-right: 1px solid $black;
-        // display: flex;
-        // justify-content: center;
+    tbody {
+        td {
+            border: 1px solid $black;
+            padding: 15px 5px;
+        }
     }
 }

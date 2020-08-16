@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useTable, useFilters, usePagination} from "react-table";
+import { useTable, useFilters, usePagination } from "react-table";
+
+import Button from "../../Button/Button";
 
 import styles from "./Children.scss";
 
@@ -20,35 +22,35 @@ export const TextFilter = ({ column: { filterValue, setFilter } }) => (
 
 export const TablePaginator = ({
   canPreviousPage,
-    canNextPage,
-    pageOptions,
-    pageCount,
-    gotoPage,
-    nextPage,
-    previousPage,
-    pageIndex
+  canNextPage,
+  pageOptions,
+  pageCount,
+  gotoPage,
+  nextPage,
+  previousPage,
+  pageIndex
 }) => (
-  <div class="pagination">
-  <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-        {'<<'}
-      </button>{' '}
-      <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-        {'<'}
-      </button>{' '}
-      <button onClick={() => nextPage()} disabled={!canNextPage}>
-        {'>'}
-      </button>{' '}
-      <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
-        {'>>'}
-      </button>{' '}
-      <span>
-        Stona {' '}
-        <strong>
-          {pageIndex + 1} z {pageOptions.length}
-        </strong>{' '}
-      </span>
+  <div className="pagination">
+    <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+      {"<<"}
+    </Button>{" "}
+    <Button onClick={() => previousPage()} disabled={!canPreviousPage}>
+      {"<"}
+    </Button>{" "}
+    <span>
+      Stona{" "}
+      <strong>
+        {pageIndex + 1} z {pageOptions.length}
+      </strong>{" "}
+    </span>
+    <Button onClick={() => nextPage()} disabled={!canNextPage}>
+      {">"}
+    </Button>{" "}
+    <Button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+      {">>"}
+    </Button>{" "}
   </div>
-) 
+);
 
 export const Table = ({ data }) => {
   const columns = React.useMemo(
@@ -70,7 +72,7 @@ export const Table = ({ data }) => {
       },
       {
         Header: "Akcje",
-        Cell: cellProps => <span>Przygotuj wniosek</span>
+        Cell: <span>Przygotuj wniosek</span>
       }
     ],
     []
@@ -80,11 +82,8 @@ export const Table = ({ data }) => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
     page,
     prepareRow,
-
-
     canPreviousPage,
     canNextPage,
     pageOptions,
@@ -92,49 +91,73 @@ export const Table = ({ data }) => {
     gotoPage,
     nextPage,
     previousPage,
-    state: { pageIndex },
+    state: { pageIndex }
   } = tableInstance;
 
   return (
     <>
-    <table {...getTableProps()} className={`${styles.ChildrenTable}`}>
-      <thead>
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map(column => (
-              <th {...column.getHeaderProps()}>
-                {column.render("Header")}
-                <Filter column={column} />
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {page.map((row) => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map(cell => (
-                <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+      <table {...getTableProps()} className={`${styles.ChildrenTable}`}>
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr key={headerGroup.id} {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th key={column.id} {...column.getHeaderProps()}>
+                  {column.render("Header")}
+                  <Filter column={column} />
+                </th>
               ))}
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
-    <TablePaginator
-      canPreviousPage={canPreviousPage}
-      canNextPage={canNextPage}
-      pageOptions={pageOptions}
-      pageCount={pageCount}
-      gotoPage={gotoPage}
-      nextPage={nextPage}
-      previousPage={previousPage}
-      pageIndex={pageIndex}
-    />
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {page.map(row => {
+            prepareRow(row);
+            return (
+              <tr key={row.id} {...row.getRowProps()}>
+                {row.cells.map(cell => (
+                  <td key={cell.id} {...cell.getCellProps()}>
+                    {cell.render("Cell")}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <TablePaginator
+        canPreviousPage={canPreviousPage}
+        canNextPage={canNextPage}
+        pageOptions={pageOptions}
+        pageCount={pageCount}
+        gotoPage={gotoPage}
+        nextPage={nextPage}
+        previousPage={previousPage}
+        pageIndex={pageIndex}
+      />
     </>
   );
+};
+
+Filter.propTypes = {
+  column: PropTypes.object
+};
+
+TextFilter.propTypes = {
+  column: PropTypes.shape({
+    filterValue: PropTypes.any,
+    setFilter: PropTypes.func
+  })
+};
+
+TablePaginator.propTypes = {
+  canPreviousPage: PropTypes.bool,
+  canNextPage: PropTypes.bool,
+  pageOptions: PropTypes.array,
+  pageCount: PropTypes.number,
+  gotoPage: PropTypes.func,
+  nextPage: PropTypes.func,
+  previousPage: PropTypes.func,
+  pageIndex: PropTypes.number
 };
 
 Table.propTypes = {
