@@ -38,6 +38,7 @@ export default class DocumentForm extends Component {
     const { children, onSubmit } = this.props;
     const { page } = this.state;
     const isLastPage = page === React.Children.count(children) - 1;
+
     if (isLastPage) {
       return onSubmit(values);
     } else {
