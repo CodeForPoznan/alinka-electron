@@ -24,7 +24,6 @@ const ChildData = () => {
 
   const getSchoolType = () => {
     // eslint-disable-next-line no-console
-    console.log("Fetching school types from DB");
     ipcRenderer.send("db:schoolType");
     ipcRenderer.on("sendSchoolTypes", (event, result) => {
       setSchoolTypes([
@@ -43,7 +42,6 @@ const ChildData = () => {
   };
 
   const getSchoolList = () => {
-    console.log("Fetching schools from DB");
     // use as schoolType value selected by user
     const schoolType = "liceum ogólnokształcące";
     ipcRenderer.send("db:schoolList", schoolType);
