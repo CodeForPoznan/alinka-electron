@@ -5,7 +5,7 @@ const { DocumentData } = require("./src/utils/utils");
 const path = require("path");
 // Specifies the enviroment variable
 const inDevelopmentMode = process.env.MODE === "dev";
-const { getSchoolTypeList } = require("./src/db/api");
+const { getSchoolTypeList, getSchoolList } = require("./src/db/api");
 
 
 /***************/
@@ -31,7 +31,11 @@ app.on("ready", () => {
 
   // Get list of school types from data base.
   ipcMain.on("db:schoolType", async () => {
-    mainWindow.webContents.send("sendData", await getSchoolTypeList())
+    mainWindow.webContents.send("sendSchoolTypes", await getSchoolTypeList())
+  })
+
+  ipcMain.on("db:schoolList", async (event, schoolType) => {
+    mainWindow.webContents.send("sendSchoolList", await getSchoolList(schoolType))
   })
 
   // Build Menu from template and insert it

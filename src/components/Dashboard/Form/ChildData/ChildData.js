@@ -11,12 +11,21 @@ const ChildData = () => {
   const [schoolTypes, setSchoolTypes] = useState([
     { key: 1, text: "Wybierz rodzaj szkoły", value: "" }
   ]);
+  const [schoolList, setSchoolList] = useState([
+    {
+      key: 1,
+      text: "Wybierz szkołę",
+      postCode: "",
+      postOffice: "",
+      street: "",
+      schoolTypeName: ""
+    }
+  ]);
 
   const getSchoolType = () => {
     // eslint-disable-next-line no-console
-    console.log("Fetching school types from DB");
     ipcRenderer.send("db:schoolType");
-    ipcRenderer.on("sendData", (event, result) => {
+    ipcRenderer.on("sendSchoolTypes", (event, result) => {
       setSchoolTypes([
         ...schoolTypes,
         ...result.map(school => {
@@ -32,8 +41,32 @@ const ChildData = () => {
     });
   };
 
+  const getSchoolList = () => {
+    // use as schoolType value selected by user
+    const schoolType = "liceum ogólnokształcące";
+    ipcRenderer.send("db:schoolList", schoolType);
+    ipcRenderer.on("sendSchoolList", (event, result) => {
+      setSchoolList([
+        ...schoolList,
+        ...result.map(school => {
+          const schoolData = school.dataValues;
+          const schoolLine = {
+            key: schoolData.createdAt,
+            text: schoolData.name,
+            postCode: schoolData.postCode,
+            postOffice: schoolData.postOffice,
+            street: schoolData.street,
+            schoolType: school.schoolTypeName
+          };
+          return schoolLine;
+        })
+      ]);
+    });
+  };
+
   useEffect(() => {
     getSchoolType();
+    getSchoolList();
   }, []);
 
   return (
@@ -52,7 +85,11 @@ const ChildData = () => {
       <SelectField name="child.schoolType" options={schoolTypes} />
       <TextField name="child.profession" componentSize="medium" />
       <TextField name="child.class" componentSize="small" />
-      <TextField name="child.schoolName" componentSize="extraLarge" />
+      <SelectField
+        name="child.schoolName"
+        componentSize="large"
+        options={schoolList}
+      />
     </div>
   );
 };

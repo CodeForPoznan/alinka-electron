@@ -32,8 +32,12 @@ const createSchool = ({
   );
 };
 
-const getSchoolList = () => {
-  return School.findAll();
+const getSchoolList = schoolType => {
+  return School.findAll({
+    where: {
+      SchoolTypeName: schoolType
+    }
+  });
 };
 
 module.exports = {
