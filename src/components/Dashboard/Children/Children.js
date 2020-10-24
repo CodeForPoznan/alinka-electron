@@ -1,9 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
+import ReactFlexyTable from "react-flexy-table";
+import { Link } from "react-router-dom";
 
 import HeaderIcon from "../../../assets/icons/profile.svg";
-import { Table as ChildrenTable } from "./Table";
 
+import "react-flexy-table/dist/index.css";
 import styles from "./Children.scss";
 
 const ChildrenHeader = () => (
@@ -49,21 +50,53 @@ const mockData = [
   { firstName: "Jan", lastName: "Sok", PESEL: "11320757736" }
 ];
 
+const dataWithTranslatedHeader = mockData.map(data => ({
+  Imię: data.firstName,
+  Nazwisko: data.lastName,
+  PESEL: data.PESEL
+}));
+
+const additionalCols = [
+  {
+    header: "Akcje",
+    td: data => {
+      return (
+        <>
+          <Link
+            to={{
+              pathname: "/create-document",
+              state: {
+                data
+              }
+            }}
+          >
+            Przygotuj wniosek
+          </Link>
+          <Link
+            to={{
+              pathname: "/",
+              state: {
+                id: data.PESEL
+              }
+            }}
+          >
+            Pokaż orzeczenia
+          </Link>
+        </>
+      );
+    }
+  }
+];
+
 const Children = () => (
   <div className={`${styles.Children}`}>
     <ChildrenHeader />
-    <ChildrenTable data={mockData} />
+    <ReactFlexyTable
+      data={dataWithTranslatedHeader}
+      globalSearch
+      additionalCols={additionalCols}
+    />
   </div>
 );
-
-ChildrenTable.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      firstName: PropTypes.string,
-      lastName: PropTypes.string,
-      PESEL: PropTypes.string
-    })
-  ).isRequired
-};
 
 export default Children;
