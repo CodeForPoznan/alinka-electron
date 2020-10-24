@@ -14,7 +14,7 @@ const StatementsHeader = () => (
 );
 
 const Statements = () => (
-  <div className={`${styles.Statements}`}>
+  <div className={styles.Statements}>
     <StatementsHeader />
   </div>
 );

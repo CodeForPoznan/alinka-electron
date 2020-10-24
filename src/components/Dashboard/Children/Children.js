@@ -89,7 +89,7 @@ const additionalCols = [
 ];
 
 const Children = () => (
-  <div className={`${styles.Children}`}>
+  <div className={styles.Children}>
     <ChildrenHeader />
     <ReactFlexyTable
       data={dataWithTranslatedHeader}
