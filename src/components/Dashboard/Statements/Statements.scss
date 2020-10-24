@@ -1,0 +1,27 @@
+@import "../../../scss/_variables";
+@import '../../../scss/_mixins';
+
+.Statements {
+    @include containerStyle;
+    @include flex(column);
+    height: 90%;
+    padding: 20px 40px;
+}
+
+.StatementsHeader {
+    @include flex(flex-start center);
+    margin-bottom: 20px;
+
+    .Heading {
+        font-family: 'PlayfairDisplay';
+        font-size: $font-lg;
+        color: $headingDark;
+        font-weight: $regular;
+        padding-left: 13px;
+    
+        span {
+            border-bottom: 3px solid $orange;
+        }
+    }
+}
+  
