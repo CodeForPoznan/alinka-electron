@@ -3,7 +3,12 @@ import styles from "./Button.scss";
 import PropTypes from "prop-types";
 
 const Button = props => (
-  <button type={props.type} className={styles.Button} onClick={props.onClick}>
+  <button
+    type={props.type}
+    className={styles.Button}
+    onClick={props.onClick}
+    disabled={props.disabled}
+  >
     {props.children}
   </button>
 );
@@ -11,7 +16,8 @@ const Button = props => (
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
-  type: PropTypes.oneOf(["button", "submit"])
+  type: PropTypes.oneOf(["button", "submit"]),
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {

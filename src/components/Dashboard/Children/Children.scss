@@ -9,8 +9,8 @@
 }
 
 .ChildrenHeader {
-    margin-bottom: 20px;
     @include flex(flex-start center);
+    margin-bottom: 20px;
 }
   
 .Heading {
@@ -47,4 +47,3 @@
         }
     }
 }
-  
