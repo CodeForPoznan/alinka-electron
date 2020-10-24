@@ -47,26 +47,3 @@
         }
     }
 }
-
-.ChildrenTable {
-    border: 1px solid $black;
-    border-radius: 5px;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 30px;
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    thead {
-        border-bottom: 1px solid $black;
-    }
-
-    tbody {
-        td {
-            border: 1px solid $black;
-            padding: 15px 5px;
-        }
-    }
-}
