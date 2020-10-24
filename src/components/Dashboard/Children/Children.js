@@ -1,10 +1,8 @@
 import React from "react";
-import ReactFlexyTable from "react-flexy-table";
 import { Link } from "react-router-dom";
-
+import Table from "../../ui/Table/Table";
 import HeaderIcon from "../../../assets/icons/profile.svg";
 
-import "react-flexy-table/dist/index.css";
 import styles from "./Children.scss";
 
 const ChildrenHeader = () => (
@@ -89,12 +87,12 @@ const additionalCols = [
 ];
 
 const Children = () => (
-  <div className={`${styles.Children}`}>
+  <div className={styles.Children}>
     <ChildrenHeader />
-    <ReactFlexyTable
+    <Table
       data={dataWithTranslatedHeader}
-      globalSearch
       additionalCols={additionalCols}
+      globalSearch
     />
   </div>
 );
