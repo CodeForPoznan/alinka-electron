@@ -15,7 +15,7 @@ export const TextFilter = ({ column: { filterValue, setFilter } }) => (
     type="text"
     value={filterValue || ""}
     onChange={e => {
-      setFilter(e.target.value || undefined);
+      setFilter(e.target.value || '');
     }}
   />
 );
@@ -33,22 +33,22 @@ export const TablePaginator = ({
   <div className="pagination">
     <Button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
       {"<<"}
-    </Button>{" "}
+    </Button>
     <Button onClick={() => previousPage()} disabled={!canPreviousPage}>
       {"<"}
-    </Button>{" "}
+    </Button>
     <span>
-      Stona{" "}
+      Stona
       <strong>
         {pageIndex + 1} z {pageOptions.length}
-      </strong>{" "}
+      </strong>
     </span>
     <Button onClick={() => nextPage()} disabled={!canNextPage}>
       {">"}
-    </Button>{" "}
+    </Button>
     <Button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
       {">>"}
-    </Button>{" "}
+    </Button>
   </div>
 );
 

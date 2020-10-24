@@ -9,8 +9,8 @@
 }
 
 .ChildrenHeader {
-    margin-bottom: 20px;
     @include flex(flex-start center);
+    margin-bottom: 20px;
 }
   
 .Heading {
@@ -53,7 +53,11 @@
     border-radius: 5px;
     border-collapse: collapse;
     width: 100%;
-    tr:nth-child(even) {background-color: #f2f2f2;}
+    margin-bottom: 30px;
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
     thead {
         border-bottom: 1px solid $black;
