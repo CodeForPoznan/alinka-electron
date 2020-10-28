@@ -5,4 +5,48 @@
   font-size: $font-sm;
   font-weight: $regular;
   color: $textColor;
+  position: relative;
+  padding-top: 20px;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 25px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+  }
+
+  .rft-gs-tr {
+    position: absolute;
+    width: 100%;
+    display: flex;
+  }
+
+  thead {
+
+    background-color: rgba($tableHeader, 0.7);
+    width: 100%;
+
+
+
+
+    > tr {
+      
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+  
+      &:nth-of-type(2n) {
+      background-color: rgba($tableRow, 0.3);
+      }
+    }
+
+    td {
+      padding: 10px 15px;
+    }
+  }
 }
+

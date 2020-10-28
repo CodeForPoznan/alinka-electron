@@ -1,7 +1,7 @@
 import React from "react";
 import FieldWrapper from "../../FieldWrapper/FieldWrapper";
 import { FieldArray } from "react-final-form-arrays";
-import Button from "../../../../Button/Button";
+import Button from "../../../../ui/Button/Button";
 
 import styles from "./TeamMembers.scss";
 
