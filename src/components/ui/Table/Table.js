@@ -16,6 +16,7 @@ const Table = ({ data, additionalCols, globalSearch }) => (
       ofText="z"
       filteredDataText="Znaleziono: "
       searchText="Wyszukaj"
+      pageSize="10"
     />
   </div>
 );
