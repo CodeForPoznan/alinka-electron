@@ -1,5 +1,7 @@
 @import "../../../scss/_variables.scss";
 
+
+
 .Table {
   font-family: "Poppins";
   font-size: $font-sm;
@@ -16,37 +18,88 @@
     text-align: center;
   }
 
-  .rft-gs-tr {
-    position: absolute;
-    width: 100%;
-    display: flex;
+  td, th{
+    padding: 8px 15px;
   }
 
   thead {
-
     background-color: rgba($tableHeader, 0.7);
     width: 100%;
-
-
-
-
-    > tr {
-      
-    }
   }
 
   tbody {
     tr {
       border-bottom: 1px solid #ddd;
+
+      &:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        color: $fieryRed;
+      }
   
       &:nth-of-type(2n) {
       background-color: rgba($tableRow, 0.3);
       }
     }
 
-    td {
-      padding: 10px 15px;
+    td:nth-child(4) {
+      display: flex;
     }
+
+    a {
+      text-decoration: none;
+      color: $textColor;
+
+      &:hover {
+        color: $fieryRed;
+      }
+    }
+  }
+
+  tfoot {
+    tr td > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  :global(.rft-gs-tr) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  //select row
+  :global(.rft-pagination) {
+    div:last-of-type {
+      display: none;
+    }
+  }
+
+  :global(.rft-pagination-button) {
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.17);
+    background-color: $fieryRed;
+    color: $white;
+    font-size: $font-sm;
+    line-height: $line-height-sm;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: button;
+  }
+
+  :global(.rft-totaldata-text) {
+    display: none;
+  }
+
+  :global(.rft-filtered-text) {
+    position: absolute;
+    top: 0;
   }
 }
 

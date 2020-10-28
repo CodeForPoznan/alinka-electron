@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactFlexyTable from "react-flexy-table";
 
-import "react-flexy-table/dist/index.css";
 import styles from "./Table.scss";
 
 const Table = ({ data, additionalCols, globalSearch }) => (
@@ -11,6 +10,12 @@ const Table = ({ data, additionalCols, globalSearch }) => (
       data={data}
       additionalCols={additionalCols}
       globalSearch={globalSearch}
+      previousText="Wstecz"
+      nextText="Dalej"
+      pageText="Strona"
+      ofText="z"
+      filteredDataText="Znaleziono: "
+      searchText="Wyszukaj"
     />
   </div>
 );
