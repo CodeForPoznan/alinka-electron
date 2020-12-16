@@ -1,0 +1,132 @@
+@import "../../../scss/_variables.scss";
+
+.Table {
+  font-family: "Poppins";
+  font-size: $font-sm;
+  font-weight: $regular;
+  color: $textColor;
+  position: relative;
+  padding-top: 20px;
+  height: 100%;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 25px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+  }
+
+  input {
+    width: 200px;
+    height: 32px;
+    background-color: $lightMarine;
+    padding: 2px 10px;
+    margin-left: 5px;
+    border: 2px solid $lightGray;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: $font-sm;
+  }
+
+  th {
+    padding: 8px 15px;
+    text-transform: uppercase;
+  }
+
+  thead {
+    background-color: rgba($tableHeader, 0.7);
+    width: 100%;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #ddd;
+
+      &:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        color: $fieryRed;
+      }
+  
+      &:nth-of-type(2n) {
+      background-color: rgba($tableRow, 0.3);
+      }
+    }
+
+    td {
+      padding: 8px 15px;
+
+      &:nth-child(4) {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+
+    a {
+      font-size: $font-sm;
+      text-decoration: none;
+      color: $textColor;
+
+      &:hover {
+        color: $fieryRed;
+      }
+    }
+  }
+
+  tfoot {
+    tr td > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  :global(.rft-gs-tr) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  //select row
+  :global(.rft-pagination) {
+    margin-top: 20px;
+
+    input {
+      width: 40px;
+      padding: 5px;
+      margin: 0 5px;
+      text-align: center;
+    }
+
+    div:last-of-type {
+      display: none;
+    }
+  }
+
+  :global(.rft-pagination-button) {
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.17);
+    background-color: $fieryRed;
+    color: $white;
+    font-size: $font-sm;
+    line-height: $line-height-sm;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: button;
+  }
+
+  :global(.rft-totaldata-text) {
+    display: none;
+  }
+
+  :global(.rft-filtered-text) {
+    position: absolute;
+    top: 5px;
+  }
+}
+

@@ -5,7 +5,7 @@ import styles from "./DocumentForm.scss";
 import arrayMutators from "final-form-arrays";
 import PropTypes from "prop-types";
 import ProgressBar from "../ProgressBar/ProgressBar";
-import Button from "../../Button/Button";
+import Button from "../../ui/Button/Button";
 
 export default class DocumentForm extends Component {
   state = {
