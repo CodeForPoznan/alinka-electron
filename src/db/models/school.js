@@ -3,6 +3,7 @@ const { DataTypes } = require("sequelize");
 
 const sequelize = require("../db_config").sequelize;
 
+
 const School = sequelize.define(
   "School",
   {
@@ -13,14 +14,26 @@ const School = sequelize.define(
       primaryKey: true
     },
     name: {
-      type: Sequelize.STRING(80),
+      type: Sequelize.STRING(256),
       allowNull: false
     },
     city: {
-      type: Sequelize.STRING(80),
+      type: Sequelize.STRING(128),
       allowNull: false
     },
-    postCode: {
+    street: {
+      type: Sequelize.STRING(128),
+      allowNull: false
+    },
+    schoolTypeName: {
+      type: Sequelize.STRING(128),
+      allowNull: false
+    },
+    number: {
+      type: Sequelize.STRING(16),
+      allowNull: true
+    },
+    postalCode: {
       type: Sequelize.STRING(6),
       allowNull: false,
       validate: {
@@ -34,10 +47,6 @@ const School = sequelize.define(
       type: Sequelize.STRING(80),
       allowNull: false
     },
-    street: {
-      type: Sequelize.STRING(80),
-      allowNull: false
-    },
     address: {
       type: Sequelize.VIRTUAL(DataTypes.STRING, ["city", "street"]),
       get() {
@@ -45,11 +54,11 @@ const School = sequelize.define(
       }
     },
     post: {
-      type: Sequelize.VIRTUAL(DataTypes.STRING, ["postCode", "postOffice"]),
+      type: Sequelize.VIRTUAL(DataTypes.STRING, ["postalCode", "postOffice"]),
       get() {
-        const { postOffice, city, postCode } = this;
+        const { postOffice, city, postalCode } = this;
         const postLocation = postOffice === city ? city : postOffice;
-        return `${postCode} ${postLocation}`;
+        return `${postalCode} ${postLocation}`;
       }
     }
   },

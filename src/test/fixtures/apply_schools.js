@@ -1,10 +1,10 @@
 const { createSchool } = require("../../db/api");
-const { schoolData } = require("../factories/schoolFactory");
+const schoolList = require("../../db/schools.js");
 
-const insertSchool = numberOfSchools => {
-  Array(numberOfSchools || 10)
-    .fill(0)
-    .forEach(() => createSchool(schoolData()));
-};
 
-insertSchool();
+const insertSchools = schoolList => {
+  schoolList.map(schoolData => createSchool(schoolData));
+}
+
+insertSchools(schoolList);
+
