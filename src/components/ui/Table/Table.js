@@ -8,7 +8,7 @@ const Table = ({ data, columnRenderer, globalSearch }) => (
   <div className={styles.Table}>
     <ReactFlexyTable
       data={data}
-      columns={columnRenderer(data)}
+      columns={columnRenderer()}
       globalSearch={globalSearch}
       previousText="Wstecz"
       nextText="Dalej"

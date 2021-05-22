@@ -48,54 +48,54 @@ const mockData = [
   { firstName: "Jan", lastName: "Sok", PESEL: "11320757736" }
 ];
 
-const additionalColsRenderer = (data) => {
+const additionalColsRenderer = data => {
   return (
     <React.Fragment key={data.PESEL}>
-    <Link
-      to={{
-        pathname: "/create-document",
-        state: {
-          child: {
-            firstName: data.firstName,
-            lastName: data.lastName,
-            pesel: data.PESEL
+      <Link
+        to={{
+          pathname: "/create-document",
+          state: {
+            child: {
+              firstName: data.firstName,
+              lastName: data.lastName,
+              pesel: data.PESEL
+            }
           }
-        }
-      }}
-    >
-      Przygotuj wniosek
-    </Link>
-    <Link
-      to={{
-        pathname: "/",
-        state: {
-          id: data.PESEL
-        }
-      }}
-    >
-      Pokaż orzeczenia
-    </Link>
-  </React.Fragment>
-  )
-}
+        }}
+      >
+        Przygotuj wniosek
+      </Link>
+      <Link
+        to={{
+          pathname: "/",
+          state: {
+            id: data.PESEL
+          }
+        }}
+      >
+        Pokaż orzeczenia
+      </Link>
+    </React.Fragment>
+  );
+};
 
-const columnRenderer = (data) => {
+const columnRenderer = () => {
   return [
-    {header: 'Imie', key: 'firstName'},
-    {header: 'Nazwisko', key: 'lastName'},
-    {header: 'PESEL', key: 'PESEL'},
-    {header: 'Akcje', key: "Actions", td: (data) => additionalColsRenderer(data)}
-  ]
-}
+    { header: "Imie", key: "firstName" },
+    { header: "Nazwisko", key: "lastName" },
+    { header: "PESEL", key: "PESEL" },
+    {
+      header: "Akcje",
+      key: "Actions",
+      td: data => additionalColsRenderer(data)
+    }
+  ];
+};
 
 const Children = () => (
   <div className={styles.Children}>
     <ChildrenHeader />
-    <Table
-      data={mockData}
-      columnRenderer={columnRenderer}
-      globalSearch
-    />
+    <Table data={mockData} columnRenderer={columnRenderer} globalSearch />
   </div>
 );
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import DocumentForm from "./DocumentForm";
 import ChildData from "./ChildData/ChildData";
 import Applicants from "./Applicants/Applicants";
@@ -27,7 +27,7 @@ const FormSteps = () => {
 
   // Note: It is a temporary solution - it will be changed when
   // we successfully connect to DB.
-  Object.assign(commonData.child, state?.child)
+  Object.assign(commonData.child, state?.child);
 
   return (
     <React.Fragment>
@@ -36,7 +36,10 @@ const FormSteps = () => {
           <ChildData />
         </DocumentForm.Step>
         <DocumentForm.Step>
-          <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
+          <Applicants
+            reasonsList={reasonsList}
+            disabilityList={disabilityList}
+          />
         </DocumentForm.Step>
         <DocumentForm.Step>
           <Team />
@@ -44,6 +47,6 @@ const FormSteps = () => {
       </DocumentForm>
     </React.Fragment>
   );
-}
+};
 
 export default FormSteps;
