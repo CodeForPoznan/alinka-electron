@@ -35,8 +35,6 @@ const createSchool = ({
 };
 
 const getSchoolList = schoolType => {
-  console.log("cos tam cos tam");
-  console.log(schoolType);
   return School.findAll({
     where: {
       SchoolTypeName: schoolType
