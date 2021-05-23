@@ -1,32 +1,37 @@
-const { SchoolType, School } = require("./models");
-
-const createSchoolType = schoolType => {
-  SchoolType.sync({ force: true }).then(() => {
-    return SchoolType.create({
-      name: schoolType
-    });
-  });
-};
+const { School } = require("./models");
 
 const getSchoolTypeList = () => {
-  return SchoolType.findAll();
+  return School.findAll({
+    attributes: ["schoolTypeName"]
+  }).then(result => {
+    return result
+      .map(school => school.dataValues.schoolTypeName)
+      .filter(
+        (schoolTypeName, index, list) => list.indexOf(schoolTypeName) === index
+      )
+      .map((schoolType, index) => {
+        return { key: index + 2, text: schoolType, value: schoolType };
+      });
+  });
 };
 
 const createSchool = ({
   name,
   city,
-  postCode,
   street,
-  SchoolTypeName,
+  schoolTypeName,
+  number,
+  postalCode,
   postOffice
 }) => {
   School.sync({ force: true }).then(() =>
     School.create({
       name,
       city,
-      postCode,
       street,
-      SchoolTypeName,
+      schoolTypeName,
+      number,
+      postalCode,
       postOffice
     })
   );
@@ -41,7 +46,6 @@ const getSchoolList = schoolType => {
 };
 
 module.exports = {
-  createSchoolType,
   getSchoolTypeList,
   createSchool,
   getSchoolList

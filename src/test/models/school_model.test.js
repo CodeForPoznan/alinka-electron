@@ -1,22 +1,20 @@
 const { sequelize } = require("../../db/db_config");
-const schoolFactory = require("../factories/schoolFactory");
-const schoolTypeFactory = require("../factories/schoolTypeFactory");
-const { schoolData } = require("../factories/schoolFactory");
 const { School } = require("../../db/models");
+
+const schoolMockData = {
+  name:
+    "SZKOŁA PODSTAWOWA Z ODDZIAŁAMI PRZEDSZKOLNYMI IM. JANUSZA KORCZAKA W BIELAWACH",
+  city: "Bielawy",
+  street: "",
+  schoolTypeName: "Szkoła podstawowa",
+  number: "3",
+  postalCode: "62-066",
+  postOffice: "Granowo"
+};
 
 describe("School model", () => {
   beforeAll(() => {
-    return sequelize
-      .sync({ force: true })
-      .then(() => schoolTypeFactory("mock"));
-  });
-
-  beforeEach(() => {
-    // I know, this is the same as code in `beforeAll` but
-    // this is temporary solution until problem with creating DB in tests should be resolved
-    return sequelize
-      .sync({ force: true })
-      .then(() => schoolTypeFactory("mock"));
+    return sequelize.sync({ force: true });
   });
 
   afterAll(async () => {
@@ -24,46 +22,41 @@ describe("School model", () => {
   });
 
   it("should be created", async () => {
-    const school = await School.create({ ...schoolData("mock"), name: "TEST" });
+    const school = await School.create(schoolMockData);
 
     expect(school).toBeTruthy();
-    expect(school.name).toEqual("TEST");
+    expect(school.name).toEqual(schoolMockData.name);
   });
 
   it("should validate `postCode`", async () => {
-    const school = await sequelize
-      .sync({ force: true })
-      .then(() =>
-        schoolFactory({
-          type: "mock",
-          postCode: "invalid code",
-          SchoolTypeName: "mock"
-        })
-      )
-      .catch(err => err.message);
+    const testSchoolData = Object.assign({}, schoolMockData);
+    testSchoolData.postalCode = "wrong postal code";
+    const school = await School.create(testSchoolData).catch(
+      err => err.message
+    );
 
     expect(school).toEqual("Validation error: Invalid polish postal code");
   });
 
   describe("has virtual methods which", () => {
     it("return concatenated address data by calling `address`", async () => {
-      const school = await schoolFactory({
-        street: "Testowa 2",
-        city: "Poznan",
-        SchoolTypeName: "mock"
-      });
+      const testSchoolData = Object.assign({}, schoolMockData);
+      testSchoolData.street = "Testowa";
+      testSchoolData.city = "Dummy City";
 
-      expect(school.address).toEqual("Poznan, Testowa 2");
+      const school = await School.create(testSchoolData);
+
+      expect(school.address).toEqual("Dummy City, Testowa");
     });
 
     it("return concatenated post data by calling `post`", async () => {
-      const school = await schoolFactory({
-        postCode: "12-345",
-        postOffice: "Poznan",
-        SchoolTypeName: "mock"
-      });
+      const testSchoolData = Object.assign({}, schoolMockData);
+      testSchoolData.postalCode = "12-345";
+      testSchoolData.postOffice = "Poznań";
 
-      expect(school.post).toEqual("12-345 Poznan");
+      const school = await School.create(testSchoolData);
+
+      expect(school.post).toEqual("12-345 Poznań");
     });
   });
 });

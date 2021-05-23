@@ -26,24 +26,13 @@ const ChildData = () => {
     // eslint-disable-next-line no-console
     ipcRenderer.send("db:schoolType");
     ipcRenderer.on("sendSchoolTypes", (event, result) => {
-      setSchoolTypes([
-        ...schoolTypes,
-        ...result.map(school => {
-          const schoolData = school.dataValues;
-          const schoolLine = {
-            key: schoolData.createdAt,
-            text: schoolData.name,
-            value: schoolData.name
-          };
-          return schoolLine;
-        })
-      ]);
+      setSchoolTypes([...schoolTypes, ...result]);
     });
   };
 
   const getSchoolList = () => {
     // use as schoolType value selected by user
-    const schoolType = "liceum ogólnokształcące";
+    const schoolType = "Liceum ogólnokształcące";
     ipcRenderer.send("db:schoolList", schoolType);
     ipcRenderer.on("sendSchoolList", (event, result) => {
       setSchoolList([
