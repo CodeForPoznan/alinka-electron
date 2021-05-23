@@ -26,10 +26,7 @@ const ChildData = () => {
     // eslint-disable-next-line no-console
     ipcRenderer.send("db:schoolType");
     ipcRenderer.on("sendSchoolTypes", (event, result) => {
-      setSchoolTypes([
-        ...schoolTypes,
-        ...result
-      ]);
+      setSchoolTypes([...schoolTypes, ...result]);
     });
   };
 

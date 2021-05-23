@@ -1,16 +1,19 @@
 const { School } = require("./models");
 
-
 const getSchoolTypeList = () => {
   return School.findAll({
     attributes: ["schoolTypeName"]
   }).then(result => {
-    return result.map(school => school.dataValues.schoolTypeName)
-                 .filter((schoolTypeName, index, list) => list.indexOf(schoolTypeName) === index)
-                 .map((schoolType, index) => {return {key: index + 2, text: schoolType, value: schoolType}})
+    return result
+      .map(school => school.dataValues.schoolTypeName)
+      .filter(
+        (schoolTypeName, index, list) => list.indexOf(schoolTypeName) === index
+      )
+      .map((schoolType, index) => {
+        return { key: index + 2, text: schoolType, value: schoolType };
+      });
   });
 };
-
 
 const createSchool = ({
   name,

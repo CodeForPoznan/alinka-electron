@@ -3,7 +3,6 @@ const { DataTypes } = require("sequelize");
 
 const sequelize = require("../db_config").sequelize;
 
-
 const School = sequelize.define(
   "School",
   {
