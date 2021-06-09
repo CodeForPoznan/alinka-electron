@@ -4,11 +4,11 @@ import ReactFlexyTable from "react-flexy-table";
 
 import styles from "./Table.scss";
 
-const Table = ({ data, additionalCols, globalSearch }) => (
+const Table = ({ data, columnRenderer, globalSearch }) => (
   <div className={styles.Table}>
     <ReactFlexyTable
       data={data}
-      additionalCols={additionalCols}
+      columns={columnRenderer()}
       globalSearch={globalSearch}
       previousText="Wstecz"
       nextText="Dalej"
@@ -16,24 +16,18 @@ const Table = ({ data, additionalCols, globalSearch }) => (
       ofText="z"
       filteredDataText="Znaleziono: "
       searchText="Wyszukaj"
-      pageSize="10"
+      pageSize={10}
     />
   </div>
 );
 
 Table.defaultProps = {
-  additionalCols: {},
   globalSearch: false
 };
 
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-  additionalCols: PropTypes.arrayOf(
-    PropTypes.shape({
-      header: PropTypes.string,
-      td: PropTypes.func
-    })
-  ),
+  columnRenderer: PropTypes.func.isRequired,
   globalSearch: PropTypes.bool
 };
 

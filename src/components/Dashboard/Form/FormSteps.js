@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import DocumentForm from "./DocumentForm";
 import ChildData from "./ChildData/ChildData";
 import Applicants from "./Applicants/Applicants";
@@ -20,20 +21,32 @@ const onSubmit = async values => {
   }
 };
 
-const FormSteps = () => (
-  <React.Fragment>
-    <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
-      <DocumentForm.Step>
-        <ChildData />
-      </DocumentForm.Step>
-      <DocumentForm.Step>
-        <Applicants reasonsList={reasonsList} disabilityList={disabilityList} />
-      </DocumentForm.Step>
-      <DocumentForm.Step>
-        <Team />
-      </DocumentForm.Step>
-    </DocumentForm>
-  </React.Fragment>
-);
+const FormSteps = () => {
+  const location = useLocation();
+  const { state } = location;
+
+  // Note: It is a temporary solution - it will be changed when
+  // we successfully connect to DB.
+  Object.assign(commonData.child, state?.child);
+
+  return (
+    <React.Fragment>
+      <DocumentForm initialValues={commonData} onSubmit={onSubmit}>
+        <DocumentForm.Step>
+          <ChildData />
+        </DocumentForm.Step>
+        <DocumentForm.Step>
+          <Applicants
+            reasonsList={reasonsList}
+            disabilityList={disabilityList}
+          />
+        </DocumentForm.Step>
+        <DocumentForm.Step>
+          <Team />
+        </DocumentForm.Step>
+      </DocumentForm>
+    </React.Fragment>
+  );
+};
 
 export default FormSteps;

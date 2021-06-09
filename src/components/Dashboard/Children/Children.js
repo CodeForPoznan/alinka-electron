@@ -15,7 +15,7 @@ const ChildrenHeader = () => (
 );
 
 const mockData = [
-  { firstName: "Jan", lastName: "Kowalski", PESEL: "99080255555" },
+  { firstName: "Jan", lastName: "Kowalski", PESEL: "12121244441" },
   { firstName: "Arnold", lastName: "Biedroń", PESEL: "03211252395" },
   {
     firstName: "Szymon",
@@ -48,52 +48,54 @@ const mockData = [
   { firstName: "Jan", lastName: "Sok", PESEL: "11320757736" }
 ];
 
-const dataWithTranslatedHeader = mockData.map(data => ({
-  Imię: data.firstName,
-  Nazwisko: data.lastName,
-  PESEL: data.PESEL
-}));
+const additionalColsRenderer = data => {
+  return (
+    <React.Fragment key={data.PESEL}>
+      <Link
+        to={{
+          pathname: "/create-document",
+          state: {
+            child: {
+              firstName: data.firstName,
+              lastName: data.lastName,
+              pesel: data.PESEL
+            }
+          }
+        }}
+      >
+        Przygotuj wniosek
+      </Link>
+      <Link
+        to={{
+          pathname: "/",
+          state: {
+            id: data.PESEL
+          }
+        }}
+      >
+        Pokaż orzeczenia
+      </Link>
+    </React.Fragment>
+  );
+};
 
-const additionalCols = [
-  {
-    header: "Akcje",
-    td: data => {
-      return (
-        <>
-          <Link
-            to={{
-              pathname: "/create-document",
-              state: {
-                data
-              }
-            }}
-          >
-            Przygotuj wniosek
-          </Link>
-          <Link
-            to={{
-              pathname: "/",
-              state: {
-                id: data.PESEL
-              }
-            }}
-          >
-            Pokaż orzeczenia
-          </Link>
-        </>
-      );
+const columnRenderer = () => {
+  return [
+    { header: "Imie", key: "firstName" },
+    { header: "Nazwisko", key: "lastName" },
+    { header: "PESEL", key: "PESEL" },
+    {
+      header: "Akcje",
+      key: "Actions",
+      td: data => additionalColsRenderer(data)
     }
-  }
-];
+  ];
+};
 
 const Children = () => (
   <div className={styles.Children}>
     <ChildrenHeader />
-    <Table
-      data={dataWithTranslatedHeader}
-      additionalCols={additionalCols}
-      globalSearch
-    />
+    <Table data={mockData} columnRenderer={columnRenderer} globalSearch />
   </div>
 );
 
