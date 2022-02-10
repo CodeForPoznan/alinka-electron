@@ -80,7 +80,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "lodash": "^4.17.15",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "1.17.1",
     "react-test-renderer": "16.8.0",
     "sass-loader": "^7.1.0",
