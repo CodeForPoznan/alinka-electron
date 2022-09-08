@@ -32,7 +32,7 @@
     "file-system": "^2.2.2",
     "final-form": "^4.20.0",
     "final-form-arrays": "^3.0.2",
-    "jszip": "3.2.2",
+    "jszip": "3.7.0",
     "nunjucks": "^3.2.1",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
