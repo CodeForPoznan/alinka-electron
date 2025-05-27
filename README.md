@@ -1,3 +1,7 @@
+> **⚠️ This repository is archived and no longer maintained.**
+>
+> **If you are looking for ongoing development, please check out [the new repository here](https://github.com/CodeForPoznan/alinka-pyside).**
+
 # Alinka
 
 [![Build status](https://ci.appveyor.com/api/projects/status/t9ku3addyo7jwa2q/branch/master?svg=true)](https://ci.appveyor.com/project/CodeForPoznanBot/alinka-electron/branch/master) [![Join Slack](https://img.shields.io/badge/slack-join%20chat-4a154b)](https://join.slack.com/t/codeforpoznan/shared_invite/enQtNjQ5MTU1MDI0NDA0LWNhYTA3NGQ0MmQ5ODgxODE3ODJlZjc3NWE0NTMzZjhmNDBkN2QwMzNhYWY5OWQ5MGE2OGM3NjAyODBlY2VjNjU)
